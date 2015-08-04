@@ -30,3 +30,13 @@
 
 # Debug files
 *.dSYM/
+
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+.workspace
+.idea
+.config
+__MACOSX/
+.swp
