@@ -1,7 +1,15 @@
-#include <stdio>
+#include <stdio.h>
 
-count = 10;
-for (i = 0; i < count; i++) {
-	println"Uso do for";
+
+int main(int argc, const char *argv[])
+{
+	
+	int i;
+
+	for (i = 0; i < 10; i++) 
+	{
+		printf("No for");
+	}
+
+	return 0;
 }
-
