@@ -1,3 +1,17 @@
+/* Programação de computadores
+   trabalho2
+   questão 2.06
+
+   equipe:
+	Evandro Fernandes
+	Wilson Neto
+	John Lucas
+	Jessica Kelly
+	Fernando Antonio
+	Jailson Pereira
+	Juliany Raiol
+	Raí Santos*/
+
 #include <stdio.h>
 
 int main(int argc, const char *argv[])
