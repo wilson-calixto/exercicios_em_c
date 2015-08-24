@@ -2,7 +2,7 @@
 
 int main(int argc, const char *argv[])
 {
-	printf("Você me mudou.\n");
+	printf("Certo.\n");
 
 	return 0;
 }
