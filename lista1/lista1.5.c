@@ -3,15 +3,15 @@
  *
  *       Filename:  q5.c
  *
- *    Description:  
+ *    Description: Isso eh um teste 
  *
  *        Version:  1.0
  *        Created:  19-08-2015 16:34:33
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  Benjamin Borges (bsb), borges.bnjamin@gmail.com
- *        Company:  CINDACTA4
+ *         Author:  GRUPO-1
+ *        Company: UEA - 
  *
  * =====================================================================================
  */
