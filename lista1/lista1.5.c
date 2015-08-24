@@ -1,20 +1,16 @@
-/*
- * =====================================================================================
- *
- *       Filename:  q5.c
- *
- *    Description: Isso eh um teste 
- *
- *        Version:  1.0
- *        Created:  19-08-2015 16:34:33
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  GRUPO-1
- *        Company: UEA - 
- *
- * =====================================================================================
+/* 
+ *   Programação de Computadores e Algoritmos
+ *   Trabalho 1
+ *   Questão 1.1
+ *   Equipe: Benjamin Borges
+ *   Davi Tavares
+ *   Manoel Souza 
+ *   Lucas Botinelly
+ *   Jackson Gomes
+ *   Robson Borges
+ *   Grupo 1 - 
  */
+
 #include <stdio.h>
 
 int main(int argc, const char *argv[])
