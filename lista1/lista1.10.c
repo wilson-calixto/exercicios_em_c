@@ -1,4 +1,17 @@
-// este e um comentario
+/*
+ * Programa de Computadores e Algoritmos
+ * Trabalho 1
+ * Questoa 1.10
+ *
+ * Equipe: 
+ *         Delrik
+ *         Elisabeth
+ *         Hermamm
+ *         Luis
+ *         Luana
+ *         Richardson
+ *
+ */
 
 #include <stdio.h>
 
