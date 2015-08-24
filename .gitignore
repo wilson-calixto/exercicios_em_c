@@ -39,4 +39,4 @@ Thumbs.db
 .idea
 .config
 __MACOSX/
-.swp
+*.swp
