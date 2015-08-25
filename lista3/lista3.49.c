@@ -1,3 +1,18 @@
+/*
+ * Programa de Computadores e Algoritmos
+ * Trabalho 1
+ * Questao 3.49
+ *
+ * Equipe: 
+ *         Delrik
+ *         Elisabeth
+ *         Hermamm
+ *         Luis
+ *         Luana
+ *         Richardson
+ *
+ */
+ 
 #include <stdio.h>
 
 int main (int argc, const char *argv[])
