@@ -1,7 +1,7 @@
 /*
  * Programa de Computadores e Algoritmos
  * Trabalho 1
- * Questoa 1.10
+ * Questao 3.33
  *
  * Equipe: 
  *         Delrik
