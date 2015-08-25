@@ -1,7 +1,7 @@
 /*
 Programação de Computadores e Algoritmos
 Trabalho 1
-Questão 3.1
+Questão 3.10
 
 Equipe:
 	Evandro Fernandes
@@ -17,16 +17,17 @@ Equipe:
 
 int main(int argc, const char *argv[])
 {
-    int n;
-    printf("Digite o numero: ");
-    scanf("%d", &n);
-    while(n<0 || n>10)
-    {
-        printf("Valor Invalido, digite novamente: ");
-        scanf("%d", &n);
-    }
+    int inicio,fim;
 
-    printf("Valor digitado: %d \n", n);
+    printf("Escreva o primeiro numero:  ");
+    scanf("%d",&inicio);
+    printf("Escreva o segundo numero:   ");
+    scanf("%d",&fim);
+
+    for(inicio++;inicio<fim;inicio++)
+    {
+        printf("%d",inicio);
+    }
 
     return 0;
 }
