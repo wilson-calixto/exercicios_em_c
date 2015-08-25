@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 #include <math.h>
-/* Para usar 'sqrt(x)' e 'pow(x,y)' é necessário compilar usando -lm,
+/* Para usar 'sqrt(x)' e 'pow(x,y)' é necessário abiblioteca include <math.h> e compilar usando -lm,
 por exemplo "gcc ~nome.c -lm -o ~nome" */
 
 int main (int argc, const char *argv[])
