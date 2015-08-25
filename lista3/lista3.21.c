@@ -3,6 +3,7 @@ Questao 21 da Lista 3
 
 O programa le o numero e testa se ele e primo.
 
+Professor Jucimar Junior
 Programacao de Computadores e Algoritmos / Laboratorio de Programacao de Computadores
 
 Equipe: Jackson Kelvin
