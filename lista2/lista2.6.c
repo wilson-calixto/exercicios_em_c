@@ -1,5 +1,5 @@
 /* Programação de computadores
-   trabalho2
+   trabalho1
    questão 2.06
 
    equipe:
