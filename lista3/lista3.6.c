@@ -1,7 +1,7 @@
 /*
 Programação de computadores e Algoritmos
 Trabalho 1
-Questão 3.07
+Questão 3.06
 
 Equipe:
 	Evandro Fernandes
