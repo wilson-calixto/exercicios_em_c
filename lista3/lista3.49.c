@@ -6,7 +6,7 @@
  * Equipe: 
  *         Delrik
  *         Elisabeth
- *         Hermamm
+ *         Hermann
  *         Luis
  *         Luana
  *         Richardson
