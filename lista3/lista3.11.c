@@ -1,7 +1,7 @@
 /* 
  *  Programação de Computadores e Algoritmos
  *  Trabalho 1
- *  Questão 3.13
+ *  Questão 3.11
  *  Equipe: Benjamin Borges
  *  Davi Tavares
  *  Manoel Souza 
