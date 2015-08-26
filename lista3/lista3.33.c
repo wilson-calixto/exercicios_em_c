@@ -17,8 +17,7 @@
 
 main(int argc, const char *argv[])
 {
-    char op;
-    int status, cont;
+    int op, status, cont;
     float n_temp, acum, media, maior, menor;
     
     status=1;
@@ -32,13 +31,12 @@ main(int argc, const char *argv[])
   
     while (status==1)
     {
-        printf("Outra temperatura? [s/n] ");
-        scanf("%c", &op);
+        printf("Outra temperatura? [1/0] ");
+        scanf("%d", &op);
 
         switch (op)
         {
-            case 'S':
-            case 's': 
+            case 1: 
                 printf("\nTemperatura: ");
                 scanf("%f",&n_temp);
                 acum+=n_temp;
@@ -53,8 +51,7 @@ main(int argc, const char *argv[])
                 menor=n_temp;
                 }
                 break;
-            case 'N':
-            case 'n':
+            case 0:
                 status=0;
                 break;
         }  
