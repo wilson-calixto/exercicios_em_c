@@ -1,102 +1,39 @@
-#include<stdio.h>
-#include<stdlib.h>
-
-
-
-
 /*
-Programação de computadores e algoritmos 
-Trabalho 01
-equipe
+Programacao de Computadores e Algoritmos/Laboratorio de programacao de computadores
 
-Paulo marinho
-Wilson calixto
-Sergio Pinheiro
-Andressa moriera
-Rodrigo oliveira
+questao 18 da lista 3
 
- LISTA 2 QUETÃO 18 */
+Equipe:
+	Ewerton Petillo
+	Jackson Kelvin
+	Gabriel Faraco
+	Lucas Vinicius
 
+*/
 
+#include <stdio.h>
 
-int main()
+int main(int argc, const char *argv[])
 {
-	int dia,mes,ano,bo;
-	bo=1;
-	printf("dia\n");
-	scanf("%d",&dia);
-	printf("mes\n");
-	scanf("%d",&mes);
-	printf("ano\n");
-	scanf("%d",&ano);
-/* verifica se o dia mes e ano não são menores q ou maiores que o limite */
-
-	if(dia<0 || dia>31 || mes<0 || mes>12 || ano<0)
-	{
-		bo=0;
-
-/* verifica os dias>29 de fevereiro de 2000 */
-
-	}else{
-
-		if((mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12) && (dia>31))
-		{
-			bo=0;
-
-		}else{
-			if((mes==4||mes==6||mes==9||mes==11) && (dia>30))
-			{	
-				bo=0;
-				
-			}else{
-				if(mes==2){
-					if(ano==2000 && dia>29)
-					{
-						bo=0;
-					}else{
-						if(ano%4==0 && ano%100!=0 && dia>29)
-						   {
-							bo=0;
-							
-						   }
-						
-						}					
-					
-
-
-					}
-
-					
-				}
-
-
-			}
-
+	int i, soma=0, v, num, maior, menor;
+	printf("digite a quantidade de valores:");
+	scanf("%d",&v);			//leitura da quantidade v de valores
+	for (i=1;i<=v;i++){
+		printf("digite um numero: ");
+		scanf("%d",&num);	//leitura dos numeros
 		
-
-
-	if(bo==0)
-	{
-		printf("False");
-
+		if (i==1){
+			maior=num;	
+			menor=num;
+		}
+		if(num>=maior){
+			maior=num;
+		}else if (num<menor){
+			menor=num;
+		}
+		soma=soma+num;		//acumulador da soma dos numeros
 	}
-	else{
-
-		printf("True");
-	     }
-
-
-
-
-
-
-
-
-
-
-
-		     }
-
-
-return 0;
+	printf("a soma dos valores: %d \no maior numero: %d \n e o menor numero %d\n", soma,maior,menor);
+		
+	return 0;
 }
