@@ -1,7 +1,7 @@
 /*
 Programacao de computadores e Algoritmos
 Trabalho 1
-Questao 2.19
+Questao 3.24
 
 Equipe:
 	Paulo Marinho
