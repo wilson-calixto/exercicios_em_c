@@ -1,18 +1,16 @@
 /*
+Programação de computadores e Algoritmos
+Trabalho 1
+Questão 3.07
 
-Programacao de Computadores e Algoritmos 
-
-Trabalho1
-
-questão 3.06
-
-Equipe: Evandro Fernandes
+Equipe:
+	Evandro Fernandes
+	Wilson Neto
+	John Lucas
+	Jessica Kelly
 	Fernando Antonio
 	Jailson Pereira
-	Jessica Kelly
-	Jhon Lucas
 	Juliany Raiol
-	Wilson Neto
 	Raí Santos
 */
 
@@ -20,8 +18,16 @@ Equipe: Evandro Fernandes
 
 int main(int argc, const char *argv[])
 {
-	int i;
-	for(i=1;i<=20;i++) printf("%d ",i);
-	printf("\n");
-	return 0;
+    int n;
+
+    n=1;
+    while(n<=120)
+    {
+        printf("%d \n", n);
+        n++;
+    }
+
+
+
+    return 0;
 }
