@@ -1,19 +1,15 @@
-// =====================================================================================
-//
-//       Filename:  q14.c
-//
-//    Description:  
-//
-//        Version:  1.0
-//        Created:  25-08-2015 12:30:55
-//       Revision:  none
-//       Compiler:  g++
-//
-//         Author:  Benjamin Borges (bsb), borges.bnjamin@gmail.com
-//   Organization:  
-//
-// =====================================================================================
-
+/* 
+ *  Programação de Computadores e Algoritmos
+ *  Trabalho 1
+ *  Questão 3.14
+ *  Equipe: Benjamin Borges
+ *  Davi Tavares
+ *  Manoel Souza 
+ *  Lucas Botinelly
+ *  Jackson Gomes
+ *  Robson Borges
+ *  Grupo 1 - 
+ *  */
 
 #include	<stdio.h>
 
