@@ -8,6 +8,7 @@ Equipe:
 	Sergio Pinheiro	
 	Wilson Calixto
 	Andressa Moreira
+	Rodrigo Oliveira
 */
 
 #include <stdio.h>
