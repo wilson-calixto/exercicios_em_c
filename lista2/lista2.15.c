@@ -35,7 +35,7 @@ int main (int argc, const char *argv[])
        	    	     (lado1 == lado3 ) || // 
        	             (lado2 == lado3 )) 
 		{
-			printf("Triangulo Escaleno!\n");
+			printf("Triangulo Isosce..!\n");
 		}else
 		{
 			printf("Triangulo qualquer");
