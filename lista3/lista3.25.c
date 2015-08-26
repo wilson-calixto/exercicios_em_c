@@ -1,3 +1,16 @@
+/*
+Programacao de computadores e Algoritmos
+Trabalho 1
+Questao 3.25
+
+Equipe:
+	Paulo Marinho
+	Sergio Pinheiro	
+	Wilson Calixto
+	Andressa Moreira
+	Rodrigo Oliveira
+*/
+
 #include <stdio.h>
 
 int main(int argc, const char *argv[])
@@ -18,17 +31,16 @@ int main(int argc, const char *argv[])
 	if (idade_media <= 25)
 	{
 		printf("\nTurma jovem!\n");
-
 	}
 	else
 	{
 		if (idade_media <= 60)
 		{
-			printf("\nTurma Adulta\n");
+			printf("\nTurma Adulta!\n");
 		}
 		else
 		{
-			printf("\nTurma Idosa\n");
+			printf("\nTurma Idosa!\n");
 		}
 	}
 	return 0;
