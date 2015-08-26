@@ -23,10 +23,15 @@ int main(int argc, const char *argv[])
     scanf("%d",&inicio);
     printf("Escreva o segundo numero:   ");
     scanf("%d",&fim);
-
+    if(inicio>fim)
+    {
+    	inicio=inicio+fim;
+    	fim=inicio-fim;
+    	inicio=inicio-fim;
+    }
     for(inicio++;inicio<fim;inicio++)
     {
-        printf("%d",inicio);
+        printf("%d\n",inicio);
     }
 
     return 0;
