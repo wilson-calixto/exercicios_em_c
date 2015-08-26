@@ -16,7 +16,7 @@
 
 int main(int argc, const char *argv[])
 {
-	int n1, n2, n3;
+	int n1, n2, n3, maior;
 
 	printf("Insira o primeiro numero: \n");
 	scanf("%d", &n1);
@@ -25,19 +25,15 @@ int main(int argc, const char *argv[])
 	printf("Insira o terceiro numero: \n");
 	scanf("%d", &n3);
 
-	if(n1 > n2 && n1 > n3)
+	maior = n1
+	if(n2 > maior)
 	{
-		printf("O maior numero é: %d \n", n1);
+		maior = n2;
 	}
-	else
+	if(n3 > maior)
 	{
-		if(n2 > n1 && n2 > n3)
-		{
-			printf("O maior numero é: %d \n", n2);
-		}else
-		{
-		printf("O maior numero é: %d \n", n3);
-		}
+		maior = n3
 	}
+	printf("O maior numero é : %d \n", maior);
 	return 0;
 }
