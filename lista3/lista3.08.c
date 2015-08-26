@@ -14,22 +14,22 @@ Equipe:
 
 int main(int argc,const char *argv[])
  {
-   int num,media,soma,i;
-   soma=0;
-     
+   float media, num, soma;
+   int i;
+   soma = 0;
+   printf("Digite 5 numeros: \n");
    for(i=0;i<5;i++)
-     {
-       printf("digite um número:\n");
-       scanf("%d",&num);
+   {
+       scanf("%f",&num);
        soma=soma+num;
        media=soma/5;
-     }
+   }
  
-
-  printf("A soma  %d\n",soma);
-  printf("a media %d\n",media);
-  return 0;
+   printf("A soma eh: %.2f\n",soma);
+   printf("A media eh: %.2f\n",media);
+   return 0;
  }
+
 
 
 
