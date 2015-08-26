@@ -1,3 +1,12 @@
+/*Programacao de Computadores e Algoritmos
+Trabalho 1
+Questao 3.26
+Equipe: Andressa Moreira
+	Paulo Marinho
+	Sergio Pinheiro
+	Wilson Calixto
+	Rodrigo Oliveira*/
+
 #include <stdio.h>
 
 int main(int argc, const char *argv[])
