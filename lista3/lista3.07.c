@@ -21,7 +21,7 @@ int main ( int argc, const char* agrv[])
 
         for(i=1;i<6;i++)
         {
-           printf("Digite o %d° número:",i);
+           printf("Digite o %d° número: \n",i);
            scanf("%d",&numeros[i]);
         }
 
