@@ -19,11 +19,12 @@ int main(int argc, const char *argv[])
 	int nu;
 	int ac = 1;
 	int co = 0;
-	printf("numero: ");
+	printf("numero: \n");
 	scanf("%d", &nu);
 	for (co = nu; co >= 1; co--)
 	{
 		ac = ac * co;
 	}
-	printf("%d", ac);
+	printf("%d\n", ac);
+	return 0;
 }
