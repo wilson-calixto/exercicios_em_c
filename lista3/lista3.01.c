@@ -18,7 +18,7 @@ Equipe:
 int main(int argc, const char *argv[])
 {
     int n;
-    printf("Digite o numero: ");
+    printf("Digite o numero: \n");
     scanf("%d", &n);
     while(n<0 || n>10)
     {
