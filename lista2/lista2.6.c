@@ -25,14 +25,14 @@ int main(int argc, const char *argv[])
 	printf("Insira o terceiro numero: \n");
 	scanf("%d", &n3);
 
-	maior = n1
+	maior = n1;
 	if(n2 > maior)
 	{
 		maior = n2;
 	}
 	if(n3 > maior)
 	{
-		maior = n3
+		maior = n3;
 	}
 	printf("O maior numero é : %d \n", maior);
 	return 0;
