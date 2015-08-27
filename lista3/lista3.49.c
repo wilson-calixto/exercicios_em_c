@@ -17,20 +17,23 @@
 
 int main (int argc, const char *argv[])
 {
-	int n;
-	float soma,i;
-
-	soma=0;
+	float i,n,m,e,soma;
+	n=1.0;
+	m=1.0;
+	soma=n/m;
 
 	printf("informe um valor: ");
-	scanf("%d", &n);
-
-	for (i=1; i<=n; i++)
+	scanf("%f", &e);
+	printf("%.0f/%.0f", n,m);
+	for (i=1; i<=e; i++)
 	{
-		soma=soma+(1/i);
+		n++;
+		m+=2;
+		soma = soma+(n/m);
+		printf(" + %.0f/%.0f ", n, m);
 	}
 	
-	printf("O valor da soma dos termos é: \t %.2f \n", soma);
+	printf("\nO valor da soma dos termos é: \t %.2f \n", soma);
 
 	return 0;
 }
