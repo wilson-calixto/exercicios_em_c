@@ -28,7 +28,7 @@ int main(int argc, const char *argv[])
 	
 	else if (valor == 0)
 	{
-		printf("Neutro");
+		printf("Neutro \n");
 	}
 
 	else
