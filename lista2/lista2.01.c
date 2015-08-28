@@ -18,11 +18,23 @@ Equipe: Evandro Fernandes
 
 #include <stdio.h>
 
-int main(int arc, const char *arcv)
+int main(int argc, const char *argv[])
 {
 	int a,b;
-	scanf("%d%d",&a,&b);
-	if(a > b) printf("%d",a);
-	else printf("%d",b);
+	printf("Digite um numero: \n");
+	scanf("%d", &a);
+	
+	printf("Digite um outro numero: \n");
+	scanf("%d", &b);
+	
+	if (a > b) 
+	{
+		printf("O maior numero é: %d\n",a);
+	}
+	else 
+	{
+		printf("O maior numero é: %d\n",b);
+	}
+	
 	return 0;
 }
