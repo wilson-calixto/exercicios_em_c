@@ -18,7 +18,6 @@ Equipe:
 int main(int argc, const char *argv[])
 {
 	int valor;
-	printf("digite um valor:\n");
 	scanf("%d",&valor);
 	(valor > 0)? printf("Positivo\n") : printf("Negativo\n");
 	return 0;
