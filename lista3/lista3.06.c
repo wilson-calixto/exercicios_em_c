@@ -18,12 +18,11 @@ Equipe:
 
 int main(int argc, const char *argv[])
 {
-    int n=1;
-    while(n <= 20)
-    {
-        printf("%d \t", n);
-        n++;
-    }
-    printf("\n");
-    return 0;
+	int n;
+	for (n=1; n<20; n++)
+	{
+		printf("%d ",n);
+	}
+    	printf("\n");
+    	return 0;
 }
