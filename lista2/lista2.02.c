@@ -21,16 +21,20 @@ int main(int argc, const char *argv[])
 	printf("digite um valor: \n");
 	scanf("%d",&valor);
 	
-	if (valor > 0)
+	if (valor >= 0)
 	{
-	 	printf("Positivo \n");
+		if (valor > 0)
+	 	{
+	 		printf("Positivo \n");
+		}
+		else
+		{
+			printf("Neutro \n");
+		}
 	}
+	 	
 	
-	else if (valor == 0)
-	{
-		printf("Neutro \n");
-	}
-
+	
 	else
 	{
 		printf("Negativo \n");
