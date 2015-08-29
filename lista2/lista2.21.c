@@ -20,7 +20,7 @@ int main(int argc, const char *argv)
 	int cem;
 	int cinq;
 	int dez;
-	int cim;
+	int cin;
 	int uni;
 	
 	printf("Qual o valor? ");
@@ -34,8 +34,8 @@ int main(int argc, const char *argv)
 	}
 	if (valor >= 50 && valor < 100)
 	{
-		valor = (valor -50);
-		printf("\n1 nota de 50");
+		valor = valor -50;
+		printf("\n1 nota de 50", cin);
 	}
 	if (valor < 50 && valor >= 10)
 	{
