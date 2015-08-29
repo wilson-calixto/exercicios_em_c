@@ -14,7 +14,7 @@ Equipe:
 */
 
 
-int main(int argc, const char* argv[])
+int main(int argc, const char  *argv[])
 {
 	printf("CCCCC\n");
         printf("C\n");
