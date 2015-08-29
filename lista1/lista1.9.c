@@ -15,9 +15,9 @@ Equipe:
 
 #include <stdio.h>
 
-int main(int argc, const char* argv[])
+int main(int argc, const char *argv[])
 {
-	printf("Cadastro de Cliente\n");
+	printf("Cadastro do Cliente\n");
 	printf("0-Fim\n");
 	printf("1-Inclui\n");
 	printf("2-Altera\n");
