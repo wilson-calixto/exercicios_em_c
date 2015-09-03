@@ -17,7 +17,7 @@ int main(int argc, const char *argv[]){
                 printf("Valor invalido. \n");
                 return 0;
             }else{
-                printf("%d:%d",convert_hour(hr), convert_minute(min)) ; 
+                printf("%d:%d %c.M \n ",convert_hour(hr), min, am_pm(hr)) ; 
             }
         }
 

@@ -4,7 +4,7 @@
 int is_hour(int);
 int is_minute(int);
 int convert_hour(int);
-int convert_minute(int);
+char am_pm(int);
 
 #endif
 
