@@ -15,43 +15,47 @@
 
 #include <stdio.h> 
 
-/*Calcula media aritimetica */
-float media()
+/* 
+ * Calcula media aritimetica de varios numeros
+ * ate que seja digitado 0
+ * retorna um float
+ */
+float calc_mean()
 {
-    float i,n,soma,media;
+    float i,num,sum,mean;
 
-    soma=0;
+    sum=0;
     i=0;
-    n=1;
+    num=1;
 
-    while(n!=0)
+    while(num!=0)
     {
         printf ( "\nDigite um numero positivo: " );
-        scanf ( "%f", &n );
+        scanf ( "%f", &num );
 
         
-        while ( n<0 )
+        while ( num<0 )
         {
             printf ( "\nNumero invalido." );
             printf ( "\nDigite um numero positivo: " );
-            scanf ( "%f", &n );
+            scanf ( "%f", &num );
         }
-        soma+=n;
+        sum+=num;
         i++;
     }
 
-    media=soma/(i-1);
+    mean=sum/(i-1);
 
-    return media;
+    return mean;
 }
 
 int main ( int argc,const char *argv[] )
 {
-    float a;
+    float result;
 
-    a=media();
+    result=calc_mean();
 
-    printf ( "Valor medio: %f\n",a );
+    printf ( "Valor medio: %.2f\n",result );
     
     return 0;
 }
