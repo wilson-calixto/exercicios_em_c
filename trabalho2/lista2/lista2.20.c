@@ -1,7 +1,7 @@
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
- * lista2.25.c
+ * lista2.20.c
  *
  * Equipe:
  *
@@ -14,3 +14,10 @@
  */
 
 
+#include <stdio.h> 
+
+int main ( int argc, char *argv[] )
+{
+    
+    return 0;
+}
