@@ -1,7 +1,7 @@
 double media(double not1, double not2, double not3, char med){
-    float mfinal;
+    double mfinal;
     if(med == 'a' || med == 'A'){
-        mfinal = (not1 + not2 + not3)/3;
+        mfinal = ((not1+not2+not3) / 3);
             return mfinal;
     }
     if (med == 'p'||med == 'P'){

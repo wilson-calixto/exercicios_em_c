@@ -28,7 +28,7 @@ int main(int argc, const char *argv[]) {
     fflush(stdin); // Limpa o buffer do teclado
     printf("Digite o tipo de media: \n A- Aritmetica\t P-Ponderada\t H-Harmonica\n");
     scanf(" %c", &tip);
-    res = media(n1, n2, n3);
+    res = media(n1, n2, n3, tip);
     printf("Media: %.2lf \n ", res);
 }
 
