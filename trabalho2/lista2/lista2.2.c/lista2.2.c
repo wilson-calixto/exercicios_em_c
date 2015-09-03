@@ -25,10 +25,10 @@ int main(int argc, const char *argv[]) {
     scanf("%d", &n2);
     printf("Digite a nota 3: ");
     scanf("%d", &n3);
-    system("clean");
+//    system("clean");
     printf("Digite o tipo de media: \n A- Aritmetica\t P-Ponderada\t H-Harmonica\n");
     scanf("%c", &tip);
-    printf("Media: ", media(n1,n2,n3,tip));
+    printf("Media: %d", media(n1,n2,n3,tip));
 }
 
 
