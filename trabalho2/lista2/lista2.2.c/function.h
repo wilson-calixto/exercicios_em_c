@@ -1,6 +1,7 @@
-#ifdef FUNCAO_H
-#define FUNCAO_H
+#ifdef FUNCTION_H
+#define FUNCTION_H
 
-int media(int,int,int,char)
+double media(double, double, double, char);
 
 #endif
+

@@ -1,5 +1,10 @@
-double media(double not1, double not2, double not3, char med){
+#include <stdio.h>
+
+float media(float not1, float not2, float not3){
     float mfinal;
+	char med;
+
+    printf("teste passou\n N1: %f, N2: %f, N3: %f", not1, not2, not3);
     if(med == 'a' || med == 'A'){
         mfinal = (not1 + not2 + not3)/3;
             return mfinal;
@@ -12,5 +17,6 @@ double media(double not1, double not2, double not3, char med){
         mfinal = 3/((1/not1)+(1/not2)+(1/not3));
         return mfinal;
     }
+    printf("Teste: %f \t %f \t %f \n FInal:  %f \n",not1, not2, not3, mfinal);
 }
 
