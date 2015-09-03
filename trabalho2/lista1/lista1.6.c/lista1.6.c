@@ -1,3 +1,28 @@
+/*Programacao de Computadores e Algoritmos / Laboratorio de Programacao de Computadores
+ *
+ * Trabalho 2
+ * Lista 1
+ * Qustao 6
+ *
+ *
+ *\Equipe:  Richardson 
+ *          Jailson Pereira
+ *          Lucas Botinelly
+ *          Hermann Hermani
+ *          Wilson
+ *          Ewerton Petillo
+ *
+ *          Autor: Ewerton Petillo
+ *
+ * / */
+
+
+
+
+
+
+
+
 #include <stdio.h>
 #include "lib_function.h"
 
