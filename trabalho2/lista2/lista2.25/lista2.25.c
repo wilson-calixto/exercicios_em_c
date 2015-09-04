@@ -13,22 +13,8 @@
  *          Wilson 
  */
 
-#include <stdio.h> 
-
-int calc_potencia(int x, int z)
-{
-    int i, pot;
-
-    pot=1;
-
-    for ( i = 0; i < z; i++ )
-    {
-        pot*=x;
-    }
-
-    return pot;
-}
-
+#include <stdio.h>
+#include "function.h"
 
 int main ( int argc, const char *argv[] )
 {
