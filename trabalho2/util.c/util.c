@@ -76,7 +76,7 @@ float arctan(float x)
 	int e=1,i=1;
 	
 	do{
-		valor=potencia(x,i)/i;
+		valor=power(x,i)/i;
 
 		if(e%2==0)
 		{
