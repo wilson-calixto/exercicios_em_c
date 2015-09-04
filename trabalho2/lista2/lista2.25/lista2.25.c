@@ -14,10 +14,11 @@
  */
 
 #include <stdio.h>
-#include "function.h"
+#include "../../util.c/util.h" /*retorna 2 niveis acima do diretorio*/
 
 int main ( int argc, const char *argv[] )
 {
+    
     int x,z,result;
 
     printf ( "\nInforme o base: " );
@@ -25,9 +26,11 @@ int main ( int argc, const char *argv[] )
     printf ( "\nDigite o expoente: " );
     scanf ( "%d", &z );
 
-    result=calc_potencia(x,z);
+    result=calc_pow(x,z);
 
     printf ( "\nPotencia de %d**%d=%d",x,z,result );
+    printf ( "\n" );
     
     return 0;
+
 }
