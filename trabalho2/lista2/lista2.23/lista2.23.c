@@ -1,19 +1,35 @@
-/*
- * =====================================================================================
- *
- *       Filename:  lista2.23.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  04-09-2015 16:31:57
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Benjamin Borges (bsb), borges.bnjamin@gmail.com
- *        Company:  CINDACTA4
- *
- * =====================================================================================
- */
+/* 
+ *  Programação de Computadores e Algoritmos
+ *  Trabalho 2
+ *  Questão 1.8
+ *  Equipe: Benjamin Borges
+ *  Davi Tavares
+ *  Paulo Henrique 
+ *  Fernando Calderaro
+ *  Lucas Frota
+ *  Luiz Fernando
+ *    
+ *  */
 
+
+
+#include	"include ../../util.c/util.h"
+#include	<include stdio.h>
+
+int iterate_number(int num)
+{	
+	int aux=1;
+	for (i=1,impar=1;i<num;i++,impar+2)
+	{
+		printf ( "%d/%d\n", aux+impar );
+		aux = aux+impar
+	}
+		return aux;
+}
+
+int main ( int argc, char *argv[] )
+{
+	iterate_number(3);
+	return 0;
+}				/* ----------  end of function main  ---------- */
 
