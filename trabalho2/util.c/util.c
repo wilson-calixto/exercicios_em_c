@@ -42,3 +42,30 @@ int qtd_num(int num)
             return 1;
      }
 }
+
+
+/* verifica se um numero inteiro e perfeito*/
+
+int is_perfect(int num)
+{
+	int i,acm;
+	acm=0;
+	for(i=1;i<num;i++)
+	{
+		if(num%i==0)
+		{
+			acm=acm+i;
+		}	
+	}
+	if(acm==num)
+	{
+		return 1;
+	}else{
+		return 0;
+	}		
+}
+
+
+
+
+
