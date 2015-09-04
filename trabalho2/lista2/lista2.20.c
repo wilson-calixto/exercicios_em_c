@@ -17,7 +17,7 @@
 
 #include <stdio.h>
 
-int calc_somatorio(int n)
+int calc_sum(int n)
 {
     int i,sum,num;
 
@@ -40,7 +40,7 @@ int main ( int argc, const char *argv[] )
     printf ( "\nInforme um valor: " );
     scanf ( "%d", &n );
     
-    result=calc_somatorio(n);
+    result=calc_sum(n);
 
     printf ( "\nSomatorio: %d", result );
     
