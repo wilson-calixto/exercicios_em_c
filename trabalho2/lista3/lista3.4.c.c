@@ -1,30 +1,33 @@
 #include<stdio.h>
-/* lista 3 questao 4 letra c falta verificar o tamanho do vetor como ele é pasado pra a funcao */
+#include<stdlib.h>
+/* lista 3 questao 4 letra c */
 
-#define tam 100
+
 
 float alfa(float x, float y);
 float arctan(float numero);
 float potencia(float x,float y);
-float s_sort(float vet);
+float s_sort(float *vetor1,float n);
 
 
 int main()
 {
 	int i,n;
-	float radiandos=180,x,y,vet[tam];
-
-	printf("Digite o numero de loops menores que 100 \n");
+	float x,y,*vet;
+	printf("Digite o numero de loops\n");
 	scanf("%d",&n);
+	vet=malloc(n*sizeof(float));
 	for(i=0;i<n;i++)
 	{
 		printf("Digite um valor para o x \n");
 		scanf("%f",&x);
-		printf("Digie um valor para o y \n");
+		printf("Digite um valor para o y \n");
 		scanf("%f",&y);
 		if(x>=0 && y>=0)	
 		{
 			vet[i]=alfa(x,y);
+			
+			
 		}else{
 			printf("O valor digitado é invalido");
 		}
@@ -33,7 +36,7 @@ int main()
 
 
 	
-	printf("o menor valor é %f",s_sort(vet);
+	printf("O menor valor é %f",s_sort(vet,n));
 
 	return 0;
 }
@@ -84,15 +87,17 @@ float potencia(float x,float y)
 
 
 
-float s_sort(float vetor1[tam])
+float s_sort(float *vetor1,float n)
 {
-	int i,j,temp;
+	int i,j;
+	float temp;
 	
-		for(i=0;i<10;i++)
+	
+		for(i=0;i<n;i++)
 		{
-			for(j=0;j<10;j++)
+			for(j=0;j<n;j++)
 			{
-				if(vetor1[j]<=vetor1[i])
+				if(vetor1[j]>=vetor1[i])
 				{
 							
 					temp=vetor1[i];
@@ -101,7 +106,7 @@ float s_sort(float vetor1[tam])
 				}		
 			}	
 		}
-	
+
 		return vetor1[0];
 }
 
