@@ -124,8 +124,21 @@ float alfa(float x, float y)
 	return (180*radianos)/pi;
 }
 
+/*forma uma serie de numeros em ordem crescente em n linhas*/
+int serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
+{
+    int i,j;
 
 
+    for(i=1;i<=n;i++)//laco externo indica o tamanho da serie
+    {
+        for(j=1;j<=i;j++)//laco interno indica a quantidade de numeros em cada linha da serie
+        {   
+            printf ("%d", j);
+        }
+        printf ("\n");
+    }
+}
 
 
 
