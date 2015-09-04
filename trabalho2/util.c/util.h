@@ -5,3 +5,4 @@ float arctan(float x);
 float power(float x,float y);
 float alfa(float x, float y);
 int serie_repetition(int n);
+float s_sort(float *vetor1,float n);
