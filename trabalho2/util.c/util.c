@@ -95,6 +95,24 @@ float arctan(float x)
 }
 
 
+/* recebe x e y float´s e retorna um float de x elevado a y  */
+float power(float x,float y)
+{
+	int i;
+	float k=1;
+	for(i=1;i<=y;i++)
+	{
+		k=k*x;
+	}
+	return k;
+}
+
+
+
+
+
+
+
 
 
 
