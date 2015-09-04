@@ -1,20 +1,15 @@
-/*
- * =====================================================================================
- *
- *       Filename:  q8.c
- *
- *    Description: Este programa retorna a quantidade de caracteres inseridas pelo usuario. 
- *
- *        Version:  1.0
- *        Created:  04-09-2015 09:24:26
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  Benjamin Borges (bsb), borges.bnjamin@gmail.com
- *        Company:  CINDACTA4
- *
- * =====================================================================================
- */
+/* 
+ *  Programação de Computadores e Algoritmos
+ *  Trabalho 2
+ *  Questão 1.8
+ *  Equipe: Benjamin Borges
+ *  Davi Tavares
+ *  Paulo Henrique 
+ *  Fernando Calderaro
+ *  Lucas Frota
+ *  Luiz Fernando
+ *  
+ *  */
 
 #include	"../../util.c/util.h"
 #include	<stdio.h>
