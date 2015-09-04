@@ -23,8 +23,9 @@ int calc_somatorio(int n)
 
     sum=0;
     
-    for ( i = 0; i < n; i++ )
+    for ( i = 1; i <= n; i++ )
     {
+        printf ( "\nInforme o valor %d:", i );
         scanf ( "%d", &num );
         sum+=num;
     }

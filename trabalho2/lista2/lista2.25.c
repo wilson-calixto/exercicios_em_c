@@ -15,7 +15,7 @@
 
 #include <stdio.h> 
 
-int calc_potencia(x,z)
+int calc_potencia(int x, int z)
 {
     int i, pot;
 
