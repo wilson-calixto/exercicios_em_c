@@ -66,6 +66,37 @@ int is_perfect(int num)
 }
 
 
+/*  recebe um numero float entre 0  e 1 e devolve sua arco tangente  */
+
+
+
+float arctan(float x)
+{
+	float resposta=0,valor;
+	int e=1,i=1;
+	
+	do{
+		valor=potencia(x,i)/i;
+
+		if(e%2==0)
+		{
+			resposta=resposta-valor;
+		}else{
+			resposta+=valor;
+		}
+		e++;		
+		i=i+2;
+		
+
+		}while(valor>0.0001);
+	
+
+	return resposta;
+}
+
+
+
+
 
 
 
