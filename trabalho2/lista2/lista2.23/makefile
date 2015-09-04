@@ -8,3 +8,5 @@ lista2.23.o: lista2.23.c
 	gcc -c lista2.23.c
 clean:
 	rm -rf *.o
+mrproper: clean 
+	rm -rf lista2.23
