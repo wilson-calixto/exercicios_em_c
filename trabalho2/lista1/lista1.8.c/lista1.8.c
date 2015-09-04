@@ -16,7 +16,7 @@
  * =====================================================================================
  */
 
-#include	"util.h"
+#include	"../../util.c/util.h"
 #include	<stdio.h>
 /*
 int qtd_num(int num)
