@@ -13,23 +13,29 @@
 
 
 
-#include	"include ../../util.c/util.h"
-#include	<include stdio.h>
+#include	<stdio.h>
 
-int iterate_number(int num)
+float iterate_number(int num)
 {	
-	int aux=1;
-	for (i=1,impar=1;i<num;i++,impar+2)
+	float aux=1, impar, i;
+	float acumulador = 0;
+	for (i=1,impar=1;i<=num;i++)
 	{
-		printf ( "%d/%d\n", aux+impar );
-		aux = aux+impar
+		printf ( "%.0f/%.0f\n", aux+impar,i+3);
+		acumulador = acumulador + ((aux+impar)/(i+3));
+		
+		aux = aux+impar;
+		impar = impar+2;
 	}
-		return aux;
+		return acumulador;
 }
 
 int main ( int argc, char *argv[] )
 {
-	iterate_number(3);
+	int qtdseq;
+	printf ( "Digite a quantidade de seq..\n" );
+	scanf ( "%d", &qtdseq );
+	printf("Somatorio da sequencia = %.2f\n", iterate_number(qtdseq));
 	return 0;
 }				/* ----------  end of function main  ---------- */
 
