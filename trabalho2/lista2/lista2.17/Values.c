@@ -1,3 +1,24 @@
+/*
+Programação de Computadores e Algoritmos
+
+Teste 3
+
+Lista 2
+
+Grupo:
+
+	Delrick Oliveira
+	Gabriel Faraco
+	Jackson Kelvin
+	Manoel Victor
+	Rai Santos 
+	Sergio Pinheiro
+
+*/
+
+
+
+
 #include <stdio.h>
 #include "util.h"
 
