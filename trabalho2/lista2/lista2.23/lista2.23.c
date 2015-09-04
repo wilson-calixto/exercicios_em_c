@@ -12,10 +12,10 @@
  *  */
 
 
-
+#include        "iterate_number.h"
 #include	<stdio.h>
 
-float iterate_number(int num)
+/*float iterate_number(int num)
 {	
 	float aux=1, impar, i;
 	float acumulador = 0;
@@ -29,7 +29,7 @@ float iterate_number(int num)
 	}
 		return acumulador;
 }
-
+*/
 int main ( int argc, char *argv[] )
 {
 	int qtdseq;
