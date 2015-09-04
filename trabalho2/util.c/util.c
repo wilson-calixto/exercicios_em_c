@@ -18,6 +18,11 @@ int calc_pow(int x, int z)
     return pot;
 }
 
+/* Faz a contagem de numero inteiros digitados 
+ * Ex: 1234 a função retornará  4  
+ *     0    a função retornará  1
+ *     -999 a função retornará  3 */ 
+
 int qtd_num(int num)
 {
     int contador;
