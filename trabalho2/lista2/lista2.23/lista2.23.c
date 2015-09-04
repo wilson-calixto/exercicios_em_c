@@ -1,7 +1,7 @@
 /* 
  *  Programação de Computadores e Algoritmos
  *  Trabalho 2
- *  Questão 1.8
+ *  Questão 2.23
  *  Equipe: Benjamin Borges
  *  Davi Tavares
  *  Paulo Henrique 
