@@ -1,3 +1,17 @@
+/* Programação de computadores e algoritmos
+ *
+ * trabalho 2
+ * questão 5
+ *
+ * equipe:
+ *          Jackson Kelvin
+ *          Delrick
+ *          Manoel
+ *          Gabriel Faraco
+ *          Sérgio
+ *          Raí
+ *              */
+
 #include <stdio.h>
 
 /*function to subtraction*/
