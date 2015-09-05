@@ -4,18 +4,19 @@
  * e retorna um inteiro pot
  */
 
-int calc_pow(int x, int z)
+float calc_pow(float x, float z)
 {
-    int i, pot;
+    int i;
+    float pow;
 
-    pot=1;
+    pow=1.0;
 
     for ( i = 0; i < z; i++ )
     {
-        pot*=x;
+        pow*=x;
     }
 
-    return pot;
+    return pow;
 }
 
 /* Faz a contagem de numero inteiros digitados 
@@ -43,7 +44,6 @@ int qtd_num(int num)
      }
 }
 
-
 /* verifica se um numero inteiro e perfeito*/
 
 int is_perfect(int num)
@@ -65,20 +65,17 @@ int is_perfect(int num)
 	}		
 }
 
-
 /*  recebe um numero float entre 0  e 1 e devolve sua arco tangente  */
-
-
 
 float arctan(float x)
 {
-	float resposta=0,valor;
+	float resposta=0.0,valor;
 	int e=1,i=1;
 	
 	do{
-		valor=power(x,i)/i;
+		valor=(calc_pow(x,i))/i;
 
-		if(e%2==0)
+		if(e%i==0)
 		{
 			resposta=resposta-valor;
 		}else{
@@ -87,28 +84,12 @@ float arctan(float x)
 		e++;		
 		i=i+2;
 		
-
 		}while(valor>0.0001);
 	
-
 	return resposta;
 }
 
-
-/* recebe x e y float´s e retorna um float de x elevado a y  */
-float power(float x,float y)
-{
-	int i;
-	float k=1;
-	for(i=1;i<=y;i++)
-	{
-		k=k*x;
-	}
-	return k;
-}
-
 /*recebe 2 coordenadas do plano cartesiano em float e retorna o ângulo formado pelo vetor (x,y) e o eixo horizontal.*/
-
 
 float alfa(float x, float y)
 {
@@ -129,7 +110,6 @@ int serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho
 {
     int i,j;
 
-
     for(i=1;i<=n;i++)//laco externo indica o tamanho da serie
     {
         for(j=1;j<=i;j++)//laco interno indica a quantidade de numeros em cada linha da serie
@@ -139,7 +119,3 @@ int serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho
         printf ("\n");
     }
 }
-
-
-
-
