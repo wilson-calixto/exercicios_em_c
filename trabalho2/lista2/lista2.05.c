@@ -14,6 +14,9 @@
 
 #include <stdio.h>
 
+/* uma função de subtração */
+/* nesta questão apenas para subtrair os segundos */
+
 /*function to subtraction*/
 int subtraction(int num1, int num2)
 {
@@ -22,16 +25,19 @@ int subtraction(int num1, int num2)
     return aux;
 }
 
-/*function seconds to hours*/
+/* função para converter segundos em horas */
 
+/*function seconds to hours*/
 int sec_hours(int sec)
 {
 	int hour;
 	hour = sec/3600;
 	return hour;
 }
-/*function seconds to minutes*/
 
+/* função que converte segundos em minutos */
+
+/*function seconds to minutes*/
 int sec_minutes(int sec)
 {
 	int min;
@@ -39,6 +45,7 @@ int sec_minutes(int sec)
 	return min;
 }
 
+/* função principal*/
 int main(int argc, const char *argv[])
 {
     int seconds, hours, minutes, aux1, aux2, sec;
