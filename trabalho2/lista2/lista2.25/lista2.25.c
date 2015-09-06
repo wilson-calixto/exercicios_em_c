@@ -19,16 +19,16 @@
 int main ( int argc, const char *argv[] )
 {
     
-    int x,z,result;
+    float x,z,result;
 
     printf ( "\nInforme o base: " );
-    scanf ( "%d", &x );
+    scanf ( "%f", &x );
     printf ( "\nDigite o expoente: " );
-    scanf ( "%d", &z );
+    scanf ( "%f", &z );
 
     result=calc_pow(x,z);
 
-    printf ( "\nPotencia de %d**%d=%d",x,z,result );
+    printf ( "\nPotencia de %f**%f=%f",x,z,result );
     printf ( "\n" );
     
     return 0;
