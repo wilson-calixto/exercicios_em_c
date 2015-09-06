@@ -13,26 +13,8 @@
  *          Wilson 
  */
 
-/* Funcao para realizar o somatorio de n numeros */
-
 #include <stdio.h>
-
-int calc_sum(int n)
-{
-    int i,sum,num;
-
-    sum=0;
-    
-    for ( i = 1; i <= n; i++ )
-    {
-        printf ( "\nInforme o valor %d:", i );
-        scanf ( "%d", &num );
-        sum+=num;
-    }
-
-    return sum;
-}
-
+#include "function.h"
 int main ( int argc, const char *argv[] )
 {
     int result,n;
@@ -43,6 +25,7 @@ int main ( int argc, const char *argv[] )
     result=calc_sum(n);
 
     printf ( "\nSomatorio: %d", result );
+    printf ( "\n" );
     
     return 0;
 }
