@@ -14,6 +14,8 @@
  *
  * / */
  
+ #include <stdio.h>
+ 
  float somaImposto(float taxaImposto, float custo)
  {
  	float novoValor;
