@@ -19,7 +19,7 @@
  float somaImposto(float taxaImposto, float custo)
  {
  	float novoValor;
- 	novoValor = custo + (custo*taxaImposto);	
+ 	novoValor = custo + (custo*(taxaImposto)/100);	
  	return novoValor;	
  }
  
@@ -28,7 +28,7 @@
  {
  	
  	float taxa, custo, novoCusto;
- 	printf("Digite a Taxa do Imposto de acordo como formato: ");
+ 	printf("Digite a Taxa do Imposto: ");
  	scanf("%f",&taxa);
  	printf("Digite o custo do item: ");  	
  	scanf("%f",&custo);
