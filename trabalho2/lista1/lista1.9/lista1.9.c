@@ -27,7 +27,7 @@ void inversoNumero(int num)
 
 int main()
 {
-	int i, tam,numero
+	int i, tam,numero;
 	scanf("%d",&numero);
 	inversoNumero(numero);
 	printf("\n");
