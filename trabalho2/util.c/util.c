@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /* 
  * Função para calcular a potencia
  * recebe dois inteiros x e z
