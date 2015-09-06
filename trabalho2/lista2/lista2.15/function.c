@@ -1,7 +1,8 @@
 #include <stdio.h>
-/* Função para calcular a somatória de um úmero
+/* Função para calcular a media de numeros digitados
  * não recebe nenhum parametro
- * retirna um float
+ * a funcao encerra quando se digita o valor o
+ * e retorna um float
  */
 float calc_mean()
 {
