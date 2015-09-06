@@ -13,14 +13,14 @@
  *          Wilson Calisto 
  */
 #include <stdio.h>
-int prova()
+int calculation_tests() /*  Algoritimo para o calculo de provas com base nas duas melhores notas */
 {
-    float nota1, nota2, nota3;
-    float maior, menor, media, mediatotal, mediamelhor;
+    float nota1, nota2, nota3; /*  variaveis para as provas */
+    float maior, menor, media, mediatotal, mediamelhor; /*  variaveis para as medias, media total das 3 provas das duas melhores */
     scanf("%f", &nota1);
-    scanf("%f", &nota2);
+    scanf("%f", &nota2); /*  input das notas */
     scanf("%f", &nota3);
-    if (nota1 > nota2 && nota1 > nota3)
+    if (nota1 > nota2 && nota1 > nota3) /*  processo para determinar a menor, a maior e a nota intermediaria */
     {
         maior = nota1;
     
@@ -79,7 +79,7 @@ int prova()
 
 int main(int argv, const char *argc[])
 {
-    prova();
+    calculation_tests();
     return 0;
 
 
