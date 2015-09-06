@@ -14,30 +14,24 @@
  *
  */
 
-
-
-
 #include<stdio.h>
-
-int is_perfect(int num);
+#include "../util.c/util.h"
 
 int main()
 {
+    int i;
 
+    for ( i = 1; i <= 1000; i += 1 )
+    {
+        
+        if ( is_perfect(i) ) 
+        {
+            printf ( "%d\n",i );
+        }
+
+    }
 
 	return 0;
 }
 
-int is_perfect(int num)
-{
-	int i,acm,vet[10];
-	acm=0;
-	for(i=1;i<num;i++)
-	{
-		if(num%i==0)
-		{
-			vet[i]=acm;			
-			acm=acm+i;
-		}	
-	}		
-}
+
