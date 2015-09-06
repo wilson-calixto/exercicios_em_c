@@ -9,7 +9,7 @@
  *          Manoel
  *          Gabriel Faraco
  *          Sérgio
- *          Raí
+ *  Autor = Raí
  *              */
 
 #include <stdio.h>
