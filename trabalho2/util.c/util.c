@@ -4,12 +4,11 @@
  * e retorna um inteiro pot
  */
 
-float calc_pow(float x, float z)
+int calc_pow(int x, int z)
 {
-    int i;
-    float pow;
+    int i, pow;
 
-    pow=1.0;
+    pow=1;
 
     for ( i = 0; i < z; i++ )
     {
@@ -19,10 +18,12 @@ float calc_pow(float x, float z)
     return pow;
 }
 
-/* Faz a contagem de numero inteiros digitados 
+/* 
+ * Faz a contagem de numero inteiros digitados 
  * Ex: 1234 a função retornará  4  
  *     0    a função retornará  1
- *     -999 a função retornará  3 */ 
+ *     -999 a função retornará  3 
+ */ 
 
 int qtd_num(int num)
 {
@@ -44,7 +45,10 @@ int qtd_num(int num)
      }
 }
 
-/* verifica se um numero inteiro e perfeito*/
+/* 
+ * Verifica se um numero inteiro e perfeito
+ * Reebe um inteiro e retorta 1 ou 0
+ */
 
 int is_perfect(int num)
 {
@@ -106,7 +110,7 @@ float alfa(float x, float y)
 }
 
 /*forma uma serie de numeros em ordem crescente em n linhas*/
-int serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
+void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
 {
     int i,j;
 

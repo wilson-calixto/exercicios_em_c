@@ -14,21 +14,21 @@
  */
 
 #include <stdio.h>
-#include "../../util.c/util.h" /*retorna 2 niveis acima do diretorio*/
+#include "../../util.c/util.h" /*biblioteca util*/
 
 int main ( int argc, const char *argv[] )
 {
     
-    float x,z,result;
+    int x,z,result;
 
     printf ( "\nInforme o base: " );
-    scanf ( "%f", &x );
+    scanf ( "%d", &x );
     printf ( "\nDigite o expoente: " );
-    scanf ( "%f", &z );
+    scanf ( "%d", &z );
 
     result=calc_pow(x,z);
 
-    printf ( "\nPotencia de %.0f**%.0f=%.0f",x,z,result );
+    printf ( "\nPotencia de %d**%d=%d",x,z,result );
     printf ( "\n" );
     
     return 0;
