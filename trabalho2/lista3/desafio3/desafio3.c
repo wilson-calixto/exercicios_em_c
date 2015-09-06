@@ -1,7 +1,7 @@
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
- * lista2.25.c
+ * desafio3.c
  * 
  * Equipe:
  * 
