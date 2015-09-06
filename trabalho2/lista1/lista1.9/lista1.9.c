@@ -16,20 +16,32 @@
  
 #include <stdio.h>
 
+/*Procedimento para a impressão de um número invertido*/
 void inversoNumero(int num)
 {
-	while(num!=0)
+	while(num!=0) /*Verifica se o quociente de um número dividido por 10 é maior que zero*/
 	{
-		printf("%d",num%10);
+		/* Imprime sempre o resto do número por 10 */
+		printf("%d",num%10); 
+		
+		/*Decrementa o número dividindo o seu valor por 10*/
 		num/=10;
 	}
 }
 
 int main()
 {
+	/*Declaração de variáveis*/
 	int i, tam,numero;
+	
+	/*Recebendo os valores de entrada*/
+	printf("Digite um Numero: ");
 	scanf("%d",&numero);
+	
+	/*Imprimindo o reverso do numero digitado*/
+	printf("Inverso do numero %d eh: ",numero);
 	inversoNumero(numero);
+	
 	printf("\n");
 	return 0;
 } 
