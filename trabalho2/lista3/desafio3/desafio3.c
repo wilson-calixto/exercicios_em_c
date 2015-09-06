@@ -15,7 +15,7 @@
  */
 
 #include<stdio.h>
-#include "../util.c/util.h"
+#include "../../util.c/util.h"
 
 int main()
 {
