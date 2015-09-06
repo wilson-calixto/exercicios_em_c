@@ -28,7 +28,7 @@ int main ( int argc, const char *argv[] )
 
     result=calc_pow(x,z);
 
-    printf ( "\nPotencia de %f**%f=%f",x,z,result );
+    printf ( "\nPotencia de %.0f**%.0f=%.0f",x,z,result );
     printf ( "\n" );
     
     return 0;
