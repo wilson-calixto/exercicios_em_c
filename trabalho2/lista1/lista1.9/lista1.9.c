@@ -15,18 +15,21 @@
  * / */
  
 #include <stdio.h>
-#include <string.h>
+
+void inversoNumero(int num)
+{
+	while(num!=0)
+	{
+		printf("%d",num%10);
+		num/=10;
+	}
+}
 
 int main()
 {
-	int i, tam;
-	char numero[1000];
-	scanf("%s",numero);
-	tam = strlen(numero);
-	for(i=tam;i--;)
-	{
-		printf("%c",numero[i]);
-	}
+	int i, tam,numero
+	scanf("%d",&numero);
+	inversoNumero(numero);
 	printf("\n");
 	return 0;
 } 
