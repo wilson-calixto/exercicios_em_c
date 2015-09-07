@@ -44,7 +44,7 @@ int main(int argc, const char *argv[])
     {
         if(num1 > num2)
         {
-            printf("%d é segmento de %d \n",num1, num2);
+            printf("%d é segmento de %d \n",num2, num1);
         }
         else
         {
