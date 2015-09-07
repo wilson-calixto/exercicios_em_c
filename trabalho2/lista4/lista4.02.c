@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int encaixa(int a, int b) 
+int fits(int a, int b) 
 {
     while (b != 0 && a%10 == b%10) 
     {
@@ -36,7 +36,7 @@ int main(int argc, const char *argv[])
     val = 0;
     while (maior >= menor) 
     {
-        if (encaixa(maior,menor) == 1)
+        if (fits(maior,menor) == 1)
             val = 1;
         maior = maior/10;
     }
