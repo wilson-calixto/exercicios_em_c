@@ -30,7 +30,7 @@
  	scanf("%f",&custo);
  	
  	// Chamando a função para alterar o custo atual
- 	novoCusto = somaImposto(taxa, custo);
+ 	novoCusto = soma_imposto(taxa, custo);
  	
  	//Imprimindo o valor antigo e o novo valor
  	printf("O novo valor de %.2f eh %.2f: ",custo,novoCusto);
