@@ -1,3 +1,16 @@
+/*Progrmação de Computadores e Algoritmos
+
+ *Trabalho 2
+ *Lista 4, questão 2
+ *
+ *Equipe:
+ *	Jackson Kelvin
+ *	Delrick
+ *	Manoel
+ *	Gabriel Faraco
+ *	Sérgio
+ *	Raí                       */
+
 #include <stdio.h>
 
 int fits(int a, int b) 
