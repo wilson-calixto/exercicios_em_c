@@ -15,8 +15,7 @@
 
 
 #include <stdio.h>
-#include "mdc.c"
-
+#include "../../util.c/util.h"
 
 int main (int argc, const char *charv[])
 {
