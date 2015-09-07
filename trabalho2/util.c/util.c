@@ -128,7 +128,9 @@ void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanh
 
 /* Verifiva se x é maior que y
 	caso for maior ou igual, retorna 1;
-	caso contrario, retorna 0. */
+	caso contrario, retorna 0.
+	
+	feito por SergioPinheiro*/
 	
 int is_higher(int x, int y)
 {
@@ -137,7 +139,9 @@ int is_higher(int x, int y)
     else return 0;
 }
 
-/* Retorna o MDC de dois números */
+/* Retorna o MDC de dois números
+	
+	feito por SergioPinheiro*/
 
 int mdc (int x, int y)
 {
@@ -166,4 +170,17 @@ int mdc (int x, int y)
     } while (res != 0);
 
     return den;
+}
+
+/* Verifica se o valor de x é par
+	caso seja, retorna 1;
+	caso contrario, retorna 0.
+	
+	feito por Sergio Pinheiro*/
+	
+int is_pair (int x)
+{
+    if (x%2==0) return 1;
+
+    else return 0;
 }
