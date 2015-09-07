@@ -125,3 +125,14 @@ void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanh
         printf ("\n");
     }
 }
+
+/* Verifiva se x é maior que y
+	caso for maior ou igual, retorna 1;
+	caso contrario, retorna 0. */
+	
+int is_higher(int x, int y)
+{
+    if(x>=y) return 1;
+
+    else return 0;
+}
