@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 //Procedimento para a impressão de um número invertido
 void reverse_number(int num)
 {

@@ -13,6 +13,7 @@
  * * / */
  
 #include <stdio.h>
+#include <"util.h">
 
 int main()
 {
@@ -25,7 +26,7 @@ int main()
 	
 	//Imprimindo o reverso do numero digitado
 	printf("Inverso do numero %d eh: ",numero);
-	inversoNumero(numero);
+	reverse_number(numero);
 	
 	printf("\n");
 	return 0;

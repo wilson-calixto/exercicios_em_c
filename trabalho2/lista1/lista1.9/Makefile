@@ -1,8 +1,8 @@
-divisores: divisores.o conta_div.o
-	gcc divisores.o conta_div.o -o divisores
-divisores.o: divisores.c
-	gcc -c divisores.c
-divisores.o: conta_div.c util.h
-	gcc -c conta_div.c
+reverse_number: lista1.9.o reverse_number.o
+	gcc lista1.9.o reverse_number -o lista1.9
+reverse_number.o: lista1.9.c
+	gcc -c lista1.9.c
+reverse_number.o: reverse_number util.h
+	gcc -c reverse_number.c
 clean:
 	rm *.o
