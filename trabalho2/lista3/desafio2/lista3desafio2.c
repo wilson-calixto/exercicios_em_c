@@ -4,7 +4,7 @@
  * lista3desafio2.c
  *
  * Equipe:
- *	Sergio Pinheiro
+ *  Sergio Pinheiro
  *  Delrick Oliveira
  *  Jackson Kevin
  *  Manoel Victor
