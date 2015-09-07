@@ -29,7 +29,7 @@ int main(int argc, const char *argv[])
     }
     else 
     {
-        maior = num2
+        maior = num2;
         menor = num1;
     }    
 
