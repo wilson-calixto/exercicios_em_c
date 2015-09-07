@@ -30,7 +30,7 @@ int serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho
 
 int main (int argc, const char *argv[])
 {
-    int n; /*  reduzindo o uso de variaveis  */
+    int n; /*  reduzindo o uso de variaveis desnecessarias */
     serie_repetition(n);
     return 0;
 }
