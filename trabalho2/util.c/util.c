@@ -136,3 +136,34 @@ int is_higher(int x, int y)
 
     else return 0;
 }
+
+/* Retorna o MDC de dois números */
+
+int mdc (int x, int y)
+{
+    int num, den, res; 
+
+    if (is_higher(x,y))
+    {
+        num = x;
+        den = y;
+    }
+    else
+    {
+        num = y;
+        den = x;
+    }
+
+    do
+    {
+        res = num%den;
+        
+        if (res !=0)
+        {
+            num = den;
+            den = res;
+        }
+    } while (res != 0);
+
+    return den;
+}
