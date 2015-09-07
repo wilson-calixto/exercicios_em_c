@@ -125,3 +125,45 @@ void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanh
         printf ("\n");
     }
 }
+
+/* Verifiva se x é maior que y
+	caso for maior ou igual, retorna 1;
+	caso contrario, retorna 0. */
+	
+int is_higher(int x, int y)
+{
+    if(x>=y) return 1;
+
+    else return 0;
+}
+
+/* Retorna o MDC de dois números */
+
+int mdc (int x, int y)
+{
+    int num, den, res; 
+
+    if (is_higher(x,y))
+    {
+        num = x;
+        den = y;
+    }
+    else
+    {
+        num = y;
+        den = x;
+    }
+
+    do
+    {
+        res = num%den;
+        
+        if (res !=0)
+        {
+            num = den;
+            den = res;
+        }
+    } while (res != 0);
+
+    return den;
+}
