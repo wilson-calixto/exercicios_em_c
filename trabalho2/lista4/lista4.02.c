@@ -51,7 +51,7 @@ int main(int argc, const char *argv[])
     {
         if (fits(maior,menor) == 1)
             val = 1;
-        maior = maior/10;
+        maior/=10;
     }
     if (val == 1)
     {
