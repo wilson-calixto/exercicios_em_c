@@ -3,21 +3,18 @@
 /* 
  * Função para calcular a potencia
  * recebe dois inteiros x e z
- * e retorna um inteiro pot
+ * e retorna um float pot
  */
 
-int calc_pow(int x, int z)
+float power(float x,float y)
 {
-    int i, pow;
-
-    pow=1;
-
-    for ( i = 0; i < z; i++ )
-    {
-        pow*=x;
-    }
-
-    return pow;
+	int i;
+	float k=1;
+	for(i=1;i<=y;i++)
+	{
+		k=k*x;
+	}
+	return k;
 }
 
 /* 
@@ -69,46 +66,6 @@ int is_perfect(int num)
 	}else{
 		return 0;
 	}		
-}
-
-/*  recebe um numero float entre 0  e 1 e devolve sua arco tangente  */
-
-float arctan(float x)
-{
-	float resposta=0.0,valor;
-	int e=1,i=1;
-	
-	do{
-		valor=(calc_pow(x,i))/i;
-
-		if(e%i==0)
-		{
-			resposta=resposta-valor;
-		}else{
-			resposta+=valor;
-		}
-		e++;		
-		i=i+2;
-		
-		}while(valor>0.0001);
-	
-	return resposta;
-}
-
-/*recebe 2 coordenadas do plano cartesiano em float e retorna o ângulo formado pelo vetor (x,y) e o eixo horizontal.*/
-
-float alfa(float x, float y)
-{
-	float pi=3.14,aux,radianos;
-	if(y<x)
-	{
-		aux=y/x;
-		radianos=arctan(aux);
-	}else{
-		aux=(x/y);
-		radianos=pi/2-arctan(aux);
-	}	
-	return (180*radianos)/pi;
 }
 
 /*forma uma serie de numeros em ordem crescente em n linhas*/
@@ -185,21 +142,6 @@ int is_pair (int x)
     else return 0;
 }
 
-/*função que verifica se um numero b "encaixa" em um numero a
- *ou seja, se os dígitos de b, correspondem aos ultimos dígitos de a*/
-
-int fits(int a, int b) 
-{
-    while (b != 0 && a%10 == b%10) 
-    {
-        a = a/10;
-        b = b/10;
-    }
-    if (b == 0)
-        return 1;
-    else
-        return 0;
-}
 
 /*função que verifica se o numero é positivo ou negativo*/
 int is_positive (int x)

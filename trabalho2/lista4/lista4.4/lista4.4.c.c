@@ -1,12 +1,29 @@
+
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 2
+ * lista3 questao 4 letra c.
+ * 
+ * Equipe:
+ * 
+ *      Ewerton
+ *      Hermann
+ *      Jailson
+ *      Lucas
+ *      Richardson
+ *      Wilson 
+ *
+
+		
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
-/* lista 3 questao 4 letra c */
-
-
+#include"../util.c/util.h"
 
 float alfa(float x, float y);
 float arctan(float numero);
-float potencia(float x,float y);
+
 float s_sort(float *vetor1,float n);
 
 
@@ -26,7 +43,7 @@ int main()
 		if(x>=0 && y>=0)	
 		{
 			vet[i]=alfa(x,y);
-			
+						
 			
 		}else{
 			printf("O valor digitado é invalido");
@@ -44,15 +61,23 @@ int main()
 
 float alfa(float x, float y)
 {
-	float pi=3.14,aux;
+	float pi=3.14,aux,radianos;
+	if(x==0 &&y==0)
+	{	
+		return -1;	
+
+	}
+
+
 	if(y<x)
 	{
 		aux=y/x;
-		return arctan(aux);
+		radianos=arctan(aux);
 	}else{
 		aux=(x/y);
-		return pi/2-arctan(aux);
+		radianos=pi/2-arctan(aux);
 	}	
+	return (180*radianos)/pi;
 }
 
 float arctan(float x)
@@ -60,7 +85,7 @@ float arctan(float x)
 	float resposta=0,pi=3.14,valor;
 	int e=1,i=1;
 	do{
-		valor=potencia(x,i)/i;
+		valor=calc_pow(x,i)/i;
 
 		if(e%2==0)
 		{
@@ -74,16 +99,7 @@ float arctan(float x)
 	return resposta;
 }
 
-float potencia(float x,float y)
-{
-	int i;
-	float k=1;
-	for(i=1;i<=y;i++)
-	{
-		k=k*x;
-	}
-	return k;
-}
+
 
 
 
