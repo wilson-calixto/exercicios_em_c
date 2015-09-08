@@ -1,35 +1,20 @@
-/*Progrmação de Computadores e Algoritmos
-
- *Trabalho 2
- *Lista 4, questão 2
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 2
+ * |FILENAME|
  *
- *Equipe:
- *	Jackson Kelvin
- *	Delrick
- *	Manoel
- *	Gabriel Faraco
- *	Sérgio
- *	Raí                       */
+ * Equipe:
+ *
+ *          Jackson Kelvin
+ *          Sergio Alexandre
+ *          Grabriel Faraco
+ *          Manoel Florencio
+ *          Rai Santos
+ *          Delrick Oliveira 
+ */
 
 #include <stdio.h>
-
-/*função que verifica se um numero b "encaixa" em um numero a
- *ou seja, se os dígitos de b, correspondem aos ultimos dígitos de a*/
-
-int fits(int a, int b) 
-{
-    while (b != 0 && a%10 == b%10) 
-    {
-        a = a/10;
-        b = b/10;
-    }
-    if (b == 0)
-        return 1;
-    else
-        return 0;
-}
-
-/*função principal*/
+#include "funcao.h"
 
 int main(int argc, const char *argv[]) 
 {
@@ -40,16 +25,8 @@ int main(int argc, const char *argv[])
     printf("Insira um numero: \n");
     scanf("%d", &num2);
             
-    if (num1 > num2) 
-    {
-        maior = num1;
-        menor = num2;
-    }
-    else 
-    {
-        maior = num2;
-        menor = num1;
-    }    
+    maior = big(num1, num2);
+    menor = small(num1, num2);
 
     val = 0;
     while (maior >= menor) 
