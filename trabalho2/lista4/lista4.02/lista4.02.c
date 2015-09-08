@@ -1,15 +1,17 @@
-/*Progrmação de Computadores e Algoritmos
-
- *Trabalho 2
- *Lista 4, questão 2
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 2
+ * |FILENAME|
  *
- *Equipe:
- *	Jackson Kelvin
- *	Delrick
- *	Manoel
- *	Gabriel Faraco
- *	Sérgio
- *	Raí                       */
+ * Equipe:
+ *
+ *          Jackson Kelvin
+ *          Sergio Alexandre
+ *          Grabriel Faraco
+ *          Manoel Florencio
+ *          Rai Santos
+ *          Delrick Oliveira 
+ */
 
 #include <stdio.h>
 #include "funcao.h"
