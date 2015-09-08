@@ -16,16 +16,13 @@
  *      Wilson 
  *
 
-
-		falta ver o caso x=0e y=0
  */
 
 #include<stdio.h>
-
+#include"../util.c/util.h"
 
 float alfa(float x, float y);
 float arctan(float numero);
-float power(float x,float y);
 
 
 int main()
@@ -52,6 +49,13 @@ scanf("%f",&y);
 float alfa(float x, float y)
 {
 	float pi=3.14,aux,radianos;
+	if(x==0 &&y==0)
+	{	
+		return -1;	
+
+	}
+
+
 	if(y<x)
 	{
 		aux=y/x;
@@ -62,10 +66,6 @@ float alfa(float x, float y)
 	}	
 	return (180*radianos)/pi;
 }
-
-
-
-
 
 float arctan(float x)
 {
@@ -85,20 +85,4 @@ float arctan(float x)
 		}while(valor>0.0001);
 	return resposta;
 }
-
-float power(float x,float y)
-{
-	int i;
-	float k=1;
-	for(i=1;i<=y;i++)
-	{
-		k=k*x;
-	}
-	return k;
-}
-
-
-
-
-
 

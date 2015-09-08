@@ -20,9 +20,9 @@
 
 
 #include<stdio.h>
+#include "../util.c/util.h"
 
 float arctan(float numero);
-float power(float x,float y);
 
 int main()
 {
@@ -65,19 +65,3 @@ float arctan(float x)
 
 	return resposta;
 }
-
-
-
-float power(float x,float y)
-{
-	int i;
-	float k=1;
-	for(i=1;i<=y;i++)
-	{
-		k=k*x;
-	}
-	return k;
-}
-
-
-

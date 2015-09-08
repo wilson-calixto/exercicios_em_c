@@ -1,3 +1,4 @@
+
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
@@ -13,16 +14,16 @@
  *      Wilson 
  *
 
-		falta ver o caso x=0e y=0
+		
  */
 
 #include<stdio.h>
 #include<stdlib.h>
-
+#include"../util.c/util.h"
 
 float alfa(float x, float y);
 float arctan(float numero);
-float power(float x,float y);
+
 float s_sort(float *vetor1,float n);
 
 
@@ -61,6 +62,13 @@ int main()
 float alfa(float x, float y)
 {
 	float pi=3.14,aux,radianos;
+	if(x==0 && y==0)
+	{	
+		return -1;	
+
+	}
+
+
 	if(y<x)
 	{
 		aux=y/x;
@@ -91,16 +99,7 @@ float arctan(float x)
 	return resposta;
 }
 
-float power(float x,float y)
-{
-	int i;
-	float k=1;
-	for(i=1;i<=y;i++)
-	{
-		k=k*x;
-	}
-	return k;
-}
+
 
 
 
