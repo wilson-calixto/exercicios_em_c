@@ -9,7 +9,7 @@ void celsius (float x)
 
 void farenheit (float x)
 {
-    float f;
+   float f;
     f = ( 9*x/5 ) + 32;
     printf ( "%.2f\n",f);//resultado em Farenheit
 }
