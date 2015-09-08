@@ -19,18 +19,18 @@ int main ( int argc, const char *argv[] )
 {
     int temperature;
     float number;
-    printf ( "digite 1 para celsius e 2 para farenheit: \n" );
+    printf ( "digite 1 para converter de farenheit para celsius e 2 para converter de celsius para farenheit:\n" );
     scanf ( "%d", &temperature );
     switch (temperature)
     {
         case 1:
-            printf("temperatura:\n");
+            printf("temperatura F°:\n");
             scanf ( "%f", &number );
             celsius(number);
             break;
 
         case 2:
-            printf("temperatura:\n");
+            printf("temperatura C°:\n");
             scanf ( "%f", &number );
             farenheit(number);
             break;
