@@ -1,16 +1,17 @@
-/* Programação de computadores e algoritmos
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 2
+ * |lista 2.05|
  *
- * trabalho 2
- * questão 5
+ * Equipe:
  *
- * equipe:
  *          Jackson Kelvin
- *          Delrick
- *          Manoel
- *          Gabriel Faraco
- *          Sérgio
- *  Autor = Raí
- *              */
+ *          Sergio Alexandre
+ *          Grabriel Faraco
+ *          Manoel Florencio
+ *          Rai Santos
+ *          Delrick Oliveira 
+ */
 
 #include <stdio.h>
 #include "funcao.h"
