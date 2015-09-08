@@ -9,4 +9,5 @@ float s_sort(float *vetor1,float n);
 int is_higher(int x, int y);
 int mdc (int x, int y);
 int is_pair(int x);
-int fits(int a, int b)
+int fits(int a, int b);
+int is_positive (int x);

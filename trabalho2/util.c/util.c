@@ -201,3 +201,11 @@ int fits(int a, int b)
         return 0;
 }
 
+/*função que verifica se o numero é positivo ou negativo*/
+int is_positive (int x)
+{
+	if (x > 0)
+		return 1;
+	else
+		return 0;
+}
