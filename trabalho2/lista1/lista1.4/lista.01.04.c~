@@ -8,7 +8,7 @@ int main(int argc, const char *argv[])
     printf ( "digite um numero:\n" );
     scanf ( "%d", &num);
 
-    if (is_positive(num)==1)
+    if (is_positive(num))
     {
         printf ( "P\n" );
     }
