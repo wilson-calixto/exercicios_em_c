@@ -17,21 +17,21 @@
 //faz converão de temperatura de celsius para farenheit e farenheit/celsius.
 int main ( int argc, const char *argv[] )
 {
-    int type;
+    int temperature;
     float number;
-    printf ( "escolha entre 1-celsius e 2-farenheit: \n" );
-    scanf ( "%d", &type );
-    switch (type)
+    printf ( "digite 1 para celsius e 2 para farenheit: \n" );
+    scanf ( "%d", &temperature );
+    switch (temperature)
     {
         case 1:
             printf("temperatura:\n");
-            scanf ( "%.2f", &number );
+            scanf ( "%f", &number );
             celsius(number);
             break;
 
         case 2:
             printf("temperatura:\n");
-            scanf ( "%.2f", &number );
+            scanf ( "%f", &number );
             farenheit(number);
             break;
    }
