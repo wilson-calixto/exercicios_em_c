@@ -18,7 +18,7 @@
 int main()
 {
 	//Declaração de variáveis
-	int i, tam,numero;
+	int i, tam,numero,value;
 	
 	//Recebendo os valores de entrada
 	printf("Digite um Numero: ");
@@ -26,7 +26,8 @@ int main()
 	
 	//Imprimindo o reverso do numero digitado
 	printf("Inverso do numero %d eh: ",numero);
-	reverse_number(numero);
+	value = reverse_number(numero);
+	printf("%d",value);
 	
 	printf("\n");
 	return 0;

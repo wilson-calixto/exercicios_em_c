@@ -1,1 +1,1 @@
-void reverse_number(int num);
+int reverse_number(int num);
