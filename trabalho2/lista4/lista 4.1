@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int contadigitos (int n, int d);
+_Bool ehPermutacao (int a, int b);
+
+int main (){
+  int a;
+  int b, d;
+    printf ("Digite o primeiro número:");
+    scanf ("%d", &a);
+    printf ("Digite o segundo número:");
+    scanf ("%d", &b);
+    prinf ("Digite um dígito a procurar:");
+    scanf ("%d", &d);
+    printf ("Repetições: %d\n", contadigitos (a, d));
+    if (ehPermutacao (a, b)){
+      printf ("Eh permutação!");
+    }else{
+      printf ("Não eh permutação!");
+    }
+  return 0;
+  }
+  
+  int contadigitos (int n, int d){
+    int resto = 0, cont = 0;
+    while (n != 0){
+      resto = n % 10;
+      n = n/10;
+      if (resto == d){
+        cont++;
+      }
+      return cont;
+    }
