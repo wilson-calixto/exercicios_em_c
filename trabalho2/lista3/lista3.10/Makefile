@@ -7,6 +7,6 @@ funcao.o:funcao.c
 lista3.10.o:lista3.10.c
 	gcc -c lista3.10.c
 clean:
-	rm -rf lista3.10 *.o
+	rm -rf *.o
 mrproper:clean
 	rm -rf lista3.10 *.o
