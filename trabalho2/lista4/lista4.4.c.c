@@ -40,13 +40,22 @@ int main()
 		scanf("%f",&x);
 		printf("Digite um valor para o y \n");
 		scanf("%f",&y);
-		if(x>=0 && y>=0)	
+
+		if(x==0 && y==0)
 		{
-			vet[i]=alfa(x,y);
+			printf("O valor digitado é invalido");
+			i--;
+
+		}else{
+			if(x>=0 && y>=0)	
+			{
+				vet[i]=alfa(x,y);
 						
 			
-		}else{
-			printf("O valor digitado é invalido");
+			}else{
+				printf("O valor digitado é invalido");
+				i--;
+			}
 		}
 	
 	}
