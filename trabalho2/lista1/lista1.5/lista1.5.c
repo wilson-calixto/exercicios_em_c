@@ -21,7 +21,7 @@
  {
  	
  	//Declaração das Variáveis
- 	float taxa, custo, novoCusto;
+ 	float taxa, custo, novo_custo;
  	
  	//Recebendo os valores de entrada do usuário
  	printf("Digite a Taxa do Imposto: ");
@@ -30,10 +30,10 @@
  	scanf("%f",&custo);
  	
  	// Chamando a função para alterar o custo atual
- 	novoCusto = soma_imposto(taxa, custo);
+ 	novo_custo = sum_imp(taxa, custo);
  	
  	//Imprimindo o valor antigo e o novo valor
- 	printf("O novo valor de %.2f eh %.2f: ",custo,novoCusto);
+ 	printf("O novo valor de %.2f eh %.2f: ",custo,novo_custo);
  	printf("\n");
  	return 0;
  }

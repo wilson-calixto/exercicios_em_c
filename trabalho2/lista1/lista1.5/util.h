@@ -1,1 +1,1 @@
-float soma_imposto(float taxaImposto, float custo);
+float sum_imp(float taxaImposto, float custo);
