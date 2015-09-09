@@ -1,0 +1,1 @@
+void primo (int total);
