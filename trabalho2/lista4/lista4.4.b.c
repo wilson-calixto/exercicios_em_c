@@ -18,6 +18,10 @@
 
  */
 
+
+/*   programa recebe 2 coordenadas devolve o angulo das coordenadas em relacao ao eixo horizontal  */
+
+
 #include<stdio.h>
 #include"../util.c/util.h"
 
@@ -34,13 +38,25 @@ printf("Digite um valor para o x \n");
 scanf("%f",&x);
 printf("Digie um valor para o y \n");
 scanf("%f",&y);
-	if(x>=0 && y>=0)	
+
+
+	/* retira as coordenadas invalidas */
+
+	if(x==0 && y==0)
 	{
-		printf("O valor é %f",alfa(x,y));
-	}else{
 		printf("O valor digitado é invalido");
-	}
+	}else{
+
+		if(x>=0 && y>=0)	
+		{
+
+			/*chama a funcao que calcula o angulo das coordenadas x e y */
 	
+			printf("O valor é %f",alfa(x,y));
+		}else{
+			printf("O valor digitado é invalido");
+		}
+	}
 
 	return 0;
 }

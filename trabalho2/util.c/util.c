@@ -151,3 +151,26 @@ int is_positive (int x)
 	else
 		return 0;
 }
+
+/*função que verifica se o numero é nulo*/
+int is_null(float x)
+{
+	if(x==0){
+		return 0;
+	}else{
+		return 1;
+	}
+}
+
+/*função que calcula o maior entre três numeros*/
+float biggest(float a,float b, float c)
+{
+	if((a>=b)&&(a>=c)){
+		return a;
+	}else if((b>=a)&&(b>=c)){
+		return b;
+	}else if((c>=b)&&(c>=a)){
+		return c;
+	}
+
+}
