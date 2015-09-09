@@ -1,7 +1,7 @@
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
- * lista2.25.c
+ * lista2.20.c
  *
  * Equipe:
  *
@@ -14,23 +14,18 @@
  */
 
 #include <stdio.h>
-#include "../../util.c/util.h" /*biblioteca util*/
-
+#include "function.h"
 int main ( int argc, const char *argv[] )
 {
+    int result,n;
+
+    printf ( "\nInforme um valor: " );
+    scanf ( "%d", &n );
     
-    int x,z,result;
+    result=calc_sum(n);
 
-    printf ( "\nInforme o base: " );
-    scanf ( "%d", &x );
-    printf ( "\nDigite o expoente: " );
-    scanf ( "%d", &z );
-
-    result=calc_pow(x,z);
-
-    printf ( "\nPotencia de %d**%d=%d",x,z,result );
+    printf ( "\nSomatorio: %d", result );
     printf ( "\n" );
     
     return 0;
-
 }
