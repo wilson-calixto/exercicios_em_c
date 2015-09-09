@@ -16,11 +16,6 @@
  
 #include <stdio.h>
 
-void retangulo(int linhas, int colunas)
-{
-	
-}
-
 int main()
 {
 	/*Declaração das variáveis*/
