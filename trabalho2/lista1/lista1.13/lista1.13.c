@@ -39,7 +39,8 @@ int main()
 		printf("Seus valores de entrada foram alterados para %d %d\n",novalinha, novacoluna);
 		
 		retangulo(novalinha,novacoluna);
-	
+		
+		printf("\n");
 	}
 	return 0;
 }
