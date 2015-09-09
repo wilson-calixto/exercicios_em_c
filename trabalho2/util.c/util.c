@@ -151,3 +151,13 @@ int is_positive (int x)
 	else
 		return 0;
 }
+
+/*função que verifica se o numero é nulo*/
+int is_null(float x)
+{
+	if(x==0){
+		return 0;
+	}else{
+		return 1;
+	}
+}
