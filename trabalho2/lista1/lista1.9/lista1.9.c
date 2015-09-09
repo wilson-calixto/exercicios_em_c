@@ -5,7 +5,7 @@
  * Questao 5
  *
  *\Equipe:  Elizabeth Castro
- *          Andreza Moreira
+ *          Andressa Moreira
  *          Juliany Raiol
  *          Luana Andrade
  *          Wilson Neto
@@ -18,7 +18,7 @@
 int main()
 {
 	//Declaração de variáveis
-	int i, tam,numero,value;
+	int numero,value;
 	
 	//Recebendo os valores de entrada
 	printf("Digite um Numero: ");

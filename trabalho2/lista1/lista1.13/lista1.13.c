@@ -15,11 +15,7 @@
  * / */
  
 #include <stdio.h>
-
-void retangulo(int linhas, int colunas)
-{
-	
-}
+#include "util.h"
 
 int main()
 {

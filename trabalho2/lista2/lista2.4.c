@@ -1,6 +1,6 @@
 /*
 * Programacao de Computadores e Algoritmos
-* Trabalho 3
+* Trabalho 2
 * Questao 2.4
 * Equipe: Benjamin Borges
 * Davi Tavares

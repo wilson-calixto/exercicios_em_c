@@ -12,8 +12,7 @@ Equipe:
 	Rodrigo Oliveira
 	
  */
-
-#include<stdio.h>
+#include <stdio.h>
 #include "util.h"
 
 int main(int argc, const char *argv)
@@ -21,5 +20,5 @@ int main(int argc, const char *argv)
     int num;
     printf("Insira um número para procurar divisores: \n");
     scanf("%d",&num);
-    printf("A quantidade de divisores do número %d é: %d\n",num,conta_div(num));
+    printf("A quantidade de divisores do número %d é: %d\n",num,div_cont(num));
 }

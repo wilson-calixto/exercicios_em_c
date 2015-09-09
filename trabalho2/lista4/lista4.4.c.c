@@ -1,12 +1,34 @@
+
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 2
+ * lista3 questao 4 letra c.
+ * 
+ * Equipe:
+ * 
+ *      Ewerton
+ *      Hermann
+ *      Jailson
+ *      Lucas
+ *      Richardson
+ *      Wilson 
+ *
+
+		
+ */
+
+
+
+
+/*   programa recebe n coordenadas calcula o angulo em relacao ao eixo horizontal de cada uma e devolve o menor angulo */
+
 #include<stdio.h>
 #include<stdlib.h>
-/* lista 3 questao 4 letra c */
-
-
+#include"../util.c/util.h"
 
 float alfa(float x, float y);
 float arctan(float numero);
-float potencia(float x,float y);
+
 float s_sort(float *vetor1,float n);
 
 
@@ -14,6 +36,10 @@ int main()
 {
 	int i,n;
 	float x,y,*vet;
+	
+	/* usa alocacao dinamica para descobrir o numero de loops e o tamanho do vetor */
+
+
 	printf("Digite o numero de loops\n");
 	scanf("%d",&n);
 	vet=malloc(n*sizeof(float));
@@ -23,18 +49,30 @@ int main()
 		scanf("%f",&x);
 		printf("Digite um valor para o y \n");
 		scanf("%f",&y);
-		if(x>=0 && y>=0)	
+
+	/* retira as coordenadas invalidas */
+
+		if(x==0 && y==0)
 		{
-			vet[i]=alfa(x,y);
-			
-			
-		}else{
 			printf("O valor digitado é invalido");
+			i--;
+
+		}else{
+			if(x>=0 && y>=0)	
+			{
+	/*chama a funcao que insere no vetor o angulo formado pelas coordenadas x e y */
+				vet[i]=alfa(x,y);
+						
+			
+			}else{
+				printf("O valor digitado é invalido");
+				i--;
+			}
 		}
 	
 	}
 
-
+	/* chama a funcao que retorna o menor valor do vetor */
 	
 	printf("O menor valor é %f",s_sort(vet,n));
 
@@ -44,15 +82,23 @@ int main()
 
 float alfa(float x, float y)
 {
-	float pi=3.14,aux;
+	float pi=3.14,aux,radianos;
+	if(x==0 && y==0)
+	{	
+		return -1;	
+
+	}
+
+
 	if(y<x)
 	{
 		aux=y/x;
-		return arctan(aux);
+		radianos=arctan(aux);
 	}else{
 		aux=(x/y);
-		return pi/2-arctan(aux);
+		radianos=pi/2-arctan(aux);
 	}	
+	return (180*radianos)/pi;
 }
 
 float arctan(float x)
@@ -60,7 +106,7 @@ float arctan(float x)
 	float resposta=0,pi=3.14,valor;
 	int e=1,i=1;
 	do{
-		valor=potencia(x,i)/i;
+		valor=power(x,i)/i;
 
 		if(e%2==0)
 		{
@@ -74,16 +120,7 @@ float arctan(float x)
 	return resposta;
 }
 
-float potencia(float x,float y)
-{
-	int i;
-	float k=1;
-	for(i=1;i<=y;i++)
-	{
-		k=k*x;
-	}
-	return k;
-}
+
 
 
 
