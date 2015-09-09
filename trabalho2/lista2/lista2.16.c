@@ -1,3 +1,14 @@
+/* 
+ *  Programação de Computadores e Algoritmos
+ *  Trabalho 2
+ *  Questão 2.16
+ *  Equipe: Wilson Neto
+ *  Julianny Raiol
+ *  Luana Andrade 
+ *  Elizabeth
+ *  
+ *  */
+
 #include <stdio.h>
 
 int fatorial(int n)
