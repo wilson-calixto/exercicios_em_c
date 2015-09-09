@@ -25,8 +25,8 @@ int main(int argc, const char *argv[])
     printf("Insira um numero: \n");
     scanf("%d", &num2);
             
-    maior = big(num1, num2);
-    menor = small(num1, num2);
+    maior = big(num1, num2); //funcao para verificar o maior numero
+    menor = small(num1, num2);//funcao para verificar o menor numero
 
     val = 0;
     while (maior >= menor) 
