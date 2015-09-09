@@ -161,3 +161,16 @@ int is_null(float x)
 		return 1;
 	}
 }
+
+/*função que calcula o maior entre três numeros*/
+float biggest(float a,float b, float c)
+{
+	if((a>=b)&&(a>=c)){
+		return a;
+	}else if((b>=a)&&(b>=c)){
+		return b;
+	}else if((c>=b)&&(c>=a)){
+		return c;
+	}
+
+}
