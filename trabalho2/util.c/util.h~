@@ -10,5 +10,3 @@ int is_higher(int x, int y);
 int mdc (int x, int y);
 int is_pair(int x);
 int is_positive (int x);
-int is_null(float x);
-float biggest(float a, float b, float c);
