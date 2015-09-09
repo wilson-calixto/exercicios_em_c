@@ -14,7 +14,7 @@
  */
 
 #include <stdio.h>
-#include "util.h"
+#include "../../util.c/util.h"
 int main(int argc, const char *argv[])
 {
 	float a,b,c;
