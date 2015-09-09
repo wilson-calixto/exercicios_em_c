@@ -17,6 +17,7 @@
  *
  */
 
+/*   programa que calcula a arcotangente das coordenadas x e y*/
 
 
 #include<stdio.h>
@@ -30,8 +31,14 @@ int main()
 	printf("digite o valor\n");
 	scanf("%f",&valor);
 
+	/* retira as coordenadas invalidas */
+
 	if(valor>=0 &&valor<=1)
 	{
+
+	/*chama a funcao que calcula a arcotangente das coordenadas x e y */
+
+
 		printf("o resultado é :%f\n",arctan(valor));
 	}else{
 	
