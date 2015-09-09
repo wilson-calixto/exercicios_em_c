@@ -1,16 +1,16 @@
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
- * main.lista2-12.c
+ * lista2-12.c
  *
  * Equipe:
  *
- *          Ewerton
- *          Hermann
- *          Jailson
- *          Lucas
- *  
- *           
+ *          Delrick Oliveira	
+ *          Jackson Kelvin
+ *          Rair Santos
+ *          Sérgio Pinheiro
+ *  	    Manoel Souza 
+ *          Gabriel Faraco  
  */
 
 #include<stdio.h>
