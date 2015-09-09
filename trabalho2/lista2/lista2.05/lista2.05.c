@@ -16,16 +16,16 @@
 #include <stdio.h>
 #include "funcao.h"
 
-int main(int argc, const char *argv[])
+int main(int argc, const char *argv[])//funcao principal
 {
     int seconds, hours, minutes, aux1, aux2, sec;
 
     printf("Insira os segundos: \n");
     scanf("%d", &seconds);
 
-    hours = sec_hours(seconds);
+    hours = sec_hours(seconds); //chamada da funcao de conversao seg ---> horas
     aux1 = seconds - (hours*3600);
-    minutes = sec_minutes(aux1);
+    minutes = sec_minutes(aux1); //chamada da funcao de conversao seg ---> minutos
     aux2 = ((hours*3600)+(minutes*60));
     sec = subtraction(seconds, aux2);
 
