@@ -28,6 +28,6 @@ int main()
 	scanf("%d",&colunas);
 	
 	retangulo(linhas,colunas);
-	printf("\n");	
+		
 	return 0;
 }
