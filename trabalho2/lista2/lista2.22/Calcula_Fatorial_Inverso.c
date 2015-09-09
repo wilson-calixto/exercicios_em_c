@@ -1,3 +1,18 @@
+/*
+Programaçao de Computadores e Algoritmos
+
+Trabalho 3
+
+Equipe:
+	Delrick Oliveira
+	Gabriel Faraco
+	Jackson Kelvin
+	Manoel Victor
+	Rai Santos
+	Sergio Pinheiro
+
+*/
+
 #include <stdio.h>
 #include "util.h"
 
