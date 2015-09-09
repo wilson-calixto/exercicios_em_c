@@ -1,1 +1,1 @@
-int conta_div(int x);
+int div_cont(int x);
