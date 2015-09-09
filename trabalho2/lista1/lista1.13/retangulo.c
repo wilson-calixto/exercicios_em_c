@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void retangulo(int linhas, int colunas)
 {
 	int i,j;
@@ -5,8 +7,9 @@ void retangulo(int linhas, int colunas)
 	{
 		for(j=0;j<colunas;j++)
 		{
-			if(j == 0 || j == colunas-1) printf("|\n");
+			if(j == 0 || j == colunas-1) printf("|");
 			else printf("+");
 		}
+		printf("\n");
 	}
 }
