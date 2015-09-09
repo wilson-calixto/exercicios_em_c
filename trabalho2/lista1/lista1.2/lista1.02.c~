@@ -13,6 +13,7 @@
 
 
 #include <stdio.h>
+#include "p.h"
 
 int serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
 {
