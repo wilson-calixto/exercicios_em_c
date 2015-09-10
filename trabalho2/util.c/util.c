@@ -68,6 +68,35 @@ int is_perfect(int num)
 	}		
 }
 
+/* Função calcula a arctangente das coordenadas x e y
+ * recebe um float x
+ * retora um float
+ */
+
+float arctan(float x)
+{
+	float resposta=0,pi=3.14,valor;
+	int e=1,i=1.0;
+	
+	do{
+		valor=power(x,i)/i;
+
+		if(e%2==0)
+		{
+			resposta=resposta-valor;
+		}
+        else
+        {
+			resposta+=valor;
+		}
+		e++;		
+		i=i+2;
+        
+	}while(valor>0.0001);
+	
+	return resposta;
+}
+
 /*forma uma serie de numeros em ordem crescente em n linhas*/
 void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
 {
