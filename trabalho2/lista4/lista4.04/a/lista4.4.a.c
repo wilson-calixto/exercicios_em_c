@@ -1,6 +1,3 @@
-
-
-
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
@@ -8,67 +5,36 @@
  * 
  * Equipe:
  * 
- *      Ewerton
- *      Hermann
- *      Jailson
- *      Lucas
- *      Richardson
- *      Wilson 
- *
+ *      Ewerton Petillo
+ *      Hermann Hernani
+ *      Jailson Pereira
+ *      Lucas Botinelly
+ *      Richardson Souza
+ *      Wilson Calisto
  */
 
-/*   programa que calcula a arcotangente das coordenadas x e y*/
-
-
 #include<stdio.h>
-#include "../util.c/util.h"
+#include "../../../util.c/util.h"
 
 float arctan(float numero);
 
-int main()
+int main(int argc, const char *argv[])
 {
 	float valor;
+
 	printf("digite o valor\n");
 	scanf("%f",&valor);
 
 	/* retira as coordenadas invalidas */
 
 	if(valor>=0 &&valor<=1)
-	{
-
-	/*chama a funcao que calcula a arcotangente das coordenadas x e y */
-
-
-		printf("o resultado é :%f\n",arctan(valor));
-	}else{
-	
-		printf("o valor é invalido\n");
-		
+    {
+		printf("o resultado é :%f\n",arctan(valor)); /*chama a funcao que calcula a arcotangente das coordenadas x e y */
 	}
-	return 0;
-}
+    else
+    {
+		printf("o valor é invalido\n");	
+	}
 
-
-float arctan(float x)
-{
-	float resposta=0,pi=3.14,valor;
-	int e=1,i=1;
-	
-	do{
-		valor=power(x,i)/i;
-
-		if(e%2==0)
-		{
-			resposta=resposta-valor;
-		}else{
-			resposta+=valor;
-		}
-		e++;		
-		i=i+2;
-		
-
-		}while(valor>0.0001);
-	
-
-	return resposta;
+    return 0;
 }

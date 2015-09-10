@@ -2,8 +2,8 @@
 
 /* 
  * Função para calcular a potencia
- * recebe dois inteiros x e z
- * e retorna um float pot
+ * recebe dois inteiros x e y
+ * e retorna um float k
  */
 
 float power(float x,float y)
