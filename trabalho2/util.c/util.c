@@ -97,6 +97,26 @@ float arctan(float x)
 	return resposta;
 }
 
+/* Função recebe n coordenadas calcula o angulo em relacao ao eixo horizontal de cada uma e devolve o menor angulo */
+
+float alfa(float x, float y)
+{
+	float pi=3.14,aux,radianos;
+	if(x==0 && y==0)
+	{	
+		return -1;
+	}
+	if(y<x)
+	{
+		aux=y/x;
+		radianos=arctan(aux);
+	}else{
+		aux=(x/y);
+		radianos=pi/2-arctan(aux);
+	}	
+	return (180*radianos)/pi;
+}
+
 /*forma uma serie de numeros em ordem crescente em n linhas*/
 void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
 {
