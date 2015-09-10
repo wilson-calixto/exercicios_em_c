@@ -2,8 +2,8 @@
 
 /* 
  * Função para calcular a potencia
- * recebe dois inteiros x e z
- * e retorna um float pot
+ * recebe dois inteiros x e y
+ * e retorna um float k
  */
 
 float power(float x,float y)
@@ -68,6 +68,55 @@ int is_perfect(int num)
 	}		
 }
 
+/* Função calcula a arctangente das coordenadas x e y
+ * recebe um float x
+ * retora um float
+ */
+
+float arctan(float x)
+{
+	float resposta=0,pi=3.14,valor;
+	int e=1,i=1.0;
+	
+	do{
+		valor=power(x,i)/i;
+
+		if(e%2==0)
+		{
+			resposta=resposta-valor;
+		}
+        else
+        {
+			resposta+=valor;
+		}
+		e++;		
+		i=i+2;
+        
+	}while(valor>0.0001);
+	
+	return resposta;
+}
+
+/* Função recebe n coordenadas calcula o angulo em relacao ao eixo horizontal de cada uma e devolve o menor angulo */
+
+float alfa(float x, float y)
+{
+	float pi=3.14,aux,radianos;
+	if(x==0 && y==0)
+	{	
+		return -1;
+	}
+	if(y<x)
+	{
+		aux=y/x;
+		radianos=arctan(aux);
+	}else{
+		aux=(x/y);
+		radianos=pi/2-arctan(aux);
+	}	
+	return (180*radianos)/pi;
+}
+
 /*forma uma serie de numeros em ordem crescente em n linhas*/
 void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
 {
@@ -94,6 +143,21 @@ int is_higher(int x, int y)
     if(x>=y) return 1;
 
     else return 0;
+}
+
+/*funcao que verifica o menor de dois numeros
+  e o retorna */
+
+int small(int num1, int num2)
+{
+    int menor;
+
+    menor = num1;
+    if(num2 > num1)
+    {
+        menor = num2;
+    }
+    return menor;
 }
 
 /* Retorna o MDC de dois números
@@ -173,4 +237,47 @@ float biggest(float a,float b, float c)
 		return c;
 	}
 
+}
+
+/*função que verifica se um numero b "encaixa" em um numero a
+ *ou seja, se os dígitos de b, correspondem aos ultimos dígitos de a*/
+
+int fits(int a, int b) 
+{
+    while (b != 0 && a%10 == b%10) 
+    {
+        a = a/10;
+        b = b/10;
+    }
+    if (b == 0)
+        return 1;
+    else
+        return 0;
+}
+
+/* uma função de subtração */
+
+int subtraction(int num1, int num2)
+{
+    int aux;
+    aux = num1 - num2;
+    return aux;
+}
+
+/* função para converter segundos em horas */
+
+int sec_hours(int sec)
+{
+	int hour;
+	hour = sec/3600;
+	return hour;
+}
+
+/* função que converte segundos em minutos */
+
+int sec_minutes(int sec)
+{
+	int min;
+	min = sec/60;
+	return min;
 }

@@ -1,0 +1,11 @@
+main:	    l3_2e5.o funcao.o
+	gcc l3_2e5.o funcao.o -o l3_2e5
+
+main.o: l3_2e5.c
+	gcc -c l3_2e5.c
+
+funcao.o:  funcao.c	funcao.h
+	gcc -c funcao.c
+
+clean:
+	rm *.o

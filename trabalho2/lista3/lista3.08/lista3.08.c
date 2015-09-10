@@ -1,7 +1,7 @@
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
- * lista3.11.c
+ * lista3.08.c
  *
  * Equipe:
  *
