@@ -16,8 +16,6 @@
 #include<stdio.h>
 #include "../../../util.c/util.h"
 
-float arctan(float numero);
-
 int main(int argc, const char *argv[])
 {
 	float valor;

@@ -1,1 +1,0 @@
-float arctan(float x);
