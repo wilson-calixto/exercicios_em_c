@@ -125,6 +125,21 @@ int is_higher(int x, int y)
     else return 0;
 }
 
+/*funcao que verifica o menor de dois numeros
+  e o retorna */
+
+int small(int num1, int num2)
+{
+    int menor;
+
+    menor = num1;
+    if(num2 > num1)
+    {
+        menor = num2;
+    }
+    return menor;
+}
+
 /* Retorna o MDC de dois números
 	
 	feito por SergioPinheiro*/
@@ -202,4 +217,20 @@ float biggest(float a,float b, float c)
 		return c;
 	}
 
+}
+
+/*função que verifica se um numero b "encaixa" em um numero a
+ *ou seja, se os dígitos de b, correspondem aos ultimos dígitos de a*/
+
+int fits(int a, int b) 
+{
+    while (b != 0 && a%10 == b%10) 
+    {
+        a = a/10;
+        b = b/10;
+    }
+    if (b == 0)
+        return 1;
+    else
+        return 0;
 }
