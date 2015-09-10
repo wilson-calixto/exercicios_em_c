@@ -1,21 +1,3 @@
-/*
-* Programacao de Computadores e Algoritmos
-* Trabalho 2
-* Questao 2.4
-* Equipe: Benjamin Borges
-* Davi Tavares
-* Paulo Henrique
-* Fernando Calderaro
-* Lucas Frota
-* Luiz Fernando
-*
-* */
-
-#include "../../util.c/util.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
 float bhaskara(float a, float b, float c);
 
 float bhaskara(float a, float b, float c)

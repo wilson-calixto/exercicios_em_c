@@ -1,0 +1,47 @@
+int is_positive (int x)
+{
+	if (x >= 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+//---------------------------------------
+
+int is_4 (int x)
+{
+	if (x == 4)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+//----------------------------------------
+
+int plus_cost (int cost, int tax)
+{
+	cost = cost + (cost * (tax/100));
+	return cost;
+}
+
+//----------------------------------------
+
+int lower_number(int n1, int n2)
+{
+	if (n1 > n2)
+	{
+		return n2;
+	}
+	else
+	{
+		return n1;
+	}
+}
