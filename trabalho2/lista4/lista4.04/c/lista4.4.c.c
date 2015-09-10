@@ -41,21 +41,21 @@ int main(int argc, const char *argv[])
 			printf("O valor digitado é invalido");
 			i--;
 		}
-        else
-        {
+	        else
+	        {
 			if(x>=0 && y>=0)	
-		    {
-	            /*chama a funcao que insere no vetor o angulo formado pelas coordenadas x e y */
+			{
+		            /*chama a funcao que insere no vetor o angulo formado pelas coordenadas x e y */
 				numero=alfa(x,y);
-
-                if (numero<menor)
-                {
-                    menor=numero;
-                }
-                
+	
+	                	if (numero<menor)
+	                	{
+	                    		menor=numero;
+	                	}
+	                
 			}
-            else
-            {
+	            	else
+	            	{
 				printf("O valor digitado é invalido");
 				i--;
 			}
