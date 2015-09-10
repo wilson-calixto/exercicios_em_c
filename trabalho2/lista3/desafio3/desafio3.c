@@ -15,7 +15,7 @@
  */
 
 #include<stdio.h>
-#include "is_perfect.h"
+#include "../../util.c/util.c"
 
 int main()
 {
