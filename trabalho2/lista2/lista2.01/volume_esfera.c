@@ -12,7 +12,7 @@
 *	Wilson Neto
 */
 
-//Chamando a funcao power do util.h
+//Chamando a funcao power do utilDreka.h
 float power(float x,float y)
 {
 	int i;
