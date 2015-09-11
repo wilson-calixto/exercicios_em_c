@@ -1,5 +1,5 @@
 /*
-
+Insira qulaquer numero e a função retornará o numero de dígitos
 
 */
 int qtd_num(int num)
