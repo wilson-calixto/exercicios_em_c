@@ -1,5 +1,3 @@
-
-
 void table(int n)
 {
 
