@@ -22,7 +22,7 @@ int is_pos(int numero)
     int boolean=0;
         if(numero>=0)
         {
-           boolen=1;
+           boolean=1;
         }
-    return bolean;
+    return boolean;
 }		   
