@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /*  Algoritimo para o calculo de provas com base nas duas melhores notas */
 
 void calculation_tests()
