@@ -10,6 +10,6 @@
 
                 resultado=delta(a,b,c);
 
-		printf("%d\n", resultado);
+		printf("O resultado de delta é:%d\n", resultado);
 	}
 
