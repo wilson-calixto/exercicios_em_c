@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -84,7 +84,25 @@ lista2.10.o: lista2/lista2.10/lista2.10.c
 ideal_weight.o: lista2/lista2.10/ideal_weight.c
 	gcc -o $(path_obj)ideal_weight.o -c lista2/lista2.10/ideal_weight.c
 
-# Bloco 
+# Bloco para compilar a questão 11 - lista 3
+lista3.11: lista3.11.o calculation_tests.o
+	gcc $(path_obj)lista3.11.o $(path_obj)calculation_tests.o -o lista3.11
+
+lista3.11.o: lista3/lista3.11/lista3.11.c
+	gcc -o $(path_obj)lista3.11.o -c lista3/lista3.11/lista3.11.c
+
+calculation_tests.o: lista3/lista3.11/calculation_tests.c
+	gcc -o $(path_obj)calculation_tests.o -c lista3/lista3.11/calculation_tests.c
+
+# Bloco para compilar a questão 7 - lista 2
+lista2.07: lista2.07.o util.o
+	gcc $(path_obj)lista2.07.o $(path_obj)util.o -o lista2.07
+
+lista2.07.o: lista2/lista2.07/lista2.07.c
+	gcc -o $(path_obj)lista2.07.o -c lista2/lista2.07/lista2.07.c
+
+
+
 
 ##
 
