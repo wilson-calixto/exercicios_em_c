@@ -1,8 +1,8 @@
 /*Programacao de Computadores e Algoritmos / Laboratorio de Programacao de Computadores
  *
  * Trabalho 2
- * Lista 1
- * Questao 5
+ * Lista 2
+ * Questao 21
  *
  *\Equipe:  Elizabeth Castro
  *          Andreza Moreira
