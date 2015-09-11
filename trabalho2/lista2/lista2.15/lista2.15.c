@@ -14,7 +14,7 @@
  */
 
 #include <stdio.h> 
-#include "function.h"
+#include "calc_mean.h"
 
 /* 
  * Calcula media aritimetica de varios numeros
