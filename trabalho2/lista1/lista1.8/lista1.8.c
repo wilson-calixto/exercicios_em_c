@@ -11,7 +11,7 @@
  *  
  *  */
 
-#include	"../../util.c/util.h"
+#include	"cont_digit.h"
 #include	<stdio.h>
 int main ( int argc, char *argv[] )
 {	
