@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include "calc_raizes.h"
+#include <math.h>
+#include <stdlib.h>
+
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
@@ -13,9 +18,6 @@
  *          Richardson 
  *
  */
-#include <stdio.h>
-#include "function.h"
-#include <math.h>
 
 int main(int argc,const char *argv[])
 { 
