@@ -1,19 +1,16 @@
 /*
- * =====================================================================================
- *
- *       Filename:  lista1.3.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  11-09-2015 16:56:22
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 2
+ *     Questão 1.3
+ *     Equipe: Benjamin Borges
+ *     Davi Tavares
+ *     Paulo Henrique
+ *     Fernando Calderaro  ??
+ *     Lucas Frota
+ *     Luiz Fernando
+ *    
+ *   
+
  */
 
 #include         "soma.h"
