@@ -13,7 +13,19 @@
  *      
  */
 #include <stdio.h>
+#include "../../util.c/uti.h"
+
 int main()
 {
+    int num; 
 
+    printf ("Digite o numero: ");
+    scanf ("%d", &num);
+
+    if (is_pair(num)) 
+        printf ("\nNumero par\n");
+    else
+        print ("\nNumero impar\n");
+            
+    return 0; 
 }
