@@ -5,7 +5,7 @@ float iteracao(float a)
 
 	for(i=1;i<=a;i++)
 	{
-		soma=soma+(1/i);
+		soma=soma+(1/i);   // soma os termos da divisão de 1 sobre i
 
 	}
 	
