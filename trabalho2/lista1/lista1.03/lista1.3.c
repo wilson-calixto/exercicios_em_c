@@ -29,11 +29,11 @@ int main ( int argc, char *argv[] )
 {
 	float num1, num2, num3;
 	printf ( "Digite o primeiro numero");
-	scanf ( "%d", &num1 );
+	scanf ( "%f", &num1 );
 	printf ( "Digite o segundo numero\n" );
-	scanf ( "%d", &num2 );	
+	scanf ( "%f", &num2 );	
 	printf ( "Digite o terceiro numero\n" );
-	scanf ( "%d", &num3 );
+	scanf ( "%f", &num3 );
 	printf ( "A soma dos tres numeros  = %f\n", soma(num1,num2,num3) );
 	return 0;
 }				/* ----------  end of function main  ---------- */
