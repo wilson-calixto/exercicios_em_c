@@ -24,7 +24,7 @@ float power(float x,float y)
 	return k;
 }
 
-//Definindo a funcao para calcular o volume de uma esfera
+//Definindo a funcao para calcular o volume de uma esfera e seus parametros
 float volume (float raio)
 { 
 	//Variavel principal
