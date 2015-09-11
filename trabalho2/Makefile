@@ -52,7 +52,7 @@ lib_function.o: lista1/lista1.06/lib_function.c
 
 # Bloco para compilar questão 2 - lista 1
 lista2.2: lista2.2.o function.o
-	gcc $(path_obj)lista2.2.o $(path_obj)function.o -o lista2.2
+	gcc $(path_obj)lista2.2.o $(path_obj)function.o -o $(path_bin)lista2.2
 
 lista2.2.o: lista2/lista2.02/lista2.2.c
 	gcc -o $(path_obj)lista2.2.o -c lista2/lista2.02/lista2.2.c
@@ -62,21 +62,21 @@ function.o: lista2/lista2.02/function.c
 
 # Bloco para compilar questão 4 - lista 4 (a)
 lista4.4.a: lista4.4.a.o util.o
-	gcc $(path_obj)lista4.4.a.o $(path_obj)util.o -o lista4.4.a
+	gcc $(path_obj)lista4.4.a.o $(path_obj)util.o -o $(path_bin)lista4.4.a
 
 lista4.4.a.o: lista4/lista4.04/a/lista4.4.a.c
 	gcc -o $(path_obj)lista4.4.a.o -c lista4/lista4.04/a/lista4.4.a.c
 
 # Bloco para compilar a questão desafio 3 - lista 3
 desafio3: desafio3.o util.o
-	gcc $(path_obj)desafio3.o $(path_obj)util.o -o desafio3
+	gcc $(path_obj)desafio3.o $(path_obj)util.o -o $(path_bin)desafio3
 
 desafio3.o: lista3/desafio3/desafio3.c
 	gcc -o $(path_obj)desafio3.o -c lista3/desafio3/desafio3.c
 
 # Bloco para compilar a questão 10 - lista 2
 lista2.10: lista2.10.o ideal_weight.o
-	gcc $(path_obj)lista2.10.o $(path_obj)ideal_weight.o -o lista2.10
+	gcc $(path_obj)lista2.10.o $(path_obj)ideal_weight.o -o $(path_bin)lista2.10
 
 lista2.10.o: lista2/lista2.10/lista2.10.c
 	gcc -o $(path_obj)lista2.10.o -c lista2/lista2.10/lista2.10.c
@@ -86,7 +86,7 @@ ideal_weight.o: lista2/lista2.10/ideal_weight.c
 
 # Bloco para compilar a questão 11 - lista 3
 lista3.11: lista3.11.o calculation_tests.o
-	gcc $(path_obj)lista3.11.o $(path_obj)calculation_tests.o -o lista3.11
+	gcc $(path_obj)lista3.11.o $(path_obj)calculation_tests.o -o $(path_bin)lista3.11
 
 lista3.11.o: lista3/lista3.11/lista3.11.c
 	gcc -o $(path_obj)lista3.11.o -c lista3/lista3.11/lista3.11.c
@@ -96,14 +96,14 @@ calculation_tests.o: lista3/lista3.11/calculation_tests.c
 
 # Bloco para compilar a questão 7 - lista 2
 lista2.07: lista2.07.o util.o
-	gcc $(path_obj)lista2.07.o $(path_obj)util.o -o lista2.07
+	gcc $(path_obj)lista2.07.o $(path_obj)util.o -o $(path_bin)lista2.07
 
 lista2.07.o: lista2/lista2.07/lista2.07.c
 	gcc -o $(path_obj)lista2.07.o -c lista2/lista2.07/lista2.07.c
 
 # Bloco para compilar a questão 8 - lista 3
 lista3.08: lista3.08.o dice.o
-	gcc $(path_obj)lista3.08.o $(path_obj)dice.o -o lista3.08
+	gcc $(path_obj)lista3.08.o $(path_obj)dice.o -o $(path_bin)lista3.08
 
 lista3.08.o: lista3/lista3.08/lista3.08.c
 	gcc -o $(path_obj)lista3.08.o -c lista3/lista3.08/lista3.08.c
