@@ -20,7 +20,7 @@ int main ( int argc, const char *argv[] )
 
     result=dice();
 
-    printf ( "Resultado: \n", result );
+    printf ( "Resultado: %d\n", result );
 
     return 0;
 }
