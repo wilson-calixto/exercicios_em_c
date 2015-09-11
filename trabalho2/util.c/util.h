@@ -10,6 +10,7 @@ int is_pair(int x);
 int is_positive (int x);
 int is_null(float x);
 float biggest(float a, float b, float c);
+int lower_number(int n1, int n2);
 int small(int num1, int num2);
 int fits(int a, int b);
 int subtraction(int num1, int num2);   
