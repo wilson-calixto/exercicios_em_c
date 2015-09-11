@@ -181,13 +181,18 @@ int mdc (int x, int y)
 
     do
     {
-        res = num%den;
+    	if (den != 0)
+    	{
+        	res = num%den;
         
-        if (res !=0)
-        {
-            num = den;
-            den = res;
-        }
+        	if (res !=0)
+        	{
+            		num = den;
+            		den = res;
+        	}
+    	}
+    	else 
+    		res = 0;
     } while (res != 0);
 
     return den;
