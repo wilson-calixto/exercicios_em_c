@@ -9,12 +9,6 @@
 
 	
 
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  main
- *  Description:  
- * =====================================================================================
- */
 
 /* ordena tres numeros de forma crescente */
 int tri_sort(int numero1,int numero2,int numero3)
@@ -25,6 +19,8 @@ int tri_sort(int numero1,int numero2,int numero3)
      if(numero1>=numero2 && numero1>=numero3)
      {
         maior=numero1;
+
+	/* verifica se o numero2 e maior que o numero3 */
             if(numero2>=numero3)
             {
                 mediano=numero2;
@@ -43,7 +39,7 @@ int tri_sort(int numero1,int numero2,int numero3)
      {
             maior=numero2;
 	    
-
+	/* verifica se o numero1 e maior que o numero3 */
 	    if(numero1>=numero3)
             {
                 mediano=numero1;
@@ -60,6 +56,8 @@ int tri_sort(int numero1,int numero2,int numero3)
     else
      {
             maior=numero3; 
+	/* verifica se o numero2 e maior que o numero1 */
+
             if(numero2>=numero1)
             {
                 mediano=numero2;
@@ -77,13 +75,8 @@ int tri_sort(int numero1,int numero2,int numero3)
      
      }
 
-     
-
-
-
-
-
-
-
-    return 0;
-}				/* ----------  end of function main  ---------- */
+     	printf("menor: %d",menor);
+	printf("mediano: %d",mediano);
+	printf("maior: %d",menor);
+	return 0;
+}
