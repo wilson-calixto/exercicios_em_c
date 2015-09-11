@@ -1,3 +1,16 @@
+/*
+ *  Programação de Computadores e Algoritmos
+ *  Trabalho 2
+ *  Lista 4.1
+ *  Equipe: Benjamim Borges
+ *  Davi Tavares
+ *  Paulo Henrique
+ *  Fernando Calderaro
+ *  Lucas Frota
+ *  Luiz Fernando
+ *
+ * */
+
 #include <stdio.h>
 
 
