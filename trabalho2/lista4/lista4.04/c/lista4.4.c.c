@@ -14,21 +14,19 @@
  */
 
 #include<stdio.h>
-#include<stdlib.h>
 #include"../../../util.c/util.h"
-#include "s_sort.h"
 
 float alfa(float x, float y);
 
 int main(int argc, const char *argv[])
 {
 	int i,n;
-	float x,y,*vet;
+	float x,y,menor=181, numero;
 	
 	/* usa alocacao dinamica para descobrir o numero de loops e o tamanho do vetor */
 	printf("Digite o numero de loops\n");
 	scanf("%d",&n);
-	vet=malloc(n*sizeof(float));
+
 	for(i=0;i<n;i++)
 	{
 		printf("Digite um valor para o x \n");
@@ -43,15 +41,21 @@ int main(int argc, const char *argv[])
 			printf("O valor digitado é invalido");
 			i--;
 		}
-        else
-        {
+	        else
+	        {
 			if(x>=0 && y>=0)	
-		    {
-	            /*chama a funcao que insere no vetor o angulo formado pelas coordenadas x e y */
-				vet[i]=alfa(x,y);			
+			{
+		            /*chama a funcao que insere no vetor o angulo formado pelas coordenadas x e y */
+				numero=alfa(x,y);
+	
+	                	if (numero<menor)
+	                	{
+	                    		menor=numero;
+	                	}
+	                
 			}
-            else
-            {
+	            	else
+	            	{
 				printf("O valor digitado é invalido");
 				i--;
 			}
@@ -60,7 +64,7 @@ int main(int argc, const char *argv[])
 	}
 
 	/* chama a funcao que retorna o menor valor do vetor */
-	printf("O menor valor é %f\n",s_sort(vet,n));
+	printf("O menor valor é %f\n", menor);
 
 	return 0;
 }
