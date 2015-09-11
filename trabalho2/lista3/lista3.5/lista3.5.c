@@ -1,7 +1,7 @@
 /* 
  *  Programação de Computadores e Algoritmos
  *  Trabalho 2
- *  Questão 1.8
+ *  Questão 5 da lista 3
  *  Equipe: Benjamin Borges
  *  Davi Tavares
  *  Paulo Henrique 
@@ -9,6 +9,7 @@
  *  Lucas Frota
  *  Luiz Fernando
  *  
+ *  o progrma faz uso da funcao lower_number (que pode ser encontrada em "funcao.c" na pasta "lista3.5") que recebe dois numeros dos quais ela retorna o menor dentre eles
  *  */
 
 #include <stdio.h>
