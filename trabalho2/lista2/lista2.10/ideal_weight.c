@@ -1,4 +1,6 @@
- /*Essa função calcula o peso ideal da pessoa com base na sua altura e sexo */
+#include<stdio.h>
+
+/*Essa função calcula o peso ideal da pessoa com base na sua altura e sexo */
 void ideal_weight()
 {
     int sexo; /* variavel do tipo int para armazenar a informação sobre o sexo da pessoa */
