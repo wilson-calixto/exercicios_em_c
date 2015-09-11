@@ -12,9 +12,7 @@
 *	Wilson Neto
 */
 
-//Definir uma funcao que encontre o volume de uma esfera
-
-//Chamando a funcao power do util.c
+//Chamando a funcao power do utilDreka.h
 float power(float x,float y)
 {
 	int i;
@@ -26,15 +24,16 @@ float power(float x,float y)
 	return k;
 }
 
-//Definindo funcao para encontrar o volume da esfera
+//Definindo a funcao para calcular o volume de uma esfera e seus parametros
 float volume (float raio)
 { 
-//Variavel principal
+	//Variavel principal
 	float V;
-//Variavel auxiliar para guardar o valor da potenciacao
+	//Variavel auxiliar para guardar o valor do raio elevado a 3
 	float r;
+	//Chamndo a funcao power() e definindo seus parametros
 	r = power(raio,3);
-//Resolucao da formula do volume de uma esfera
+	//Calculo do volume de uma esfera
 	V = (4*3.14*r)/3;
 	return V;
 }

@@ -1,11 +1,21 @@
 #include <stdio.h>
 
-int main (){
-  int = 1;
-  int n = 10;
-  for (i = 1; i <= n; i++){
-    printf("\t%d x %d = %d\n", i, n, i*n);
+void table(int n);
 
-  }
-  return 0;
+int main(){
+	int numero;
+	printf("Digite o número\n");
+	scanf("%d",&numero);
+	table(numero);
+return 0;
+}
+
+void table(int n)
+{
+	int i;
+  	for(i=1;i<=n;i++)
+	{
+    		printf("\t%d x %d = %d\n",i,n,i*n);
+  	}
+
 }

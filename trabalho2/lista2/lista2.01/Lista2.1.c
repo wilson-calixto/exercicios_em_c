@@ -11,18 +11,17 @@
 *	Wilson Neto
 */
 
-//Chamando bibliotecas
+//Chamando as bibliotecas
 #include <stdio.h> 
-#include "util.h"
+#include "utilDreka.h"
 
-//Construcao usual da funcao main()
+//Definindo a funcao main () usual
 int main(int argc, char const *argv[])
 {
 	float raio, volume1;
 	printf("Insira o valor do raio: \n");
 	scanf("%f",&raio);
-
-//Chamando a funcao volume(), referente ao arquivo volume_esfera
+//Chamando a funcao volume() para calcular o volume da esfera
 	volume1 = volume(raio);
 
 	printf("O volume da esfera eh %.2f: \n", volume1);

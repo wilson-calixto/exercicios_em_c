@@ -2,7 +2,7 @@
  *
  * Trabalho 2
  * Lista 1
- * Questao 5
+ * Questao 9
  *
  *\Equipe:  Elizabeth Castro
  *          Andressa Moreira
