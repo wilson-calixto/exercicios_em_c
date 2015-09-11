@@ -22,12 +22,12 @@ int main(int argc, char const *argv[])
 	int ano, meses, dias; //Declarando variaveis
 	int idade; //Variavel que recebera todos os valores finais
 
-	printf("Digite sua idade em anos, meses e dias: \n");
+	printf("Digite sua idade em anos, meses e dias (aa mm dd): \n");
 	scanf("%d %d %d", &ano, &meses, &dias);
 
-	idade = idadedias(ano, meses, dias);
+	idade = idadedias(ano, meses, dias); //Chamando funcao idadedias da biblioteca Dreka.h
 
-	printf("Sua idade em dias eh: %d\n", idade);
+	printf("Sua idade em dias eh: %d\n", idade); 
 
 	return 0;
 }
