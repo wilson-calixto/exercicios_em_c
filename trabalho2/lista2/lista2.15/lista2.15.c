@@ -16,11 +16,6 @@
 #include <stdio.h> 
 #include "calc_mean.h"
 
-/* 
- * Calcula media aritimetica de varios numeros
- * ate que seja digitado 0
- * retorna um float
- */
 int main ( int argc,const char *argv[] )
 {
     float result;

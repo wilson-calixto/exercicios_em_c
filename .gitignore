@@ -1,3 +1,6 @@
+# Project file
+bin/
+
 # Object files
 *.o
 *.ko
