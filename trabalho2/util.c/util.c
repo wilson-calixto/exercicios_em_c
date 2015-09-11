@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include<time.h>
+#include<stdlib.h>
 
 /* 
  * Função para calcular a potencia
@@ -280,4 +282,15 @@ int subtraction(int num1, int num2)
     int aux;
     aux = num1 - num2;
     return aux;
+}
+
+/*
+ *para utilizar a função rand()
+ *para usar o srand, enviando com "semente"
+ *o horário do sistema, para os valores não se repetirem
+ */
+int dice()
+{
+	srand(time(NULL));
+	return ("%d\n", rand() % 6);	
 }
