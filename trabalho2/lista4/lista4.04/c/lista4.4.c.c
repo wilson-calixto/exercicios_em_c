@@ -23,7 +23,7 @@ int main(int argc, const char *argv[])
 	int i,n;
 	float x,y,menor=181, numero;
 	
-	/* usa alocacao dinamica para descobrir o numero de loops e o tamanho do vetor */
+	/* descobre o numero de loops */
 	printf("Digite o numero de loops\n");
 	scanf("%d",&n);
 
@@ -45,7 +45,7 @@ int main(int argc, const char *argv[])
 	        {
 			if(x>=0 && y>=0)	
 			{
-		            /*chama a funcao que insere no vetor o angulo formado pelas coordenadas x e y */
+		            /*verifica qual o menor angulo formado pelas coordenadas x e y */
 				numero=alfa(x,y);
 	
 	                	if (numero<menor)
@@ -63,7 +63,7 @@ int main(int argc, const char *argv[])
 	
 	}
 
-	/* chama a funcao que retorna o menor valor do vetor */
+	/* chama a funcao que retorna o menor angulo  */
 	printf("O menor valor é %f\n", menor);
 
 	return 0;
