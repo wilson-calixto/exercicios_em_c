@@ -9,7 +9,6 @@
  *  Lucas Frota
  *  Luiz Fernando
  *  
- *  a funcao "date" esta minuciosamente comentada em "funcao.c" na pasta lista1.11
  *  */
 
 int main(int argc, const char *argv[])
