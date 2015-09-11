@@ -13,7 +13,7 @@
 
 //Chamando as bibliotecas
 #include <stdio.h> 
-#include "util.h"
+#include "utilDreka.h"
 
 //Definindo a funcao main () usual
 int main(int argc, char const *argv[])
