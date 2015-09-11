@@ -6,7 +6,7 @@ Lista2.1: volume_esfera.o Lista2.1.o
 Lista2.1.o: Lista2.1.c
 	gcc -c Lista2.1.c
 
-volume_esfera.o: volume_esfera.c util.h
+volume_esfera.o: volume_esfera.c utilDreka.h
 	gcc -c volume_esfera.c 
 
 clean:
