@@ -13,7 +13,7 @@
  *      
  */
 #include <stdio.h>
-#include "../../util.c/uti.h"
+#include "../../util.c/util.h"
 
 int main()
 {
@@ -25,7 +25,7 @@ int main()
     if (is_pair(num)) 
         printf ("\nNumero par\n");
     else
-        print ("\nNumero impar\n");
+        printf ("\nNumero impar\n");
             
     return 0; 
 }
