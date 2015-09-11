@@ -101,7 +101,17 @@ lista2.07: lista2.07.o util.o
 lista2.07.o: lista2/lista2.07/lista2.07.c
 	gcc -o $(path_obj)lista2.07.o -c lista2/lista2.07/lista2.07.c
 
+# Bloco para compilar a questão 8 - lista 3
+lista3.08: lista3.08.o dice.o
+	gcc $(path_obj)lista3.08.o $(path_obj)dice.o -o lista3.08
 
+lista3.08.o: lista3/lista3.08/lista3.08.c
+	gcc -o $(path_obj)lista3.08.o -c lista3/lista3.08/lista3.08.c
+
+dice.o: lista3/lista3.08/dice.c
+	gcc -o $(path_obj)dice.o -c lista3/lista3.08/dice.c
+
+# Bloco para compilar
 
 
 ##
