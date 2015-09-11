@@ -13,7 +13,7 @@
  *          Wilson Calisto 
  */
 #include <stdio.h>
-#include "../../util.c/util.c"
+#include "../../util.c/util.h"
 int main(int argc, const char *argv[])
 {
 	int num, perf;
