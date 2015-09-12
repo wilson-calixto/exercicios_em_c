@@ -21,7 +21,6 @@
  * =====================================================================================
  */
 
-#include "../../util.c/util.c"
 #include	<stdio.h>
 
 /* 
@@ -30,23 +29,28 @@
  *   */
 int main ( int argc, char *argv[] )
 {
-	int i,num1=0,num2=0,num3=0,num4=0,num5=0,num6=0;
-	
-	for ( i = 0; i < 1000000; i += 1 ) 
+	int i,num1=0,num2=0,num3=0,num4=0,num5=0,num6=0, numero;
+
+	for ( i = 0; i < 20; i += 1 ) 
 	{
-		swicht (dice())
+		switch (dice())
 		{
 			case 1:
 				num1+=1;
+			break;
 			case 2:
 				num2+=1;
+			break;
 			case 3: 
 				num3+=1;
+			break;
 			case 4:
 				num4+=1;
+			break;
 			case 5:
 				num5+=1;
-			case 6:
+			break;
+			default:
 				num6+=1;
 
 		}
