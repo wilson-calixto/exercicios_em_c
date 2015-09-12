@@ -285,6 +285,12 @@ float lowest(float a,float b, float c)
 	}
 }
 
+
+// Esta função recebe 2 parametros, o primeiro é um número qualquer. O segundo é um numero
+// que será verificado quantas vezes ele aparece no primeiro.
+// Ex: num1 = 123455 
+//     num2 = 5
+// Saída: O numero 5 foi digitado 2 vezes.
 int conta_digitos (unsigned long int num1, int num2 )
 {
 	int i,contador;
