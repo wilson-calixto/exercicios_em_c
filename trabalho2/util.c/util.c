@@ -294,3 +294,17 @@ int dice()
 	srand(time(NULL));
 	return ("%d\n", 1+ (rand() % 6));	
 }
+
+
+// retorna o menor valor de 3 parametros
+
+float lowest(float a,float b, float c)
+{
+	if((a<=b)&&(a<=c)){
+		return a;
+	}else if((b<=a)&&(b<=c)){
+		return b;
+	}else if((c<=b)&&(c<=a)){
+		return c;
+	}
+}
