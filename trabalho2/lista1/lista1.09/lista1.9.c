@@ -1,4 +1,4 @@
-/*Programacao de Computadores e Algoritmos / Laboratorio de Programacao de Computadores
+﻿/*Programacao de Computadores e Algoritmos / Laboratorio de Programacao de Computadores
  *
  * Trabalho 2
  * Lista 1
@@ -13,7 +13,7 @@
  * * / */
  
 #include <stdio.h>
-#include "util.h"
+#include "reverse_number.h"
 
 int main()
 {
