@@ -24,7 +24,7 @@ entrada: 02/01/2004
 observacao: o procedimento nao leva em conta se os dias existem por tanto ele
 ira funcionar mesmo com dias inexistentes (ex: 33, 99 entre outros)
 */
-void date(char str[9])
+void data(char str[9])
 {	
 
 	printf("dia  %c%c", str[0], str[1]);
@@ -83,5 +83,4 @@ void date(char str[9])
 	}	
 	printf(" de %c%c%c%c\n", str[6], str[7], str[8], str[9]);
 
-	return 0;
 }
