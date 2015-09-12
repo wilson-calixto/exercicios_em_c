@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  lista4.01a.c
+ *       Filename:  conta_digitos.c
  *
  *    Description:  
  *
  *        Version:  1.0
- *        Created:  11-09-2015 22:13:09
+ *        Created:  11-09-2015 22:20:28
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -16,22 +16,32 @@
  * =====================================================================================
  */
 
-#include <stdio.h>
 
 /* 
  * ===  FUNCTION  ======================================================================
- *         Name:  main
+ *         Name:  conta_digitos
  *  Description:  
  * =====================================================================================
  */
-int main ( int argc, char *argv[] )
+#include <stdio.h>
+int conta_digitos (long int num1, int num2 )
 {
-	unsigned long int  num1, num2;
-	printf ( "Digite o primeiro numero\n" );
-	scanf ( "%lu", &num1 );
-	printf ( "Digite o segundo  numero\n" );
-	scanf ( "%lu", &num2 );
-	printf ( "O numero %d aparece no numero  %d vezes\n", num2 , conta_digitos(num1,num2) );
+	int i,contador;
+	while (num1 != 0)
+	{
+//		printf("%lu\n", (num1 % 10));
+		if ((num1 % 10) == num2)
+		{
+			contador += 1;
+		}
+		num1 = num1 / 10;
 
-	return 0;
-}				/* ----------  end of function main  ---------- */
+	}	
+	
+
+	return contador;
+}	
+
+
+
+/* -----  end of function conta_digitos  ----- */
