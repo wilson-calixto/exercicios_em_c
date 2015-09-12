@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -166,6 +166,18 @@ lista2.04.o: lista2/lista2.04/lista2.04.c
 
 baskaras.o: lista2/lista2.04/baskaras.c
 	gcc -o $(path_obj)baskaras.o -c lista2/lista2.04/baskaras.c
+
+# Bloco para compilar questão 4 - lista 2
+lista2.13: lista2.13.o triangle.o
+	gcc $(path_obj)lista2.13.o $(path_obj)triangle.o -o $(path_bin)lista2.13 
+
+lista2.13.o: lista2/lista2.13/lista2.13.c
+	gcc -o $(path_obj)lista2.13.o -c lista2/lista2.13/lista2.13.c
+
+triangle.o: lista2/lista2.13/triangle.c
+	gcc -o $(path_obj)triangle.o -c lista2/lista2.13/triangle.c
+
+
 
 
 
