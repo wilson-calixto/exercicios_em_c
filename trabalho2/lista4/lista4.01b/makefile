@@ -6,7 +6,7 @@ lista4.01b.o: lista4.01b.c
 eh_permut.o: eh_permut.c 
 	gcc -c eh_permut.c
 util.o: ../../util.c/util.c
-	        gcc -c ../../util.c/util.c
+	gcc -c ../../util.c/util.c
 clean:
 	rm -rf *.o
 remove: clean

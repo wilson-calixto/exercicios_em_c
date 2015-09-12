@@ -19,13 +19,13 @@
 int eh_permut(int num1,int num2)
 {
 
-	while (num2 != 0 )
+	while (num1 != 0 )
 	{
 
- 		switch (conta_digitos(num1,num2 % 10))
+ 		switch (conta_digitos(num2,num1 % 10))
 		{
 			case 1:
-				num2 = num2 / 10;
+				num1 = num1 / 10;
 				break;
 			default:
 				return 0;
