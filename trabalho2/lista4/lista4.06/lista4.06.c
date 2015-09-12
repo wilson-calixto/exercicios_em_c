@@ -11,9 +11,7 @@
 *
 * */
 
-#include "../../util.c/util.h"
 #include <stdio.h>
-#include <function.h>
 
 int main(int argc, const char *argv[])
 
@@ -26,6 +24,6 @@ int main(int argc, const char *argv[])
 	printf("Digite o segundo numero: \n");
 	scanf("%d",&b); //recebe o valor de b
 
-	printf("O mdc dos numeros digitados e: %d \n", int mdc(int a,int b)); //imprime o mdc, chamando a funcao mdc
+	printf("O mdc dos numeros digitados e: %d \n", mdc_euclides(a,b)); //imprime o mdc, chamando a funcao mdc
 	return 0;
 }

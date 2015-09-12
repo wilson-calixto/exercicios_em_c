@@ -4,7 +4,7 @@
 
 //funcao para calcular o mdc atravez do algoritmo de euclides
 
-int mdc(int a,int b);
+int mdc_euclides(int a,int b);
 
 {
 	int a,b,quociente,resto; //declaracao das variaveis
