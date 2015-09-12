@@ -17,5 +17,5 @@ int main(int argc, const char *argv[])
 	char num[12];
 	printf(">");
 	scanf("%s", num);
-	date(num);
+	data(num);
 }
