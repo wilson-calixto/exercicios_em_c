@@ -1,25 +1,31 @@
-	#include <stdio.h>
-	#include "../../util.c/util.h"
+/*Programacao de Computadores e Algoritmos / Laboratorio de Programacao de Computadores
+ *
+ * Trabalho 2
+ * Lista 3
+ * Questao 7
+ *
+ *\Equipe:  Elizabeth Castro
+ *          Andreza Moreira
+ *          Juliany Raiol
+ *          Luana Andrade
+ *          Wilson Neto
+ *
+ *
+ * / */
 
-	int main (int argc,const char *argv[])
-	{
+#include <stdio.h>
+#include "../../util.c/util.h"
 
-		int n1,n2,n3,menor;
-		
-		printf("Digite três valores:\n");
-		scanf("%i %i %i", &n1,&n2,&n3);
+int main (int argc,const char *argv[])
+{
 
-		menor=a;
-
-		if(lower_number(b,c)<menor)
-		{
-			printf("O menor: %i\n", menor);
-		}
-		else 		
-		{
-			printf("O menor é:%i\n", menor);
-		}
+	int n1,n2,n3,menor;
 	
+	printf("Digite três valores:\n");
+	scanf("%i %i %i", &n1,&n2,&n3);
 
-		return 0;		
-	}
+	menor = lowest(n1,n2,n3);
+	
+	printf("%.2f",menor);
+	return 0;		
+}

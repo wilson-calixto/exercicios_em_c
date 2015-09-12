@@ -147,21 +147,6 @@ int is_higher(int x, int y)
     else return 0;
 }
 
-/*funcao que verifica o menor de dois numeros
-  e o retorna */
-
-int small(int num1, int num2)
-{
-    int menor;
-
-    menor = num1;
-    if(num2 > num1)
-    {
-        menor = num2;
-    }
-    return menor;
-}
-
 /* Retorna o MDC de dois números
 	
 	feito por SergioPinheiro*/
@@ -275,15 +260,6 @@ int fits(int a, int b)
         return 0;
 }
 
-/* uma função de subtração */
-
-int subtraction(int num1, int num2)
-{
-    int aux;
-    aux = num1 - num2;
-    return aux;
-}
-
 /*
  *para utilizar a função rand()
  *para usar o srand, enviando com "semente"
@@ -293,4 +269,18 @@ int dice()
 {
 	srand(time(NULL));
 	return ("%d\n", 1+ (rand() % 6));	
+}
+
+
+// retorna o menor valor de 3 parametros
+
+float lowest(float a,float b, float c)
+{
+	if((a<=b)&&(a<=c)){
+		return a;
+	}else if((b<=a)&&(b<=c)){
+		return b;
+	}else if((c<=b)&&(c<=a)){
+		return c;
+	}
 }
