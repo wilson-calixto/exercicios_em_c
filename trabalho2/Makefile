@@ -134,14 +134,6 @@ qnt_numbers.o: lista1/lista1.01/qnt_numbers.c
 # -----< Continue aqui >-------
 
 
-
-
-
-
-
-
-
-
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
 	gcc -o $(path_obj)util.o -c util.c/util.c
