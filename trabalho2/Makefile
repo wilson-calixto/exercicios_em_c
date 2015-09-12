@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -51,14 +51,14 @@ lib_function.o: lista1/lista1.06/lib_function.c
 	gcc -o $(path_obj)lib_function.o -c lista1/lista1.06/lib_function.c
 
 # Bloco para compilar questão 2 - lista 1
-lista2.2: lista2.2.o function.o
-	gcc $(path_obj)lista2.2.o $(path_obj)function.o -o $(path_bin)lista2.2
+lista2.2: lista2.2.o calc_media.o
+	gcc $(path_obj)lista2.2.o $(path_obj)calc_media.o -o $(path_bin)lista2.2
 
 lista2.2.o: lista2/lista2.02/lista2.2.c
 	gcc -o $(path_obj)lista2.2.o -c lista2/lista2.02/lista2.2.c
 
-function.o: lista2/lista2.02/function.c
-	gcc -o $(path_obj)function.o -c lista2/lista2.02/function.c
+calc_media.o: lista2/lista2.02/calc_media.c
+	gcc -o $(path_obj)calc_media.o -c lista2/lista2.02/calc_media.c
 
 # Bloco para compilar questão 4 - lista 4 (a)
 lista4.4.a: lista4.4.a.o util.o
@@ -111,10 +111,36 @@ lista3.08.o: lista3/lista3.08/lista3.08.c
 dice.o: lista3/lista3.08/dice.c
 	gcc -o $(path_obj)dice.o -c lista3/lista3.08/dice.c
 
-# Bloco para compilar
+# Bloco para compilar questão 3 - lista3
+lista3.3: lista3.3.o cal_raizes.o
+	gcc $(path_obj)lista3.3.o $(path_obj)cal_raizes.o -lm -o $(path_bin)lista3.3
+
+lista3.3.o: lista3/lista3.03/lista3.3.c
+	gcc -o $(path_obj)lista3.3.o -c lista3/lista3.03/lista3.3.c
+
+cal_raizes.o: lista3/lista3.03/cal_raizes.c
+	gcc -lm -o $(path_obj)cal_raizes.o -c lista3/lista3.03/cal_raizes.c
+
+# Bloco para compilar questão 1 - lista 1
+lista1.1: lista1.1.o qnt_numbers.o
+	gcc $(path_obj)lista1.1.o $(path_obj)qnt_numbers.o -o $(path_bin)lista1.1
+
+lista1.1.o: lista1/lista1.01/lista1.1.c
+	gcc -o $(path_obj)lista1.1.o -c lista1/lista1.01/lista1.1.c
+
+qnt_numbers.o: lista1/lista1.01/qnt_numbers.c
+	gcc -o $(path_obj)qnt_numbers.o -c lista1/lista1.01/qnt_numbers.c
 
 
-##
+
+
+
+
+
+
+
+
+
 
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c

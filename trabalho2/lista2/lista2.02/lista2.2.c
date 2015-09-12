@@ -13,7 +13,7 @@
  *          Richardson 
  */
 #include <stdio.h>
-#include "function.h"
+#include "calc_media.h"
 
 int main(int argc, const char *argv[])
 {
