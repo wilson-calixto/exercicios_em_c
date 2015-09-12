@@ -10,6 +10,8 @@
  *  Luiz Fernando
  *  
  *  */
+/* Este programa faz a contagem de digitos de um numero inteiro
+ */
 
 #include	"cont_digit.h"
 #include	<stdio.h>
