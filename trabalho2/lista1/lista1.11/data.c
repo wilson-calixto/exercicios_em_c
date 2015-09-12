@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /*
 a funcao "date" consiste em transformar uma data em formato DD/MM/AAAA (DD= dia
 MM= mes e AAAA= ano) em uma data do tipo DD do mes MM(por escrito e nao o

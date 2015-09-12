@@ -11,7 +11,7 @@
  *  
  *  a funcao "date" esta minuciosamente comentada em "funcao.c" na pasta lista1.11
  *  */
-
+#include <stdio.h>
 int main(int argc, const char *argv[])
 {
 	char num[12];
