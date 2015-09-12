@@ -14,7 +14,7 @@
  */
 
 #include<stdio.h>
-#include"function.h"
+#include"qnt_numbers.h"
 int main (int argc,const char *argv[])
 {
     int n;
