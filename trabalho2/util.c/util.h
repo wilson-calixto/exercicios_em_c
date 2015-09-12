@@ -14,3 +14,5 @@ int lower_number(int n1, int n2);
 int fits(int a, int b);
 int dice(); 
 float lowest(float a, float b, float c);
+int conta_digitos (unsigned long int num1, int num2 );
+
