@@ -132,8 +132,13 @@ qnt_numbers.o: lista1/lista1.01/qnt_numbers.c
 	gcc -o $(path_obj)qnt_numbers.o -c lista1/lista1.01/qnt_numbers.c
 
 # -----Bloco para compilar a questão 3 da lista 1 -------
-lista1.03: soma.o lista1.3.o
-
+path_lista = lista1/lista1.03
+lista1.03: soma.o lista1.03.o
+	gcc $(path_obj)lista1.03.o $(path_obj)soma.o -o $(path_bin)lista1.03
+lista1.03.o: $(path_lista)/lista1.03.c
+	gcc -o $(path_obj)lista1.03.o -c  $(path_lista)/lista1.03.c
+soma.o: $(path_lista)/soma.c
+	gcc -o $(path_obj)soma.o -c $(path_lista)/soma.c
 
 #-------<Continue Aqui >-------
 # Bloco referente a biblioteca UTIL
