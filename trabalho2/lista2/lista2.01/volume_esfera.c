@@ -12,6 +12,8 @@
 *	Wilson Neto
 */
 
+#include "../../util.c/util.h"
+
 //Definindo a funcao para calcular o volume de uma esfera e seus parametros
 float volume (float raio)
 { 
