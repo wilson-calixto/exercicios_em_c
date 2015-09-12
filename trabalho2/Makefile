@@ -157,6 +157,17 @@ lista1.11.o: lista1/lista1.11/lista1.11.c
 data.o: lista1/lista1.11/data.c
 	gcc -o $(path_obj)data.o -c lista1/lista1.11/data.c
 
+# Bloco para compilar questão 4 - lista 2
+lista2.04: lista2.04.o baskaras.o
+	gcc $(path_obj)lista2.04.o $(path_obj)baskaras.o -o $(path_bin)lista2.04 -lm
+
+lista2.04.o: lista2/lista2.04/lista2.04.c
+	gcc -o $(path_obj)lista2.04.o -c lista2/lista2.04/lista2.04.c
+
+baskaras.o: lista2/lista2.04/baskaras.c
+	gcc -o $(path_obj)baskaras.o -c lista2/lista2.04/baskaras.c
+
+
 
 #-------<Continue Aqui >-------
 
