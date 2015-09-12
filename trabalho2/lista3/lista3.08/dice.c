@@ -18,6 +18,6 @@
 int dice()
 {
 	srand(time(NULL));
-	return ("%d\n", rand() % 6);	
+	return ("%d\n", 1+ (rand() % 6));	
 }
 
