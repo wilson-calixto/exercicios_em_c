@@ -1,1 +1,1 @@
-float iteracao(int n);
+float iteracao(float a);
