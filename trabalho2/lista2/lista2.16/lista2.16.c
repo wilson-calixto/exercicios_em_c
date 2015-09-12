@@ -17,11 +17,11 @@
 
 int main()
 {
-    int numero,
+    int numero;
 
     //recebe o numero do parametro
     printf("Digite o numero que deseja fazer o fatorial: ");
-    scanf("%d", numero);
+    scanf("%d", &numero);
 
      // coloca o numero recebido na funcao
     fatorial=fat(numero);
