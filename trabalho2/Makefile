@@ -131,7 +131,7 @@ lista1.1.o: lista1/lista1.01/lista1.1.c
 qnt_numbers.o: lista1/lista1.01/qnt_numbers.c
 	gcc -o $(path_obj)qnt_numbers.o -c lista1/lista1.01/qnt_numbers.c
 
-
+# -----< Continue aqui >-------
 
 
 
