@@ -12,7 +12,6 @@
  *  */
  
 /* #include	"../../util.c/util.h" */
-#include "triangle.h"
 #include <stdio.h>
 
 int main( int argc, const char *argv[] ) 
