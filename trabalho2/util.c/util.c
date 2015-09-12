@@ -147,21 +147,6 @@ int is_higher(int x, int y)
     else return 0;
 }
 
-/*funcao que verifica o menor de dois numeros
-  e o retorna */
-
-int small(int num1, int num2)
-{
-    int menor;
-
-    menor = num1;
-    if(num2 > num1)
-    {
-        menor = num2;
-    }
-    return menor;
-}
-
 /* Retorna o MDC de dois números
 	
 	feito por SergioPinheiro*/
@@ -273,15 +258,6 @@ int fits(int a, int b)
         return 1;
     else
         return 0;
-}
-
-/* uma função de subtração */
-
-int subtraction(int num1, int num2)
-{
-    int aux;
-    aux = num1 - num2;
-    return aux;
 }
 
 /*
