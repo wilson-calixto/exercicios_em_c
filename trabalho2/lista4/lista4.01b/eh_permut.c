@@ -15,8 +15,8 @@
  *
  * =====================================================================================
  */
-
-int eh_permut(int num1, num2)
+#include "../../util.c/util.h"
+int eh_permut(int num1,int num2)
 {
 
 	while (num2 != 0 )

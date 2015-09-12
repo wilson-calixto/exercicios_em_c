@@ -26,11 +26,18 @@
  */
 int main ( int argc, char *argv[] )
 {
+	int num1, num2;
 	printf ( "Digite o primeiro numero\n" );
 	scanf ( "%d", &num1 );
 	printf ( "Digite o segundo numero\n" );
 	scanf ( "%d", &num2 );
-	
+	if (eh_permut(num1,num2))
+	{
+		printf ( "É permutação\n" );
+	}else
+	{
+		printf ( "Não é permutação\n" );
+	}
 
 	return 0;
-}				/* ----------  end of function main  ---------- */
+}
