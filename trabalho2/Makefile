@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.09
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -193,6 +193,27 @@ lista3.09: lista3.09.o util.o
 
 lista3.09.o: lista3/lista3.09/lista3.09.c
 	gcc -o $(path_obj)lista3.09.o -c lista3/lista3.09/lista3.09.c
+
+# Bloco para compilar questão 5 - lista 3
+lista3.05: lista3.05.o lower_number.o
+	gcc $(path_obj)lista3.05.o $(path_obj)lower_number.o -o $(path_bin)lista3.05 
+
+lista3.05.o: lista3/lista3.05/lista3.05.c
+	gcc -o $(path_obj)lista3.05.o -c lista3/lista3.05/lista3.05.c
+
+lower_number.o: lista3/lista3.05/lower_number.c
+	gcc -o $(path_obj)lower_number.o -c lista3/lista3.05/lower_number.c
+
+# Bloco para compilar questão 1a- lista 4
+lista4.01a: lista4.01a.o conta_digitos.o
+	gcc $(path_obj)lista4.01a.o $(path_obj)conta_digitos.o -o $(path_bin)lista4.01a 
+
+lista4.01a.o: lista4/lista4.01a/lista4.01a.c
+	gcc -o $(path_obj)lista4.01a.o -c lista4/lista4.01a/lista4.01a.c
+
+conta_digitos.o: lista4/lista4.01a/conta_digitos.c
+	gcc -o $(path_obj)conta_digitos.o -c lista4/lista4.01a/conta_digitos.c
+
 
 
 
