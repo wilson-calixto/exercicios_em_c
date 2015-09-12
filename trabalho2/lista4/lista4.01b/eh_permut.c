@@ -15,20 +15,24 @@
  *
  * =====================================================================================
  */
-#include "../../util.c/util.h"
+#include <stdio.h>
 int eh_permut(int num1,int num2)
 {
 
 	while (num2 != 0 )
 	{
-		switch (conta_digitos(num1,num2 % 10))
+
+ 		switch (conta_digitos(num1,num2 % 10))
 		{
 			case 1:
 				num2 = num2 / 10;
 				break;
 			default:
 				return 0;
+
+				
 		}
-	}
+	
 	return 1; 
+}
 }
