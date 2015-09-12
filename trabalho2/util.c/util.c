@@ -305,6 +305,3 @@ int conta_digitos (unsigned long int num1, int num2 )
 	 return contador;
 }
 
-											}
-					}
-}
