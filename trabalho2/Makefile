@@ -214,6 +214,16 @@ lista4.01a.o: lista4/lista4.01a/lista4.01a.c
 conta_digitos.o: lista4/lista4.01a/conta_digitos.c
 	gcc -o $(path_obj)conta_digitos.o -c lista4/lista4.01a/conta_digitos.c
 
+# Bloco para compilar questão 1b- lista 4
+lista4.01b: lista4.01b.o eh_permut.o util.o
+	gcc $(path_obj)lista4.01b.o $(path_obj)eh_permut.o $(path_obj)util.o -o $(path_bin)lista4.01b 
+
+lista4.01b.o: lista4/lista4.01b/lista4.01b.c
+	gcc -o $(path_obj)lista4.01b.o -c lista4/lista4.01b/lista4.01b.c
+
+eh_permut.o: lista4/lista4.01b/eh_permut.c
+	gcc -o $(path_obj)eh_permut.o -c lista4/lista4.01b/eh_permut.c
+
 
 
 
