@@ -1,5 +1,5 @@
 all:lista4.01b
-lista4.01b: eh_permut.o lista4.01b.o 
+lista4.01b: eh_permut.o lista4.01b.o util.o
 	gcc util.o  eh_permut.o lista4.01b.o -o lista4.01b
 lista4.01b.o: lista4.01b.c
 	gcc -c lista4.01b.c

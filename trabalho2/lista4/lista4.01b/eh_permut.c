@@ -18,10 +18,8 @@
 #include <stdio.h>
 int eh_permut(int num1,int num2)
 {
-
 	while (num1 != 0 )
 	{
-
  		switch (conta_digitos(num2,num1 % 10))
 		{
 			case 1:
@@ -29,10 +27,8 @@ int eh_permut(int num1,int num2)
 				break;
 			default:
 				return 0;
-
 				
 		}
-	
+	}	
 	return 1; 
-}
 }

@@ -32,7 +32,7 @@ int main ( int argc, char *argv[] )
 	printf ( "Digite o segundo numero\n" );
 	scanf ( "%d", &num2 );
 	
-	if (eh_permut(num1,num2))
+	if (eh_permut(num1,num2)  && (qtd_num(num1) == qtd_num(num2)))
 	{
 		printf ( "É permutação\n" );
 	}else
