@@ -31,6 +31,7 @@ int main ( int argc, char *argv[] )
 	scanf ( "%d", &num1 );
 	printf ( "Digite o segundo numero\n" );
 	scanf ( "%d", &num2 );
+	
 	if (eh_permut(num1,num2))
 	{
 		printf ( "É permutação\n" );
