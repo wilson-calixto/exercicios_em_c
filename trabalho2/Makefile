@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -131,9 +131,11 @@ lista1.1.o: lista1/lista1.01/lista1.1.c
 qnt_numbers.o: lista1/lista1.01/qnt_numbers.c
 	gcc -o $(path_obj)qnt_numbers.o -c lista1/lista1.01/qnt_numbers.c
 
-# -----< Continue aqui >-------
+# -----Bloco para compilar a questão 3 da lista 1 -------
+lista1.03: soma.o lista1.3.o
 
 
+#-------<Continue Aqui >-------
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
 	gcc -o $(path_obj)util.o -c util.c/util.c
