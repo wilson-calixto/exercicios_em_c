@@ -12,17 +12,7 @@
 *	Wilson Neto
 */
 
-//Chamando a funcao power do utilDreka.h
-float power(float x,float y)
-{
-	int i;
-	float k=1;
-	for(i=1;i<=y;i++)
-	{
-		k=k*x;
-	}
-	return k;
-}
+#include "../../util.c/util.h"
 
 //Definindo a funcao para calcular o volume de uma esfera e seus parametros
 float volume (float raio)

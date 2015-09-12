@@ -1,3 +1,18 @@
+/*Programacao de Computadores e Algoritmos / Laboratorio de Programacao de Computadores
+ *
+ * Trabalho 2
+ * Lista 2
+ * Questao 21
+ *
+ *\Equipe:  Elizabeth Castro
+ *          Andreza Moreira
+ *          Juliany Raiol
+ *          Luana Andrade
+ *          Wilson Neto
+ *
+ *
+ * / */
+
 float iteracao(float a)
 {
 	float soma;

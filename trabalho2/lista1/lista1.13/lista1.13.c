@@ -15,7 +15,7 @@
  * / */
  
 #include <stdio.h>
-#include "util.h"
+#include "retangulo.h"
 
 int main()
 {
