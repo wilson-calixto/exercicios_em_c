@@ -14,7 +14,6 @@
 #include <stdio.h>
 
 int main(int argc, const char *argv[])
-
 {
 	int a,b; //declara as variaveis a e b
 

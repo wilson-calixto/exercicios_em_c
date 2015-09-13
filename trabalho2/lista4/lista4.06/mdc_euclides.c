@@ -1,13 +1,10 @@
-#include "../../util.c/util.h"
 #include <stdio.h>
-#include <function.h>
 
 //funcao para calcular o mdc atravez do algoritmo de euclides
 
-int mdc_euclides(int a,int b);
-
+int mdc_euclides(int a,int b)
 {
-	int a,b,quociente,resto; //declaracao das variaveis
+	int quociente,resto; //declaracao das variaveis
 	
 	resto = 1;	
 
