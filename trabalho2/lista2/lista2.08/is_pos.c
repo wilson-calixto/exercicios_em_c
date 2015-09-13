@@ -6,7 +6,7 @@
  * Equipe:
  * 
  *      Paulo Marinho 
- *      Evandro Fer 
+ *      Evandro Fern 
  *      Jailson
  *      Lucas
  *      Richardson
