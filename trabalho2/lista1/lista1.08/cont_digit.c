@@ -9,7 +9,7 @@ int qtd_num(int num)
     {
         if ( num < 0 ) //aninhando o if perguntando se alem de diferente de 0, e menor
         {
-           num = num*(-1);
+           num = num*(-1); // tornando-lhe positivo
         }
         for ( contador = 0; num >  0 ;  contador++  )
         {
