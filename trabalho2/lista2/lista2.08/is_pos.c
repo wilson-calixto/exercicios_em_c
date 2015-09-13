@@ -7,7 +7,7 @@
  * 
  *      Paulo Marinho 
  *      Evandro Fernandes
- *      Jackson Gom 
+ *      Jackson Gomes
  *      Lucas
  *      Richardson
  *      Wilson 	
