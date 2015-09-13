@@ -5,7 +5,6 @@
  *     Equipe: Benjamin Borges
  *     Davi Tavares
  *     Paulo Henrique
- *     Fernando Calderaro  ??
  *     Lucas Frota
  *     Luiz Fernando
  *    

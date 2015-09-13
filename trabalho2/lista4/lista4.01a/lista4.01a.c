@@ -1,11 +1,16 @@
 #include <stdio.h>
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 2
+ *     Questão 4.1A
+ *     Equipe: Benjamin Borges
+ *     Davi Tavares
+ *     Paulo Henrique
+ *     Lucas Frota
+ *     Luiz Fernando
+ *          *
+ *           *  */
 
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  main
- *  Description:  
- * =====================================================================================
- */
 int main ( int argc, char *argv[] )
 {
 	unsigned long int  num1, num2;

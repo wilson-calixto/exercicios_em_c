@@ -1,32 +1,18 @@
-/*
- * =====================================================================================
- *
- *       Filename:  lista3.9.c
- *
- *    Description:  Description: Esse programa usará a função da questao 8 da lista 3 para  
- * gerar valores de um dado de 1 a 1000000, depois imprimirá quantas vezes o lado correspondente
- * apareceu. Repare que precisei criar 6 variáveis que correspondem a 6 lados do dado
- * depois vou incrementando a medida que a função me retorna.
- * =====================================================================================
-
- *
- *        Version:  1.0
- *        Created:  11-09-2015 18:11:58
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
-
 #include	<stdio.h>
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 2
+ *     Questão 3.9
+ *     Equipe: Benjamin Borges
+ *     Davi Tavares
+ *     Paulo Henrique
+ *     Lucas Frota
+ *     Luiz Fernando
+ *    
+ *    */
 
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  main
- *   */
+
+ */
 int main ( int argc, char *argv[] )
 {
 	int i,num1=0,num2=0,num3=0,num4=0,num5=0,num6=0, numero;
