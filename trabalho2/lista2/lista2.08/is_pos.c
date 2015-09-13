@@ -5,7 +5,7 @@
  * 
  * Equipe:
  * 
- *      Paulo Marinh 
+ *      Paulo Marinho 
  *      Hermann
  *      Jailson
  *      Lucas
