@@ -6,7 +6,7 @@
  * Equipe:
  * 
  *      Paulo Marinho 
- *      Her
+ *      He
  *      Jailson
  *      Lucas
  *      Richardson
