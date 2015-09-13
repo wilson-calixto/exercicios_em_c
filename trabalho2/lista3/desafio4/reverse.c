@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include "reverse.h"
-
 int reverse(int n)
 {
     int i, j, r, result, div;
@@ -14,5 +11,5 @@ int reverse(int n)
         result = result+((n/j)*(div/j));
         n=r;
     }
-    return n;
+    return result;
 }

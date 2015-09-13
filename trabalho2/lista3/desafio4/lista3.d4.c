@@ -4,9 +4,9 @@
  * *lista 3
  * *Desafio 4
  * *
- * *Equipe: Paulo Marinho
+ * *Equipe: 
+ * *     Paulo Marinho
  * *     Evandro Fernandes      
- * *     Robson
  * *     Jessica
  * *     Jackson Gomes
  * *     
@@ -16,6 +16,8 @@
 #include "reverse.h"
 int main (int argc, const char *argv[])
 {
-    reverse(123);
+    int a;
+    a=reverse(123);
+    printf("%d",a);
     return 0;
 }
