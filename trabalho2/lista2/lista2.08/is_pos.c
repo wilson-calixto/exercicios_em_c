@@ -7,7 +7,7 @@
  * 
  *      Paulo Marinho 
  *      Evandro Fernandes
- *      Ja
+ *      J
  *      Lucas
  *      Richardson
  *      Wilson 	
