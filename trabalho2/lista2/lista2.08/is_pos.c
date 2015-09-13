@@ -6,7 +6,7 @@
  * Equipe:
  * 
  *      Paulo Marinho 
- *      Hermann
+ *      Herman
  *      Jailson
  *      Lucas
  *      Richardson
