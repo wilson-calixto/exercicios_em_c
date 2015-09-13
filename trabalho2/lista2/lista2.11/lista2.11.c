@@ -4,11 +4,16 @@
  * lista2.11.c
  *
  * Equipe:
+ *      Paulo Marinho
+ *      Evandro Fernandes
+ *      Jackson Gomes
+ *      Jessica Kely
  *
  */
 
 	
 
+#include <stdio.h>
 
 /* ordena tres numeros de forma crescente */
 int tri_sort(int numero1,int numero2,int numero3)
