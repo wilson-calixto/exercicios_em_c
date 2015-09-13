@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -223,6 +223,16 @@ lista4.01b.o: lista4/lista4.01b/lista4.01b.c
 
 eh_permut.o: lista4/lista4.01b/eh_permut.c
 	gcc -o $(path_obj)eh_permut.o -c lista4/lista4.01b/eh_permut.c
+
+# Bloco para compilar questão 6 lista 4
+lista4.06: lista4.06.o mdc_euclides.o 
+	gcc $(path_obj)lista4.06.o $(path_obj)mdc_euclides.o  -o $(path_bin)lista4.06 
+
+lista4.06.o: lista4/lista4.06/lista4.06.c
+	gcc -o $(path_obj)lista4.06.o -c lista4/lista4.06/lista4.06.c
+
+mdc_euclides.o: lista4/lista4.06/mdc_euclides.c
+	gcc -o $(path_obj)mdc_euclides.o -c lista4/lista4.06/mdc_euclides.c
 
 
 
