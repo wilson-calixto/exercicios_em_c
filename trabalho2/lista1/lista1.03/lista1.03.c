@@ -25,7 +25,7 @@ int main ( int argc, char *argv[] )
 {
 	float num1, num2, num3; //declarando as variaveis
 	printf ( "Digite o primeiro numero\n");
-	scanf ( "%f", &num1 );
+	scanf ( "%f", &num1 ); //lendo as variaveis
 	printf ( "Digite o segundo numero\n" );
 	scanf ( "%f", &num2 );	
 	printf ( "Digite o terceiro numero\n" );
