@@ -8,9 +8,7 @@
  *      Paulo Marinho 
  *      Evandro Fernandes
  *      Jackson Gomes
- *      Jessica Kely
- *      
- *     	
+ *      Jessica Kely     	
  */
 
 
