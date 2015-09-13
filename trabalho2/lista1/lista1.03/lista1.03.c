@@ -23,7 +23,7 @@
  */
 int main ( int argc, char *argv[] )
 {
-	float num1, num2, num3;
+	float num1, num2, num3; //declarando as variaveis
 	printf ( "Digite o primeiro numero\n");
 	scanf ( "%f", &num1 );
 	printf ( "Digite o segundo numero\n" );
