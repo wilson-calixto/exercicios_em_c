@@ -23,7 +23,10 @@ void retangulo(int linhas, int colunas)
 	{
 		for(j=0;j<colunas;j++)
 		{
-			if(j == 0 || j == colunas-1) printf("|");
+			if(j == 0 || j == colunas-1)
+			{
+				printf("|");
+			}
 			else printf("+");
 		}
 		printf("\n");
