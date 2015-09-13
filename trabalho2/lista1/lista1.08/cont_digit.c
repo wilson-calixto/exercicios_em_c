@@ -5,7 +5,7 @@ Insira qulaquer numero e a função retornará o numero de dígitos
 int qtd_num(int num)
 {
     int contador;
-    if ( num != 0  )
+    if ( num != 0  ) //perguntando se o mumero e diferente de 0
     {
         if ( num < 0 )
         {
