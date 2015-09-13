@@ -5,7 +5,7 @@
  * 
  * Equipe:
  * 
- *      Ewerton
+ *      P
  *      Hermann
  *      Jailson
  *      Lucas
