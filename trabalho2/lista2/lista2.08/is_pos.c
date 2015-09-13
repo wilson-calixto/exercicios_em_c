@@ -5,7 +5,7 @@
  * 
  * Equipe:
  * 
- *      Paulo Mari
+ *      Paulo Marin
  *      Hermann
  *      Jailson
  *      Lucas
