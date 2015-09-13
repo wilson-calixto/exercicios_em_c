@@ -6,7 +6,7 @@
  * Equipe:
  * 
  *      Paulo Marinho 
- *      Evan 
+ *      Evand 
  *      Jailson
  *      Lucas
  *      Richardson
