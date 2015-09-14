@@ -12,3 +12,5 @@ reverse.o: reverse.c
 clean:
 	rm -rf *.o
 
+mrproper:
+	rm -rf lista3.d4

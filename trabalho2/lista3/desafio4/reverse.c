@@ -1,15 +1,13 @@
-int reverse(int n)
+int reverse(int num)
 {
-    int i, j, r, result, div;
-    for(i=10; n/i>=1; i=i*10)
+    int rev;
+    
+    rev=0;
+
+    while (num>0)
     {
-        div=i;
+        rev=rev*10+num%10;
+        num=num/10;
     }
-    for(j=div; j>=1; j=j/10)
-    {
-        r=n%j;
-        result = result+((n/j)*(div/j));
-        n=r;
-    }
-    return result;
+    return rev;
 }

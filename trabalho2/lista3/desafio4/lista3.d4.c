@@ -16,8 +16,12 @@
 #include "reverse.h"
 int main (int argc, const char *argv[])
 {
-    int a;
-    a=reverse(123);
-    printf("%d",a);
+    int result,num;
+
+    printf ( "Informe um numero: \n" );
+    scanf ( "%d", &num );
+    result=reverse(num);
+    printf("%d\n",result);
+
     return 0;
 }
