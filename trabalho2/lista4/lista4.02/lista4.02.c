@@ -14,7 +14,7 @@
  */
 
 #include <stdio.h>
-#include "funcao.h"
+#include "f.h"
 
 int main(int argc, const char *argv[]) 
 {
