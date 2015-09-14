@@ -279,7 +279,7 @@ lista4.02.o: lista4/lista4.02/lista4.02.c
 	gcc -o $(path_obj)lista4.02.o -c lista4/lista4.02/lista4.02.c
 
 f.o: lista4/lista4.02/f.c
-	gcc -o $(path_obj)f.o -c lista4/lista4.02/fu.c
+	gcc -o $(path_obj)f.o -c lista4/lista4.02/f.c
 
 
 
