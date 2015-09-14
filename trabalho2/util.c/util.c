@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include<time.h>
+#include<stdlib.h>
 
 /* 
  * Função para calcular a potencia
- * recebe dois inteiros x e z
- * e retorna um float pot
+ * recebe dois inteiros x e y
+ * e retorna um float k
  */
 
 float power(float x,float y)
@@ -68,6 +70,55 @@ int is_perfect(int num)
 	}		
 }
 
+/* Função calcula a arctangente das coordenadas x e y
+ * recebe um float x
+ * retora um float
+ */
+
+float arctan(float x)
+{
+	float resposta=0,pi=3.14,valor;
+	int e=1,i=1.0;
+	
+	do{
+		valor=power(x,i)/i;
+
+		if(e%2==0)
+		{
+			resposta=resposta-valor;
+		}
+        else
+        {
+			resposta+=valor;
+		}
+		e++;		
+		i=i+2;
+        
+	}while(valor>0.0001);
+	
+	return resposta;
+}
+
+/* Função recebe n coordenadas calcula o angulo em relacao ao eixo horizontal de cada uma e devolve o menor angulo */
+
+float alfa(float x, float y)
+{
+	float pi=3.14,aux,radianos;
+	if(x==0 && y==0)
+	{	
+		return -1;
+	}
+	if(y<x)
+	{
+		aux=y/x;
+		radianos=arctan(aux);
+	}else{
+		aux=(x/y);
+		radianos=pi/2-arctan(aux);
+	}	
+	return (180*radianos)/pi;
+}
+
 /*forma uma serie de numeros em ordem crescente em n linhas*/
 void serie_repetition(int n) //imprime o valor de i j vezes numa serie de tamanho n
 {
@@ -117,13 +168,18 @@ int mdc (int x, int y)
 
     do
     {
-        res = num%den;
+    	if (den != 0)
+    	{
+        	res = num%den;
         
-        if (res !=0)
-        {
-            num = den;
-            den = res;
-        }
+        	if (res !=0)
+        	{
+            		num = den;
+            		den = res;
+        	}
+    	}
+    	else 
+    		res = 0;
     } while (res != 0);
 
     return den;
@@ -174,3 +230,78 @@ float biggest(float a,float b, float c)
 	}
 
 }
+
+/* Recebe dois inteiros e retorna o menor deles */
+
+int lower_number(int n1, int n2)
+{
+	if (n1 > n2)
+	{
+		return n2;
+	}
+	else
+	{
+		return n1;
+	}
+}
+/*função que verifica se um numero b "encaixa" em um numero a
+ *ou seja, se os dígitos de b, correspondem aos ultimos dígitos de a*/
+
+int fits(int a, int b) 
+{
+    while (b != 0 && a%10 == b%10) 
+    {
+        a = a/10;
+        b = b/10;
+    }
+    if (b == 0)
+        return 1;
+    else
+        return 0;
+}
+
+/*
+ *para utilizar a função rand()
+ *para usar o srand, enviando com "semente"
+ *o horário do sistema, para os valores não se repetirem
+ */
+int dice()
+{
+	srand(time(NULL));
+	return ("%d\n", 1+ (rand() % 6));	
+}
+
+
+// retorna o menor valor de 3 parametros
+
+float lowest(float a,float b, float c)
+{
+	if((a<=b)&&(a<=c)){
+		return a;
+	}else if((b<=a)&&(b<=c)){
+		return b;
+	}else if((c<=b)&&(c<=a)){
+		return c;
+	}
+}
+
+
+// Esta função recebe 2 parametros, o primeiro é um número qualquer. O segundo é um numero
+// que será verificado quantas vezes ele aparece no primeiro.
+// Ex: num1 = 123455 
+//     num2 = 5
+// Saída: O numero 5 foi digitado 2 vezes.
+int conta_digitos (unsigned long int num1, int num2 )
+{
+	int i,contador;
+	while (num1 != 0)
+	{
+	      if ((num1 % 10) == num2)
+	     {
+                 contador += 1;
+             }
+             num1 = num1 / 10;
+        }
+	 return contador;
+}
+

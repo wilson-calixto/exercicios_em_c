@@ -1,10 +1,10 @@
 int fat(int n)
 {
-	int aux = 1 ,cont;
+	int fat = 1 ,cont;
 
-	for(cont=1;cont<=n;cont++)
+	for(cont=1;cont<=n;cont++)//calcula o fatorial
 	{
-		aux *= cont; 	
+		fat *= cont; 	
 	}
-	return(aux);
+	return(fat);
 }

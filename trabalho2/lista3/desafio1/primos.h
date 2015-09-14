@@ -1,0 +1,1 @@
+int primos(int n);
