@@ -4,7 +4,7 @@
 int main()
 {
 
-	int tam=0,n=0;	
+	int tam=0,n=0, reverse=0;	
 	printf("Tamanho da sequencia: ");
 	scanf("%d",&tam);
 	printf("Digite a sequencia correspondente ao tamanho anterior: ");
