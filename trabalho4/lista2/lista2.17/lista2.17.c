@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include "functions.h"
 
-int main(int argc, const char *argv[])
+int main()
 {
     int n, vet[n], i, sum;
 
@@ -28,5 +28,4 @@ int main(int argc, const char *argv[])
     }
     sum = sum_max(vet,n);
     printf("A soma maxima do segmento eh: %d \n", sum);
-        
 }

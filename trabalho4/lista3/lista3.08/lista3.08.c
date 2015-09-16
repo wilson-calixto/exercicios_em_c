@@ -1,6 +1,19 @@
+/*
+* Programacao de Computadores e Algoritmos
+* Trabalho 4
+* Questao 3.08
+* Equipe: 	Wilson Neto
+* 		Sergio Pinheiro
+* 		Andressa Moreira
+* 		Benjamim Borges
+*		Gabriel Faraco
+*
+* */
+
+
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+#include "../../util.c/util.h"
 #include "comb.h"
 
 int fatorial(int n);

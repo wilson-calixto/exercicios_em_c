@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "../../util.c/util.h"
+
+int fatorial(n);
 
 int comb(int a, int b) {
 	//s2 return complexos

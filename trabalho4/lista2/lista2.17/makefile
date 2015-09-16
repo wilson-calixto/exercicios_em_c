@@ -1,10 +1,10 @@
-all: lista2.12
+all: lista2.17
 
-lista2.12: lista2.12.o functions.o
-	gcc lista.12.o functions.o lista2.12
+lista2.17: lista2.17.o functions.o
+	gcc lista2.17.o functions.o -o lista2.17
 
-lista2.12.o: lista2.12.c
-	gcc -c lista2.12.c
+lista2.17.o: lista2.17.c
+	gcc -c lista2.17.c
 
 functions.o: functions.c
 	gcc -c functions.c
@@ -13,5 +13,5 @@ clean:
 	rm -rf *.o
 
 mrproper: clean
-	rm -rf lista2.12
+	rm -rf lista2.17
 
