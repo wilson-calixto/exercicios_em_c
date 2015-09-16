@@ -1,7 +1,7 @@
 all: lista1.09
 
 lista1.09: lista1.09.o util.o
-	gcc lista1.09.o util.o o- lista1.09
+	gcc lista1.09.o util.o -o lista1.09
 
 lista1.09.0: lista1.09.c
 	gcc -c lista1.09.c
