@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "../../util.c/util.h"
 int comb(int a, int b) {
 	//s2 return complexos
 	//C(a,b)
