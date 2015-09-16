@@ -1,21 +1,23 @@
 	#include <stdio.h>
 	#define MAX 100
-
-	int main(argc,const char *argc[])
+        #include "matriz.c"
+	int main(int argc,char const *argv[])
 	{
 		int m,n,cont,cont2,i,j,aux=1;
-		float A[MAX][MAX];
+		int A[MAX][MAX];
 
 		printf("Digite a quantidade de linhas da matriz A:\n");
 		scanf("%d", &m);
 		printf("Digite a quantidade de colunas da matriz A:\n");
 		scanf("%d", &n);
 		
-		for (i=0;i<m;i++)
+		le_matriz(A, m, n);
+		if(teste_permutacao(A,m,n)==1)
 		{
-			for (j=0;j<n;j++)
-			{
-				scanf("%f", &A[i][j]);
-			}
-		}
+			printf("é permutação!");
+		}else{
+			printf("não é permutação!");
+               }
+	return 0;
+}
 
