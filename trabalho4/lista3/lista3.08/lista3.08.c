@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "util.h"
+#include "comb.h"
 
 int fatorial(int n);
 int comb(int a, int b);
