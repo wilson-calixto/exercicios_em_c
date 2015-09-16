@@ -15,7 +15,7 @@ int main()
 		scanf("%d",&n[i]);
 	}
 	printf("\n\n");
-	reverse = inverso(n,tam);
+	reverse = inverso(*n,tam);
 
 	printf("Numero inverso: %d",reverse);
 
