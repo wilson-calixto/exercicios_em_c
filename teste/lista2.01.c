@@ -4,7 +4,7 @@
 int main()
 {
 
-	int tam=0, reverse=0;	
+	int tam=0, reverse=0, i=0;	
 	int n[tam];
 
 	printf("Tamanho da sequencia: ");
