@@ -1,4 +1,4 @@
-all: lista1.09
+all: lista1.09 lista2.01
 
 lista1.09: lista1.09.o util.o
 	gcc lista1.09.o util.o -o lista1.09
