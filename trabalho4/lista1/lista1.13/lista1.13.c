@@ -1,3 +1,17 @@
+/*
+Programaçao de Computadores e Algoritmos
+
+Teste 4
+
+Grupo:
+	Davi Tavares;
+	Delrick Oliveira;
+	Evandro Fernandes;
+	Lucas Frota;
+	Manoel Victor;
+
+*/
+
 #include <stdio.h>
 
 int main(int argc, const char *argv[])
