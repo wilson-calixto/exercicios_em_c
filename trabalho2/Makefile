@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -291,15 +291,36 @@ lista2.12.o: lista2/lista2.12/lista2.12.c
 func.lista2.12.o: lista2/lista2.12/func.lista2.12.c
 	gcc -o $(path_obj)func.lista2.12.o -c lista2/lista2.12/func.lista2.12.c
 	
-# Bloco para compilar questão 12 - lista 2
-lista2.12: lista2.12.o func.lista2.12.o
-	gcc $(path_obj)lista2.12.o $(path_obj)func.lista2.12.o -o $(path_bin)lista2.12
+# Bloco para compilar questão 7 - lista 4
+lista4.7: lista4.7.o func.lista4.7.o
+	gcc $(path_obj)lista4.7.o $(path_obj)func.lista4.7.o -o $(path_bin)lista4.7
 
-lista2.12.o: lista2/lista2.12/lista2.12.c
-	gcc -o $(path_obj)lista2.12.o -c lista2/lista2.12/lista2.12.c
+lista4.7.o: lista4/lista4.07/lista4.7.c
+	gcc -o $(path_obj)lista4.7.o -c lista4/lista4.07/lista4.7.c
 
-func.lista2.12.o: lista2/lista2.12/func.lista2.12.c
+func.lista4.7.o: lista4/lista4.07/func.lista4.7.c
+	gcc -o $(path_obj)func.lista2.12.o -c lista4/lista4.07/func.lista4.7.c
+	
+# Bloco para compilar questão 7 - lista 4
+lista4.7: lista4.7.o func.lista4.7.o
+	gcc $(path_obj)lista4.7.o $(path_obj)func.lista4.7.o -o $(path_bin)lista4.7
+
+lista4.7.o: lista4/lista4.07/lista4.7.c
+	gcc -o $(path_obj)lista4.7.o -c lista4/lista4.07/lista4.7.c
+
+func.lista4.7.o: lista4/lista4.07/func.lista4.7.c
 	gcc -o $(path_obj)func.lista2.12.o -c lista2/lista2.12/func.lista2.12.c
+
+
+
+
+
+
+
+
+
+
+
 
 
 
