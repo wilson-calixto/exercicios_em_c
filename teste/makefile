@@ -29,8 +29,6 @@ lista3.04: lista3.04.o util.o
 
 lista3.04.o: lista3.04.c
 	gcc -c lista3.04.c
-	
-/*parte padrão do Makefile*/
 
 util.o: util.c 
 	gcc -c util.c
