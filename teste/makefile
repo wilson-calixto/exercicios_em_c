@@ -18,3 +18,6 @@ util.o: util.c
 
 clean:
 	rm -rf *.o
+	
+mrproper: clean
+	rm -rf lista3.04
