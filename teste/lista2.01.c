@@ -12,7 +12,7 @@ int main()
 	printf("\n\n");
 	reverse = inverso(n,tam);
 
-	printf("Numero inverso: ",reverse);
+	printf("Numero inverso: %d",reverse);
 
 	printf("\n\n\n");
 
