@@ -18,6 +18,3 @@ util.o: util.c
 
 clean:
 	rm -rf *.o
-
-mrproper:
-	rm -rf
