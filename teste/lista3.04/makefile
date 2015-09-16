@@ -13,4 +13,4 @@ clean:
 	rm -rf *.o
 
 mrproper: clean
-	rm -rf lista2.3
+	rm -rf lista3.04
