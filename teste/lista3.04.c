@@ -35,6 +35,9 @@ int main(int argc, const char *argv[])
     {
         printf("Nao existe elementos repetidos.\n");
     }
+    
+    free(a);
+    a = NULL;
 
     return 0;
 }
