@@ -1,4 +1,4 @@
-all: lista1.09 lista2.01 lista3.5 principal
+all: lista1.09 lista2.01 lista3.5 principal lista3.04
 
 lista1.09: lista1.09.o util.o
 	gcc lista1.09.o util.o -o lista1.09
@@ -23,16 +23,18 @@ principal: principal.o util.o
 
 principal.o: principal.c
 	gcc -c principal.c
+	
+lista3.04: lista3.04.o util.o
+	gcc lista3.04.o util.o -o lista3.04
 
+lista3.04.o: lista3.04.c
+	gcc -c lista3.04.c
+	
+/*parte padrão do Makefile*/
 
-
-
-
-util.o: util.c
+util.o: util.c 
 	gcc -c util.c
-
 clean:
 	rm -rf *.o
-	
 mrproper: clean
-	rm -rf principal lista2.01 lista3.5 lista1.09
+	rm -rf principal lista2.01 lista3.5 lista1.09 lista3.04
