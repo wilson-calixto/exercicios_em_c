@@ -33,12 +33,12 @@ void produto_escalar(int *vetor1,int *vetor2,int loops)
 }
 
 //-------------------------------------------------------------------------------
-int inverso(int *vetor, int s)
+void inverso(int *vetor, int s)
 {
     int i=0;
     for (i=s-1;i>=0;i--)
     {
-        return vetor[i];  
+        printf("%d ", vetor[i]);  
     }
 
    
