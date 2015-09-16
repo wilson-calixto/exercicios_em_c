@@ -1,0 +1,1 @@
+int inverso(n,tam);
