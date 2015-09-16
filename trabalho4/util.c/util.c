@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 void read_array(int n, int v[n])
 {
 	int cont; //contador
