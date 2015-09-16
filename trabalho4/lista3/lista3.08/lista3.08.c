@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+#include "../../util.c/util.h"
 #include "comb.h"
 
 int fatorial(int n);
