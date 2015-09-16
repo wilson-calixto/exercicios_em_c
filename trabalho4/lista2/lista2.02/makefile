@@ -1,17 +1,17 @@
-all:
+all: lista2.02
 
-lista2.02:
+lista2.02: lista2.02.o process.o
+	gcc lista2.02.o process.o -o lista2.02
 
+lista2.02.o: lista2.02.c
+	gcc -c lista2.c
 
-lista2.02.o:
-
-
-process.o:
-
+process.o: process.c
+	gcc -c process.c
 
 clean:
-
-
-mrproper:
-
+	rm -rf *.o
+	
+mrproper: clean
+	rm -rf lista2.02
 
