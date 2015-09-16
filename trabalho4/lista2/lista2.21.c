@@ -14,7 +14,7 @@ int main()
 	/* carrega os numeros no vetor */
 	for (i=0;i<loops;i++ )
 	{
-		printf ("Digite vet[%d]: ",i);
+		printf ("Digite o numero %d: ",i+1);
 		scanf ("%f", &vetor[i]);
 	}
     
@@ -26,17 +26,24 @@ int main()
 	for (i=0;i<loops ;i++ )
 	{
 		procurado=vetor[i];        
-        
-        
-
-        /* chama a funcao que devolve quantas vezes esse numero apareceu  no vetor */
+		
+	/* chama a funcao que devolve quantas vezes esse numero apareceu  no vetor */
         vezes_q_apareceu = qnt_ap(vetor,loops,procurado);
 
- /*         printf ( "apareceu %d\n",vezes_q_apareceu );*/
 
-/*           mostra o numero e quantas vezes o numeo repetiu */
-        printf ( "o numero %.2f repetiu : %d vezes\n",vetor[i],vezes_q_apareceu-1 );
-/*     incrementa o contador para que ele va para o proximo numero */
+
+	/*  mostra o numero e quantas vezes o numeo repetiu */
+		if( vezes_q_apareceu==2)
+		{
+			printf ( "o numero %.2f repetiu : %d vez\n",vetor[i],vezes_q_apareceu-1 );
+		}
+		else
+		{
+			printf ( "o numero %.2f repetiu : %d vezes\n",vetor[i],vezes_q_apareceu-1 );
+		}
+        
+        
+	/* incrementa o contador para que ele va para o proximo numero */
         i+=vezes_q_apareceu-1;
     
     }
