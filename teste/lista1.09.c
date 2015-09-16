@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "select.c"
 int main(int argc, const char *argv[])
 
 {
