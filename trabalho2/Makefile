@@ -1,5 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23
-
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -244,6 +243,54 @@ lista4.06.o: lista4/lista4.06/lista4.06.c
 
 mdc_euclides.o: lista4/lista4.06/mdc_euclides.c
 	gcc -o $(path_obj)mdc_euclides.o -c lista4/lista4.06/mdc_euclides.c
+
+# Bloco para compilar questão 4 - lista 1
+lista1.04: lista1.04.o util.o
+	gcc $(path_obj)lista1.04.o $(path_obj)util.o -o $(path_bin)lista1.04
+
+lista1.04.o: lista1/lista1.04/lista1.04.c
+	gcc -o $(path_obj)lista1.04.o -c lista1/lista1.04/lista1.04.c
+	
+# Bloco para compilar questão 10 - lista 3
+lista3.10: lista3.10.o funcao.o
+	gcc $(path_obj)lista3.10.o $(path_obj)funcao.o -o $(path_bin)lista3.10
+
+lista3.10.o: lista3/lista3.10/lista3.10.c
+	gcc -o $(path_obj)lista3.10.o -c lista3/lista3.10/lista3.10.c
+
+funcao.o: lista3/lista3.10/funcao.o
+	gcc -o $(path_obj)funcao.o -c lista3/lista3.10/funcao.c
+	
+# Bloco para compilar questão 05 - lista 2
+lista2.05: lista2.05.o fu.o
+	gcc $(path_obj)lista2.05.o $(path_obj)fu.o -o $(path_bin)lista2.05
+
+lista2.05.o: lista2/lista2.05/lista2.05.c
+	gcc -o $(path_obj)lista2.05.o -c lista2/lista2.05/lista2.05.c
+
+fu.o: lista2/lista2.05/fu.c
+	gcc -o $(path_obj)fu.o -c lista2/lista2.05/fu.c
+	
+# Bloco para compilar questão 02 - lista 4
+lista4.02: lista4.02.o f.o
+	gcc $(path_obj)lista4.02.o $(path_obj)f.o -o $(path_bin)lista4.02
+
+lista4.02.o: lista4/lista4.02/lista4.02.c
+	gcc -o $(path_obj)lista4.02.o -c lista4/lista4.02/lista4.02.c
+
+f.o: lista4/lista4.02/f.c
+	gcc -o $(path_obj)f.o -c lista4/lista4.02/f.c
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -14,7 +14,7 @@
  */
 
 #include <stdio.h>
-#include "funcao.h"
+#include "fu.h"
 
 int main(int argc, const char *argv[])//funcao principal
 {

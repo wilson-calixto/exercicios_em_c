@@ -1,6 +1,1 @@
-#ifdef FUNCAO_H
-#define FUNCAO_H
-
-int funcPrimo(int a);
-
-#endif
+int funcPrimo(int);//Declaracao da funcao usada para fazer o link entre a funcao e main

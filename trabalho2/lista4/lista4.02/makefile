@@ -1,10 +1,10 @@
 all: lista4.02
 
-lista4.02:funcao.o lista4.02.o
-	gcc funcao.o lista4.02.o -o lista4.02
+lista4.02:f.o lista4.02.o
+	gcc f.o lista4.02.o -o lista4.02
 
-funcao.o:funcao.c
-	gcc -c funcao.c
+funcao.o:f.c
+	gcc -c f.c
 
 lista4.02.o:lista4.02.c 
 	gcc -c lista4.02.c

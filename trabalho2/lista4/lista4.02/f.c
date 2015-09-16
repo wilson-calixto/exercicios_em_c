@@ -36,7 +36,7 @@ int small(int num1, int num2)
     int menor;
 
     menor = num1;
-    if(num2 > num1)
+    if(num2 < num1)
     {
         menor = num2;
     }

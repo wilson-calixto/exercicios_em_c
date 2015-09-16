@@ -8,19 +8,28 @@
  *      Paulo Marinho 
  *      Evandro Fernandes
  *      Jackson Gomes
- *      Jessica Kely     	
+ *           	
  */
 
 
 /* verifica se o numero e positivo */
 
 #include<stdio.h>
-int is_pos(int numero)
+#include"p.h"
+
+int main(int argc, const char *argv[])
 {
-    int boolean=0;
-        if(numero>=0)
-        {
-           boolean=1;
-        }
-    return boolean;
-}		   
+	int a, num;
+	printf("digite um numero: \n");
+	scanf("%d",&num);
+	a = is_pos(num);
+	if(a==1)
+	{
+		printf("positivo!\n");
+	}
+	else
+	{
+		printf("negativo!\n");
+	}
+	return 0;
+}
