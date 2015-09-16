@@ -1,8 +1,8 @@
-main: main.o funcoes.o
-	gcc main.o funcoes.o -o main
+main: main.o p.o
+	gcc main.o p.o -o main
 main.o: main.c
 	gcc -c main.c
-funcoes.o:	funcoes.c	util.h
-	gcc -c funcoes.c
+p.o:	p.c	p.h
+	gcc -c p.c
 clean:
 	rm *.o
