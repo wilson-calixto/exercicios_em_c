@@ -4,11 +4,16 @@
 int main()
 {
 
-	int tam=0,n=0, reverse=0;	
+	int tam=0, reverse=0;	
+	int n[tam];
+
 	printf("Tamanho da sequencia: ");
 	scanf("%d",&tam);
 	printf("Digite a sequencia correspondente ao tamanho anterior: ");
-	scanf("%d",&n);
+	for (i = 0; i < tam; i++)
+	{
+		scanf("%d",&n[i]);
+	}
 	printf("\n\n");
 	reverse = inverso(n,tam);
 
