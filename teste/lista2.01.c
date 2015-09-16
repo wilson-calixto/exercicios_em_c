@@ -6,6 +6,7 @@ int main()
 
 	int tam=0, reverse=0, i=0;	
 	int n[tam];
+	int i;
 
 	printf("Tamanho da sequencia: ");
 	scanf("%d",&tam);
