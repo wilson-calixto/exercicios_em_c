@@ -18,7 +18,6 @@ void select_sort(int *x)
 		
 }
 /* funcao recebe dois vetores,o numero de loops (len do vetor) e calcula seu produto */
-#include <stdio.h>
 
 void produto_escalar(int *vetor1,int *vetor2,int loops)
 {   
