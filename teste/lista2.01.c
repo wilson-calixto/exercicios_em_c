@@ -9,17 +9,15 @@ int main()
 	
 	printf("Tamanho da sequencia: ");
 	scanf("%d",&tam);
-	printf("Digite a sequencia correspondente ao tamanho anterior: ");
+	printf("Digite os numeros separadamente: \n");
 	for (i = 0; i < tam; i++)
 	{
 		scanf("%d",&n[i]);
 	}
-	printf("\n\n");
-	reverse = inverso(n,tam);
-
-	printf("Numero inverso: %d",reverse);
-
-	printf("\n\n\n");
+	printf("Numero inverso:");
+	printf("\n");
+	inverso(n,tam);
+	printf("\n");
 
 	return 0;
 }
