@@ -45,7 +45,7 @@ int inverso(int *vetor, int s)
 }
 
 //------------------------------------------------------------------------------
-int teste_permutacao(int matriz[][],int n,int m)
+int teste_permutacao(int matriz[][100],int n,int m)
 {
     int  i, j, cont1=0, cont2=0, aux=1;
     for (i=0; i < n; i++)
