@@ -5,10 +5,10 @@
  *
  * Equipe:
  *
- *          Delrick
- *          Evandro
- *          Manoel
- *          Lucas Frota
+ *          Delrick (head)
+ *          Evandro (makefile do grupo)
+ *          Manoel (Programador)
+ *          Lucas Frota 
  *          Davi 
  */
 
