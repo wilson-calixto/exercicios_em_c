@@ -31,3 +31,15 @@ void produto_escalar(int *vetor1,int *vetor2,int loops)
     }
    
 }
+
+
+int inverso(int s, int vetor[s])
+{
+    int i=0;
+    for (i=s-1;i>=0;i--)
+    {
+        
+    }
+
+    return &vetor;
+}
