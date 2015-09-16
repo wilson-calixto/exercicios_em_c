@@ -12,3 +12,12 @@ void read_array(int n, int v[n])
 	}
 		
 }
+
+//fatorial
+int fatorial(int n) 
+{
+	if(n == 0)
+		return 1;
+	//fatorial recursivo
+	return (n*fatorial(n-1));
+}
