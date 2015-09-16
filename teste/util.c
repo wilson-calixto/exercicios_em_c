@@ -70,4 +70,44 @@ int teste_permutacao(int matriz[][],int n,int m)
     }
 
     return aux;
+} 
+
+
+int verifica(int m,int n,int a[][100]) 
+{
+    int verifica = 0, i, j, k, l, *p, *q;
+
+    for(i = 0; i < m; i++)
+    {
+        for(j = 0; j < n; j++)
+        {
+            for(k = 0; k < m; k++)
+            {
+                for(l = 0; l < n; l++)
+                {
+                    if((a[i][j]  == a[k][l]) && (i != k) && (j != l))
+                    {
+                        verifica = 1;
+                    }
+                }
+            }   
+        }
+    }
+
+    return verifica;
+}
+
+void read_matrix(int m,int n,int a[][100])
+{
+    int i, j;
+
+    printf("Informe os valores de A: \n");
+    
+    for(i = 0; i < m; i++)
+    {
+        for(j = 0;j < n; j++)
+        {
+            scanf("%d", &a[i][j]);    
+        } 
+    }  
 }
