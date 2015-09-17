@@ -1,3 +1,14 @@
+int fat(int n)
+{
+	int fat = 1 ,cont;
+
+	for(cont=1;cont<=n;cont++)//calcula o fatorial
+	{
+		fat *= cont; 	
+	}
+	return(fat);
+}
+
 float calc_num(int n)
 {
 	int cont = 1;//contador

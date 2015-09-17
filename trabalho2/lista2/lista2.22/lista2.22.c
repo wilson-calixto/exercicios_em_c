@@ -14,7 +14,7 @@ Equipe:
 */
 
 #include <stdio.h>
-#include "Calcula_Fatorial_Inverso.h"
+#include "Fatorial_Inverso.h"
 
 int main(int argc, const char *argv[])
 {

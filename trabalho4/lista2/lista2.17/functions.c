@@ -16,7 +16,7 @@
 int sum_position(int vet[],int pos, int ter)
 {
     int i, sum = 0;
-    for (i=0; i<ter; i++)
+    for (i=0; i<=ter; i++)
     {
         sum = sum + vet[pos+i];
     }

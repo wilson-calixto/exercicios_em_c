@@ -13,7 +13,7 @@
  *          
  */
 #include<stdio.h>
-#define MAX 20
+#define MAX 30
 
 int find_position(int a[][MAX], int x, int y)
 {
