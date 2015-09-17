@@ -26,11 +26,6 @@ int main ( int argc, char *argv[] )
 	printf("Digite o numero de alunos:\n");
 	scanf("%d", &n);
  
- 	
- 	printf("Observação: ao digitar o gabarito da prova com letra minuscula por ex 'a' as respostas do aluno tambem deverão ser digitadas com letras minuscula,a mesmaa regra para letras maiulucas.\n");
-	printf("A B C D E F\n");
-	printf("ou\n");
-	printf("a b c d e f\n");
 	printf("Digite o gabarito da prova:\n");
 	for (i = 0; i < 5; i++) 
    	scanf("%c", &gabarito[i]);  
@@ -39,9 +34,7 @@ int main ( int argc, char *argv[] )
      	interpretado como a primeira "letra" do gabarito*/
   	for (aluno = 1; aluno <= n; aluno++) {
     		pontos = 0;
-    		printf("A B C D E F\n");
-		printf("ou\n");
-		printf("a b c d e f\n");
+    		
     		printf("Digite as respostas do aluno %d:\n ", aluno);
     		for (i = 0; i < 5; i++) {
       			scanf("%c", &resp[i]);  /* atencao para o espaco em branco */
