@@ -1,4 +1,10 @@
-all: lista4.08a lista4.08b lista4.08c
+all: lista4.08a lista4.08b lista4.08c lista4.08d
+lista4.08d: lista4.08d.o matriz_identidade.o util.o 
+	gcc lista4.08d.o matriz_identidade.o util.o  -o lista4.08d
+lista4.08d.o: lista4.08d.c
+	gcc -c lista4.08d.c
+matriz_identidade.o: matriz_identidade.c
+	gcc -c matriz_identidade.c
 lista4.08a: lista4.08a.o matriz_transposta.o util.o imprimi_matriz.o
 	gcc lista4.08a.o matriz_transposta.o util.o  -o lista4.08a
 lista4.08a.o: lista4.08a.c
