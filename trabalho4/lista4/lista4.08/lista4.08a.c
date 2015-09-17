@@ -8,7 +8,7 @@ int main ( int argc, char *argv[] )
 	int **matriz;
 	scanf ( "%d", &nlinha);
 	printf ( "Numero de linhas %d \n", nlinha);
-	matriz = malloc (nlinha*sizeof(int * ));
+	matriz = (int**) malloc (nlinha*sizeof(int*));
 	
 	insere_matriz(nlinha, nlinha , matriz);
 	

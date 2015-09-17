@@ -24,7 +24,10 @@ int fatorial(int n)
 	return (n*fatorial(n-1));
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 624a713ee9fe491f4f96fbeb99f237d833ad0e75
 void insere_vetor(int tamanho, int *vetor)
 {
 	int i;
@@ -34,12 +37,12 @@ void insere_vetor(int tamanho, int *vetor)
 	}
 }
 
-void insere_matriz(int linha, int ncoluna, int *matriz)
+void insere_matriz(int linha, int ncoluna, int **matriz)
 {
 	int i;
 	for ( i = 0; i < linha; i += 1 ) 
 	{
-		matriz[i] = malloc (ncoluna*sizeof(int));
+		matriz[i] = (int*)  malloc (ncoluna*sizeof(int*));
 		insere_vetor(ncoluna,matriz[i]);
 	}
 }
@@ -52,5 +55,9 @@ void inverso(int *vetor, int s)
         printf("%d ", vetor[i]);  
     }
 
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 624a713ee9fe491f4f96fbeb99f237d833ad0e75
 }

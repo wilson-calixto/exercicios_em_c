@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include"matriz.c"
-#define MAX 100
+#define Max 100
 
 int main(int argc,const char *argv[])
 	{
