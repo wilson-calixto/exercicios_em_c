@@ -1,7 +1,7 @@
 /*
 * Programacao de Computadores e ALgoritmos
 * Trabalho 4
-* lista2.1.c
+* lista2.01.c
 *
 * Equipe:
 *  Sergio Pinheiro
@@ -13,16 +13,23 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include "util.h"
 
 int main(int argc, const char *argv)
 {
-	int a[50],b,i;
+	int a[50],tam=0,i=0;
 
-	printf("digite a quantidade de termos na sua sequência:\n");
-	scanf("%d",&b);
+	printf("digite a quantidade de termos da sua sequência:\n");
+	scanf("%d",&tam);
 	
-	prinf("digite a sua sequência de numeros:\n");
-	
+	printf("digite a sua sequência de numeros separadamente:\n");
+	for (i = 0; i < tam; i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	printf("A sequência inversa é: \n");
+	inverso(n,tam);
 
 	return 0;
 }
