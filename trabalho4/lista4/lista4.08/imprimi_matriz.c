@@ -1,19 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int matriz_transposta (int ordem , int **matriz, int **matriz2)
+void imprimi_matriz (int ordem , int **matriz)
 {
 	int i,j;
 	
 	for ( i = 0; i < ordem; i += 1 ) 
 	{
+	
 		for ( j = 0; j < ordem; j += 1 ) 
 		{
-			if (matriz[i][j] != matriz2[j][i] )
-			{
-				return 0;
-			}	
+			printf("%d ", matriz[i][j] );
 		}
+		printf("\n");
+
 	}
-	return 1; 
 }

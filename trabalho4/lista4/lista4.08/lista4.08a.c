@@ -1,36 +1,33 @@
-#include "matriz_transposta.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  main
- *  Description:  
- * =====================================================================================
- */
 int main ( int argc, char *argv[] )
 {
-	int nlinha,ncoluna,i,j;
-	int **matriz;
-	printf ( "Digite a quantidade de linhas\n" );
-	scanf ( "%d", &nlinha );
-	printf ( "Digite a quantidade de colunas\n" );
-	scanf ( "%d", &ncoluna );
-	matriz = malloc (nlinha*sizeof(int * ));
-	 	
-	for ( i = 0; i < nlinha; i += 1 ) 
-	{
-		matriz[i] = (int*) malloc (ncoluna*sizeof(int));
-		
-		for ( j = 0; j < ncoluna; j += 1 ) 
-		{
-			printf("Digite o valor da linha %d coluna %d",i+1,j+1);
-			scanf ( "%d", &matriz[i][j]);
-		}
-	}
+	int nlinha,i;
+	int **matriz, **matriz2;
+	scanf ( "%d", &nlinha);
+	printf ( "Insira  Matrizes de ordem =   %d \n", nlinha);
+	matriz = (int**) malloc (nlinha*sizeof(int*));
+	matriz2 = (int**) malloc (nlinha*sizeof(int*));
 	
+	insere_matriz(nlinha, nlinha , matriz);
+	insere_matriz(nlinha, nlinha , matriz2);
+	
+	imprimi_matriz(nlinha, matriz);
+	printf("\n\n "); 
+	imprimi_matriz(nlinha, matriz2);
+	
+	if (matriz_transposta(nlinha, matriz, matriz2))
+	{
+		printf("A matriz 2 É transposta\n");
+	}else
+	{
+		printf("A matriz 2 NAO É  transposta\n");
+	}
 
-	//matriz_transposta(nvalores, pvetor);
+	free(matriz);
+	free(matriz2);
 
 	return 0;
-}				/* ----------  end of function main  ---------- */
+}

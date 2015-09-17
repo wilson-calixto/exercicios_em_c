@@ -50,10 +50,11 @@ int teste_permutacao(int matriz[][100],int n,int m)
     int  i, j, cont1=0, cont2=0, aux=1;
     for (i=0; i < n; i++)
     {
+        cont1=0;
+        cont2=0;
         for(j=0; j<m; j++)
         {
-            cont1=0;
-            cont2=0;
+            
             if(matriz[i][j]==0)
             {
                 cont1++;
@@ -63,40 +64,40 @@ int teste_permutacao(int matriz[][100],int n,int m)
                 cont2++;
             }
         }
-    }
-    if (cont1!=(n-1) && (cont2!=1))
+        if (cont1!=(n-1) && (cont2!=1))
     {
         aux=0;
+    }
     }
 
     return aux;
 } 
 
-
+//------------------------------------------------------------------------------
 int verifica(int m,int n,int a[][100]) 
 {
-    int verifica = 0, i, j, k, l, *p, *q;
+    int verifica = 0, i, j, k, l;
 
-    for(i = 0; i < m; i++)
+    for(i = 0; i < m; i++) //o 'i' será o primeiro indice da matriz a[m][n] que irá variar menos vezes para fazer a comparação
     {
-        for(j = 0; j < n; j++)
+        for(j = 0; j < n; j++) //o 'j' será o segundo indice da matriz a[m][n] que irá variar menos
         {
-            for(k = 0; k < m; k++)
+            for(k = 0; k < m; k++) //o 'k' será o primeiro indice da matriz a[m][n] que irá variar mais vezes para fazer a comparação
             {
-                for(l = 0; l < n; l++)
+                for(l = 0; l < n; l++) //o 'l' será o segundo indice da matriz a[m][n] que irá variar mais vezes.
                 {
-                    if((a[i][j]  == a[k][l]) && (i != k) && (j != l))
-                    {
-                        verifica = 1;
-                    }
-                }
+                    if((a[i][j]  == a[k][l]) && (i != k) && (j != l)) // verifica se a[i][j] é igual a a[k][l], se 'i' é diferente de 'k'
+                    {						                          // e se 'j' é diferente de 'l' pois se forem iguais será uma compa-
+                        verifica = 1;				                  // ração de uma matriz com indices iguais ex: a[1][1] == a[1][1],
+                    }						                          // se não houvesse essas duas ultimas comparações seria gerado um
+                }						                              // bug dizendo que haveria elementos iguais mesmo sem haver. 
             }   
         }
     }
 
     return verifica;
 }
-
+//------------------------------------------------------------------------------
 void read_matrix(int m,int n,int a[][100])
 {
     int i, j;
@@ -107,7 +108,7 @@ void read_matrix(int m,int n,int a[][100])
     {
         for(j = 0;j < n; j++)
         {
-            scanf("%d", &a[i][j]);    
+            scanf("%d", &a[i][j]); //lê valores para a matriz 'a'
         } 
     }  
 }
