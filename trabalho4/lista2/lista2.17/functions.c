@@ -37,4 +37,5 @@ int sum_max(int vet[], int max)
              }
         }
     }
+    return sum;
 }
