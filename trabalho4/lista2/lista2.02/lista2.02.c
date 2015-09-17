@@ -20,23 +20,31 @@ int main ( int argc, char *argv[] )
 	i,/*varialvel para clico for*/           
 	aluno,/*indica o aluno corrente*/
 	pontos;/*numero de pontos do aluno corrente*/
-	char gabarito[10],/*gabarito da prova*/
-	resp[10];/*respostas do aluno corrente*/
+	char gabarito[5],/*gabarito da prova*/
+	resp[5];/*respostas do aluno corrente*/
   
 	printf("Digite o numero de alunos:\n");
 	scanf("%d", &n);
  
+ 	
+ 	printf("Observação: ao digitar o gabarito da prova com letra minuscula por ex 'a' as respostas do aluno tambem deverão ser digitadas com letras minuscula,a mesmaa regra para letras maiulucas.\n");
+	printf("A B C D E F\n");
+	printf("ou\n");
+	printf("a b c d e f\n");
 	printf("Digite o gabarito da prova:\n");
-	for (i = 0; i < 10; i++) 
-   	scanf(" %c \n", &gabarito[i]);  
+	for (i = 0; i < 5; i++) 
+   	scanf("%c", &gabarito[i]);  
   	/* O espaco em branco antes do %c e' importante.
      	Ele evita que o return digitado depois do n seja 
      	interpretado como a primeira "letra" do gabarito*/
   	for (aluno = 1; aluno <= n; aluno++) {
     		pontos = 0;
+    		printf("A B C D E F\n");
+		printf("ou\n");
+		printf("a b c d e f\n");
     		printf("Digite as respostas do aluno %d:\n ", aluno);
-    		for (i = 0; i < 10; i++) {
-      			scanf(" %c \n", &resp[i]);  /* atencao para o espaco em branco */
+    		for (i = 0; i < 5; i++) {
+      			scanf("%c", &resp[i]);  /* atencao para o espaco em branco */
       		if (resp[i] == gabarito[i])
         	pontos = pontos + 1;
     		}
