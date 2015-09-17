@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "../../util.c/util.h"
+#include "function.h"
+
 #define MAXI 100 //Constante
 
 int main(int argc, char const *argv[])
@@ -26,20 +28,6 @@ int main(int argc, char const *argv[])
 			scanf("%d",&a[i][j]);
 		}
 	}
-	
-	for(i=0;i<n;i++)
-	{
-		for(j = 0; j < m;j++)
-		{
-			resultado = a[i][j]*x[i];
-			if( resultado == b[j] )
-			{
-				printf("Para o valor %f de A e %f de B, %f de X satisfaz o problema.\n",a[i][j],b[j],x[i]);
-			}
-			else printf("Para o valor %f de A e %f de B, não %f de X satisfaz o problema.\n",a[i][j],b[j],x[i]);
-			
-		}
-	}
-			
+	test_function(n, m, a[][m], x[n], b[m]);		
 	return 0;
 }
