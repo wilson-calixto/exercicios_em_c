@@ -17,12 +17,14 @@ void read_array(int n, int v[n])
 int fatorial(int n) 
 {
 	if(n == 0)
+    {
 		return 1;
+    }
 	//fatorial recursivo
 	return (n*fatorial(n-1));
 }
 
-<<<<<<< HEAD
+
 void insere_vetor(int tamanho, int *vetor)
 {
 	int i;
@@ -40,7 +42,7 @@ void insere_matriz(int linha, int ncoluna, int *matriz)
 		matriz[i] = malloc (ncoluna*sizeof(int));
 		insere_vetor(ncoluna,matriz[i]);
 	}
-=======
+}
 //funcao inverso
 void inverso(int *vetor, int s)
 {
@@ -50,6 +52,5 @@ void inverso(int *vetor, int s)
         printf("%d ", vetor[i]);  
     }
 
-   
->>>>>>> 62859485c6e18844c5c8ff91e8c3a1fcf45ebebc
+
 }
