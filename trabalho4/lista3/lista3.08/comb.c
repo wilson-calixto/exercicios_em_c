@@ -1,3 +1,17 @@
+/*
+* Programacao de Computadores e ALgoritmos
+* Trabalho 4
+* lista3.08
+*
+* Equipe:
+*  Sergio Pinheiro
+*  Wilson Araújo
+*  Andressa Moreira
+*  Benjamin Borges
+*  Gabriel Faraco
+      
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "../../util.c/util.h"
