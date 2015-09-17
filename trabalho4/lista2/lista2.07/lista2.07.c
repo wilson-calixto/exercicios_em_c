@@ -1,6 +1,6 @@
 #include<stdlib.h>
 #include <stdio.h>
-#include "funcao.c"
+#include "funcao.h"
 int main()
 {
 	float *vetor,*nvetor,procurado;
