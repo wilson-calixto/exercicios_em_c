@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void matriz_transposta (int ordem , int **matriz)
+void matriz_transposta (int ordem , int **matriz, int **matriz2)
 {
 	int i,j;
 	
