@@ -37,7 +37,6 @@ util.o: util.c/util.c
 
 #Limpar objetos criados na compilação
 clean:
-	rm -rf $(path_obj)*.o
-
+	rm -rf $(path_obj)*.
 mrproper:
 	rm -rf $(path_bin)*
