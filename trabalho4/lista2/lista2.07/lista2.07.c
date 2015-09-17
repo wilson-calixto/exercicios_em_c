@@ -1,3 +1,17 @@
+/*  Programacao de Computadores e ALgoritmos
+ *  Trabalho 4
+ *  Lista2.07
+ *   
+ *  Equipe:
+ *      
+ *          Paulo Henrique
+ *          Rai Santos 
+ *          Jackson Kelvin
+ *          Wilson Calisto
+ *          Ewerton Petillo 
+ *            
+ */
+
 #include<stdlib.h>
 #include <stdio.h>
 #include "funcao.h"
