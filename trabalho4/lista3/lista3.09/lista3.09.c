@@ -14,7 +14,7 @@
  */
 
 #include <stdio.h>
-#include "function.c"
+#include "function.h"
 #define MAX 20
 
 int main()
