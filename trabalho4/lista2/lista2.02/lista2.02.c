@@ -28,15 +28,16 @@ int main ( int argc, char *argv[] )
  
 	printf("Digite o gabarito da prova:\n");
 	for (i = 0; i < 10; i++) 
-   	scanf(" %c \n", &gabarito[i]);  
+   	scanf(" %c", &gabarito[i]);  
   	/* O espaco em branco antes do %c e' importante.
      	Ele evita que o return digitado depois do n seja 
      	interpretado como a primeira "letra" do gabarito*/
   	for (aluno = 1; aluno <= n; aluno++) {
     		pontos = 0;
+    		
     		printf("Digite as respostas do aluno %d:\n ", aluno);
     		for (i = 0; i < 10; i++) {
-      			scanf(" %c \n", &resp[i]);  /* atencao para o espaco em branco */
+      			scanf(" %c", &resp[i]);  /* atencao para o espaco em branco */
       		if (resp[i] == gabarito[i])
         	pontos = pontos + 1;
     		}

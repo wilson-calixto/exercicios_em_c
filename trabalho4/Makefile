@@ -1,4 +1,4 @@
-all: bin obj lista4.02
+all: bin obj lista4.02 lista4.7
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -16,7 +16,6 @@ path_bin = bin/
 path_obj = obj/
 
 # Bloco para compilar a questão 02 - lista 04
-
 lista4.02: lista4.02.o matrix.o
 	gcc $(path_obj)lista4.02.o $(path_obj)matrix.o -o $(path_bin)lista4.02
 
@@ -26,9 +25,19 @@ lista4.02.o: lista4/lista4.02/lista4.02.c
 matrix.o: lista4/lista4.02/matrix.c
 	gcc -o $(path_obj)matrix.o -c lista4/lista4.02/matrix.c
 
+# Bloco para compilar a questão 07 - lista 04
+lista4.7: lista4.7.o sets_ab.o
+	gcc $(path_obj)lista4.7.o $(path_obj)sets_ab.o -o $(path_bin)lista4.7
+
+lista4.7.o: lista4/lista4.07/lista4.7.c
+	gcc -o $(path_obj)lista4.7.o -c lista4/lista4.07/lista4.7.c
+
+sets_ab.o: lista4/lista4.07/sets_ab.c
+	gcc -o $(path_obj)sets_ab.o -c lista4/lista4.07/sets_ab.c
 
 
-#>>>> continue aqui <<<<
+
+# >>>> continue aqui <<<<
 
 
 # Bloco referente a biblioteca UTIL
