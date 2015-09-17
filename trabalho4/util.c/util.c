@@ -21,3 +21,15 @@ int fatorial(int n)
 	//fatorial recursivo
 	return (n*fatorial(n-1));
 }
+
+//funcao inverso
+void inverso(int *vetor, int s)
+{
+    int i=0;
+    for (i=s-1;i>=0;i--)
+    {
+        printf("%d ", vetor[i]);  
+    }
+
+   
+}
