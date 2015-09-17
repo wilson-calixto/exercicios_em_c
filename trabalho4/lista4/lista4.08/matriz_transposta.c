@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void matriz_transposta (int linha, int coluna , int **matriz)
 {
@@ -14,5 +15,4 @@ void matriz_transposta (int linha, int coluna , int **matriz)
 		printf("\n");
 
 	}
-	free(matriz);
 }
