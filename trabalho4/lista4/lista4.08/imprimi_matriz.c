@@ -13,6 +13,5 @@ void imprimi_matriz (int ordem , int **matriz)
 			printf("%d ", matriz[i][j] );
 		}
 		printf("\n");
-
 	}
 }

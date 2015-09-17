@@ -14,9 +14,9 @@ int main ( int argc, char *argv[] )
 	insere_matriz(nlinha, nlinha , matriz);
 	insere_matriz(nlinha, nlinha , matriz2);
 	
-	imprimi_matriz(nlinha, matriz);
-	printf("\n\n "); 
-	imprimi_matriz(nlinha, matriz2);
+	//imprimi_matriz(nlinha, matriz);
+	//printf("\n\n "); 
+	//imprimi_matriz(nlinha, matriz2);
 	
 	if (matriz_transposta(nlinha, matriz, matriz2))
 	{
