@@ -1,4 +1,4 @@
-all: lista1.09 lista2.01 lista3.5 principal lista3.04
+all: lista1.09 lista2.01 principal lista3.04 lista3.05
 
 lista1.09: lista1.09.o util.o
 	gcc lista1.09.o util.o -o lista1.09
@@ -11,12 +11,6 @@ lista2.01: lista2.01.o util.o
 
 lista2.01.o: lista2.01.c
 	gcc -c lista2.01.c
-
-lista3.5: lista3.5.o util.o
-	gcc lista3.5.o util.o -o lista3.5
-
-lista3.5.o: lista3.5.c
-	gcc -c lista3.5.c
 	
 principal: principal.o util.o
 	gcc principal.o util.o -o principal
@@ -29,10 +23,16 @@ lista3.04: lista3.04.o util.o
 
 lista3.04.o: lista3.04.c
 	gcc -c lista3.04.c
+	
+lista3.05: lista3.05.o util.o
+	gcc lista3.05.o util.o -o lista3.05
+
+lista3.05.o: lista3.05.c
+	gcc -c lista3.05.c
 
 util.o: util.c 
 	gcc -c util.c
 clean:
 	rm -rf *.o
 mrproper: clean
-	rm -rf principal lista2.01 lista3.5 lista1.09 lista3.04
+	rm -rf principal lista2.01 lista3.05 lista1.09 lista3.04

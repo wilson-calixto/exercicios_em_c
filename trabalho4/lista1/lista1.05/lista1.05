@@ -1,0 +1,29 @@
+/*
+* Programacao de Computadores e ALgoritmos
+* Trabalho 4
+* lista1.05
+*
+* Equipe:
+*  Sergio Pinheiro
+*  Wilson Araújo
+*  Andressa Moreira
+*  Benjamin Borges
+*  Gabriel Faraco
+      
+*/
+
+Diga quais expressoes abaixo sao válidas ou não. Considere as declarações
+
+int  vetor[10];
+int *ponteiro;
+
+a) vetor = vetor + 2; 
+b) vetor++;           
+c) vetor = ponteiro;  
+d) ponteiro = vetor;      
+e) ponteiro = vetor+2;
+
+//Questão puramente dissertativa
+Resposta:
+a, b e c: Inválidas. O vetor não é uma variável.
+d e e: Válidas. O ponteiro é uma variável.
