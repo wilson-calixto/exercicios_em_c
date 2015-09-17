@@ -10,21 +10,22 @@
 *  Richardson  
 */
 
-
 #include <stdio.h>
 #include <stdlib.h>
+
+/* Falta adicionar os comentários do Luiz */
 
 int main( int argc, const char *argv[] ) 
 {
 
-	float **m;
+	float **m; //Declarando uma matriz de ponteiros
 	int i, j;
 
-	m = ( float** ) malloc( sizeof( float *) * 50 );
+	m = ( float** ) malloc( sizeof( float *) * 50 ); //Alocando valores na memória
 	for( i = 0; i < 50; i++ ) 
 	{
 
-		m[ i ] = ( float* ) malloc( sizeof( float ) * 50 );
+		m[ i ] = ( float* ) malloc( sizeof( float ) * 50 ); //Leitura de matriz
   	}
 
 	for( i = 0; i < 50; i++ ) 
