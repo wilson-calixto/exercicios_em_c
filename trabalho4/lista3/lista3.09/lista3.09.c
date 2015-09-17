@@ -19,7 +19,7 @@
 
 int main()
 {
-    int mat[MAX][MAX], line, col, i, j, cont;
+    int mat[MAX][MAX], line, col, i, j, cont = 0;
 
     printf("Quantas linhas? \n ");
     scanf("%d", &line);
@@ -33,18 +33,25 @@ int main()
             scanf("%d", &mat[i][j]);
         }
     }
-    
     for (i=0;i<line; i++)
     {
         for (j=0; j< col; j++)
         {
-            if (find_position(mat, i, j) == 1)
+            if (find_position(i, j, mat) == 1)
             {
-                write_matriz(mat, i, j);
+                cont ++;
+                mat[i][j]= cont;
             }
         }
     }
-
-    print_matriz(mat, line, col);
+    
+    for (i=0; i<line; i++)
+    {
+        for(j=0; j<col; j++)
+        {
+            printf("%d \t", mat[i][j]);
+        }
+        printf("\n");
+    }
 
 }

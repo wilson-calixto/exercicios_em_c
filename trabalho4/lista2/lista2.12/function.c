@@ -12,16 +12,14 @@
  *          Ewerton Petillo
  *          
  */
-int find_position(int x, int y, int a[x][y])
+
+int polynomial(int vet[], int n, int a)
 {
-    if (a[x][y] == 0)
+    int qx[n-1], x, i;
+    x = a;
+    for (i=n; i<=0; i--)
     {
-        if ((a[x-1][y] == -1 && a[x+1][y] == 0) || a[x][y-1] == -1 && a[x][y+1 == 0])
-        {
-            return 1;
-        }
-    }else
-        return 0;
+          qx[i-1] = (vet[i] * x) + vet[i-1];
+    }
+    return qx;
 }
-
-
