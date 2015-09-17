@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/* Funcao para criar um vetor A e retorna-lo */
 int *set_a(int n)
 {
     int i, *a;
@@ -15,6 +16,7 @@ int *set_a(int n)
     return a;
 }
 
+/* funcao para criar um vetor B e retorna-lo */
 int *set_b(int m)
 {
     int i, *b;
@@ -29,6 +31,11 @@ int *set_b(int m)
     return b;
 }
 
+/* Funcao verifica se A esta contido em B
+ * recebe dois vetores
+ * e a quantidade de elementos
+ * retorna 0 ou 1
+ */
 int a_contains_b(int *a,int n, int *b, int m)
 {
     int i, j, status;
@@ -54,6 +61,10 @@ int a_contains_b(int *a,int n, int *b, int m)
     return 1;
 }
 
+/* Funcao verifica se o vetor A e igual a B
+ * recebe dois vetores A e B e seus tamanhos
+ * retorna 1 ou 0
+ */
 int ab_equals_ba(int *a, int n, int *b, int m)
 {
 
@@ -72,6 +83,5 @@ int ab_equals_ba(int *a, int n, int *b, int m)
     {
         return 0;
     }
-
 }
 
