@@ -86,10 +86,10 @@ int verifica(int m,int n,int a[][100])
                 for(l = 0; l < n; l++) //o 'l' será o segundo indice da matriz a[m][n] que irá variar mais vezes.
                 {
                     if((a[i][j]  == a[k][l]) && (i != k) && (j != l)) // verifica se a[i][j] é igual a a[k][l], se 'i' é diferente de 'k'
-                    {						      // e se 'j' é diferente de 'l' pois se forem iguais será uma compa-
-                        verifica = 1;				      // ração de uma matriz com indices iguais ex: a[1][1] == a[1][1],
-                    }						      // se não houvesse essas duas ultimas comparações seria gerado um
-                }						      // bug dizendo que haveria elementos iguais mesmo sem haver. 
+                    {						                          // e se 'j' é diferente de 'l' pois se forem iguais será uma compa-
+                        verifica = 1;				                  // ração de uma matriz com indices iguais ex: a[1][1] == a[1][1],
+                    }						                          // se não houvesse essas duas ultimas comparações seria gerado um
+                }						                              // bug dizendo que haveria elementos iguais mesmo sem haver. 
             }   
         }
     }
