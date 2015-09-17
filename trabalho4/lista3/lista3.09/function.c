@@ -15,9 +15,9 @@
 #include<stdio.h>
 #define MAX 20
 
-int find_position(int m[][MAX], int x, int y)
+int find_position(int a[][MAX], int x, int y)
 {
-    if (m[x][y] != -1 && ((m[x-1][y] == -1 && m[x+1][y] != -1) || (m[x][y-1] == -1 && m[x][y+1] != -1)))
+    if (a[x][y] != -1 && ((a[x-1][y] == -1 && a[x+1][y] != -1) || (a[x][y-1] == -1 && a[x][y+1] != -1)))
     {
         return 1;
     }else
@@ -40,17 +40,9 @@ void print_matriz(int m[][MAX], int line, int col)
 
 void write_matriz(int m[][MAX], int l, int c)
 {
-    int i, j, cont;
-    for (i = 0; i<l; i++)
-    {
-        for (j=0; j<c; j++)
-        {
-            if(find_position(m, l, c) == 1)
-            {
-                cont ++;
-                m[i][j] = cont;
-            }
-        }
-    }
+    int cont =0;
+
+    cont ++;
+    m[l][c] = cont;
 }
 

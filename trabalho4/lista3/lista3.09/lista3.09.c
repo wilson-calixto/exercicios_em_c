@@ -25,13 +25,26 @@ int main()
     scanf("%d", &line);
     printf("Quantas colunas? \n ");
     scanf("%d", &col);
-    for (i=0; i<;line i++)
+    for (i=0; i<line;i++)
     {
         for (j=0; j<col; j++)
         {
             printf("Digite o elemento[%d][%d]", i, j);
-            scanf("%d", mat[i][j]);
+            scanf("%d", &mat[i][j]);
         }
     }
+    
+    for (i=0;i<line; i++)
+    {
+        for (j=0; j< col; j++)
+        {
+            if (find_position(mat, i, j) == 1)
+            {
+                write_matriz(mat, i, j);
+            }
+        }
+    }
+
+    print_matriz(mat, line, col);
 
 }

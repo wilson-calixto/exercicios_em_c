@@ -14,7 +14,5 @@
  * =====================================================================================
  */
 int find_position(int *, int, int);
-
 void print_matriz(int *, int, int);
-
 void write_matriz(int *, int, int);
