@@ -19,7 +19,7 @@
 void pede_dados(int **matriz,int ordem);
 void completa_vetor(int *itinerario,int ordem);
 int calcula_custo(int **matriz,int *itinerario,int ordem);
-   
+void imprime_vetor(int *itinerario,int tamanho_do_vetor);
 
     int
 main ( int argc, char *argv[] )
@@ -45,15 +45,16 @@ main ( int argc, char *argv[] )
     pede_dados(matriz,ordem);
    
     /* completa o vetor itinerario com dados */
-    completa_vetor(itinerario,ordem);
+    completa_vetor(itinerario,tamanho_do_vetor);
 
 	/* calcula o custo do itinerario*/
     custo=calcula_custo(matriz,itinerario,tamanho_do_vetor);
     
     /* mostra o resultado final*/
-    printf ( "%d\n",custo );
-
-
+    printf ( "o custo do itinerário ");
+    /*imprime vetor*/
+	imprime_vetor(itinerario,tamanho_do_vetor);
+	printf ( "é\n %d",custo);
     return 0;
 }	
 
@@ -75,13 +76,12 @@ void pede_dados(int **matriz,int ordem)
 }
 
 /* Dada uma um vetor e seu tamanho, a funcao completa esse vetor */
-void completa_vetor(int *itinerario,int ordem)
+void completa_vetor(int *itinerario,int tamanho_do_vetor)
 {
     int i;
-    	/*o vetor tem o dobro da ordem da matriz por isso ele e modificada no escopo LOCAL da funcao */
-    ordem*=2;
+    	
 
-    for ( i=0;i<ordem;i++ )
+    for ( i=0;i<tamanho_do_vetor;i++ )
         {
         
            scanf ( "%d", &itinerario[i] );      
@@ -108,4 +108,21 @@ int calcula_custo(int **matriz,int *itinerario,int tamanho_do_vetor)
     return acm;
 
 }
+/*imprime o vetor na tela*/
+
+void imprime_vetor(int *itinerario,int tamanho_do_vetor)
+{
+ int i;
+    	
+
+    for ( i=0;i<tamanho_do_vetor;i++ )
+        {
+        
+           printf ( " %d",itinerario[i] );      
+        }
+
+
+
+}
+
 
