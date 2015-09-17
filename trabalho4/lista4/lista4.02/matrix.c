@@ -1,33 +1,34 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <stdlib.h>
 
-float read_matrix ()
+float **read_matrix(int m, int n)
 {
-    int l=3, c=4; //3 linhas 4 colunas
+    float **v;  //ponteiro para matriz
+    int i;      //variavel auxiliar
+
+    if (m<1 || n<1) //verifica parametros recebidos
+    {
+        printf ( "<<< Erro: Parametro invalidos >>>\n" );
+        return (NULL);
+    }
     
-    int i,j;
-    float count, **matrix = (float *)malloc(i * j * sizeof(float));
-
-    count = 0.0;
-
-    for ( i = 0; i < l; i += 1 )
+    //aloca linhas da matriz
+    v=(float **) malloc (m, sizeof(float *));
+    
+    if (v==NULL)
     {
-        
-        for ( j = 0; j < c; j += 1 )
-        {
-            *(matrix + i*c + j) = ++count;
-        }
-
+        printf ( "<<< Erro: Memoria insuficiente >>>\n" );
+        return (NULL);
     }
 
-    for ( i = 0; i < l; i += 1 )
+    //aloca colunas da matriz
+    
+    for ( i = 0; i < m; i++ )
     {
+        v[i]=(float*) malloc (n, sizeof(float));
 
-        for ( j = 0; j < c; j += 1 )
-        {
-            printf ( "%f ", *(matrix + i*c +j) );
-        }
-
+        if (v[i]==NULL)
     }
-   
+
+
 }
