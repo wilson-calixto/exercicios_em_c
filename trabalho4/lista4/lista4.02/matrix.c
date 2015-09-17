@@ -4,7 +4,7 @@
 float **read_matrix(int m, int n)
 {
     float **v;  //ponteiro para matriz
-    int i;      //variavel auxiliar
+    int i, j;      //variavel auxiliar
 
     if (m<1 || n<1) //verifica parametros recebidos
     {
@@ -13,22 +13,21 @@ float **read_matrix(int m, int n)
     }
     
     //aloca linhas da matriz
-    v=(float **) malloc (m, sizeof(float *));
+    v= (float **) malloc (m * sizeof(float *));
     
-    if (v==NULL)
-    {
-        printf ( "<<< Erro: Memoria insuficiente >>>\n" );
-        return (NULL);
-    }
-
-    //aloca colunas da matriz
-    
+    //aloca colunas da matriz    
     for ( i = 0; i < m; i++ )
     {
-        v[i]=(float*) malloc (n, sizeof(float));
+        v[i]= (float *) malloc (n * sizeof(float));
 
-        if (v[i]==NULL)
+        for ( j = 0; j < n; j++ )
+        {
+            scanf ( "%f", &v[i][j] );
+        }
+
     }
-
-
+    
+    return (v); // retorna o ponteiro para a matriz
 }
+
+
