@@ -15,16 +15,23 @@
 
 #include <stdio.h>
 #include "function.c"
-#define max 20
+#define MAX 20
 
 int main()
 {
-    int mat[max][max], line, col, i, j, cont;
+    int mat[MAX][MAX], line, col, i, j, cont;
 
     printf("Quantas linhas? \n ");
     scanf("%d", &line);
     printf("Quantas colunas? \n ");
     scanf("%d", &col);
-    
+    for (i=0; i<;line i++)
+    {
+        for (j=0; j<col; j++)
+        {
+            printf("Digite o elemento[%d][%d]", i, j);
+            scanf("%d", mat[i][j]);
+        }
+    }
 
 }
