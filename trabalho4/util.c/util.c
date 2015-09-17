@@ -24,10 +24,6 @@ int fatorial(int n)
 	return (n*fatorial(n-1));
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 624a713ee9fe491f4f96fbeb99f237d833ad0e75
 void insere_vetor(int tamanho, int *vetor)
 {
 	int i;
@@ -55,9 +51,4 @@ void inverso(int *vetor, int s)
         printf("%d ", vetor[i]);  
     }
 
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> 624a713ee9fe491f4f96fbeb99f237d833ad0e75
 }
