@@ -16,9 +16,9 @@
 #include "function.h"
 #define MAX 10
 
-int main
+int main()
 {
-    int n, vet[n], i;
+    int n, vet[n], i, x;
 
     printf("Digite o grau do polimonio: \n");
     scanf("%d", &n);
@@ -27,5 +27,8 @@ int main
         printf("Coeficiente de A[%d]: \n", i);
         scanf("%d", &vet[i]);
     }
+    printf("Digite um valor para X: \n" );
+    scanf("%d", &x);
 }
+ 
 
