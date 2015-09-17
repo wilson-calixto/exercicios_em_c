@@ -31,9 +31,9 @@ int *set_b(int m)
 
 int a_contains_b(int *a,int n, int *b, int m)
 {
-    int i, j, result;
+    int i, j, status;
 
-    result = 0;
+    status = 0;
 
     for ( i = 0; i < n; i += 1 )
     {
@@ -41,20 +41,37 @@ int a_contains_b(int *a,int n, int *b, int m)
         {
             if (a[i]==b[j])
             {
-                result = 1;
+                status = 1;
             }
         }
-        if (result==0)
+        if (status==0)
         {
             return 0;
+            break;
         }
     }
 
     return 1;
 }
 
-int ab_equals_ba(int *a, int *b)
+int ab_equals_ba(int *a, int n, int *b, int m)
 {
+
+    if (m==n)
+    {
+        if ((a_contains_b (a,n,b,m)) && (a_contains_b (b,m,a,n)))
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }               
+    }
+    else
+    {
+        return 0;
+    }
 
 }
 
