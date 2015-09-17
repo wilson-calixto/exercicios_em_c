@@ -1,14 +1,16 @@
 /*
-* Programacao de Computadores e Algoritmos
+* Programacao de Computadores e ALgoritmos
 * Trabalho 4
-* Questao 3.08
-* Equipe: 	Wilson Neto
-* 		Sergio Pinheiro
-* 		Andressa Moreira
-* 		Benjamim Borges
-*		Gabriel Faraco
+* lista3.08
 *
-* */
+* Equipe:
+*  Sergio Pinheiro
+*  Wilson Araújo
+*  Andressa Moreira
+*  Benjamin Borges
+*  Gabriel Faraco
+      
+*/
 
 
 #include <stdio.h>
