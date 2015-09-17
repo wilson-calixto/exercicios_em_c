@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../../util.c/util.h"
 #define MAXI 100 //Constante
 
 int main(int argc, char const *argv[])
@@ -11,18 +12,11 @@ int main(int argc, char const *argv[])
 	scanf("%d%d",&n,&m);
 	
 	//Leitura do vetor X
-	printf("Digite os valores do vetor X: ");
-	for(i=0;i<n;i++)
-	{
-		scanf("%d",&x[i]);
-	}
+	read_array(n, x[n]);
 	
 	//Leitura do vetor B
 	printf("Digite os valores do vetor B: ");
-	for(i=0;i<b;i++)
-	{
-		scanf("%d",&b[i]);
-	}
+	read_array(m, b[m]);
 	
 	//Leitura da matriz
 	for(i=0;i<n;i++)
