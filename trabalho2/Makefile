@@ -1,4 +1,4 @@
-all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06
+all: bin obj lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06 lista2.22 lista2.17
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -314,7 +314,26 @@ lista3.06: lista3.06.o util.o
 
 lista3.06.o: lista3/lista3.06/lista3.06.c
 	gcc -o $(path_obj)lista3.06.o -c lista3/lista3.06/lista3.06.c
+	
+# Bloco para compilar questão 22 - lista 2
+lista2.22: lista2.22.o Fatorial_Inverso.o
+	gcc $(path_obj)lista2.22.o $(path_obj)Fatorial_Inverso.o -o $(path_bin)lista2.22
 
+lista2.22.o: lista2/lista2.22/lista2.22.c
+	gcc -o $(path_obj)lista2.22.o -c lista2/lista2.22/lista2.22.c
+
+Fatorial_Inverso.o: lista2/lista2.22/Fatorial_Inverso.o
+	gcc -o $(path_obj)Fatorial_Inverso.o -c lista2/lista2.22/Fatorial_Inverso.c
+
+# Bloco para compilar questão 17 - lista 2
+lista2.17: lista2.17.o Values.o
+	gcc $(path_obj)lista2.17.o $(path_obj)Values.o -o $(path_bin)lista2.17
+
+lista2.17.o: lista2/lista2.17/lista2.17.c
+	gcc -o $(path_obj)lista2.17.o -c lista2/lista2.17/lista2.17.c
+
+Values.o: lista2/lista2.17/Values.o
+	gcc -o $(path_obj)Values.o -c lista2/lista2.17/Values.c
 
 
 
