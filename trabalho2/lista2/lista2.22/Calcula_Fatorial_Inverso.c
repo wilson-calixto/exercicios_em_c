@@ -1,28 +1,27 @@
-/*
-Programaçao de Computadores e Algoritmos
-
-Trabalho 3
-
-Equipe:
-	Delrick Oliveira
-	Gabriel Faraco
-	Jackson Kelvin
-	Manoel Victor
-	Rai Santos
-	Sergio Pinheiro
-
-*/
-
-#include <stdio.h>
-#include "Calcula_Fatorial_Inverso.h"
-
-int main(int argc, const char *argv[])
+int fat(int n)
 {
-	int n; //numero
+	int fat = 1 ,cont;
 
-	puts("Informe um numero:");
-	scanf("%d",&n); //pede ao usuario o ultimo 'n' da sequencia s = 1 + 1/1! + 1/2! +...+ 1/n!
+	for(cont=1;cont<=n;cont++)//calcula o fatorial
+	{
+		fat *= cont; 	
+	}
+	return(fat);
+}
 
-	printf("O resultado é %1.2f\n",(float) calc_num(n));//Informa ao usuario o resultado do calculo mostrado acima.	
-	return 0;
+float calc_num(int n)
+{
+	int cont = 1;//contador
+	float s,aux;//'s' da sequencia, auxiliar 
+
+	s = 1.0;
+
+	while(cont <= n)
+	{ 
+		aux = fat(cont); //'aux' recebe o fatorial de todos os n numeros.	
+		s +=  1/(float) aux; //aqui 's' acumula a soma de todos os 1/'aux'
+		cont++; //contador é incrementado
+	}
+
+	return(s);
 }
