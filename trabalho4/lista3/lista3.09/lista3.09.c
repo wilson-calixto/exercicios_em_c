@@ -25,29 +25,33 @@ int main()
     scanf("%d", &line);
     printf("Quantas colunas? \n ");
     scanf("%d", &col);
-    for (i=0; i<line;i++)
+    mold(line, col, line+2, col+2, mat);
+    for (i=1; i<=line;i++)
     {
-        for (j=0; j<col; j++)
+        for (j=1; j<=col; j++)
         {
             printf("Digite o elemento[%d][%d]", i, j);
             scanf("%d", &mat[i][j]);
         }
     }
-    for (i=0;i<line; i++)
+    for (i=1;i<=line; i++)
     {
-        for (j=0; j< col; j++)
+        for (j=1; j<=col; j++)
         {
             if (find_position(i, j, mat) == 1)
             {
-                cont ++;
+                printf("Entrou \n");
+                cont++;
                 mat[i][j]= cont;
+                printf("Contou %d \n", cont);
+                printf("%d \n ", mat[i][j]);
             }
         }
     }
     
-    for (i=0; i<line; i++)
+    for (i=0; i<=line+1; i++)
     {
-        for(j=0; j<col; j++)
+        for(j=0; j<=col+1; j++)
         {
             printf("%d \t", mat[i][j]);
         }
