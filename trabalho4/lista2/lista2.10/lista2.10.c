@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /*
 * Programacao de Computadores e ALgoritmos
 * Trabalho 4
@@ -11,8 +9,8 @@
 *  Luiz Fernando
 *  Richardson  
 */
->>>>>>> 525d9ecc7168fefd2638940bf2889474213935bc
 #include<stdio.h>
+#include"2.10.h"
 int main(int argc, const char *argv[])
 
 {
