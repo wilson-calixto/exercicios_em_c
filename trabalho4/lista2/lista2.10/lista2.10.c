@@ -3,7 +3,7 @@
 /*
 * Programacao de Computadores e ALgoritmos
 * Trabalho 4
-* lista3.02.c
+* lista2.10.c
 *
 * Equipe
 *  Juliany Raiol
