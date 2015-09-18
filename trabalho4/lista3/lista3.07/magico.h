@@ -1,0 +1,1 @@
+int qmagico(int n, int **matriz);
