@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char  ***insere_vetor(int numero_jogos)
+char  ***insere_resultado(int numero_jogos)
 {
 	int i,j;
 	char  ***resultados = (char ***) malloc(numero_jogos*sizeof(char *));

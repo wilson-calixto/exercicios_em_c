@@ -15,4 +15,4 @@
  *
  * =====================================================================================
  */
-char ***insere_vetor(int npartidas); 
+char ***insere_resultado(int npartidas); 
