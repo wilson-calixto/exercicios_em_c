@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include "magico.h"
-#define MAX 10000
+#define MAX 1000
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
 	printf("Digite o tamanho da matriz: ");
 	scanf("%d",&n);
 	
-	read_m(n,n,matriz);
+	read_m(n,matriz);
 	
 	if(qmagico(n, matriz))
 	{

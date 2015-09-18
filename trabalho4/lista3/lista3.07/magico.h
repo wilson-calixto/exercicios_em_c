@@ -1,2 +1,2 @@
-void read_m(int n, mat[][n]);
+void read_m(int n, int mat[][n]);
 int qmagico(int n, int matriz[][n]);

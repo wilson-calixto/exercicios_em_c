@@ -1,6 +1,7 @@
-void read_m(int n, mat[][n])
+#include <stdio.h>
+void read_m(int n, int mat[][n])
 {
-	int n;
+	int i,j;
 	for (i=0; i<n;i++)
 	    {
 		for (j=0; j<n; j++)
@@ -23,7 +24,7 @@ int qmagico(int n, int matriz[][n])
 			somac+=matriz[i][j];
 			if( j >= i )
 			{
-				somad+=matriz[i][j];
+				somap+=matriz[i][j];
 			}
 			else 
 			{
@@ -36,5 +37,6 @@ int qmagico(int n, int matriz[][n])
 		somal+=matriz[i][j];
 	}
 	
-	if( (somal == somac) && (somap == somas) && () )
+	if( (somal == somac) && (somap == somas) && (somap == somal) ) return 1;
+	else return 0;
 }
