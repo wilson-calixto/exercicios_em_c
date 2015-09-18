@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
-void insere_vetor(int numero_jogos,  char** resultados)
+
+char  ***insere_vetor(int numero_jogos)
 {
 	int i,j;
-	char dados[10];  
+	char  ***resultados = (char ***) malloc(numero_jogos*sizeof(char *));
 	for ( i = 0; i < numero_jogos; i += 1 ) 
 	{
-		resultados[i] = (char*) malloc (4*sizeof(char*));
-		for ( j = 0; j < 3; j += 1 ) 
+		resultados[i] = (char **)malloc(4*sizeof(char));
+		for ( j = 0; j < 4; j += 1 ) 
 		{
+			resultados[i][j] = (char *)malloc(10*sizeof(char));
 			scanf("%s", resultados[i][j]);
 			
 		}
 	}
+	return(resultados);
 }
