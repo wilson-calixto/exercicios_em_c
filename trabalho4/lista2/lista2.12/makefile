@@ -1,13 +1,13 @@
 all: lista2.12
 
-lista2.12: lista2.12.o functions.o
-	gcc lista.12.o functions.o lista2.12
+lista2.12: lista2.12.o function.o
+	gcc lista2.12.o function.o -o lista2.12
 
 lista2.12.o: lista2.12.c
 	gcc -c lista2.12.c
 
-functions.o: functions.c
-	gcc -c functions.c
+function.o: function.c
+	gcc -c function.c
 
 clean:
 	rm -rf *.o

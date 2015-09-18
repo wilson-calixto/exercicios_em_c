@@ -1,0 +1,35 @@
+/*
+* Programacao de Computadores e ALgoritmos
+* Trabalho 4
+* lista1.10
+*
+* Equipe:
+*  Sergio Pinheiro
+*  Wilson Araújo
+*  Andressa Moreira
+*  Benjamin Borges
+*  Gabriel Faraco
+      
+*/
+
+//Explique o que o progama abaixo faz:
+
+
+void main() 
+{
+      int vet[] = {4,9,12};
+      int i,*ptr;
+	//as variáveis e o ponteiro são declarados como inteiros
+      ptr = vet;//Ponteiro recebe vet
+
+      for(i = 0 ; i < 3 ; i++) 	//o for coloca o ponteiro para o índice 0 e percorre o mesmo até o índice 2; 
+				//sendo incrementado o índice de 1 em 1 até  2.
+	{
+           printf("%d ",*ptr++); //O programa imprimi o conteúdo (valor) da posição onde o ponteiro aponta. 
+				//Logo, ele imprimirá na tela, na ordem: 4,9,12
+     	}
+	return 0;
+}
+
+
+

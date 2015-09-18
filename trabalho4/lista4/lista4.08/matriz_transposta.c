@@ -1,18 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void matriz_transposta (int linha, int coluna , int **matriz)
+int matriz_transposta (int ordem , int **matriz, int **matriz2)
 {
 	int i,j;
 	
-	for ( i = 0; i < linha; i += 1 ) 
+	for ( i = 0; i < ordem; i += 1 ) 
 	{
-	
-		for ( j = 0; j < coluna; j += 1 ) 
+		for ( j = 0; j < ordem; j += 1 ) 
 		{
-			printf("%d ", matriz[i][j] );
+			if (matriz[i][j] != matriz2[j][i] )
+			{
+				return 0;
+			}	
 		}
-		printf("\n");
-
 	}
+	return 1; 
 }

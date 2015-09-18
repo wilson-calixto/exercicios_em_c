@@ -31,7 +31,8 @@ Dada uma matriz inteira Anxn, verificar se A é de permutação.
 
 
 
-7.  Dizemos que uma matriz quadrada inteira é um quadrado mágico (1) se a soma dos elementos de cada linha, a soma dos elementos de cada coluna e a soma dos elementos das diagonais principal e secundária são todas iguais.
+7.  Dizemos que uma matriz quadrada inteira é um quadrado mágico (1) se a soma dos elementos de cada linha, 
+a soma dos elementos de cada coluna e a soma dos elementos das diagonais principal e secundária são todas iguais.
 
     Exemplo: A matriz
 
