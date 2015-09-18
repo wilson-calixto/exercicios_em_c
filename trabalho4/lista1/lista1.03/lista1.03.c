@@ -20,8 +20,8 @@ int main(int argc, const char *argv[])
 	p=&y;//A Variavel P recebe o endereço de Y
 	x=*p;//X recebe o que P estava apontando
 	x=4;//X recebe 4
-	(*p)++;//O que P estava apontando recebe Y
-	x--;//X descrementa
+	(*p)++;//O que P estava apontando é incrementado
+	x--;//X decrementa
 	(*p)+=x;//O P vai incrementar o Y com o valor de X
 	
 	printf("y = %d\n", y);

@@ -19,16 +19,16 @@ void inters(int n, int *a,int *b, int *c)
 {
 	int i, j, *p;
     
-    p = &c[0];
+    p = &c[0]; //ponteiro 'p' passa a apontar para o primeiro endereço da matriz 'c'
 
-	for(i = 0; i < n; i++)
-	{
-		for(j = 0; j < n; j++)
+	for(i = 0; i < n; i++) //indice que ira variar menos
+ 	{
+		for(j = 0; j < n; j++) //indice que ira variar mais
 		{
 			if(a[i] == b[j])
 			{
-					*p = a[i];
-					p++;
+					*p = a[i]; //local da memoria em que 'p' esta apontado recebe a[i]
+					p++; //'p' passa a apontar para o proximo endereço da matriz 'c'
 			}
 		}
 	}
@@ -36,11 +36,11 @@ void inters(int n, int *a,int *b, int *c)
 
 int taminters(int n, int a[n], int b[n])
 {
-	int tam = 0, i, j;
+	int tam = 0, i, j;//tamanho,indice i, indice j
 
-	for(i = 0; i < n; i++)
-		for(j = 0; j < n; j++)
-			if(a[i] == b[j])
+	for(i = 0; i < n; i++)//indice que ira variar menos
+		for(j = 0; j < n; j++)//indice que ira variar mais
+			if(a[i] == b[j])//verifica valores de a[í] e b[j], se forem tamanho da interseçao é incrementado
 				tam++;
 
 	return tam;
@@ -50,8 +50,8 @@ void ler_vetor(int n, int v[n])
 {
 	int cont;
 
-    printf("Informe os valores do vetor:\n");
-
+    printf("Informe os valores do vetor:\n"); //é inapropriado usar printf em funçao void, mas assim fica melhor 
+    					      //para o usuario saber o que está acontacendo.
 	for(cont = 0; cont < n; cont++)
-		scanf("%d", &v[cont]);
+		scanf("%d", &v[cont]);//lê valores para o vetor
 }

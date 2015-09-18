@@ -1,3 +1,14 @@
+/*
+* Programacao de Computadores e ALgoritmos
+* Trabalho 4
+* lista3.02.c
+*
+* Equipe
+*  Juliany Raiol
+*  Lucas Botinelly
+*  Luiz Fernando
+*  Richardson  
+*/
 #include <stdio.h>
 #include "../../util.c/util.h"
 #include "equacao.h"
