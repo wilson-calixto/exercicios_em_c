@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+/*
+* Programacao de Computadores e ALgoritmos
+* Trabalho 4
+* lista3.02.c
+*
+* Equipe
+*  Juliany Raiol
+*  Lucas Botinelly
+*  Luiz Fernando
+*  Richardson  
+*/
+>>>>>>> 525d9ecc7168fefd2638940bf2889474213935bc
 #include<stdio.h>
 #include"polinome.c"
 int main(int argc, const char *argv[])
