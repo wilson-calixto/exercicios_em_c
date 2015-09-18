@@ -1,3 +1,17 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 1
+ * lista2.18.c
+ *
+ * Equipe:
+ *
+ *          Jackson Gomes
+ *          Paulo Marinho
+ *          Hermann
+ *          Elizabeth
+ *          Jailson
+ */
+
 #include <stdio.h>
 #include"matriz.c"
 #define Max 100
