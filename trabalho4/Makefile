@@ -23,12 +23,12 @@ lista3.02.o: lista3/lista3.02/lista3.02.c
 	gcc -o $(path_obj)lista3.02.o -c lista3/lista3.02/lista3.02.c
 
 equacao.o: lista3/lista3.02/equacao.c
-	gcc -o $(path_obj)equacao.o -c lista3/lista3.02/equacao.c
+	gcc -o $(path_obj)equacao.o -c lista3/lista3.02/equacao.c	
 	
 
 # Bloco para compilar a questão 07 - lista 03
-lista3.07: lista3.07.o magico.o
-	gcc $(path_obj)lista3.07.o $(path_obj)magico.o -o $(path_bin)lista3.07
+lista3.07: lista3.07.o magico.o util.o
+	gcc $(path_obj)lista3.07.o $(path_obj)magico.o $(path_obj)util.o -o $(path_bin)lista3.07
 
 lista3.07.o: lista3/lista3.07/lista3.07.c
 	gcc -o $(path_obj)lista3.07.o -c lista3/lista3.07/lista3.07.c
