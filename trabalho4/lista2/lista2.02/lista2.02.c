@@ -32,7 +32,8 @@ int main ( int argc, char *argv[] )
   	/* O espaco em branco antes do %c e' importante.
      	Ele evita que o return digitado depois do n seja 
      	interpretado como a primeira "letra" do gabarito*/
-  	for (aluno = 1; aluno <= n; aluno++) {
+  	for (aluno = 1; aluno <= n; aluno++) 
+  	{
     		pontos = 0;
     		
     		printf("Digite as respostas do aluno %d:\n ", aluno);
