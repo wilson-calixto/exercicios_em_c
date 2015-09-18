@@ -13,7 +13,7 @@ obj:
 	mkdir -p obj
 
 path_bin = bin/
-path_obj = obj/ 
+path_obj = obj/
 
 # Bloco para compilar a questão 02 - lista 03
 lista3.02: lista3.02.o equacao.o util.o
