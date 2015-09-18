@@ -1,3 +1,15 @@
+/* Programação de Computadores e Algoritmos
+ * Trabalho 4
+ *
+ * Equipe:
+ *		Paulo Henrique
+ *		Raí Santos
+ *		Jackson Kevin
+ *		Wilson Calisto
+ *		Ewerton Petillo
+ *
+ */
+
 #include <stdio.h>
 
 void main(){
