@@ -19,17 +19,17 @@ int main(int argc, const char *argv[])
 {
 	//p(x)=a0+a1x+a2x2**2+...+anx**n
 	int n=0;
-	printf("Insira o grau do polinomio: ");
+	printf("Insira o grau do polinomio: ");//Lê o tamanho do vetor
 	scanf("%d", &n);
 	int i, j, vetor[n], k;
-	printf("Quer em quantos pontos diferentes ?\n");
+	printf("Quer em quantos pontos diferentes ?\n");//Vê a quantidade de loops que estarão no programa
 	scanf("%d", &k);
-	for (j=0; j<k; j++);
-		for(i=0;i<n;i++)
+	for (j=0; j<k; j++);//Loop pela quantidade de pontos diferentes
+		for(i=0;i<n;i++)//loop para criar um vetor
 		{	
 			printf("Insira o valor do %dº valor: ", i+1);
-			scanf("%d", &vetor[i]);	
+			scanf("%d", &vetor[i]);	//Adiciona ao vetor
 		}
-		polinome(n, vetor);
+		polinome(n, vetor);//chama a função
 	return 0;
 }
