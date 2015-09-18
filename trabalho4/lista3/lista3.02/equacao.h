@@ -1,1 +1,0 @@
-int test_function(int n, int m, int a[][m], int x[n], int b[m]);

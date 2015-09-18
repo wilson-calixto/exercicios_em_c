@@ -1,4 +1,4 @@
-all: bin obj lista4.02 lista4.7
+all: bin obj lista3.02 lista4.02 lista4.7
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -13,7 +13,19 @@ obj:
 	mkdir -p obj
 
 path_bin = bin/
-path_obj = obj/
+path_obj = obj/ 
+
+# Bloco para compilar a questão 02 - lista 03
+lista3.02: lista3.02.o equacao.o util.o
+	gcc $(path_obj)lista3.02.o $(path_obj)equacao.o $(path_obj)util.o -o $(path_bin)lista3.02
+
+lista3.02.o: lista3/lista3.02/lista3.02.c
+	gcc -o $(path_obj)lista3.02.o -c lista3/lista3.02/lista3.02.c
+
+equacao.o: lista3/lista3.02/equacao.c
+	gcc -o $(path_obj)equacao.o -c lista3/lista3.02/equacao.c
+
+
 
 # Bloco para compilar a questão 02 - lista 04
 lista4.02: lista4.02.o matrix.o
@@ -24,6 +36,8 @@ lista4.02.o: lista4/lista4.02/lista4.02.c
 
 matrix.o: lista4/lista4.02/matrix.c
 	gcc -o $(path_obj)matrix.o -c lista4/lista4.02/matrix.c
+
+
 
 # Bloco para compilar a questão 07 - lista 04
 lista4.7: lista4.7.o sets_ab.o
