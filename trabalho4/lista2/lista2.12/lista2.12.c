@@ -18,27 +18,26 @@
 
 int main()
 {
-    int n, vet[MAX], i, x, p[MAX];
+    int n, vet[MAX], i,j, x, p[MAX], ind, cont;
 
     printf("Digite o grau do polimonio: \n");
     scanf("%d", &n);
-    for (i=n-1; i>=0; i--)
+    for (i=n; i>=0; i--)
     {
         printf("Coeficiente de A[%d]: \n", i);
         scanf("%d", &vet[i]);
     }
     printf("Digite um valor para X: \n" );
     scanf("%d", &x);
-    p[n-2] = vet[n-1];
-    for (i=0;i>n-3; i++)
+    ind = n;
+    for(j=n-1;j>=0;j--)
     {
-        p[i] = polynomial(vet, n-1, x);
-        printf("%d \n ", p[i]);
-    }
-    for (i=n-2; i>=0; i++)
+        p[j] = polynomial(vet,p,j,x,ind);
+        printf("%d \n ", p[j]);
+        }
+    for (i=ind-1 ; i>=0; i--)
     {
         printf("%dx^%d + ", p[i], i);
-        n--;
     }
 }
  
