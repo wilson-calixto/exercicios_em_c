@@ -5,14 +5,29 @@
 int main ( int argc, char *argv[] )
 {
 	int nlinha,i;
-	int **matriz;
+	int **matriz, **matriz2;
 	scanf ( "%d", &nlinha);
-	printf ( "Numero de linhas %d \n", nlinha);
+	printf ( "Insira  Matrizes de ordem =   %d \n", nlinha);
 	matriz = (int**) malloc (nlinha*sizeof(int*));
+	matriz2 = (int**) malloc (nlinha*sizeof(int*));
 	
 	insere_matriz(nlinha, nlinha , matriz);
+	insere_matriz(nlinha, nlinha , matriz2);
 	
-	matriz_transposta(nlinha, nlinha, matriz);
+	//imprimi_matriz(nlinha, matriz);
+	//printf("\n\n "); 
+	//imprimi_matriz(nlinha, matriz2);
+	
+	if (matriz_transposta(nlinha, matriz, matriz2))
+	{
+		printf("A matriz 2 É transposta\n");
+	}else
+	{
+		printf("A matriz 2 NAO É  transposta\n");
+	}
+
 	free(matriz);
+	free(matriz2);
+
 	return 0;
 }

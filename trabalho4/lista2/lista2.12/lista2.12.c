@@ -12,21 +12,33 @@
  *          Ewerton Petillo
  *          
  */
-#include <stdio.h>
-#include "functions.h"
+#include<stdio.h>
+#include "function.h"
+#define MAX 10
 
-int main(int argc, const char *argv[])
+int main()
 {
-    int n, vet[n], i, sum;
+    int n, vet[MAX], i,j, x, p[MAX], ind, cont;
 
-    printf("Digite a quantidade de termos: \n");
+    printf("Digite o grau do polimonio: \n");
     scanf("%d", &n);
-    printf("Digite os %d termos: \n", n);
-    for(i=0;i<n; i++)
+    for (i=n; i>=0; i--)
     {
-        scanf("%d ", &vet[i]);
+        printf("Coeficiente de A[%d]: \n", i);
+        scanf("%d", &vet[i]);
     }
-    sum = sum_max(vet,n);
-    printf("A soma maxima do segmento eh: %d \n", sum);
-        
+    printf("Digite um valor para X: \n" );
+    scanf("%d", &x);
+    ind = n;
+    for(j=n-1;j>=0;j--)
+    {
+        p[j] = polynomial(vet,p,j,x,ind);
+        printf("%d \n ", p[j]);
+        }
+    for (i=ind-1 ; i>=0; i--)
+    {
+        printf("%dx^%d + ", p[i], i);
+    }
 }
+ 
+

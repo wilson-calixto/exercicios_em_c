@@ -1,1 +1,0 @@
-void test_function(int n, int m, float a[][m], float x[n], float b[m]);

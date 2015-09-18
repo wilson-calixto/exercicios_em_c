@@ -17,7 +17,9 @@ void read_array(int n, int v[n])
 int fatorial(int n) 
 {
 	if(n == 0)
+    {
 		return 1;
+    }
 	//fatorial recursivo
 	return (n*fatorial(n-1));
 }
@@ -49,5 +51,18 @@ void inverso(int *vetor, int s)
         printf("%d ", vetor[i]);  
     }
 
-   
+}
+
+/* Funcao len
+	retorna o numero de caracteres de uma string + 1 (referente ao caractere de fim da linha '\0')
+*/	
+int len (char str[])
+{
+    int cont = 0;
+    while (str[cont] != '\0')
+    {
+        cont++;
+    }
+    cont++;
+    return cont;
 }

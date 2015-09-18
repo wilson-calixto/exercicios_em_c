@@ -23,8 +23,7 @@ int comb(int a, int b);
 
 int main(int argc, char *argv[])
 {
-	//para deixar genérico, precisaríamos perguntar o user
-	//o valor de num
+	//o valor de num é o tamanho do triangulo
 	int i=0,i2=0,num=8;
 
 	for(i = 0; i <= num; i++) 

@@ -24,6 +24,8 @@ d) ponteiro = vetor;
 e) ponteiro = vetor+2;
 
 //Questão puramente dissertativa
+
 Resposta:
 a, b e c: Inválidas. O vetor não é uma variável.
+
 d e e: Válidas. O ponteiro é uma variável.
