@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
 #define MAX 100
-void preencher(int A[MAX][MAX], int n)
+
+void preencher(int A[][MAX], int n)
 { 
  	int i,j;
  	for (i= 0; i<n;i++)
@@ -13,7 +12,7 @@ void preencher(int A[MAX][MAX], int n)
   	}
 }
 
-int devolveMaior (int m[MAX][MAX], int n, int *lin, int *col) {
+int devolveMaior (int m[][MAX], int n, int *lin, int *col) {
   int i, j;
   int maior = m[0][0];
   *lin = 0;
@@ -27,3 +26,5 @@ int devolveMaior (int m[MAX][MAX], int n, int *lin, int *col) {
       }
   return (maior);
  }
+
+
