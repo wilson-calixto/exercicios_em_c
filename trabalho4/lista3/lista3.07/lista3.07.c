@@ -28,20 +28,10 @@ int main()
 	printf("Digite os elementos da matriz\n");
 	insere_matriz(n, n, matriz);
 	
-	
-	for (i=0; i<n;i++)
-	    {
-		for (j=0; j<n; j++)
-		{
-		    printf("%d ", matriz[i][j]); 
-		}
-		printf("\n");
-	    }
-	
 	//Verifica se é uma quadrado mágico
 	if(qmagico(n, matriz))
 	{
-		printf("aqui A matriz é um quadrado mágico\n");
+		printf("A matriz é um quadrado mágico\n");
 	}
 	else printf("A matriz não é quadrado mágico\n");
 	

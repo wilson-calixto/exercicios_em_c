@@ -2,16 +2,23 @@
 
 int qmagico(int n, int **matriz)
 {
-	int somal = 0, somac = 0, somap = 0, somas = 0, i, j,  k = 0; //Declaração das variáveis
+	int somal = 0, somac = 0, somap = 0, somas = 0;
+	int i, j = 0,k = 0, m = 0; //Índices da matriz
+	int resultado = 0; //variável que será usada na comparação das somas linha e somas coluna
 	
 	for(i = 0; i < n;i++)
-	{		
-		somal+=matriz[i][k]; //Soma dos elementos da linha
-		k++;
-		for(j = 0; j < n; j++)
+	{	
+	
+		//Verifica o somatório da linha	
+		for(k = 0; k < n;k++)
 		{
-			somac+=matriz[i][j]; //Soma dos elementos da coluna
-						
+			somal+=matriz[k][m]; //Soma dos elementos da linha
+		}
+		
+		//Verifica o somatório da coluna, diagonal princial e secundária
+		for(j = 0; j < n; j++)
+		{		
+			somac+=matriz[i][j]; //Soma dos elementos da coluna			
 			if( i == j ) //Soma dos elementos da diagonal principal
 			{
 					somap+=matriz[i][j];
@@ -23,9 +30,20 @@ int qmagico(int n, int **matriz)
 				}
 			
 		}
+		
+		//Verifica se o somatório da linha é igual ao da coluna
+		if(somac == somal) resultado = 1;
+		else
+		{
+			resultado = 0;
+			break;
+		}
+		
+		//Zerando as variáveis para o próximo loop
+		somac = 0;
+		somal = 0;
 	}
 	
-	printf("%d %d\n",somap, somas);
-	if((somap == somas) && (somal == somac) && (somal == somap)) return 1; //Verifica se todas as somas são iguais
+	if((somap == somas) && resultado) return 1; //Verifica se todas as somas são iguais
 	else return 0;
 }
