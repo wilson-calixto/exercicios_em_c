@@ -16,16 +16,19 @@
 int main(int arc, char const *argv[])
 {
 	//Declaração dos vetores
-	char *nome;
+	char **nome;
 	float *salario, *ref, *val;
 	int *hed, *hen, *nd, *fal, *de, n; 
 	
+	//Tamanho do vetor
 	printf("Digite o numero de funcionarios: ");
 	scanf("%d",&n);
 	
 	//Inserção nos vetores
 	insere_vetor(n,nome,salario,ref,val,hed,hen,nd,fal,de);
 	
+	//Impressão da folha de pagamento
+	print_vetor(n,nome,salario,ref,val,hed,hen,nd,fal,de);
 	
 	return 0;
 }
