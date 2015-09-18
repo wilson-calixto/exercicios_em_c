@@ -15,7 +15,7 @@
 #include "../../util.c/util.h"
 #define MAX 1000
 
-int main()
+int main(int arc, char const *argv[])
 {
 	int i, j, n;
 	int **matriz;
