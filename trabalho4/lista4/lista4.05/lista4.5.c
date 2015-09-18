@@ -1,7 +1,7 @@
 /*
  * Programacao de Computadores e ALgoritmos
- * Trabalho 1
- * lista2.18.c
+ * Trabalho 4
+ * lista4.5.c
  *
  * Equipe:
  *
