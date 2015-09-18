@@ -8,7 +8,7 @@ Equipe:
 	Sergio Pinheiro
 	Wilson Calixto
 	Andressa Moreira
-	Rodrigo (TADS)
+	Rodrigo [TADS]
 */	
 
 #include <stdio.h>
