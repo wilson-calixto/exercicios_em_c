@@ -13,7 +13,6 @@
 #include <stdio.h>
 #include "magico.h"
 #include "../../util.c/util.h"
-#define MAX 1000
 
 int main(int arc, char const *argv[])
 {

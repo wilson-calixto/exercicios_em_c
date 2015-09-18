@@ -12,9 +12,16 @@
  *          Ewerton Petillo
  *          
  */
-int polynomial(int vet[], int n, int a)
+int polynomial(int vet[], int p[], int n, int a, int ind)
 {
+
     int qx;
-    qx = (vet[n] * a) + vet[n-1];
+    if(n == ind-1){
+        qx = vet[ind];
+    }
+    else
+    {
+        qx= (p[n+1] * a) + vet[n+1];
+    }
     return qx;
 }
