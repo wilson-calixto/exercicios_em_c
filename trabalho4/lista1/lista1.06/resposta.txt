@@ -1,1 +1,3 @@
-A resposta de questão "Lista1.6" é um programa que imprime um vetor com cinco números fracionários e indica o endereço deles.
+A resposta de questão "Lista1.6" é um programa que 
+imprime um vetor com cinco números fracionários
+e indica o endereço deles.
