@@ -24,6 +24,7 @@ lista3.02.o: lista3/lista3.02/lista3.02.c
 
 equacao.o: lista3/lista3.02/equacao.c
 	gcc -o $(path_obj)equacao.o -c lista3/lista3.02/equacao.c	
+	
 
 # Bloco para compilar a questão 07 - lista 03
 lista3.07: lista3.07.o magico.o util.o
