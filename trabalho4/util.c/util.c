@@ -52,3 +52,17 @@ void inverso(int *vetor, int s)
     }
 
 }
+
+/* Funcao len
+	retorna o numero de caracteres de uma string + 1 (referente ao caractere de fim da linha '\0')
+*/	
+int len (char str[])
+{
+    int cont = 0;
+    while (str[cont] != '\0')
+    {
+        cont++;
+    }
+    cont++;
+    return cont;
+}
