@@ -32,14 +32,14 @@ int main( int argc, const char *argv[] )
 	{
 		for( j = 0; j < 50; j++ ) 
 		{
-			m[i][j] = 0.0;	
+			m[i][j] = 0.0;	//Zerando a matriz
 			
 		}
 	}
 	
 	for( i = 0; i < 50; i++ ) 
 	{
-		free( v[ i ] );
+		free( v[ i ] ); //Liberando da memória
 	}
 
 	return 0;
