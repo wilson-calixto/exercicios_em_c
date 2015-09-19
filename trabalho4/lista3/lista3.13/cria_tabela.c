@@ -1,9 +1,11 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "insere_resultado.h"
+#include <string.h>
 char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 {
 	char ***tabela;
-	int i,j,s=0, indice_tabela;
+	int i,j,s=0, indice_tabela=0;
 	//Colunas da Tabela
 	//Time  PG  GM GS S V GA
 	
@@ -25,33 +27,38 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 		
 		if (s > 0)
 		{
-			indice_tabela = pesq_matriz(s-1, matriz_resultado[i][0], tabela);
-			
+			indice_tabela = pesq_matriz(s, matriz_resultado[i][0], tabela);
 			if (indice_tabela == -1)
 			{
 				tabela[s][0] = matriz_resultado[i][0];
+				printf("add %s ========\n", matriz_resultado[i][0]);
 				s++;
 			}else
 			{
-				tabela[indice_tabela][0] = matriz_resultado[i][0];
+				//tabela[indice_tabela][0] = matriz_resultado[i][0];
+				strcpy(tabela[indice_tabela][0], matriz_resultado[i][0]);
 			}
 			
-			indice_tabela = pesq_matriz(s-1, matriz_resultado[i][0], tabela);
-			
+			indice_tabela = pesq_matriz(s, matriz_resultado[i][1], tabela);
+
 			if (indice_tabela == -1)
 			{
-				tabela[s][0] = matriz_resultado[i][0];
+				printf("add %s", matriz_resultado[i][1]);
+				tabela[s][0] = matriz_resultado[i][1];
 				s++;
 			}else
 			{
-				tabela[indice_tabela][0] = matriz_resultado[i][0];
+				//tabela[indice_tabela][0] = matriz_resultado[i][1];
+				strcpy(tabela[indice_tabela][0], matriz_resultado[i][1]);
 			}
 
+		}else
+		{
+			tabela[s][0] = matriz_resultado[i][0];
+			s++;
+			tabela[s][0] = matriz_resultado[i][1];
+			s++;
 		}
-		tabela[s][0] = matriz_resultado[i][0];
-		s++;
-		tabela[s][0] = matriz_resultado[i][1];
-		s++;
 
 	}
 	return (tabela);
