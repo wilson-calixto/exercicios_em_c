@@ -16,3 +16,5 @@
  * =====================================================================================
  */
 char ***insere_resultado(int npartidas); 
+int pesq_matrizes(int ntimes, char* time, char*** tabela);
+char ***cria_tabela(int ntimes, int njogos, char*** matriz_resultados);

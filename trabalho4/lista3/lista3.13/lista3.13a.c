@@ -12,7 +12,7 @@ int main ( int argc, char *argv[] )
 	printf("Qauntidade de jogos possiveis =  %d", njogos);
 
 	matriz_resultado = insere_resultado(njogos);
-	//tabela = cria_tabela(matriz_resultado);
+	tabela = cria_tabela(ntimes, njogos, matriz_resultado);
 	
 	
 	free(matriz_resultado);
