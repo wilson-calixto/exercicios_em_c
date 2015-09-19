@@ -29,7 +29,7 @@ int main(int argc, const char *argv)
 		scanf("%d",&a[i]);
 	}
 	printf("A sequência inversa é: \n");
-	inverso(n,tam);
+	inverso(a,tam);
 
 	return 0;
 }
