@@ -17,7 +17,7 @@
 
 int main(int argc, const char *argv[])
 {
-	int a, b, c, d, i, j, l;
+	int a, b, c, d, i, j;
 	float X[MAX][MAX], Y[MAX][MAX];	//matrizes
 
 	printf("digite o tamanho da primeira matriz:\n");
