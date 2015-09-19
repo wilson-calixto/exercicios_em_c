@@ -12,7 +12,7 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 	tabela =  (char ***) malloc (ntimes*sizeof(char*));
 	for ( i = 0; i < ntimes; i += 1 )
 	{
-		tabela[i] = (char **) malloc (7*sizeof(char*));
+		tabela[i] =  (char **) malloc (7*sizeof(char*));
 		tabela[i][0] = (char *) malloc (10*sizeof(char));
 		tabela[i][1] = (char *) malloc (3*sizeof(char));
 		tabela[i][2] = (char *) malloc (3*sizeof(char));
@@ -35,8 +35,8 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 				s++;
 			}else
 			{
-				//tabela[indice_tabela][0] = matriz_resultado[i][0];
-				strcpy(tabela[indice_tabela][0], matriz_resultado[i][0]);
+				tabela[indice_tabela][0] = matriz_resultado[i][0];
+
 			}
 			
 			indice_tabela = pesq_matriz(s, matriz_resultado[i][1], tabela);
@@ -48,15 +48,18 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 				s++;
 			}else
 			{
-				//tabela[indice_tabela][0] = matriz_resultado[i][1];
-				strcpy(tabela[indice_tabela][0], matriz_resultado[i][1]);
+				tabela[indice_tabela][0] = matriz_resultado[i][1];
 			}
 
 		}else
 		{
 			tabela[s][0] = matriz_resultado[i][0];
+			tabela[s][2] = matriz_resultado[i][2]; 
+			tabela[s][3] = matriz_resultado[i][3];
 			s++;
-			tabela[s][0] = matriz_resultado[i][1];
+			tabela[s][2] = matriz_resultado[i][1];
+			tabela[s][2] = matriz_resultado[i][3];
+			tabela[s][3] = matriz_resultado[i][2];
 			s++;
 		}
 

@@ -10,8 +10,9 @@ char  ***insere_resultado(int numero_jogos)
 		resultados[i] = (char **)malloc(4*sizeof(char));
 		for ( j = 0; j < 4; j += 1 ) 
 		{
-			resultados[i][j] = (char *)malloc(10*sizeof(char));
-			scanf("%s", resultados[i][j]);
+			
+				resultados[i][j] = (char *)malloc(10*sizeof(char));
+				scanf("%s", resultados[i][j]);
 			
 		}
 	}
