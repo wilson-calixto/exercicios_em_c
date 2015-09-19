@@ -49,6 +49,6 @@ int main ( int argc, char *argv[] )
     printf ( "o custo do itinerário ");
     /*imprime vetor*/
 	imprime_vetor(itinerario,tamanho_do_vetor);
-	printf ( "é\n %d",custo);
+	printf ( "é\n %d\n",custo);
     return 0;
 }	
