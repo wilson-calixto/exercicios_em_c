@@ -8,7 +8,7 @@ void imprime_tabela(int ntimes, char ***tabela)
 	
 	for ( i = 0; i < ntimes; i += 1 ) 
 	{
-		printf("%s     ", tabela[i][0] );
+		printf("%-10s  %s   %s   %s   %s  %s ", tabela[i][0], tabela[i][1], tabela[i][2], tabela[i][3], tabela[i][4], tabela[i][5] );
 		printf("\n"); 
 	}
 
