@@ -16,13 +16,7 @@
  *  Description:  
  * =====================================================================================
  */
-void pede_dados(int **matriz,int ordem);
-void completa_vetor(int *itinerario,int ordem);
-int calcula_custo(int **matriz,int *itinerario,int ordem);
-void imprime_vetor(int *itinerario,int tamanho_do_vetor);
-
-    int
-main ( int argc, char *argv[] )
+int main ( int argc, char *argv[] )
 {
     int **matriz,*itinerario,custo=0,ordem,i,tamanho_do_vetor=0;
     
