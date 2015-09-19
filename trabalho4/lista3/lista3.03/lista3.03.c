@@ -57,7 +57,8 @@ int main(int argc, const char *argv[])
 		
 		//imprimir funcao multiplica matriz
 		printf("multiplicação da 1a pela 2a matriz:\n");
-		multi_matriz(X,Y);
+		multi_matriz(X, Y, a, b, d);	/*necessário para a função o tamanho 
+						 das matrizes para a criação da matriz multiplicação*/
 
 
 	}
