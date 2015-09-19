@@ -1,0 +1,189 @@
+ Exercícios com Vetores
+
+1.  Dada uma seqüência de n números, imprimi-la na ordem inversa à da leitura.
+
+               Solução em C
+
+2.  Deseja-se publicar o número de acertos de cada aluno em uma prova em forma de testes. A prova consta de 30 questões, cada uma com cinco alternativas identificadas por A, B, C, D e E. Para isso são dados:
+    o cartão gabarito; 
+    o número de alunos da turma; 
+    o cartão de respostas para cada aluno, contendo o seu número e suas respostas.
+
+                   Solução em C
+                   Solução em Pascal
+
+    3.  Tentando descobrir se um dado era viciado, um dono de cassino honesto (ha! ha! ha! ha!) o lançou n vezes. Dados os n resultados dos lançamentos, determinar o número de ocorrências de cada face.
+
+    4.  Dados dois vetores x e y, ambos com n elementos, determinar o produto escalar (1) desses vetores.
+
+                   Solução em C
+                   Solução em Pascal
+
+    5.  Faça um programa para resolver o seguinte problema:
+    São dadas as coordenadas reais x e y de um ponto, um número natural n, e as coordenadas reais de n pontos (1 < n < 100). Deseja-se calcular e imprimir sem repetição os raios das circunferências centradas no ponto (x,y) que passam por pelo menos um dos n pontos dados.
+
+        Exemplo : (x,y) = (1.0, 1.0) ; n = 5
+
+        pontos : (-1.0, 1.2) , (1.5, 2.0) , (0.0, -2.0) , (0.0, 0.5) , (4.0, 2.0)
+
+        Nesse caso há três circunferências de raios: 1.12,  2.01 e 3.162.
+
+        Observações:
+
+                Distância entre os pontos (a,b) e (c,d) é 
+
+                Dois pontos estão na mesma circunferência se estão à mesma distância do centro.
+
+
+
+    6.  (COMP 89) Dados dois strings (um contendo uma frase e outro contendo uma palavra), determine o número de vezes que a palavra ocorre na frase.
+
+        Exemplo:
+        Para a palavra ANA e a frase :
+
+        ANA E MARIANA GOSTAM DE BANANA (2)
+
+        Temos que a palavra ocorre 4 vezes na frase.
+
+
+
+                   Solução em Pascal
+
+    7.  (MAT 88) Dada uma seqüência de n números reais, determinar os números que compõem a seqüência e o número de vezes que cada um deles ocorre na mesma.
+
+        Exemplo: n = 8
+
+        Seqüência: -1.7,  3.0,  0.0,  1.5,  0.0, -1.7,  2.3, -1,7
+
+        Saída:       -1.7 ocorre 3 vezes
+                           3.0 ocorre 1 vez
+                           0.0 ocorre 2 vezes
+                           1.5 ocorre 1 vez
+                           2.3 ocorre 1 vez
+
+
+
+                   Solução em C
+                   Solução em Pascal
+
+    8.  Dados dois números naturais m e n e duas seqüências ordenadas com m e n números inteiros, obter uma única seqüência ordenada contendo todos os elementos das seqüências originais sem repetição.
+
+        Sugestão: Imagine uma situação real, por exemplo, dois fichários de uma biblioteca.
+
+
+
+                   Solução em Pascal
+
+    9.  Dadas duas seqüências com n números inteiros entre 0 e 9, interpretadas como dois números inteiros de n algarismos, calcular a seqüência de números que representa a soma dos dois inteiros.
+
+        Exemplo: n = 8,
+
+    1ª  seqüência 	      8    2    4    3    4    2    5    1
+    2ª  seqüência 	+    3    3    7    5    2    3    3    7
+    	1    1    6    1    8    6    5    8    8
+
+
+                   Solução em Pascal
+
+    10.  Calcule o valor do polinômio   p(x)=a0+a1x+...+anxn em k pontos distintos. São dados os valores de n (grau do polinômio), de   a0, a1, ..., an   (coeficientes reais do polinômio), de k e dos pontos  x1, x2, ..., xk.
+
+    11.  Dado o polinômio   p(x)=a0+a1x+...+anxn, isto é, os valores de n e de   a0, a1, ..., an  , determine os coeficientes reais da primeira derivada de p(x).
+
+    12.  Dado um polinômio   p(x)=a0+a1x+...+anxn, calcular o polinômio q(x) tal que p(x)= (x-  ).q(x) + p( ), para m valores distintos de  (Usar o método de Briot-Ruffini) (3).
+
+    13.  Dados dois polinômios reais   p(x)=a0+a1x+...+anxn e   q(x)=b0+b1x+...+bmxm determinar o produto desses polinômios.
+
+    14.  (POLI 82) Chama-se seqüência de Farey relativa a n, a seqüência das frações racionais irredutíveis, dispostas em ordem crescente, com denominadores positivos e não maiores que n.
+
+        Exemplo:  Se n=5, os termos  da seqüência de Farey, tais que 0 < < 1 são:
+
+    Para gerarmos os termos   de uma seqüência de Farey tais que 0 < < 1, podemos usar o seguinte processo. Começamos com as frações
+    ,
+    e entre cada duas frações consecutivas
+    ,
+    introduzimos a fração:
+
+    e assim sucessivamente enquanto j + m < n. Quando não for mais possível introduzir novas frações teremos gerado todos os termos da seqüência de Farey relativa a n, tais que 0 < < 1.
+
+    Usando o processo descrito, determine os termos , 0 < < 1, da seqüência de Farey relativa a n, n inteiro positivo.
+
+        Sugestão: Gere os numeradores e os denominadores em dois vetores.
+
+
+
+    15.  Em uma classe há n alunos, cada um dos quais realizou k provas com pesos distintos. Dados n , k, os pesos das k provas e as notas de cada aluno, calcular a média ponderada das provas para cada aluno e a média aritmética da classe em cada uma das provas.
+
+    16.  (QUIM 84) Dada uma seqüência   x1, x2, ..., xk de números inteiros, verifique se existem dois segmentos consecutivos iguais nesta seqüência, isto é, se existem i e m tais que:
+    xi, xi+1,..., xi+m-1 = xi+m, xi+m+1,..., xi+2m-1
+
+    Imprima, caso existam, os valores de i e m.
+
+        Exemplo: Na seqüência  7, 9, 5, 4, 5, 4, 8, 6 existem i=3 e m=2.
+
+
+
+                   Solução em C
+                   Solução em Pascal
+
+    17.  Dada uma seqüência de n números inteiros, determinar um segmento de soma máxima.
+
+        Exemplo: Na seqüência 5, 2, -2, -7, 3, 14, 10, -3, 9, -6, 4, 1 , a soma do segmento é 33.
+
+
+
+    18.    (POLI 88) Simule a execução do programa abaixo destacando a sua saída:
+
+    #include <stdio.h
+    int main()
+    { 
+      int n, inic, fim, i, aux, para, a[100];
+
+      printf("Digite n: ");
+      scanf("%d", &n); 
+      printf("n = %d\n", n);
+      printf("Digite uma sequencia de %d numeros.\n", n);
+      for (i = 0; i < n; i++) { 
+        scanf("%d", &a[i]); 
+        printf("%d ", a[i]); 
+      }
+      printf("\n");
+      inic = 0; 
+      fim  = n - 1; 
+      aux  = a[inic];
+      while (inic < fim) { 
+        para = 0;
+        while ((inic < fim) && !para) { 
+          if (a[fim] <= aux) 
+            para = 1;
+          else 
+            fim = fim - 1;
+        }
+        if (para) {
+          a[inic] = a[fim]; 
+          inic = inic + 1; 
+          para = 0;
+          while ((inic < fim) && !para) { 
+            if (a[inic] <= aux) 
+              inic = inic + 1;
+            else 
+              para = 1;
+          }
+          if (para) {
+            a[fim] = a[inic]; 
+            fim = fim - 1;
+          }
+        }
+        for (i = 0; i < n; i++) 
+          printf("%d ", a[i]);
+        printf("\n");
+      } 
+      a[inic] = aux;
+      for (i = 0; i < n; i++) 
+        printf("%d ", a[i]);
+      printf("\n");
+      return 0;
+    }
+
+    Dados:
+        7
+        10    3    6    12    13    7    15
