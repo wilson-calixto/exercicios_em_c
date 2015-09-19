@@ -36,7 +36,7 @@ int main()
     }
     for (i=ind-1 ; i>=0; i--)
     {
-        printf("%dx^%d + \n", p[i], i);
+        printf("%dx^%d + ", p[i], i);
     }
 }
  
