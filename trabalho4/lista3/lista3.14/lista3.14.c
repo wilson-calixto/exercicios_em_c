@@ -1,10 +1,14 @@
 /*
  * Programacao de Computadores e ALgoritmos
- * Trabalho 2
+ * Trabalho 4
  * lista3.14.c
  *
  * Equipe:
- *
+ *	Paulo Henrique
+ *	Raí Santos
+ *	Jackson Kelvin
+ *	Wilson Calisto
+ *	Ewerton Petillo
  */
 
 
