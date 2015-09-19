@@ -27,6 +27,33 @@ void completa_vetor(int *vetor,int tamanho_do_vetor)
 
 
 
+int menor_do_vetor ( int *vetor)
+{
+    int menor,menor_indice,tam_vet,i;
+       
+    for (i=0;i<tam_vet ;i++ )
+    {
+        if(i==0)
+        {
+            menor=vetor[i];
+            menor_indice=i;
+        
+        }
+        if(vetor[i]<menor)
+        {
+            menor=vetor[i];
+            menor_indice=i;
+        
+        }
+    
+    
+    }
+
+
+
+    return menor_indice;
+}
+
 
 void mostra_vetor(int *vetor,int tamanho_do_vetor)
 {
