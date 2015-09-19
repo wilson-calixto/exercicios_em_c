@@ -13,12 +13,12 @@
  
 #include <stdio.h>
 #define MAX 100
-
+#include "funcao.h"
 
 int main(int argc, const char *argv[])
 {
 	int a, b, c, d, i, j, l;
-	float X[MAX][MAX], Y[MAX][MAX], Z[MAX][MAX];	//matrizes
+	float X[MAX][MAX], Y[MAX][MAX];	//matrizes
 
 	printf("digite o tamanho da primeira matriz:\n");
 	scanf("%d",&a);
@@ -37,9 +37,11 @@ int main(int argc, const char *argv[])
 	scanf("%d",&c);
 	scanf("%d",&d);
 
-	if (b!=c)
+	if (b!=c)	
 	{
-		printf("o produto não pode ser feito!\n");
+		printf("o produto não pode ser feito!\n");	/*regra da multiplicação de matrizes: 
+								o numero de colunas da primeira matriz tem que
+								ser igual ao numero de colunas da segunda matriz*/
 		
 	}else{
 
@@ -54,6 +56,8 @@ int main(int argc, const char *argv[])
 		}
 		
 		//imprimir funcao multiplica matriz
+		printf("multiplicação da 1a pela 2a matriz:\n");
+		multi_matriz(X,Y);
 
 
 	}
