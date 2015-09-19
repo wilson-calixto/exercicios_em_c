@@ -54,6 +54,29 @@ int menor_do_vetor ( int *vetor)
     return menor_indice;
 }
 
+int s_sort(int *vetor,int tam)
+{
+	int i,j,temp;
+	
+		for(i=0;i<tam;i++)
+		{
+			for(j=0;j<tam;j++)
+			{
+				if(vetor[j]>=vetor[i])
+				{
+							
+					temp=vetor[i];
+					vetor[i]=vetor[j];
+					vetor[j]=temp;
+				}		
+			}	
+		}
+	
+		return vetor[0];
+
+
+
+}
 
 void mostra_vetor(int *vetor,int tamanho_do_vetor)
 {
