@@ -10,6 +10,10 @@ Grupo:
 	Manoel Victor;
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 void farey(int n)
 {
 	typedef struct { int d, n; } fraci;
