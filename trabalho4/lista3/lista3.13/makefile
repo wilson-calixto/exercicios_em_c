@@ -1,10 +1,16 @@
-all: lista3.13a
-lista3.13a: insere_vetor.o lista3.13a.o
-	gcc insere_vetor.o lista3.13a.o -o lista3.13a
+all: remove lista3.13a
+lista3.13a: lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o
+	gcc lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o  -o lista3.13a
 lista3.13a.o: lista3.13a.c
 	gcc -c lista3.13a.c
-insere_vetor.o: insere_vetor.c
-	gcc -c  insere_vetor.c
+insere_resultado.o: insere_resultado.c
+	gcc -c  insere_resultado.c
+pesq_matriz.o: pesq_matriz.c
+	gcc -c pesq_matriz.c
+cria_tabela.o: pesq_matriz.o 
+	gcc -c cria_tabela.c
+imprime_tabela.o: imprime_tabela.c
+	gcc -c imprime_tabela.c
 clean:
 	rm -rf *.o
 remove:	clean
