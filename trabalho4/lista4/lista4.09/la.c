@@ -8,7 +8,8 @@
  */
 #include	<stdlib.h>
 #include <stdio.h>
-
+#include "menor_do_vetor.c"
+void completa_vetor(int *vetor,int tamanho_do_vetor);
 
 int main ( int argc, char *argv[] )
 {
@@ -17,10 +18,10 @@ int main ( int argc, char *argv[] )
     scanf("%d",&tamanho_do_vetor);
         
     vetor=(int*)malloc(tamanho_do_vetor*sizeof(int));    
-    
-  
-	printf("O menor indice do vetor é : %d",menor);
+    completa_vetor(vetor,tamanho_do_vetor);
 
+	printf("O menor indice do vetor é : %d",menor);
+/*MUDAR PARA ELEMANTO MINIMO*/
     return 0;
 }				/* ----------  end of function main  ---------- */
 
