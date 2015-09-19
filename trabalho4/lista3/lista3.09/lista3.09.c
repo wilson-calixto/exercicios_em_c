@@ -25,8 +25,19 @@ int main()
     scanf("%d", &line);
     printf("Quantas colunas? \n ");
     scanf("%d", &col);
-    mold(line, col, line+2, col+2, mat);
-    for (i=1; i<=line;i++)
+    
+    for(i=1; i<=line;i++) // Criando uma especie de moldura para a matriz
+    {
+        mat[i][0]= -1;
+        mat[i][col+1]= -1;
+    }
+    for (j=0; j<=col+1; j++)
+    {
+        mat[0][j] = -1;
+        mat[line+1][j] = -1;
+    }
+   
+    for (i=1; i<=line;i++) // Le a matriz a partir da segunda posicao
     {
         for (j=1; j<=col; j++)
         {
@@ -34,24 +45,22 @@ int main()
             scanf("%d", &mat[i][j]);
         }
     }
+
     for (i=1;i<=line; i++)
     {
         for (j=1; j<=col; j++)
         {
-            if (find_position(i, j, mat) == 1)
+            if (find_position(i, j, line+2, col+2, mat) == 1)
             {
-                printf("Entrou \n");
                 cont++;
                 mat[i][j]= cont;
-                printf("Contou %d \n", cont);
-                printf("%d \n ", mat[i][j]);
             }
         }
     }
     
-    for (i=0; i<=line+1; i++)
+    for (i=1; i<=line; i++)
     {
-        for(j=0; j<=col+1; j++)
+        for(j=1; j<=col; j++)
         {
             printf("%d \t", mat[i][j]);
         }

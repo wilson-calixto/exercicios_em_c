@@ -33,12 +33,12 @@ int main()
     for(j=n-1;j>=0;j--)
     {
         p[j] = polynomial(vet,p,j,x,ind);
-        printf("%d \n ", p[j]);
-        }
+    }
     for (i=ind-1 ; i>=0; i--)
     {
         printf("%dx^%d + ", p[i], i);
     }
+    printf("\n");
 }
  
 
