@@ -1,5 +1,19 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * lista3.03.c
+ *
+ * Equipe:
+ *	Sergio Pinheiro
+ *	Andressa Moreira
+ *	Wilson Araújo
+ *	Gabriel Faraco
+ *	Benjamin Borges
+ *
+ */
+ 
 #include <stdio.h>
 #define MAX 100
+
 
 int main(int argc, const char *argv[])
 {
