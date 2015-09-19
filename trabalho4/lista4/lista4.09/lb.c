@@ -2,7 +2,7 @@
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
  * main.c
- *wilson
+ *
  * Equipe:
  *
  */
@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "menor_do_vetor.c"
 void completa_vetor(int *vetor,int tamanho_do_vetor);
+
 
 void mostra_vetor(int *vetor,int tamanho_do_vetor);
 
