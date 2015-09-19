@@ -28,3 +28,13 @@ void completa_vetor(int *vetor,int tamanho_do_vetor)
 
 
 
+void mostra_vetor(int *vetor,int tamanho_do_vetor)
+{
+    int i;
+    
+    for ( i=0;i<tamanho_do_vetor;i++ )
+        {
+        
+           printf ( "%d\n", vetor[i] );      
+        }
+}
