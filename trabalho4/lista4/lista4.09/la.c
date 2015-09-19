@@ -2,7 +2,7 @@
  * Programacao de Computadores e ALgoritmos
  * Trabalho 2
  * main.c
- *
+ *wilson
  * Equipe:
  *
  */
