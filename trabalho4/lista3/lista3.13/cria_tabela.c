@@ -3,7 +3,7 @@
 char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 {
 	char ***tabela;
-	int i,j;
+	int i,j,s=0, indice_tabela;
 	//Colunas da Tabela
 	//Time  PG  GM GS S V GA
 	
@@ -18,19 +18,41 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 		tabela[i][4] = (char *) malloc (3*sizeof(char));
 		tabela[i][5] = (char *) malloc (3*sizeof(char));
 		tabela[i][6] = (char *) malloc (3*sizeof(char));
-	  	
-		for ( j = 0; j < njogos; j += 1 ) 
+	 }
+	  
+	for ( i = 0; i < njogos; i += 1 ) 
+	{
+		
+		if (s > 0)
 		{
-			if (i > 0)
+			indice_tabela = pesq_matriz(s-1, matriz_resultado[i][0], tabela);
+			
+			if (indice_tabela == -1)
 			{
-				if (pesq_matriz(i-1,matriz_resultado[i][0], tabela) == 0)
-				{
-					tabela[i][0] = matriz_resultado[j][0];
-					//tabela[i][1] = pontos_ganhos(njogos, matriz_resultado[i][0], matriz_resultado);
-				}
-
+				tabela[s][0] = matriz_resultado[i][0];
+				s++;
+			}else
+			{
+				tabela[indice_tabela][0] = matriz_resultado[i][0];
+			}
+			
+			indice_tabela = pesq_matriz(s-1, matriz_resultado[i][0], tabela);
+			
+			if (indice_tabela == -1)
+			{
+				tabela[s][0] = matriz_resultado[i][0];
+				s++;
+			}else
+			{
+				tabela[indice_tabela][0] = matriz_resultado[i][0];
+			}
 
 		}
-	  }
+		tabela[s][0] = matriz_resultado[i][0];
+		s++;
+		tabela[s][0] = matriz_resultado[i][1];
+		s++;
+
+	}
 	return (tabela);
 }
