@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "menor_do_vetor.c"
 void completa_vetor(int *vetor,int tamanho_do_vetor);
-
+int s_sort(int *vetor,int tam);
 
 void mostra_vetor(int *vetor,int tamanho_do_vetor);
 
@@ -22,7 +22,7 @@ int main ( int argc, char *argv[] )
         
     vetor=(int*)malloc(tamanho_do_vetor*sizeof(int));    
     completa_vetor(vetor,tamanho_do_vetor);
-   
+    s_sort(vetor,tamanho_do_vetor);
 	mostra_vetor(vetor,tamanho_do_vetor);
 /*MUDAR PARA ELEMANTO MINIMO*/
     return 0;
