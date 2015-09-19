@@ -1,7 +1,7 @@
 /*
 * Programacao de Computadores e ALgoritmos
 * Trabalho 4
-* lista1.4.c
+* lista1.14.c
 *
 * Equipe:
 *
@@ -26,22 +26,7 @@ int main( int argc, const char *argv[] )
 	for( i = 0; i < 100; i++ )
 		matriz[ i ] = ( int * ) malloc( 100 * sizeof( int ) ); /* Alocando um novo vetor para cada ponteiro do vetor */
 
-	for( i = 0; i < 100; i++ ) 
-	{
-		for( j = 0; j < 100; j++ ) 
-		{
-			matriz[i][j] = 0; /* Inicializa elementos da matriz com 0 */
-		}
-	}
-
-	for( i = 0; i < 100; i++ )
-	{
-		for( j = 0; j < 100; j++ )
-		{
-			matriz[i][j] = v; /* Preenche matriz com números de 1 a 10000 */
-			v++;
-		}
-	}	
+	inicializar( matriz, 100, 100 );	
 
 	for( i = 0; i < 100; i++ )
 		free( matriz[ i ] ); /* libera memória */
