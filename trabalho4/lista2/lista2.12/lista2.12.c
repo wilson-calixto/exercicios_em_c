@@ -38,6 +38,7 @@ int main()
     {
         printf("%dx^%d + ", p[i], i);
     }
+    printf("\n");
 }
  
 
