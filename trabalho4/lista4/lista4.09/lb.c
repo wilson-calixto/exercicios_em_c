@@ -8,8 +8,8 @@
  */
 #include	<stdlib.h>
 #include <stdio.h>
-
-void mostra_vetor(int *vetor,int tamanho_do_vetor);
+#include "menor_do_vetor.c"
+void completa_vetor(int *vetor,int tamanho_do_vetor);
 
 int main ( int argc, char *argv[] )
 {
@@ -19,7 +19,7 @@ int main ( int argc, char *argv[] )
         
     vetor=(int*)malloc(tamanho_do_vetor*sizeof(int));    
 
-
+/*MUDAR PARA ELEMANTO MINIMO*/
     return 0;
 }				/* ----------  end of function main  ---------- */
 
