@@ -25,18 +25,12 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 			{
 				if (pesq_matriz(i-1,matriz_resultado[i][0], tabela) == 0)
 				{
-					tabela[i][0] = matriz_resultado[i][0];
-				//	tabela[i][1] = pontos_ganhos(njogos, matriz_resultado[i][0], matriz_resultado);
+					tabela[i][0] = matriz_resultado[j][0];
+					//tabela[i][1] = pontos_ganhos(njogos, matriz_resultado[i][0], matriz_resultado);
 				}
 
 
-			}
 		}
-		
-	
-
-	}
-
+	  }
 	return (tabela);
-
 }

@@ -9,11 +9,11 @@ int main ( int argc, char *argv[] )
 	int ntimes=0,njogos;
 	scanf("%d", &ntimes);
 	njogos = (ntimes * (ntimes -1))/2;
-	printf("Qauntidade de jogos possiveis =  %d", njogos);
+	printf("Qauntidade de jogos possiveis =  %d\n", njogos);
 
 	matriz_resultado = insere_resultado(njogos);
 	tabela = cria_tabela(ntimes, njogos, matriz_resultado);
-	
+	imprime_tabela(ntimes, tabela);	
 	
 	free(matriz_resultado);
 
