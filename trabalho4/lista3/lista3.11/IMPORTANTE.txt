@@ -1,0 +1,11 @@
+Aos que estão visualizando meu código, preciso que saibam que ele está incompleto. Peço ajuda (de quem quiser ajudar), para q possa me ajudar a ver o meu erro (Um Erro Lógico) e modifique-o. Estou tendo problema de leitura de string (Preciso ler espaço) e outros pequenos erros
+
+Quem quiser ajudar, saiba que tenho um commit diferente e prefiro continuar com essa sequencia
+
+O Commit seria por exemplo: "Versão 1.0.0", pois tenho assim o controle do que cmodifiquei ou foi modificado. Sendo esse desse jeito:
+
+Versão (Estrutura do Código).(Bugs concertados).(Sintaxe ou formatação de saída)
+
+Exemplo: "Versão 2.4.3"
+
+Obg a todos
