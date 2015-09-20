@@ -20,7 +20,7 @@ int main(int argc, const char *argv[])
 {
 	int *v1, *v2, n, cont; //vetor 1, vetor 2, numero de elementos, contador;
 
-	puts("Informe o tamanho do vetor:\n");
+	puts("Informe o tamanho do vetor:");
 	scanf("%d", &n);	
 
 	v1 = (malloc(sizeof(int) * n)); //alocar n endereços de memoria para o vetor 1;
