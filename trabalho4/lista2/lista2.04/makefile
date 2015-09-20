@@ -1,11 +1,13 @@
-Produto_Escalar:	ex4.o function.o
-	gcc ex4.o function.o -o Produto_Escalar
+all: Produto_Escalar
 
-ex4.o:	ex4.c
-	gcc -c ex4.c
+Produto_Escalar: lista2.04.o function.o
+	gcc lista2.04.o function.o -o Produto_Escalar 
 
-function.o: function.c function.h
+lista2.04.o: lista2.04.c
+	gcc -c lista2.04.c
+
+function.o: function.c
 	gcc -c function.c 
 
 clean:
-	rm *.o
+	rm -rf Produto_Escalar *.o
