@@ -6,9 +6,9 @@
  * Equipe:
  *
  */
-#include	<stdlib.h>
-#include <stdio.h>
-#include "menor_do_vetor.c"
+#include<stdlib.h>
+#include<stdio.h>
+#include "menor_do_vetor.h"
 void completa_vetor(int *vetor,int tamanho_do_vetor);
 
 int main ( int argc, char *argv[] )
