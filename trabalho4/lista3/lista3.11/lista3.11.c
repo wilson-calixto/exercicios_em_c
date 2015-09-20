@@ -38,25 +38,25 @@ main()
          break;
          
          case 3:
-              printf("digite o numero de sua conta: ");
-              scanf("%s", aux);
-              addopr(aux);
-         break;
-         
-         case 4:
-              mostraroprs();
-         break;
-         
-         case 5:
-		exit(0);
-         break;
-         
-         default:
-                 printf("Operacao inválida !\n");
-         break;         
-         
+	 printf("digite o numero de sua conta: ");
+	 scanf("%s", aux);
+	 addopr(aux);
+	 break;
+
+	 case 4:
+	 mostraroprs();
+	 break;
+
+	 case 5:
+	 exit(0);
+	 break;
+
+	 default:
+	 printf("Operacao inválida !\n");
+	 break;         
+
       }  
-      
+
       return 0;
 }
 
