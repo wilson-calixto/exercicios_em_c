@@ -4,7 +4,7 @@ Quem quiser ajudar, saiba que tenho um commit diferente e prefiro continuar com 
 
 O Commit seria por exemplo: "Versão 1.0.0", pois tenho assim o controle do que cmodifiquei ou foi modificado. Sendo esse desse jeito:
 
-Versão (Estrutura do Código).(Bugs concertados).(Sintaxe ou formatação de saída)
+Versão (Estrutura do Código).(Bugs concertados).(Sintaxe, Identação ou formatação de saída)
 
 Exemplo: "Versão 2.4.3"
 
