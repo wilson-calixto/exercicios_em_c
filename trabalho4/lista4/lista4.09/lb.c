@@ -1,11 +1,17 @@
 /*
  * Programacao de Computadores e ALgoritmos
- * Trabalho 2
- * main.c
+ * Trabalho 4
+ * lista4.09.a.c
  *
  * Equipe:
- *
+ *          Paulo Henrique
+ *          Rai Santos 
+ *          Jackson Kelvin
+ *          Ewerton Petillo
+ *      
  */
+//Autor:Wilson Calisto
+
 #include<stdlib.h>
 #include<stdio.h>
 #include "menor_do_vetor.h"
