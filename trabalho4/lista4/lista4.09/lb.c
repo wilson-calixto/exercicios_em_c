@@ -23,7 +23,7 @@ int main ( int argc, char *argv[] )
     vetor=(int*)malloc(tamanho_do_vetor*sizeof(int));    
     completa_vetor(vetor,tamanho_do_vetor);
     s_sort(vetor,tamanho_do_vetor);
-	mostra_vetor(vetor,tamanho_do_vetor);
+    mostra_vetor(vetor,tamanho_do_vetor);
 /*MUDAR PARA ELEMANTO MINIMO*/
     return 0;
 }				/* ----------  end of function main  ---------- */
