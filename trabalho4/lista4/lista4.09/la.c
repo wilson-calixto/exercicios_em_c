@@ -2,7 +2,7 @@
  * Programacao de Computadores e ALgoritmos
  * Trabalho 4
  * lista4.09.a.c
- *wilson
+ *
  * Equipe:
  *
  */
