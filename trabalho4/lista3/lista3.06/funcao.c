@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void nulas(int matriz)
+int nulas(int matriz)
 {
 	int i,j,cont1,cont2,ac1,ac2;
 
