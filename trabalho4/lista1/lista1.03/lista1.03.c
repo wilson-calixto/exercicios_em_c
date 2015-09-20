@@ -27,3 +27,5 @@ int main(int argc, const char *argv[])
 	printf("y = %d\n", y);
 	return(0);
 }
+
+\* Y == 4 */
