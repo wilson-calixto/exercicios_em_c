@@ -3,7 +3,7 @@
 
 int nulas(int matriz)
 {
-	int i,j,cont1,cont2,ac1,ac2;
+	int a,b,i,j,cont1,cont2,ac1,ac2;
 
 	cont1=0;
 	cont2=0;
