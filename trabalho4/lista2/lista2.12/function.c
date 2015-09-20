@@ -16,7 +16,8 @@ int polynomial(int vet[], int p[], int n, int a, int ind)
 {
 
     int qx;
-    if(n == ind-1){
+    if(n == ind-1)
+    {
         qx = vet[ind];
     }
     else

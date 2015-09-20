@@ -59,8 +59,8 @@ int main()
 				printf ( "%.1f ocorre %d vezes\n",vetor[i],vezes_q_apareceu );
 			}
       	
-         }
-     }
+         	}
+     	}
      return 0;
 
 }
