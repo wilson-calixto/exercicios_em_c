@@ -13,7 +13,8 @@ int repeat(int m,int n,int matriz[100][100])
             {
                 for(l = 0; l < n; l++)
                 {
-                    if((matriz[i][j]  == matriz[k][l]) && (i != k) && (j != l)){						                      
+                    if((matriz[i][j]  == matriz[k][l]) && (i != k) && (j != l))
+                    {						                      
                         repeat = 1;
                     }
                 }
