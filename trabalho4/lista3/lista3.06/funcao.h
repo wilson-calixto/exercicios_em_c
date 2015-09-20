@@ -1,1 +1,1 @@
-int nulas(int matriz);
+int nulas(matriz);
