@@ -30,7 +30,7 @@ int main(int argc, const char *argv[])
     printf ( "Lendo o segundo vetor...\n" );
 	read_array(n, v2); //vetor 2 recebe os valores;
 
-	printf("O produto escalar é: %d\n", produto_escalar(n, v1, v2));
+	printf("O produto escalar é: %d\n", produto_escalar(n, v1, v2)); // printa o retorno da função produto escalar que recebe os dois vetores e o tamanho deles e depois calcula o produto escalar.
 
 	return 0;
 }
