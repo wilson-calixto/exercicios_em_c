@@ -12,8 +12,6 @@
  */
 //Autor:Wilson Calisto
 
- *
- */
 #include<stdlib.h>
 #include<stdio.h>
 #include "menor_do_vetor.h"
