@@ -20,7 +20,7 @@ int main ( int argc, char *argv[] )
     vetor=(int*)malloc(tamanho_do_vetor*sizeof(int));    
     completa_vetor(vetor,tamanho_do_vetor);
     menor=menor_do_vetor(vetor);
-    printf("O menor indice do vetor é : %d",menor);
+    printf("O menor indice do vetor é : %d\n",menor);
 /*MUDAR PARA ELEMANTO MINIMO*/
     return 0;
 }				/* ----------  end of function main  ---------- */
