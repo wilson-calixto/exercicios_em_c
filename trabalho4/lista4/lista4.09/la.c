@@ -4,6 +4,14 @@
  * lista4.09.a.c
  *
  * Equipe:
+ *          Paulo Henrique
+ *          Rai Santos 
+ *          Jackson Kelvin
+ *          Ewerton Petillo
+ *      
+ */
+//Autor:Wilson Calisto
+
  *
  */
 #include<stdlib.h>
