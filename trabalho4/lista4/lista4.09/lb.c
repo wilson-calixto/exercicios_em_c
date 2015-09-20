@@ -6,8 +6,8 @@
  * Equipe:
  *
  */
-#include	<stdlib.h>
-#include <stdio.h>
+#include<stdlib.h>
+#include<stdio.h>
 #include "menor_do_vetor.c"
 void completa_vetor(int *vetor,int tamanho_do_vetor);
 int s_sort(int *vetor,int tam);
