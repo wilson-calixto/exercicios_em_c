@@ -1,7 +1,7 @@
 /*
  * Programacao de Computadores e ALgoritmos
  * Trabalho 4
- * lista4.09.a.c
+ * lista4.09.b.c
  *
  * Equipe:
  *          Paulo Henrique
