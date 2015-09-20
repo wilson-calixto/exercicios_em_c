@@ -36,7 +36,7 @@ int main(int argc, const char *argv[])
 		}
 	}
 
-	int nulas(int matriz);
+	int nulas(matriz);
 	printf("%d linhas nulas e %d colunas nulas. \n" ln,cn);		
 
 	return 0;
