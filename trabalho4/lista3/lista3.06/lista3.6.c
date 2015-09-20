@@ -32,7 +32,7 @@ int main(int argc, const char *argv[])
 	{
 		for (j=0;j<b;j++)
 		{
-			scanf("%f",&matriz[i][j]);
+			scanf("%d",&matriz[i][j]);
 		}
 	}
 
