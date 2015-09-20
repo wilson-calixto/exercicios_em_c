@@ -1,5 +1,5 @@
 3
-flamengo vasco 3 2
+flamengo vasco 3 1 
 santos vasco 2 2
 santos flamengo 1 0
 
