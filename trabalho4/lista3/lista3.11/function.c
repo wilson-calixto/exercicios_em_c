@@ -50,25 +50,25 @@ void addopr(char x[6])
      if(opr[j] >= 0)
         opr[j]++;
      else
-        j++;
-           
+	     j++;
+
      strcpy (conta2[j], x);
      printf("(c) - Credito\t(d) - Debito: \n");
      scanf("%s", tipo);
      printf("Valor da operacao: ");
      scanf("%d",&valor[j]);
-     
+
      main();
 }
 
 void mostraroprs()
 {
-    for(j=0;j<3;j++)
-      {
-         if(valor[j] != 0)
-            printf("conta: %s\tOperacoes: %d\ttipo: %s\tvalor: %d\n",conta2[j], opr[j], tipo[j], valor[j]);
-      }
-      
-      main();
+	for(j=0;j<3;j++)
+	{
+		if(valor[j] != 0)
+			printf("conta: %s\tOperacoes: %d\ttipo: %s\tvalor: %d\n",conta2[j], opr[j], tipo[j], valor[j]);
+	}
+
+	main();
 }
 
