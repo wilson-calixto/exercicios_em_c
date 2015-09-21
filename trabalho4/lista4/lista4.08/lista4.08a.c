@@ -8,6 +8,9 @@
  *      Wilson Araújo
  *      Gabriel Faraco
  *      Benjamin Borges
+ 
+ Para executar esse programa utilizes ./lista4.08a < dados_lista4.08a.txt
+ 
  *
  */
 

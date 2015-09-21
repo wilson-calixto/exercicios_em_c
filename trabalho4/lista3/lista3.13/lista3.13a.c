@@ -14,7 +14,7 @@ int main ( int argc, char *argv[] )
 	matriz_resultado = insere_resultado(njogos);
 	tabela = cria_tabela(ntimes, njogos, matriz_resultado);
 	imprime_tabela(ntimes, tabela);
-	printf("##########################\n\n");
+	printf("######################################\n\n");
 	ordena_tabela(ntimes, tabela);
 	imprime_tabela(ntimes, tabela);
 	

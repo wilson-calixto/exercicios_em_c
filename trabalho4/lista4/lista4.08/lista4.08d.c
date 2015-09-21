@@ -1,3 +1,18 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * lista4.08d.c
+ *
+ * Equipe:
+ *      Sergio Pinheiro
+ *      Andressa Moreira
+ *      Wilson Araújo
+ *      Gabriel Faraco
+ *      Benjamin Borges
+
+ Para executar esse programa utilizes ./lista4.08d < dados_lista4.08d.txt
+
+ *
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
