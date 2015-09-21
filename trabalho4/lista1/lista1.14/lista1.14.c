@@ -1,5 +1,5 @@
 /*
-* Programacao de Computadores e ALgoritmos
+* Programação de Computadores e Algoritmos
 * Trabalho 4
 * lista1.14.c
 *
@@ -13,13 +13,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "inicializar.h"
 
 int main( int argc, const char *argv[] ) 
 {
 	/* Declarando matriz 100 x 100 usando ponteiros */
 
-	int **matriz; /* Declara matriz como ponteiro para ponteiro */
-	int i, j;
+	int **matriz;
+	int i, j, v = 1; /* variável v para armazenar valores */
 
 	matriz = ( int ** ) malloc( 100 * sizeof( int * ) ); /* Alocando vetor de ponteiros */
 	
