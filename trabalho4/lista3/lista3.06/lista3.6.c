@@ -18,13 +18,14 @@ Grupo:
 int main(int argc, const char *argv[])
 {
 
-	int a,b,i,j;
+	int a,b,i,j,*p;
 
 	printf("Digite o tamanho da matriz:\n");
 	scanf("%d",&a);
 	scanf("%d",&b);
 	
 	int matriz[a][b];
+	p = &matriz;
 	
 	printf("Digite os valores da matriz:\n");
 	for (i=0; i<a; i++)
