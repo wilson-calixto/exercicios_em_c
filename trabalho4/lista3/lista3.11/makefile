@@ -1,9 +1,9 @@
 all: lista3.11
 
-lista3.11: lista3.11.o function.o
-	gcc lista3.11.o function.o -o lista3.11
+cliente: lista3.11.o function.o
+	gcc lista3.11.o function.o -o cliente
 
-lista2.14.o: lista3.11.c
+lista3.11.o: lista3.11.c
 	gcc -c lista3.11.c
 
 function.o: function.c
