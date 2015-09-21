@@ -5,6 +5,8 @@ int nulas(int matriz)
 {
 	int a,b,i,j,cont1,cont2,ac1,ac2;
 
+	matriz=&p;
+
 	cont1=0;
 	cont2=0;
 	
