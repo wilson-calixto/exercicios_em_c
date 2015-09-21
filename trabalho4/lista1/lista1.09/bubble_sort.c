@@ -2,10 +2,10 @@ void bubble_sort( int *array, int size ) /* Função para ordenar vetor */
 {
 	int i, j, swap = 0, temp; /* swap - variável para verificar se é necessário mais um loop para ordenar vetor
 				       temp - variável para auxiliar na troca de elementos do vetor */
- 
-	for( j = size-1;j>=1;j-- ) 
+
+	for( j = 1; j < size; j++ ) 
 	{
-		for( i = 0; i < j; i++ ) 
+		for( i = 0; i < size - 1; i++ ) 
 		{
 			if( array[ i ] > array[i+1] ) /* Compara valores */
 			{

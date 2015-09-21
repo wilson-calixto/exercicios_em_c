@@ -1,5 +1,5 @@
 /*
-* Programacao de Computadores e ALgoritmos
+* Programacao de Computadores e Algoritmos
 * Trabalho 4
 * lista1.9.c
 *
@@ -31,7 +31,7 @@ int main( int argc, const char *argv[] )
 		vetor[i] = v;	
 	}
 
-	bubble_sort( vetor, 5 ); /* Chamando função para ordenar vetor */
+	bubble_sort( vetor, 5 ); /* Chamando função bubble_sort para ordenar vetor */
 
 	for( i = 0; i < 5; i++ ) 
 	{
