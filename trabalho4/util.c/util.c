@@ -94,7 +94,7 @@ void clean_matrix(int **v, int m)
 
 //Função para ler um vetor FLOAT
 
-void read_vector(float *vetor)
+void read_vector(int n, float v[n])
 {
         int cont; //contador
 

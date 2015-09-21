@@ -4,8 +4,11 @@
 
 int main(int argc, const char *argv[])
 {
-	int m;
-	matriz(m);
+	int ordem;
+	int *M;
+	
+	matriz(M, &ordem);
+	teste_permutacao(M, ordem);
 	return 0;
 }
 

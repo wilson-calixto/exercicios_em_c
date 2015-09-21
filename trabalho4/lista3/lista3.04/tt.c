@@ -3,29 +3,38 @@
 
 int repeat(int m,int n,int matriz[100][100]) 
 {
-    int repeat = 0, i, j, k, l;
+    int cont = 0, a, k, b, i, j=0, termo;
 
-    for(i = 0; i < m; i++)
+    for(a = 0; a < m; a++)
     {
-        for(j = 0; j < n; j++)
+        for(b = 0; b < n; b++)
         {
-            for(k = 0; k < m; k++)
+            termo = matriz[a][b];
+            for(i = a; i < m; i++)
             {
-                   if((matriz[i][j]  == matriz[i][k] )  && (j != k)) //Varia os elementos da linha
-                    {						                      
-                        repeat = 1;
-                    }
-                   
-                if((matriz[j][i]  == matriz[k][i])  && (j != k))//Varia os elementos da coluna
-                {						                      
-                        repeat = 1;
+                if(i==a)
+                {
+                    j=b+1;
                 }
-                
-            }   
+                else
+                {
+                    j=0;
+                }
+                for(k=0; j < n; j++)
+                {
+                    if(termo == matriz[i][j])
+                    {
+                        cont+=1;
+                    }
+
+                }    
+            
+            }            
         }
     }
-
-    return repeat;
+    if(cont != 0)
+        return 1;
+    return 0;
 }
 /*-------------------------------------------------------------*/
 void maker_matriz(int m,int n,int matriz[100][100])
