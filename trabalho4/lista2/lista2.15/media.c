@@ -29,7 +29,6 @@ void read_notas(float *nota, float *peso, int aluno,int prova)
 {
         int i,j;
         float media, acm=0.0, somapeso=0.0, soman = 0.0;
-     
         for(i = 0; i <aluno;i++)
         {
                 for(j=0;j<prova; j++)
