@@ -1,3 +1,15 @@
+/*
+Programaçao de Computadores e Algoritmos
+Trabalho 4
+Questão 6 da Lista 4
+Grupo:
+	Davi Tavares;
+	Delrick Oliveira;
+	Evandro Fernandes;
+	Lucas Frota;
+	Manoel Victor;
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
