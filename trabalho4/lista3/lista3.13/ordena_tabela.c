@@ -1,7 +1,7 @@
-void insertionSort(int numeros[], int tam) 
+void insertionSort(int ntimes, char ***tabela) 
 {
    int i, j, eleito;
-   for (i = 1; i < tam; i++)
+   for (i = 1; i < ntimes; i++)
    {
       eleito = numeros[i];
       j = i - 1;
