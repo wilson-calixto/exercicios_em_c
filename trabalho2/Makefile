@@ -388,12 +388,21 @@ lista2.3: function.o lista2.3.o
 	gcc $(path_obj)lista2.3.o $(path_obj)function.o -o $(path_bin)lista2.3
 
 lista2.3.o: lista2/lista2.03/lista2.3.c
-	gcc -o $(path_obj)main.o -c lista2/lista2.03/lista2.3.c
+	gcc -o $(path_obj)lista2.3.o -c lista2/lista2.03/lista2.3.c
 
 function.o: lista2/lista2.03/function.o
 	gcc -o $(path_obj)function.o -c lista2/lista2.03/function.c
 
+#bloco para compilar lista2.08
 
+is_pos: p.o is_pos.o
+	gcc $(path_obj)is_pos.o $(path_obj)p.o -o $(path_bin)is_pos
+
+is_pos.o: lista2/lista2.08/is_pos.c
+	gcc -o $(path_obj)is_pos.o -c lista2/lista2.08/is_pos.c
+
+p.o: lista2/lista2.08/p.o
+	gcc -o $(path_obj)p.o -c lista2/lista2.08/p.c
 
 
 
