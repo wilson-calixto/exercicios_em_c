@@ -20,6 +20,7 @@ int main(int argc, const char *argv)
 	{
 		for (j = 0; j < 8; j++)
 		{
+            printf ( "insira o nome da peça na posição |%d|%d| \n", i, j );
 			scanf("%s", v1[i][j]);
 		}
 	}
@@ -30,5 +31,5 @@ int main(int argc, const char *argv)
 			ac = ac + tabela(v1[i][j]);
 		}
 	}
-	printf("%d\n", ac);
+	printf("O somatório do valor das peças é:%d\n", ac);
 }
