@@ -14,18 +14,17 @@ Grupo:
 
 #include <stdio.h>
 #include "funcao.h"
-#define TAM 1000
 
 int main(int argc, const char *argv[])
 {
 
 	int a,b,i,j;
 
-	int matriz[TAM][TAM];
-
 	printf("Digite o tamanho da matriz:\n");
 	scanf("%d",&a);
 	scanf("%d",&b);
+	
+	int matriz[a][b];
 	
 	printf("Digite os valores da matriz:\n");
 	for (i=0; i<a; i++)
