@@ -404,7 +404,16 @@ is_pos.o: lista2/lista2.08/is_pos.c
 p.o: lista2/lista2.08/p.o
 	gcc -o $(path_obj)p.o -c lista2/lista2.08/p.c
 
+#bloco para compilar lista2.11
 
+lista2.11: p.o lista2.11.o
+	gcc $(path_obj)lista2.11.o $(path_obj)p.o -o $(path_bin)lista2.11
+
+lista2.11.o: lista2/lista2.11/lista2.11.c
+	gcc -o $(path_obj)lista2.11.o -c lista2/lista2.11/lista2.11.c
+
+p.o: lista2/lista2.11/p.o
+	gcc -o $(path_obj)p.o -c lista2/lista2.11/p.c
 
 
 
