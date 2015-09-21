@@ -26,8 +26,8 @@ void gera_dados(int s , char **tabela, char **matriz_resultado)
                                 	snprintf(tabela[5],3,"%d",0);
 
                         	}
-                        	tabela[2] = matriz_resultado[2]; //Gols Marcados
-                        	tabela[3] = matriz_resultado[3]; //Gols Sofridos
+				strcpy( tabela[2], matriz_resultado[2]); 
+				strcpy( tabela[3], matriz_resultado[3]); 
                         	snprintf(tabela[4],3,"%d", atoi(tabela[2]) - atoi(tabela[3]));
                         	sprintf(tabela[6],"%.2f", ((float)atoi(tabela[2])) / atoi(tabela[3]));
 			break;
@@ -51,8 +51,8 @@ void gera_dados(int s , char **tabela, char **matriz_resultado)
                                 	snprintf(tabela[1],3,"%d",0);
                                 	snprintf(tabela[5],3,"%d",0);
                         	}
-                        	tabela[2] = matriz_resultado[3]; // Gols Marcados
-                        	tabela[3] = matriz_resultado[2]; // Gols Sofridos
+				strcpy( tabela[2], matriz_resultado[3]); 
+				strcpy( tabela[3], matriz_resultado[2]); 
                         	sprintf(tabela[4],"%.f", (float)atoi(tabela[2]) - atoi(tabela[3]));
                         	sprintf(tabela[6],"%.2f", ((float)atoi(tabela[2])) / atoi(tabela[3]));
 			  break;
