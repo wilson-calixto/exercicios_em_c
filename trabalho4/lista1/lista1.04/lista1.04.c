@@ -1,5 +1,5 @@
 /*
-* Programacao de Computadores e ALgoritmos
+* Programacao de Computadores e Algoritmos
 * Trabalho 4
 * lista1.4.c
 *
@@ -29,14 +29,7 @@ int main( int argc, const char *argv[] )
 		matrx[ i ] = ( float * ) malloc( sizeof( float ) * 50 ); /* Alocando linhas da matriz na memória */
   	}
 
-	for( i = 0; i < 50; i++ ) 
-	{
-		for( j = 0; j < 50; j++ ) 
-		{
-			matrx[i][j] = 0.0;	/* Inicializando elementos da matriz com 0.0 */
-			
-		}
-	}
+	preencher( matrx, 50, 50 );
 	
 	for( i = 0; i < 50; i++ ) 
 	{
