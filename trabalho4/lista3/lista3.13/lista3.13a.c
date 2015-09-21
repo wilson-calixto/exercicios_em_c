@@ -1,3 +1,19 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * lista3.13a.c
+ *
+ * Equipe:
+ *      Sergio Pinheiro
+ *      Andressa Moreira
+ *      Wilson Araújo
+ *      Gabriel Faraco
+ *      Benjamin Borges
+
+ Para executar esse programa utilizes ./lista3.13a < dados.txt
+
+ *
+ */
+
 #include "insere_resultado.h"
 #include <stdio.h>
 #include <stdlib.h>
