@@ -1,13 +1,16 @@
-all: lista3.1
+all:	Produto
 
-lista3.1: lista3.1.o function.o
-	gcc lista3.1.o function.o -o lista3.1
+Produto:	lista3.01.o function.o
+	gcc lista3.01.o function.o -o Produto
 
-lista3.1.o: lista3.1.c 
-	gcc -c lista3.1.c
+lista3.01.o:	lista3.01.c
+	gcc -c lista3.01.c
 
-function.o: function.c
+function.o:	function.o
 	gcc -c function.c
 
 clean:
-	rm -rf lista3.1 *.o
+	rm -rf *.o
+
+mrproper:	clean
+	rm -rf Produto		
