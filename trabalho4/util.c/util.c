@@ -80,7 +80,7 @@ int power(int x, int y)
 
 /*  Função para limpar dados alocados numa matriz mxn */
 
-void clean_matrix(float **v, int m)
+void clean_matrix(int **v, int m)
 {
     int i;
 
