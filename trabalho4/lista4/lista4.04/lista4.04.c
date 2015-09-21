@@ -1,32 +1,32 @@
+/* Programacao de Computadores e ALgoritmos
+ * Trabalho 4
+ * 
+ * Equipe:
+ *
+ *          Paulo Henrique
+ *          Rai Santos 
+ *          Jackson Kelvin
+ *          Wilson Calisto 
+ */
+//Autor:Jackson Kelvin de Souza
+
 #include <stdio.h>
 #include <stdlib.h>
-//#include "ff.h"
+#include "ff.h"
 
 int main(int argc, const char *argv[])
 {
-	int m,n,i,j;
-	int matriz[5][5];
-	
-	printf ("\nDigite valor para os elementos da matriz\n\n");
-	
-	for ( m=0; m < 5; m++)
-		for ( n=0; n<5; n++)
-		{
-			scanf ("%d", &matriz[ m ][ n ]);
-		}
+    int matriz[100][100], m, n;
 
-	for ( m=0; m < 5; m++)
-		for ( n=0; n < 5; n++)
-		{
-			printf ("\nM[%d][%d] = %d\n", m, n,matriz[ m ][ n ]);
-		}
-/*
-	printf("digite o 1° numero da linha que deseja trocar:\n");
-	scanf("%d",i);
+    printf("Informe o numero de linhas da matriz:\n");	
+    scanf("%d", &m);
+    printf("Informe o numero de colunas da matriz:\n");
+    scanf("%d", &n);
 
-	printf("digite o 2° numero da linha que deseja trocar:\n");
-	scanf("%d",j);
-	
-	troca(matriz[m][n]);*/
-	return 0;
+    maker_matriz(m, n, matriz);
+    print(m,n,matriz);
+    //funcao de troca de variaveis nas linhas i j
+    print(m,n,matriz);
+
+    return 0;
 }

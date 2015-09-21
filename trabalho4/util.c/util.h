@@ -4,3 +4,4 @@ void insere_vetor(int tamanho, int *vetor);
 void insere_matriz(int nlinha, int ncoluna, int **vetor);
 void inverso(int *vetor, int s);
 int len(char str[]);
+void clean_matrix(int **v, int m);

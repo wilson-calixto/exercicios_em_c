@@ -40,7 +40,7 @@ int main ( int argc, const char *argv[] )
     }
     else
     {
-        printf ( "Nao esta contido\n" );
+        printf ( "A nao esta contido em B\n" );
     }
     
     // recebe o resultado 1 ou 0

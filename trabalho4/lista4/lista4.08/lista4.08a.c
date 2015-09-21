@@ -1,3 +1,18 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * lista4.08a.c
+ *
+ * Equipe:
+ *      Sergio Pinheiro
+ *      Andressa Moreira
+ *      Wilson Araújo
+ *      Gabriel Faraco
+ *      Benjamin Borges
+ *
+ */
+
+
+
 
 #include <stdio.h>
 #include <stdlib.h>

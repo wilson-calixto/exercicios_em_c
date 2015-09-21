@@ -6,42 +6,31 @@ void change (int *p, int *q)
    int temp;
    temp = *p; *p = *q; *q = temp;
 }
-
-void troca (int i,int j,int matriz[m][n])
+/*-------------------------------------------------------------*/
+void maker_matriz(int m,int n,int matriz[100][100])
 {
-	int a;
-	for ( i=0; i < 3; i++)
-		for ( j=0; j<3; j++)
+    int i, j;
+
+    printf("preencha a matriz com valores numericos: \n");
+    
+    for(i = 0; i < m; i++)
+    {
+        for(j = 0;j < n; j++)
+        {
+            scanf("%d", &matriz[i][j]);
+    	}
+    }
+}
+/*-------------------------------------------------------------*/
+void print(int m,int n,int matriz[100][100])
+{
+	int l,c;
+	for (l = 0; l < m; ++l)
+	{
+		for (c = 0;c < n; ++c)
 		{
-			a=change(matriz[ i ][ j ]);
+			printf("\t%d ",matriz[l][c]);
 		}
-	printf("%d",a);
+		printf("\n");
+	}
 }
-
-
-/*
-int main(int argc, const char *argv[])
-{
-	int i;
-	int j;
-	int *p;
-	int *q;
-
-	p = &i;
-	q = &j;
-
-	printf("i= %d\n", i);
-	printf("j= %d\n", j);
-
-
-	printf("trocando i por j...\n");
-
-	trocar(p,q);
-
-	printf("i= %d\n", i);
-	printf("j= %d\n", j);
-
-
-	return 0;
-}
-*/

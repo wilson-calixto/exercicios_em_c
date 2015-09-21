@@ -77,3 +77,16 @@ int power(int x, int y)
 		return x * power(x, y -1);
 }
 /*---------------------------------------------------------------------------------------------------------------------*/
+
+/*  Função para limpar dados alocados numa matriz mxn */
+
+void clean_matrix(int **v, int m)
+{
+    int i;
+
+    for ( i = 0; i < m; i++ )
+    {
+        free(v[i]);
+    }
+    free (v);
+}
