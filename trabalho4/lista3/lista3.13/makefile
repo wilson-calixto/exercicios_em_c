@@ -12,7 +12,7 @@ cria_tabela.o: pesq_matriz.o
 imprime_tabela.o: imprime_tabela.c
 	gcc -c imprime_tabela.c -g
 gera_dados.o: gera_dados.c
-	gcc -c gera_dados.c
+	gcc -c gera_dados.c -g
 clean:
 	rm -rf *.o
 remove:	clean

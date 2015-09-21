@@ -30,106 +30,32 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 			indice_tabela = pesq_matriz(s, matriz_resultado[i][0], tabela);
 			if (indice_tabela == -1)
 			{
-				/*
-				tabela[s][0] = matriz_resultado[i][0];
-				if (atoi(matriz_resultado[i][2]) >= atoi(matriz_resultado[i][3]))
-				{
-					if (atoi(matriz_resultado[i][2]) == atoi(matriz_resultado[i][3]))
-					{
-						snprintf(tabela[s][1],3,"%d",1);
-						snprintf(tabela[s][5],3,"%d",0);
-					}else
-					{
-						snprintf(tabela[s][1],3,"%d",3);
-						snprintf(tabela[s][5],3,"%d",1);
-					}
-				}else
-				{
-					snprintf(tabela[s][1],3,"%d",0);				
-					snprintf(tabela[s][5],3,"%d",0);
-				}
-				tabela[s][2] = matriz_resultado[i][2]; //Gols Marcados
-				tabela[s][3] = matriz_resultado[i][3]; //Gols Sofridos
-				snprintf(tabela[s][4],3,"%d", atoi(tabela[s][2]) - atoi(tabela[s][3]));
-				sprintf(tabela[s][6],"%.2f", ((float)atoi(tabela[s][2])) / atoi(tabela[s][3]));
-			*/
-				
-				gera_dados(s,tabela[s],matriz_resultado[i]);
+				gera_dados(0,tabela[s],matriz_resultado[i]);
 				s++;
 			}else
 			{
-				tabela[indice_tabela][0] = matriz_resultado[i][0];
-
+				gera_dados(2,tabela[indice_tabela],matriz_resultado[i]);
 			}
 			
 			indice_tabela = pesq_matriz(s, matriz_resultado[i][1], tabela);
 
 			if (indice_tabela == -1)
-			{/*
-				tabela[s][0] = matriz_resultado[i][1];
-                        	if (atoi(matriz_resultado[i][3]) > atoi(matriz_resultado[i][2]))
-                        	{
-                                	snprintf(tabela[s][1],3,"%d",3);
-                                	snprintf(tabela[s][5],3,"%d",1);
-                        	}else
-                        	{
-                                	snprintf(tabela[s][1],3,"%d",0);
-                                	snprintf(tabela[s][5],3,"%d",0);
-                        	}
-                        	tabela[s][2] = matriz_resultado[i][3]; // Gols Marcados
-                        	tabela[s][3] = matriz_resultado[i][2]; // Gols Sofridos
-                        	sprintf(tabela[s][4],"%.f", (float)atoi(tabela[s][2]) - atoi(tabela[s][3]));
-                        	sprintf(tabela[s][6],"%.2f", ((float)atoi(tabela[s][2])) / atoi(tabela[s][3]));
-		              */
-				gera_dados(s,tabela[s],matriz_resultado[i]);
+			{
+				gera_dados(1,tabela[s],matriz_resultado[i]);
 				s++;
 			}else
 			{
-				tabela[indice_tabela][0] = matriz_resultado[i][1];
+				gera_dados(3,tabela[indice_tabela],matriz_resultado[i]);
 			}
 
 		}else
 		{ 
-			/*
-			tabela[s][0] = matriz_resultado[i][0];
-			if (atoi(matriz_resultado[i][2]) > atoi(matriz_resultado[i][3]))
-			{
-				snprintf(tabela[s][1],3,"%d",3);
-				snprintf(tabela[s][5],3,"%d",1);
-			}else
-			{
-				snprintf(tabela[s][1],3,"%d",0);				
-				snprintf(tabela[s][5],3,"%d",0);
-
-			}
-			tabela[s][2] = matriz_resultado[i][2]; //Gols Marcados
-			tabela[s][3] = matriz_resultado[i][3]; //Gols Sofridos
-			snprintf(tabela[s][4],3,"%d", atoi(tabela[s][2]) - atoi(tabela[s][3]));
-			sprintf(tabela[s][6],"%.2f", ((float)atoi(tabela[s][2])) / atoi(tabela[s][3]));
-			*/
-			gera_dados(s,tabela[s],matriz_resultado[i]);
+			gera_dados(0,tabela[s],matriz_resultado[i]);
 			s++;
-			gera_dados(s,tabela[s],matriz_resultado[i]);
+			gera_dados(1,tabela[s],matriz_resultado[i]);
 			s++;
-			/*
-			tabela[s][0] = matriz_resultado[i][1];
-			if (atoi(matriz_resultado[i][3]) > atoi(matriz_resultado[i][2]))
-			{
-				snprintf(tabela[s][1],3,"%d",3);				
-				snprintf(tabela[s][5],3,"%d",1);
-			}else
-			{
-				snprintf(tabela[s][1],3,"%d",0);				
-				snprintf(tabela[s][5],3,"%d",0);
-			}
-			tabela[s][2] = matriz_resultado[i][3]; // Gols Marcados
-			tabela[s][3] = matriz_resultado[i][2]; // Gols Sofridos
-			sprintf(tabela[s][4],"%.f", (float)atoi(tabela[s][2]) - atoi(tabela[s][3]));
-			sprintf(tabela[s][6],"%.2f", ((float)atoi(tabela[s][2])) / atoi(tabela[s][3]));
-			s++;
-			*/
 		}
-
 	}
+	
 	return (tabela);
 }
