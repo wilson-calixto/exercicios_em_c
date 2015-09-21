@@ -89,7 +89,9 @@ int mat[4], *p, x;
 Quais expressões são válidas? Justifique:
 a) p = mat + 1;       b) p = mat++;      c) p = ++mat;      d) x = (*mat)++;
 9. Faça um programa usando ponteiros, para ordenar 5 números e 
-mostrá­los ordenados na tela.10. Explique o que o progama abaixo faz
+mostrá­los ordenados na tela.
+
+10. Explique o que o progama abaixo faz
 main() {
       int vet[] = {4,9,12};
       int i,*ptr;
