@@ -90,3 +90,18 @@ void clean_matrix(int **v, int m)
     }
     free (v);
 }
+/*----------------------------------------------------------------------------------------------------------------------*/
+
+//Função para ler um vetor FLOAT
+
+void read_vector(float *vetor)
+{
+        int cont; //contador
+
+	for(cont = 0; cont < n; cont++)
+	{
+		printf("Informe o %dº valor do vetor: ",cont + 1);
+		scanf("%f", &v[cont]); //lê valores para o vetor
+	}
+        
+}
