@@ -1,6 +1,6 @@
 all: remove lista3.13a
-lista3.13a: lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o gera_dados.o
-	gcc lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o gera_dados.o   -o lista3.13a -g
+lista3.13a: lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o gera_dados.o ordena_tabela.o
+	gcc lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o gera_dados.o ordena_tabela.o   -o lista3.13a -g
 lista3.13a.o: lista3.13a.c
 	gcc -c lista3.13a.c -g
 insere_resultado.o: insere_resultado.c
@@ -13,6 +13,8 @@ imprime_tabela.o: imprime_tabela.c
 	gcc -c imprime_tabela.c -g
 gera_dados.o: gera_dados.c
 	gcc -c gera_dados.c -g
+ordena_tabela.o: ordena_tabela.c
+	gcc -c ordena_tabela.c
 clean:
 	rm -rf *.o
 remove:	clean
