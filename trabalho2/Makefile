@@ -371,6 +371,33 @@ lista1.07.o: lista1/lista1.07/lista1.07.c
 main.o: lista1/lista1.07/main.o
 	gcc -o $(path_obj)main.o -c lista1/lista1.07/main.c
 
+#bloco para compilar lista1.10
+
+main: main.o funcao.o
+	gcc $(path_obj)main.o $(path_obj)funcao.o -o $(path_bin)main
+
+main.o: lista1/lista1.10/main.c
+	gcc -o $(path_obj)main.o -c lista1/lista1.10/main.c
+
+funcao.o: lista1/lista1.10/funcao.o
+	gcc -o $(path_obj)funcao.o -c lista1/lista1.07/funcao.c
+
+#bloco para compilar lista2.03
+
+lista2.3: function.o lista2.3.o
+	gcc $(path_obj)lista2.3.o $(path_obj)function.o -o $(path_bin)lista2.3
+
+lista2.3.o: lista2/lista2.03/lista2.3.c
+	gcc -o $(path_obj)main.o -c lista2/lista2.03/lista2.3.c
+
+function.o: lista2/lista2.03/function.o
+	gcc -o $(path_obj)function.o -c lista2/lista2.03/function.c
+
+
+
+
+
+
 
 
 
