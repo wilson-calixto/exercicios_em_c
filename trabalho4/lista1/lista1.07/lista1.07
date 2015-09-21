@@ -1,0 +1,10 @@
+Lita 1 - Questão 7
+
+Assumindo que Mi[] é um vetor do tipo int, quais das seguintes
+expressões referenciam o terceiro elemento de M1?
+
+a) *(M1 + 2)    b) *(M1+4)   c) M1+4   d) M1+2
+
+A resposta é a d), pois o vetor começa na posição 0. então o terceiro valor está na 
+posição 2.
+
