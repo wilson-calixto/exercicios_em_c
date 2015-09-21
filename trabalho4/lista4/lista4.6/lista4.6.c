@@ -32,7 +32,7 @@ int main(int argc, const char *argv)
 	{
 		for (j = 0; j < 8; j++)
 		{
-            printf ( "insira o nome da peça na posição |%d|%d| \n", i, j );
+            printf ( "insira o nome da peça na posição |%d|%d| \n", i+1, j+1 );
 			scanf("%s", v1[i][j]);
 		}
 	}
