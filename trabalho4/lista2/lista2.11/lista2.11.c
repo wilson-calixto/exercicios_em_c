@@ -10,31 +10,55 @@
  *      Wilson Neto
  *      Benjamon Borges
  *      Gabriel Faraco
+ *
  */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
     int n, i;
 
     printf("Digite o grau do polinomio: ");
-    stanf("%d", &n);
+    scanf("%d", &n);
+    
+    printf("\n");
 
-    int a[n];
+    int a[(n+1)], b[n], *p;
+    
+    p = &a[0];
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i <= n; i++)
     {
-        pritnf("\nDigire o valor de A de ax^%i: ", i);
-        scanf("%d", a[i]);
+        printf("Digire o valor de A de Ax^%i: ", i);
+        scanf("%d", p);
+        p++;
     }
     
-    printf("\n p(x)=");
+    printf("\n f(x) = ");
 
-    for (i = n; i >= 0; i--)
+     for (i = (n); i >= 0; i--)
     {
-        printf("%dx^%d", a[i], (i);
+        printf("%dx^%d", a[i], i);
         if (i != 0)
-            printf("+");
+            printf(" + ");
     }
+    
+    for (i = 0; i < n; i++)
+    {
+        b[i] = a[i+1] * (i+1); 
+    }
+   
+    printf("\n f'(x) = ");
+
+    for (i = (n-1); i >= 0; i--)
+    {
+        printf("%dx^%d", b[i], i);
+        if (i != 0)
+            printf(" + ");
+    }
+    printf("\n\n");
+
+    return 0;
 }
