@@ -14,14 +14,14 @@ Grupo:
 
 #include <stdio.h>
 #include "funcao.h"
-#define t 100
+#define TAM 1000
 
 int main(int argc, const char *argv[])
 {
 
 	int a,b,i,j;
 
-	int matriz[t][t];
+	int matriz[TAM][TAM];
 
 	printf("Digite o tamanho da matriz:\n");
 	scanf("%d",&a);
