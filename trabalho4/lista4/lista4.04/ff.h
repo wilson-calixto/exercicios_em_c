@@ -1,2 +1,3 @@
 void change (int *p, int *q);
-void troca (int i,j,matriz[m][n]);
+void maker_matriz(int m,int n,int matriz[100][100]);
+void print(int m,int n,int matriz[100][100]);

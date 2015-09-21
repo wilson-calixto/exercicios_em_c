@@ -4,8 +4,8 @@
 
 int main(int argc, const char *argv[])
 {
-
-	matriz(int**m);
+	int m;
+	matriz(m);
 	return 0;
 }
 
