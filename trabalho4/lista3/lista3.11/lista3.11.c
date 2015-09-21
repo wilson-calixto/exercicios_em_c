@@ -12,11 +12,9 @@ Grupo:
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "function.h"
 #include <string.h>
 
-int i = 0, j = 0, saldo[3], opr[3], valor[3];
-char conta[3][6],conta2[3][6];
-char nome[3][20], tipo[3][1];
 
 main()
 {
@@ -55,5 +53,7 @@ main()
 			break;
 
 		default:
-			printf("Operacao inválida !\n");
-			break;         
+			printf("Operacao inválida !\n"); 
+			break;
+	}
+}
