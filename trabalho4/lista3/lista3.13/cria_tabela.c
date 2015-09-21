@@ -52,6 +52,7 @@ char ***cria_tabela(int ntimes, int njogos,char ***matriz_resultado)
 		{ 
 			gera_dados(0,tabela[s],matriz_resultado[i]);
 			s++;
+
 			gera_dados(1,tabela[s],matriz_resultado[i]);
 			s++;
 		}
