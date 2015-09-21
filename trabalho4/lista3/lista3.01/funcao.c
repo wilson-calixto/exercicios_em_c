@@ -6,6 +6,9 @@ int matriz_produto(int matriz, int vetor)
 	int i,j,matriz,matrizR,vetor,c,x,Aux;
 	
 	Aux=0;	
+	
+	matriz = *p1;
+	vetor = *p2;
 
 	for(i=0; i<a; i++)
 	{
