@@ -5,12 +5,12 @@
  *
  * Equipe:
  *
- *          Ewerton
+ *          Elizabeth
  *          Hermann
- *          Lucas
+ *          Jackson
  *          Jailson
- *          Wilson
- *          Richardson 
+ *          Paulo
+ *           
  */
 #include <stdio.h>
 #include <stdlib.h>
