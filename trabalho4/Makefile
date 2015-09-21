@@ -15,6 +15,13 @@ obj:
 path_bin = bin/
 path_obj = obj/
 
+# Bloco para compilar a questão 04 - lista 01
+lista1.04: lista1.04.o
+	gcc $(path_obj)lista1.04.o -o $(path_bin)lista1.04
+
+lista1.04.o: lista1/lista1.04/lista1.04.c
+	gcc -o $(path_obj)lista1.04.o -c lista1/lista1.04/lista1.04.c
+
 # Bloco para compilar a questão 02 - lista 03
 lista3.02: lista3.02.o equacao.o util.o
 	gcc $(path_obj)lista3.02.o $(path_obj)equacao.o $(path_obj)util.o -o $(path_bin)lista3.02
