@@ -21,6 +21,17 @@ lista1.04: lista1.04.o
 
 lista1.04.o: lista1/lista1.04/lista1.04.c
 	gcc -o $(path_obj)lista1.04.o -c lista1/lista1.04/lista1.04.c
+	
+
+# Bloco para compilar a questão 09 - lista 01
+lista1.09: lista1.09.o bubble_sort.o
+	gcc $(path_obj)lista1.09.o  $(path_obj)bubble_sort.o -o $(path_bin)lista1.09
+
+lista1.09.o: lista1/lista1.09/lista1.09.c
+	gcc -o $(path_obj)lista1.09.o -c lista1/lista1.09/lista1.09.c
+
+bubble_sort.o: lista1/lista1.09/bubble_sort.c
+	gcc -o $(path_obj)bubble_sort.o -c lista1/lista1.09/bubble_sort.c
 
 # Bloco para compilar a questão 02 - lista 03
 lista3.02: lista3.02.o equacao.o util.o
