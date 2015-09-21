@@ -1,3 +1,17 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 4
+ * lista2.8
+ *
+ * Equipe:
+ *
+ *          Elizabeth
+ *          Herman
+ *          Jackson Gomes
+ *          Jailson
+ *          Paulo Marinho
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -43,13 +57,11 @@ int main(int argc, const char *argv){
 				}
            }
 	}
-
 	while (i<=m){ 
 		k=k+1;
 		c[k]=a[i];
 		i=i+1;
 	}
-	
 	while (j<=n){
 		k=k+1;
 		c[k]=b[j];
