@@ -1,4 +1,6 @@
-all:	lista4.01.a.o function.o
+all: Intersecao
+
+Intersecao:	lista4.01.a.o function.o
 	gcc lista4.01.a.o function.o -o Intersecao
 
 lista4.01.a.o:	lista4.01.a.c
@@ -8,7 +10,6 @@ function.o: function.c function.h
 	gcc -c function.c
 
 clean:
-	rm *.o
+	rm -rf Intersecao *.o
 
-mrproper:	clean
-	rm -rf Intersecao
+
