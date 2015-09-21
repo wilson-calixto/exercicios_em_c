@@ -24,6 +24,8 @@ int main(int argc, const char *argv[])
 	x--;//X decrementa
 	(*p)+=x;//O P vai incrementar o Y com o valor de X
 	
-	printf("y = %d\n", y);
+	printf("y = %d\n", y);// y irá imprimir 4 ( x tinha 3 pq do decremento -- e o conteúdo do ponteiro p (y) já tinha 1 pelo incremento ++)
 	return(0);
 }
+
+

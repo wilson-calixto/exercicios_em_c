@@ -1,4 +1,4 @@
-all: bin obj lista3.02 lista4.02 lista4.7
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -14,6 +14,35 @@ obj:
 
 path_bin = bin/
 path_obj = obj/
+
+# Bloco para compilar a questão 04 - lista 01
+lista1.04: lista1.04.o
+	gcc $(path_obj)lista1.04.o -o $(path_bin)lista1.04
+
+lista1.04.o: lista1/lista1.04/lista1.04.c
+	gcc -o $(path_obj)lista1.04.o -c lista1/lista1.04/lista1.04.c
+	
+
+# Bloco para compilar a questão 09 - lista 01
+lista1.09: lista1.09.o bubble_sort.o
+	gcc $(path_obj)lista1.09.o  $(path_obj)bubble_sort.o -o $(path_bin)lista1.09
+
+lista1.09.o: lista1/lista1.09/lista1.09.c
+	gcc -o $(path_obj)lista1.09.o -c lista1/lista1.09/lista1.09.c
+
+bubble_sort.o: lista1/lista1.09/bubble_sort.c
+	gcc -o $(path_obj)bubble_sort.o -c lista1/lista1.09/bubble_sort.c
+
+# Bloco para compilar a questão 14 - lista 01
+lista1.14: inicializar.o lista1.14.o
+	gcc $(path_obj)inicializar.o $(path_obj)lista1.14.o -o $(path_bin)lista1.14
+
+lista1.14.o: lista1/lista1.14/lista1.14.c
+	gcc -o $(path_obj)lista1.14.o -c lista1/lista1.14/lista1.14.c
+
+inicializar.o: lista1/lista1.14/inicializar.c
+	gcc -o $(path_obj)inicializar.o -c lista1/lista1.14/inicializar.c
+
 
 # Bloco para compilar a questão 02 - lista 03
 lista3.02: lista3.02.o equacao.o util.o

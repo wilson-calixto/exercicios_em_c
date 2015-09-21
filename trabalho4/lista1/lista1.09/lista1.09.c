@@ -13,7 +13,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+#include "bubble_sort.h"
 
 int main( int argc, const char *argv[] ) 
 {
@@ -24,6 +24,7 @@ int main( int argc, const char *argv[] )
 
 	vetor = ( int* ) malloc( sizeof( int ) * 5 );
 	
+	printf("Preencha o vetor\n");
 	for( i = 0; i < 5; i++ ) 
 	{
 		scanf( "%d", &v ); /* Entrada de valores */

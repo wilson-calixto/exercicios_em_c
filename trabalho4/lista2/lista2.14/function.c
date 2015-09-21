@@ -20,7 +20,7 @@ void farey(int n)
 	fraci f1 = {0, 1}, f2 = {1, n}, t;
 	int k;
  
-	printf("%d/%d\n %d/%d\n", 0, 1, 1, n);
+	printf(" %d/%d\n %d/%d\n", 0, 1, 1, n);
 	while (f2.n > 1) {
 		k = (n + f1.n) / f2.n;
 		t = f1;

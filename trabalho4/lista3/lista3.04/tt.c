@@ -11,13 +11,16 @@ int repeat(int m,int n,int matriz[100][100])
         {
             for(k = 0; k < m; k++)
             {
-                for(l = 0; l < n; l++)
-                {
-                    if((matriz[i][j]  == matriz[k][l]) && (i != k) && (j != l))
+                   if((matriz[i][j]  == matriz[i][k] )  && (j != k)) //Varia os elementos da linha
                     {						                      
                         repeat = 1;
                     }
+                   
+                if((matriz[j][i]  == matriz[k][i])  && (j != k))//Varia os elementos da coluna
+                {						                      
+                        repeat = 1;
                 }
+                
             }   
         }
     }

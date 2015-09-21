@@ -1,19 +1,19 @@
-void bubble_sort( int * array, int size ) /* Função para ordenar vetor */
+void bubble_sort( int *array, int size ) /* Função para ordenar vetor */
 {
 	int i, j, swap = 0, temp; /* swap - variável para verificar se é necessário mais um loop para ordenar vetor
 				       temp - variável para auxiliar na troca de elementos do vetor */
  
-	for( i = 0; i < size - 1; i++ ) 
+	for( j = size-1;j>=1;j-- ) 
 	{
-		for( j = 0; j < size - 1; j++ ) 
+		for( i = 0; i < j; i++ ) 
 		{
-			if( *array[ i ] > *array[ i + 1 ] ) /* Compara valores */
+			if( array[ i ] > array[i+1] ) /* Compara valores */
 			{
 				/* Troca elementos do vetor para ordena-lo */
 				swap = 1;
-				temp = *array[ i ];
-				*array[ i ] = *array[ i + 1 ];
-				*array[ i + 1 ] = temp;
+				temp = array[ i ];
+				array[ i ] = array[i+1];
+				array[i+1] = temp;
 			}
 		}
 		
