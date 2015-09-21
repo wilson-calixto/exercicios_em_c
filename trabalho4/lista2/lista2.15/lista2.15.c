@@ -16,7 +16,7 @@ int main(int argc, const char *argv[])
         read_vector(prova, peso);
         
         printf("Notas das provas\n");
-        read_notas(nota, peso,aluno, nota,prova);
+        read_notas(nota, peso,aluno, prova);
                
         return 0;
 }
