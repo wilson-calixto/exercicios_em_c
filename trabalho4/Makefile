@@ -38,10 +38,10 @@ lista1.14: inicializar.o lista1.14.o
 	gcc $(path_obj)inicializar.o $(path_obj)lista1.14.o -o $(path_bin)lista1.14
 
 lista1.14.o: lista1/lista1.14/lista1.14.c
-	gcc -o $(path_obj)lista1.14.c -c lista1/lista1.14/lista1.14.c
+	gcc -o $(path_obj)lista1.14.o -c lista1/lista1.14/lista1.14.c
 
 inicializar.o: lista1/lista1.14/inicializar.c
-	gcc -o $(path_obj)inicializar.c -c lista1/lista1.14/inicializar.c
+	gcc -o $(path_obj)inicializar.o -c lista1/lista1.14/inicializar.c
 
 
 # Bloco para compilar a questão 02 - lista 03
