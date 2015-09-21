@@ -18,11 +18,26 @@ int i = 0, j = 0, saldo[3], opr[3], valor[3];
 char conta[6],conta2[6];
 char nome[20], tipo[1];
 
-void addcliente();
-void mostrar();
-void addopr(char x[6]);
-void mostraroprs();
 
+void addopr(char x[6])
+{
+     
+     if(opr[j] >= 0)
+        opr[j]++;
+     else
+	     j++;
+
+     strcpy (conta, x);
+     printf("(c) - Credito\t(d) - Debito: \n");
+     setbuf(stdin, NULL);
+     scanf("%s", tipo);
+     printf("Valor da operacao: ");
+     setbuf(stdin, NULL);
+     scanf("%d",&valor[j]);
+     setbuf(stdin, NULL);
+
+     main();
+}
 
 void addcliente()
 {
@@ -53,26 +68,6 @@ void mostrar()
       }
      
      main();  
-}
-
-void addopr(char x[6])
-{
-     
-     if(opr[j] >= 0)
-        opr[j]++;
-     else
-	     j++;
-
-     strcpy (conta, x);
-     printf("(c) - Credito\t(d) - Debito: \n");
-     setbuf(stdin, NULL);
-     scanf("%s", tipo);
-     printf("Valor da operacao: ");
-     setbuf(stdin, NULL);
-     scanf("%d",&valor[j]);
-     setbuf(stdin, NULL);
-
-     main();
 }
 
 void mostraroprs()
