@@ -17,10 +17,10 @@ int repeat(int m,int n,int matriz[100][100])
                     {						                      
                         repeat = 1;
                     }
+                    
+                    //Compara os elementos da coluna 
+             	if((matriz[j][i]  == matriz[l][k])) repeat = 1; //Varia os elementos da coluna
                 }
-                
-               //Compara os elementos da coluna 
-             if((matriz[j][i]  == matriz[j+1][i])) repeat = 1; //Varia os elementos da coluna
             }   
         }
     }
