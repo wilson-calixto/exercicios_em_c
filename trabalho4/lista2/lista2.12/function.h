@@ -12,4 +12,4 @@
  *
  * =====================================================================================
  */
-int polynomial(int*,int*, int, int, int);
+int polynomial(int*,int*, int, int, int); //Corpo da funcao a ser usada
