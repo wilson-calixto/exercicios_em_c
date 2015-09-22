@@ -1,31 +1,64 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int matriz (int **m)    
+
+
+int matriz(int **M, int *p)
 {
-    int col, linha, i;
-    
-    printf("informe a ordem da matriz: \n");
-    scanf("%d", &linha);
+	
+	int l, c, ordem=*p;
 
-    m = (int**) malloc(linha*sizeof(int*));
+	printf("Ordem da matriz: ");
+	scanf ("%d", &ordem);
+	printf("\n");
 
-    
-    
-    for (i=0;i<linha;i++)
-    {
-        printf("informe os valores colunas: \n");
-        scanf("%d", &col);
-        m[i]=(int*) malloc(col*sizeof(int));
-    }
-    for (i=0; i<linha; i++)
-    {
-        printf("%d ", m[linha][i]);
-        
-    }
-    
-    printf("\n");
-    free(m);
-    
-    return 0;
+	M = (int **)malloc(ordem * sizeof (int *));
+	for (l = 0; l < ordem; ++l)
+	   M[l] = (int *)malloc(ordem * sizeof (int));
+
+	for (c = 0; c < ordem; ++c)
+		for (l = 0; l < ordem; ++l)
+		{	
+			printf("Valor[%d][%d]: ", l+1, c+1);
+			scanf ("%d", &M[l][c]);
+		}
+	printf("\n\n");
+
+	for (c = 0; c < ordem; ++c)
+	{
+		for (l = 0; l < ordem; ++l)
+		{	
+			printf("%d ", M[l][c]);
+		}
+		printf("\n");
+	}
+
+	free (M);
+	M = NULL;
+	return 0;
 }
+
+int teste_permutacao(int **M, int ordem)
+{
+    int  i, j, cont1=0, cont2=0;
+    for (i=0; i < ordem; i++)
+    {
+        
+        for(j=0; j<ordem; j++)
+        {
+            
+            if(M[i][j]==0)
+            {
+                cont1++;
+            }
+            if(M[i][j]==1)
+            {
+                cont2++;
+            }
+        }
+      
+    }
+
+    printf("valor de 1: %d \nvalor de 0: %d\n", cont1, cont2);
+    return 0;
+} 

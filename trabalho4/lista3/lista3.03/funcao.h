@@ -1,1 +1,1 @@
-void multi_matriz(float *m1, float *m2, int a, int b, int d);
+void multi_matriz(float m1[][100], float m2[][100], int a, int b, int d);

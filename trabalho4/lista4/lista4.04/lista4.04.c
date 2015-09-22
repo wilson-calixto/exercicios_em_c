@@ -16,16 +16,24 @@
 
 int main(int argc, const char *argv[])
 {
-    int matriz[100][100], m, n;
+    int matriz[100][100], m, n,i,j;
 
     printf("Informe o numero de linhas da matriz:\n");	
     scanf("%d", &m);
     printf("Informe o numero de colunas da matriz:\n");
     scanf("%d", &n);
 
+    printf("Informe o numero de linhas que deseja trocar:\n");	
+    scanf("%d", &i);
+    printf("Informe o numero da a outra linhas que deseja trocar:\n");
+    scanf("%d", &j);
+  
+
     maker_matriz(m, n, matriz);
+    printf("matriz original:\n");
     print(m,n,matriz);
-    //funcao de troca de variaveis nas linhas i j
+    printf("matriz com as linhas trocadas:\n");
+    troca(i, j, m, n, matriz);
     print(m,n,matriz);
 
     return 0;
