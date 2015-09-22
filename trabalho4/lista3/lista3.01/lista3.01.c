@@ -20,37 +20,37 @@
 int main()
 {
 
-	int m, n, R[100], V[100], **A, i;
+	int m, n, R[100], V[100], **A, i; // m = numero de colunas, n = numero de linhas, R - Vetor resultado, V - Vetor lido
+					  // A - Matriz lida e i - contador
+	A = malloc(sizeof(int) * 100); // declara tamanho da matriz A.
 
-	A = malloc(sizeof(int) * 100);
-
-	printf("Informe o valor de m:");
-	scanf("%d", &m);
+	printf("Informe o valor de m:"); 
+	scanf("%d", &m); //lê valor de m
 
 	printf("Informe o valor de n:");
-	scanf("%d", &n);
+	scanf("%d", &n); //lê valor de n
 
-	putchar('\n');
+	putchar('\n'); //pula uma linha
 
 	puts("Informe os valores de V:");
-	insert_array(n, V);	
+	insert_array(n, V); //lê valores para o vetor V
 
-	putchar('\n');
+	putchar('\n'); //pula uma linha
 
-	puts("Informe os valores de A:");
-	insert_matrix(n, m, A);	
+	puts("Informe os valores de A:"); 
+	insert_matrix(n, m, A);	//lê valores para a Matriz A
 
-	putchar('\n');
+	putchar('\n'); //pula outra linha
 
-	make_result(R, V, A, n, m);	
+	make_result(R, V, A, n, m); //gera o vetor resultado
 
-	putchar('\n');
+	putchar('\n'); //pula uma linha
 
 	for(i = 0; i < n; i++)
 	{
-		printf("%d ", R[i]);
+		printf("%d ", R[i]); //mostra ao usuario o vetor resultado
 	}
-	putchar('\n');	
+	putchar('\n');	//pula outra linha
 
 	return 0;
 }
