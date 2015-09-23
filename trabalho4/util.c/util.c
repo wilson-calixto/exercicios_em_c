@@ -105,3 +105,18 @@ void read_vector(int n, float v[n])
 	}
         
 }
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+//Funçao para calcular o produto escalar(interno)
+
+int produto_escalar(int n, int v1[n], int v2[n])
+{
+	int cont, acm = 0; //contador, acumulador;
+
+	for(cont = 0; cont < n; cont++)
+		acm += v1[cont] * v2[cont]; //acm acumula o produto escalar dos vetores
+
+	return acm;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
