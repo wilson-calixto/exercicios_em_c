@@ -1,3 +1,17 @@
+/*
+* Programacao de Computadores e ALgoritmos
+* Trabalho 4
+* lista2.16
+*
+* Equipe:
+*  Sergio Pinheiro
+*  Wilson Araújo
+*  Andressa Moreira
+*  Benjamin Borges
+*  Gabriel Faraco
+      
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
