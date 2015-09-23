@@ -16,10 +16,10 @@ Grupo:
 
 int main(void)
 {
-	int n;
-	printf("digite o número de sequencia: \n");
+	int n;//declarar variavel n
+	printf("digite o número de sequencia: \n");//saida na tela
 	scanf("%d", &n); //recebe o valor do numero.
 	farey(n); //mostra a sequencia de farey para o numero informado.
 	
-	return 0;
+	return 0;//retorna 0
 }
