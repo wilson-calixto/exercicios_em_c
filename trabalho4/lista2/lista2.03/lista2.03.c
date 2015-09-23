@@ -1,14 +1,27 @@
 #include <stdio.h>
-#include <util.c>
+#include <stdlib.h>
 int main(int argc, const char *argv[])
 {
-	int lancamento, i; arm;
-	for (lancamento=0; i < lancamento; i++)
-	{
-		arm += dice();
-		printf("%d", arm);
-	}
+    int  n, l, i;
+    int *result; 
+    
+    printf("informe quantas jogadas: \n");
+    scanf("%d", &n);
 
+    result = (int*) (malloc(sizeof(int) * n));
+    
+    printf("informe os valores de cada lancamento: \n");
+    
+    for (i=0; i<n; i++)
+    {
+        scanf("%d", &l);
+        result[i] = l;
+    }
+    
+    printf("%d", *result);
+    free(result);
+    result = NULL;
+
+    return 0;
 }
-// codigo ainda em construção -- Hermann.
 
