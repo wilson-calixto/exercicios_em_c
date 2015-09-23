@@ -17,8 +17,7 @@
 
 int main(int argc,const char *argv[])
 	{
-		int maior,n,i;
-		int linha, coluna;
+		int n;
 
 		printf("Digite a quantidade de linhas da matriz A:\n");
 		scanf("%d",&n);
