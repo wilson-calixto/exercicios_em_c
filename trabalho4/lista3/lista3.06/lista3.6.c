@@ -18,25 +18,25 @@ Grupo:
 int main(int argc, const char *argv[])
 {
 
-	int a,b,i,j,*p;
+	int a,b,i,j,*p; //declaracao das variaveis, incluindo o ponteiro
 
 	printf("Digite o tamanho da matriz:\n");
-	scanf("%d",&a);
-	scanf("%d",&b);
+	scanf("%d",&a); //recebe o numero de linhas da matriz
+	scanf("%d",&b); //recebe o numero de colunas da matriz
 	
-	int matriz[a][b];
-	p = &matriz;
+	int matriz[a][b]; //declara a matriz com o tamanho fornecido pelo usuario
+	*p = &matriz; //ponteiro aponta para o endereco da matriz
 	
 	printf("Digite os valores da matriz:\n");
 	for (i=0; i<a; i++)
 	{
 		for (j=0;j<b;j++)
 		{
-			scanf("%d",&matriz[i][j]);
+			scanf("%d",&matriz[i][j]); //recebe os valores da matriz
 		}
 	}
 
-	int nulas(matriz);
+	nulas(matriz); //chamada da funcao "nulas"
 	printf("%d linhas nulas e %d colunas nulas. \n" ln,cn);		
 
 	return 0;
