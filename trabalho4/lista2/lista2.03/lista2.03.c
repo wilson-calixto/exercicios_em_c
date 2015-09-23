@@ -1,3 +1,17 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 4
+ * lista4.5
+ *
+ * Equipe:
+ *
+ *          Jackson Gomes
+ *          Paulo Marinho
+ *          Hermann
+ *          Elizabeth
+ *          Jailson
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 int main(int argc, const char *argv[])
