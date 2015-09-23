@@ -18,6 +18,8 @@ int main(void)
 {
 	int n;
 	printf("digite o número de sequencia: \n");
-	scanf("%d", &n);
-	farey(n);
+	scanf("%d", &n); //recebe o valor do numero.
+	farey(n); //mostra a sequencia de farey para o numero informado.
+	
+	return 0;
 }
