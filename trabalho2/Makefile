@@ -478,9 +478,15 @@ idadedias.o: lista2/lista2.06/idadedias.c
 	gcc -o $(path_obj)lista2.6.o -c lista2/lista2.06/idadedias.c 
 	
 #bloco para compilar lista2.16
+lista2.16: funcao.o lista2.16.o
+	gcc $(path_obj)lista2.16.o $(path_obj)funcao.o -o $(path_bin)lista2.16
 
+lista2.16.o: lista2/lista2.16/lista2.16.c
+	gcc -o $(path_obj)lista2.16.o-c lista2.16.c
 
-
+funcao.o: lista2/lista2.16/funcao.c
+	gcc -o $(path_obj)funcao.o -c lista2/lista2.16/funcao.c
+	
 #bloco para compilar lista2.21
 
 
