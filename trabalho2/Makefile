@@ -1,4 +1,4 @@
-all: bin obj lista1.02 lista2.03 lista1.07 lista1.10 lista2.11 lista3.d4 is_pos lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06 lista2.22 lista2.17 lista2.09 lista3desafio2 lista1.05
+all: bin obj lista1.02 lista2.03 lista1.07 lista1.10 lista2.11 lista3.d4 is_pos lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06 lista2.22 lista2.17 lista2.09 lista3desafio2 lista1.05 lista1.09
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -438,6 +438,16 @@ sum_imp.o: sum_imp.c sum_imp.h
 	gcc -o $(path_obj)sum_imp.o -c  lista1/lista1.05/sum_imp.c
 
 #bloco para compilar lista1.09
+lista1.9: reverse_number.o lista1.9.o
+	gcc $(path_obj)lista1.9.o $(path_obj))reverse_number.o -o $(path_bin)lista1.9
+	
+lista1.9.o: lista1.9.c
+	gcc -o $(path_obj)lista1.9.o -c lista1/lista1.09/lista1.9.c
+	
+reverse_number.o: reverse_number.c
+	gcc -o $(path_obj)reverse_number.o -c lista1/lista1.09/reverse_number.c
+
+#bloco para compilar lista1.13
 
 
 
