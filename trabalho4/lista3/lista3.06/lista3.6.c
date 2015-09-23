@@ -12,32 +12,30 @@ Grupo:
 
 
 
-#include <stdio.h>
+#include <stdio.h
+#include <stdlib.h>
 #include "funcao.h"
 
 int main(int argc, const char *argv[])
 {
+	int **a, i, j, M, N;
 
-	int a,b,i,j,*p; //declaracao das variaveis, incluindo o ponteiro
+	printf("Quatidade de linha\n");
+	scanf("%d", &M);
+	printf("Quantidade de Coluna\n");
+	scanf("%d", &N);
 
-	printf("Digite o tamanho da matriz:\n");
-	scanf("%d",&a); //recebe o numero de linhas da matriz
-	scanf("%d",&b); //recebe o numero de colunas da matriz
-	
-	int matriz[a][b]; //declara a matriz com o tamanho fornecido pelo usuario
-	*p = &matriz; //ponteiro aponta para o endereco da matriz
-	
-	printf("Digite os valores da matriz:\n");
-	for (i=0; i<a; i++)
+	a=(int **)malloc (M * sizeof(int **));
+	for (i=0; i<M; i++)
 	{
-		for (j=0;j<b;j++)
+		a[i]=(int *)malloc (N * sizeof(int *));
+		for (j=0; j<N; j++) 
 		{
-			scanf("%d",&matriz[i][j]); //recebe os valores da matriz
+			printf("Informe a[%d][%d]: ", i, j);
+			scanf("%d", &a[i][j]);
 		}
 	}
-
-	nulas(matriz); //chamada da funcao "nulas"
-	printf("%d linhas nulas e %d colunas nulas. \n" ln,cn);		
-
+	
+	matriz(a, M, N);
 	return 0;
-}
+} 
