@@ -1,7 +1,7 @@
 /*
 * Programacao de Computadores e ALgoritmos
 * Trabalho 4
-* lista3.08
+* lista2.16
 *
 * Equipe:
 *  Sergio Pinheiro
