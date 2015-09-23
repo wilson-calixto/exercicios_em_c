@@ -496,7 +496,14 @@ lista2.21.o: lista2/lista2.21/lista2.21.c
 	gcc -o $(path_obj)funcao.o -c lista2/lista2.21/lista2.21.c
 
 #bloco para compilar lista3.02
+lista3.2: lista3.2.o delta.o
+	gcc $(path_obj)lista3.2.o $(path_obj)delta.o -o $(path_bin)lista3.2
 
+lista3.2.o: lista3/lista3.02/lista3.2.c
+	gcc -o $(path_obj)lista3.2.o -c lista3/lista3.02/lista3.2.c
+
+delta.o: lista3/lista3.02/delta.c
+	gcc -o $(path_obj)lista3.2.o -c lista3/lista3.02/delta.c
 
 #bloco para compilar lista3.07
 
