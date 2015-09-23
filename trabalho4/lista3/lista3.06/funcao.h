@@ -1,1 +1,1 @@
-int nulas(matriz);
+void matriz(int **matriz, int M, int N)
