@@ -1,1 +1,1 @@
-void matriz(int **matriz, int M, int N)
+void matriz(int **matriz, int M, int N);
