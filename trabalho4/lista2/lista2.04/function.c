@@ -1,3 +1,14 @@
+/*
+Programaçao de Computadores e Algoritmos
+Teste 4
+Grupo:
+	Davi Tavares;
+	Delrick Oliveira;
+	Evandro Fernandes;
+	Lucas Frota;
+	Manoel Victor;
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
