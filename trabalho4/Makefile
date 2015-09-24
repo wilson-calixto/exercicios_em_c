@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -177,15 +177,25 @@ lista4.04.o: lista4/lista4.04/lista4.04.c
 flista4.04.o: lista4/lista4.04/flista4.04.c
 	gcc -o $(path_obj)flista4.04.o -c lista4/lista4.04/flista4.04.c
 
-# Bloco para compilar a questao 09 - lista4
-lista4.09: lista4.09.o flista4.09.o
-	gcc $(path_obj)lista4.09.o $(path_obj)flista4.09.o -o $(path_bin)lista4.09
 
-lista4.09.o: lista4/lista4.09/lista4.09.c
-	gcc -o $(path_obj)lista4.09.o -c lista4/lista4.09/lista4.09.c
+# Bloco para compilar as questoes 09.a 09.b - lista4
+#09.a
+lista4.09.a: la.o menor_do_vetor.o
+	gcc $(path_obj)la.o $(path_obj)menor_do_vetor.o -o $(path_bin)lista4.09.a
 
-flista4.09.o: lista4/lista4.09/flista4.04.c
-	gcc -o $(path_obj)flista4.04.o -c lista4/lista4.04/flista4.04.c
+la.o: lista4/lista4.09/la.c
+	gcc -o $(path_obj)la.o -c lista4/lista4.09/la.c
+
+#09.b
+lista4.09.b:lb.o menor_do_vetor.o 
+	gcc $(path_obj)lb.o $(path_obj)menor_do_vetor.o -o $(path_bin) lista4.09.b
+
+
+lb.o:lista4/lista4.09/lb.c
+	gcc -o $(path_obj)lb.o -c lista4/lista4.09/lb.c
+
+menor_do_vetor.o: lista4/lista4.09/menor_do_vetor.c
+	gcc -o $(path_obj)menor_do_vetor.o -c lista4/lista4.04/menor_do_vetor.c
 
 
 # >>>> continue aqui <<<<
