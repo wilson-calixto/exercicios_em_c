@@ -174,9 +174,18 @@ lista4.04: lista4.04.o flista4.04.o
 lista4.04.o: lista4/lista4.04/lista4.04.c
 	gcc -o $(path_obj)lista4.04.o -c lista4/lista4.04/lista4.04.c
 
-flista4.04.o: lista4/lista4.04/lista4.04.c
-	gcc -o $(path_obj)flista.o -c lista4/lista4.04/lista4.04.c
+flista4.04.o: lista4/lista4.04/flista4.04.c
+	gcc -o $(path_obj)flista4.04.o -c lista4/lista4.04/flista4.04.c
 
+# Bloco para compilar a questao 09 - lista4
+lista4.09: lista4.09.o flista4.09.o
+	gcc $(path_obj)lista4.09.o $(path_obj)flista4.09.o -o $(path_bin)lista4.09
+
+lista4.09.o: lista4/lista4.09/lista4.09.c
+	gcc -o $(path_obj)lista4.09.o -c lista4/lista4.09/lista4.09.c
+
+flista4.09.o: lista4/lista4.09/flista4.04.c
+	gcc -o $(path_obj)flista4.04.o -c lista4/lista4.04/flista4.04.c
 
 
 # >>>> continue aqui <<<<
