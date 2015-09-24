@@ -90,6 +90,48 @@ sets_ab.o: lista4/lista4.07/sets_ab.c
 	gcc -o $(path_obj)sets_ab.o -c lista4/lista4.07/sets_ab.c
 
 
+#questoes grupo rai
+
+# Bloco para compilar a questão 02 - lista 02
+lista2.02:lista2.02.o process.o
+	gcc $(path_obj)lista2.02.o $(path_obj)process.o -o $(path_bin)lista2.02
+
+lista2.02.o:lista2/lista2.02/lista2.02.c
+	gcc -o $(path_obj)lista2.02.o -c lista2/lista2.02/lista2.02.c
+
+process.o:lista2/lista2.02/process.c
+	gcc -o $(path_obj)process.o -c lista2/lista2.02/process.c
+
+# Bloco para compilar a questão 07 - lista 02
+lista2.07:lista2.07.o flista2.07.o
+	gcc $(path_obj)lista2.07.o $(path_obj)flista2.07.o -o $(path_bin)lista2.07
+
+lista2.07.o: lista2/lista2.07/lista2.07.c
+	gcc -o $(path_obj)lista2.07.o -c lista2/lista2.07/lista2.07.c
+
+flista2.07.o: lista2/lista2.07/flista2.07.c
+	gcc -o $(path_obj)flista2.07.o -c lista2/lista2.07/flista2.07.c
+
+# Bloco para compilar a questão 12 - lista 02
+lista2.12: lista2.12.o flista2.12.o
+	gcc $(path_obj)lista2.12.o $(path_obj)flista2.12.o -o $(path_bin)lista2.12
+
+lista2.12.o: lista2/lista2.12/lista2.12.c
+	gcc -o $(path_obj)lista2.12.o -c lista2/lista2.12/lista2.12.c
+
+flista2.12.o: lista2/lista2.12/flista2.12.c
+	gcc -o $(path_obj)flista2.12.o -c lista2/lista2.12/flista2.12.c
+
+# Bloco para compilar a questao 17 - lista 02
+lista2.17: lista2.17.o flista2.17.o
+	gcc $(path_obj)lista2.17.o $(path_obj)flista2.17.o -o $(path_bin)lista2.17
+
+lista2.17.o: lista2/lista2.17/lista2.17.c
+	gcc -o $(path_obj)lista4.7.o -c lista2/lista2.17/lista2.17.c
+
+flista2.17.o: lista2/lista2.17/flista2.17.c
+	gcc -o $(path_obj)flista2.17.o -c lista2/lista2.17/flista2.17.c
+
 
 # >>>> continue aqui <<<<
 
