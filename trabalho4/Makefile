@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
