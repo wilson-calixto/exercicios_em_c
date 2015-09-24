@@ -195,7 +195,7 @@ lb.o:lista4/lista4.09/lb.c
 	gcc -o $(path_obj)lb.o -c lista4/lista4.09/lb.c
 
 menor_do_vetor.o: lista4/lista4.09/menor_do_vetor.c
-	gcc -o $(path_obj)menor_do_vetor.o -c lista4/lista4.04/menor_do_vetor.c
+	gcc -o $(path_obj)menor_do_vetor.o -c lista4/lista4.09/menor_do_vetor.c
 
 
 # >>>> continue aqui <<<<
