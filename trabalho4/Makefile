@@ -153,6 +153,18 @@ lista3.09: lista3.09.o
 lista3.09.o: lista3/lista3.09/lista3.09.c
 	gcc -o $(path_obj)lista3.09.o -c lista3/lista3.09/lista3.09.c
 
+
+# Bloco para compilar a questão 14 - lista 03
+lista3.14: lista3.14.o flista3.14.o
+	gcc $(path_obj)lista3.14.o $(path_obj)flista3.14.o -o $(path_bin)lista3.14
+
+lista3.14.o: lista3/lista3.14/lista3.14.c
+	gcc -o $(path_obj)lista3.14.o -c lista3/lista3.14/lista3.14.c
+
+flista3.14.o: lista3/lista3.14/flista3.14.c
+	gcc -o $(path_obj)flista3.14.o -c lista3/lista3.14/flista3.14.c
+
+
 # >>>> continue aqui <<<<
 
 
