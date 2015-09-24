@@ -165,6 +165,20 @@ flista3.14.o: lista3/lista3.14/flista3.14.c
 	gcc -o $(path_obj)flista3.14.o -c lista3/lista3.14/flista3.14.c
 
 
+#lista4
+
+# Bloco para compilar a questão 04 - lista 04
+lista4.04: lista4.04.o flista4.04.o
+	gcc $(path_obj)lista4.04.o $(path_obj)flista4.04.o -o $(path_bin)lista4.04
+
+lista4.04.o: lista4/lista4.04/lista4.04.c
+	gcc -o $(path_obj)lista4.04.o -c lista4/lista4.04/lista4.04.c
+
+flista4.04.o: lista4/lista4.04/lista4.04.c
+	gcc -o $(path_obj)flista.o -c lista4/lista4.04/lista4.04.c
+
+
+
 # >>>> continue aqui <<<<
 
 
