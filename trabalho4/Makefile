@@ -136,14 +136,14 @@ flista2.17.o: lista2/lista2.17/flista2.17.c
 #lista3
 
 #bloco para compilar a questao 04 - lista 03
-lista3.04: lista3.04.o flista3.04.o
-	gcc $(path_obj)lista3.04.o $(path_obj)flista3.04.o -o $(path_bin)lista3.04
+lista3.04: lista3.04.o tt.o
+	gcc $(path_obj)lista3.04.o $(path_obj)tt.o -o $(path_bin)lista3.04
 
 lista3.04.o: lista3/lista3.04/lista3.04.c
 	gcc -o $(path_obj)lista3.04.o -c lista3/lista3.04/lista3.04.c
 
-flista3.04.o: lista3/lista3.04/flista3.04.c
-	gcc -o $(path_obj)flista3.04.o -c lista3/lista3.04/flista3.04.c
+tt.o: lista3/lista3.04/tt.c
+	gcc -o $(path_obj)tt.o -c lista3/lista3.04/tt.c
 
 
 #bloco para compilar a questao 09 - lista 03
@@ -168,14 +168,14 @@ flista3.14.o: lista3/lista3.14/flista3.14.c
 #lista4
 
 # Bloco para compilar a questão 04 - lista 04
-lista4.04: lista4.04.o flista4.04.o
-	gcc $(path_obj)lista4.04.o $(path_obj)flista4.04.o -o $(path_bin)lista4.04
+lista4.04: lista4.04.o ff.o
+	gcc $(path_obj)lista4.04.o $(path_obj)ff.o -o $(path_bin)lista4.04
 
 lista4.04.o: lista4/lista4.04/lista4.04.c
 	gcc -o $(path_obj)lista4.04.o -c lista4/lista4.04/lista4.04.c
 
-flista4.04.o: lista4/lista4.04/flista4.04.c
-	gcc -o $(path_obj)flista4.04.o -c lista4/lista4.04/flista4.04.c
+ff.o: lista4/lista4.04/ff.c
+	gcc -o $(path_obj)ff.o -c lista4/lista4.04/ff.c
 
 
 # Bloco para compilar as questoes 09.a 09.b - lista4
