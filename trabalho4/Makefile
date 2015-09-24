@@ -188,7 +188,7 @@ la.o: lista4/lista4.09/la.c
 
 #09.b
 lista4.09.b:lb.o menor_do_vetor.o 
-	gcc $(path_obj)lb.o $(path_obj)menor_do_vetor.o -o $(path_bin) lista4.09.b
+	gcc $(path_obj)lb.o $(path_obj)menor_do_vetor.o -o $(path_bin)lista4.09.b
 
 
 lb.o:lista4/lista4.09/lb.c
