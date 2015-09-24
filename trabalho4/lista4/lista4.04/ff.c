@@ -37,7 +37,7 @@ void maker_matriz(int m,int n,int matriz[100][100])
 void troca(int i,int j,int m,int n,int matriz[100][100])
 {
 	int b;
-    for(b = 0;b < n; b++)
+    for(b = 0;b < m; b++)
        {
                 
 	  change(&matriz[i][b],&matriz[j][b]);           
