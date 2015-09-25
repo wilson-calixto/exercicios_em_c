@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -312,7 +312,24 @@ comb.o: comb.c
 lista3.08.o: lista3.08.c
 	gcc -c $(path_obj)lista3.08.c
 
+#Bloco para compilar a questão 13 - lista 03
 
+lista3.13a: lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o gera_dados.o ordena_tabela.o
+	gcc $(path_obj)lista3.13a.o $(path_obj)insere_resultado.o $(path_obj)pesq_matriz.o $(path_obj)cria_tabela.o $(path_obj)imprime_tabela.o $(path_obj)gera_dados.o $(path_obj)ordena_tabela.o   -o $(path_bin)lista3.13a -g
+lista3.13a.o: lista3.13a.c
+	gcc -c $(path_obj)lista3.13a.c -g
+insere_resultado.o: insere_resultado.c
+	gcc -c  $(path_obj)insere_resultado.c -g
+pesq_matriz.o: pesq_matriz.c
+	gcc -c $(path_obj)pesq_matriz.c -g
+cria_tabela.o: pesq_matriz.o 
+	gcc -c $(path_obj)cria_tabela.c -g
+imprime_tabela.o: imprime_tabela.c
+	gcc -c $(path_obj)imprime_tabela.c -g
+gera_dados.o: gera_dados.c
+	gcc -c $(path_obj)gera_dados.c -g
+ordena_tabela.o: ordena_tabela.c
+	gcc -c $(path_obj)ordena_tabela.c
 
 # >>>> continue aqui <<<<
 
