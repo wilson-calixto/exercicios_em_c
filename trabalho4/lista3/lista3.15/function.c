@@ -1,11 +1,11 @@
 #include <stdio.h>
-int teste_permutacao()
+int teste_permutacao(int M[][100])
 {
-    int  i, j, cont1=0, cont2=0, aux=1;
+    int  i, j, cont1=0, cont2=0, aux=1, n, m;
     for (i=0; i < n; i++)
     {
-        cont1=0;
-        cont2=0;
+        //cont1=0;
+        //cont2=0;
         for(j=0; j<m; j++)
         {
             
