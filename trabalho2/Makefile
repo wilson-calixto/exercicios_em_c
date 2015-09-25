@@ -534,6 +534,14 @@ bloco.o: trabalho2/lista4/lista4.03/bloco.c
 	gcc -o $(path_obj)bloco.o -c trabalho2/lista4/lista4.03/bloco.c
 	
 #bloco para compilar lista4.03b
+lista4.03b.o: bloco_b.o lista4.03b.o
+	gcc $(path_obj)lista4.03b.o $(path_obj)bloco_b.o -o $(path_bin)lista4.03b
+
+lista4.03b.o: trabalho2/lista4/lista4.03/lista4.03b.c
+	gcc -o $(path_obj)lista4.03b.o -c trabalho2/lista4/lista4.03/lista4.03b.c
+
+bloco_b.o: trabalho2/lista4/lista4.03/bloco_b.c
+	gcc -o $(path_obj)bloco_b.o -c trabalho2/lista4/lista4.03/bloco_b.c
 
 
 #-------<Continue Aqui >-------
