@@ -357,7 +357,7 @@ lista1.02: lista1.02.o p.o
 lista1.02.o: lista1/lista1.02/lista1.02.c
 	gcc -o $(path_obj)lista1.02.o -c lista1/lista1.02/lista1.02.c
 
-p.o: lista1/lista1.02/p.o
+p.o: lista1/lista1.02/p.c
 	gcc -o $(path_obj)p.o -c lista1/lista1.02/p.c
 
 #bloco para compilar lista1.07
