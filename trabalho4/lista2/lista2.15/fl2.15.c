@@ -47,3 +47,11 @@ void read_notas(float *notas, float *media_aritmetica, float *notas, float *peso
     		
     	}
 }
+void calcula_media(float *media_aritmetica)
+{
+	int j;	
+	for (j=0;j<prov;j++)
+    	{	
+        media_aritmetica[j]=(media_aritmetica[j]/alu);    //Divide o somatorio das notas de cada prova pela quantidade de alunos
+    	}
+}
