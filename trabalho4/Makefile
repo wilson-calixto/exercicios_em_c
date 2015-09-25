@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -105,6 +105,14 @@ sets_ab.o: lista4/lista4.07/sets_ab.c
 
 
 #questoes grupo rai
+
+# Bloco para compilar a questao 01 - lista01
+lista1.01:lista1.01.o
+	gcc $(path_obj)lista1.01.o -o $(path_bin)lista1.01
+
+lista1.01.o:lista1/lista1.01/lista1.1.c
+	gcc -o $(path_obj)lista1.01.o -c lista1/lista1.01/lista1.1.c
+
 
 # Bloco para compilar a questão 02 - lista 02
 lista2.02:lista2.02.o process.o
