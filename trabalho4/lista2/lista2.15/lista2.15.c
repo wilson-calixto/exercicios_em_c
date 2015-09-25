@@ -21,17 +21,27 @@ int main(int argc, const char *argv[])
     scanf("%d", &alu);
     int pesos[prov];
     float notas[prov], acm=0, media_aritmetica[prov];
-    for (j=0;j<prov;j++)
+    zera_vetor( media_aritmetica, prov);
+    zera_vetor(notas, alu);
+    for (k=0;k<prov;k++)
     {
-        media_aritmetica[j]=0; //Zera o vetor, para não imprimir endereço de memória
+    	printf("Insira o peso da %dº prova: ", k+1);    
+    	scanf("%d", &pesos[k]);                   //Recebe o valor do peso de cada prova
+    	acm+=pesos[k];
     }
-    acm=read_pesos(pesos);
-    read_notas(notas, media_aritmetica, notas, pesos, alu, acm);	
-    calcula_media(media_aritmetica);
-    for (i=0;i<prov;i++)
-    {
-        printf("A media aritmetica da prova %d eh : %.2f\n", i+1, (media_aritmetica[i]));
-    }
+    for (i=0;i<alu;i++)
+    	{
+        	for (j=0; j<prov;j++)
+        	{
+        	    printf("Insira a nota da %d prova do %d aluno: ", j+1, i+1);
+        	    scanf("%f", &notas[j]);   //Recebe a nota do aluno "i" da prova "j"
+        	    media_aritmetica[j]+=notas[j];    //Acumula o valor da nota "j" no vetor media_aritmetica
+        	}
+        	media_ponderada(notas, pesos, alu, acm); //Chama a função pra calcular a média ponderada do aluno "i"
+    		
+    	}	
+    calcula_media(media_aritmetica, prov, alu);
+    imprime_media(prov, media_aritmetica);
     printf("----------Fim do Programa----------\n");
     return 0;
 }
