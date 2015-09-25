@@ -1,4 +1,4 @@
-all: bin obj lista1.02 lista2.03 lista1.07 lista1.10 lista2.11 lista3.d4 is_pos lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06 lista2.22 lista2.17 lista2.09 lista3desafio2 lista1.05 lista1.09 lista1.13 lista2.01 lista2.6 lista2.16 lista2.21 lista3.2 lista3.7 desafio1
+all: bin obj lista1.02 lista2.03 lista1.07 lista1.10 lista2.11 lista3.d4 is_pos lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06 lista2.22 lista2.17 lista2.09 lista3desafio2 lista1.05 lista1.09 lista1.13 lista2.01 lista2.6 lista2.16 lista2.21 lista3.2 lista3.7 desafio1 lista4.03a lista4.03b
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -523,8 +523,17 @@ primos.o: trabalho2/lista3/desafio1/primos.c
 	gcc -o $(path_obj)primos.o -c trabalho2/lista3/desafio1/primos.c
 
 
-#bloco para compilar lista4.03
+#bloco para compilar lista4.03a
+lista4.03a.o: bloco.o lista4.03a.o
+	gcc $(path_obj)lista4.03a.o $(path_obj)bloco.o -o $(path_bin)lista4.03a
 
+lista4.03a.o: trabalho2/lista4/lista4.03/lista4.03a.c
+	gcc -o $(path_obj)lista4.03a.o -c trabalho2/lista4/lista4.03/lista4.03a.c
+
+bloco.o: trabalho2/lista4/lista4.03/bloco.c
+	gcc -o $(path_obj)bloco.o -c trabalho2/lista4/lista4.03/bloco.c
+	
+#bloco para compilar lista4.03b
 
 
 #-------<Continue Aqui >-------
