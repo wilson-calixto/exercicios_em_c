@@ -17,16 +17,11 @@
 int main(int argc, const char *argv[])
 {
     int  n, l, i;
-    //int cont1,cont2,cont3,cont4,cont5,cont6;
     int p[6]; 
     
     printf("informe quantas jogadas: \n");
     scanf("%d", &n);
 
-    /*result = (int*) (malloc(sizeof(int) * n));
-    
-     p= (int*) (malloc(sizeof(int) * 6));*/
-    
     printf("informe os valores de cada lancamento: \n");
 
     for (i=0;i<6;i++){ 
@@ -36,7 +31,6 @@ int main(int argc, const char *argv[])
     for (i=0; i<n; i++)
     {
         scanf("%d", &l);
-//        result[i] = l;
 		if (l==1){ 
 			p[0]++;
 		}	
@@ -62,10 +56,6 @@ int main(int argc, const char *argv[])
 	
 	}
     
-   /* printf("%d %d %d %d %d %d",cont1, cont2, cont3, cont4,cont5,cont6);
-    free(result);
-    result = NULL;*/
-
     return 0;
 }
 
