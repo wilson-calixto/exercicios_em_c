@@ -1,6 +1,6 @@
 /*
  * Programacao de Computadores e ALgoritmos
- * Trabalho 1
+ * Trabalho 4
  * function.c
  *
  * Equipe:
@@ -15,12 +15,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float power(float x, int y) //funçao para calcular potencia
+float power(float x, int y) //funçao para calcular potencia de forma recorrente
 {
     if(y == 1)
         return x;
     else
-        return x* power(x, y-1);
+        return x* power(x, y-1); 
 }
 
 float raiz(float x) //funçao para calcular raiz quadrada
