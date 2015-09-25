@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -290,6 +290,75 @@ lista2.16.o: lista2.16.c
 segmento.o: segmento.c
 	gcc -c $(path_obj)segmento.c
 
+#Bloco para compilar a questão 3 - lista 03
+
+lista3.03: funcao.o lista3.03.o
+	gcc $(path_obj)funcao.o $(path_obj)lista3.03.o -o $(path_bin)lista3.03
+
+funcao.o: funcao.c
+	gcc -c $(path_obj)funcao.c
+
+lista3.03.o: lista3.03.c
+	gcc -c $(path_obj)lista3.03.c
+
+#Bloco para compilar a questão 8 - lista 03
+
+lista3.08: comb.o lista3.08.o util.o	
+	gcc $(path_obj)comb.o $(path_obj)lista3.08.o $(path_obj)util.o -o $(path_bin)lista3.08
+
+comb.o: comb.c
+	gcc -c $(path_obj)comb.c
+
+lista3.08.o: lista3.08.c
+	gcc -c $(path_obj)lista3.08.c
+
+#Bloco para compilar a questão 13 - lista 03
+
+lista3.13a: lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o gera_dados.o ordena_tabela.o
+	gcc $(path_obj)lista3.13a.o $(path_obj)insere_resultado.o $(path_obj)pesq_matriz.o $(path_obj)cria_tabela.o $(path_obj)imprime_tabela.o $(path_obj)gera_dados.o $(path_obj)ordena_tabela.o   -o $(path_bin)lista3.13a -g
+lista3.13a.o: lista3.13a.c
+	gcc -c $(path_obj)lista3.13a.c -g
+insere_resultado.o: insere_resultado.c
+	gcc -c  $(path_obj)insere_resultado.c -g
+pesq_matriz.o: pesq_matriz.c
+	gcc -c $(path_obj)pesq_matriz.c -g
+cria_tabela.o: pesq_matriz.o 
+	gcc -c $(path_obj)cria_tabela.c -g
+imprime_tabela.o: imprime_tabela.c
+	gcc -c $(path_obj)imprime_tabela.c -g
+gera_dados.o: gera_dados.c
+	gcc -c $(path_obj)gera_dados.c -g
+ordena_tabela.o: ordena_tabela.c
+	gcc -c $(path_obj)ordena_tabela.c
+	
+#Bloco para compilar a questão 8 - lista 04	
+	
+	lista4.08d: lista4.08d.o matriz_identidade.o util.o 
+	gcc $(path_obj)lista4.08d.o $(path_obj)matriz_identidade.o $(path_obj)util.o  -o $(path_bin)lista4.08d
+lista4.08d.o: lista4.08d.c
+	gcc -c $(path_obj)lista4.08d.c
+matriz_identidade.o: matriz_identidade.c
+	gcc -c $(path_obj)matriz_identidade.c
+lista4.08a: lista4.08a.o matriz_transposta.o util.o imprimi_matriz.o
+	gcc $(path_obj)lista4.08a.o $(path_obj)matriz_transposta.o $(path_obj)util.o  -o $(path_bin)lista4.08a
+lista4.08a.o: lista4.08a.c
+	gcc -c $(path_obj)lista4.08a.c
+lista4.08b: lista4.08b.o  produto_escalar.o util.o
+	gcc  $(path_obj)lista4.08b.o  $(path_obj)produto_escalar.o $(path_obj)util.o  -o $(path_bin)lista4.08b
+lista4.08b.o: lista4.08b.c
+	gcc -c $(path_obj)lista4.08b.c
+lista4.08c: lista4.08c.o  produto_matriz.o util.o matriz_transposta.o  imprimi_matriz.o
+	gcc $(path_obj)lista4.08c.o   $(path_obj)produto_matriz.o $(path_obj)util.o $(path_obj)matriz_transposta.o  $(path_obj)imprimi_matriz.o  -o $(path_bin)lista4.08c
+lista4.08c.o: lista4.08c.c
+	gcc -c $(path_obj)lista4.08c.c
+produto_matriz.o: produto_matriz.c
+	gcc -c $(path_obj)produto_matriz.c 
+produto_escalar.o: produto_escalar.c
+	gcc -c $(path_obj)produto_escalar.c
+matriz_transposta.o: matriz_transposta.c
+	gcc -c $(path_obj)matriz_transposta.c
+imprimi_matriz.o: imprimi_matriz.c
+	gcc -c $(path_obj)imprimi_matriz.c
 
 # >>>> continue aqui <<<<
 
