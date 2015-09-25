@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -78,6 +78,16 @@ matrix.o: lista4/lista4.02/matrix.c
 	gcc -o $(path_obj)matrix.o -c lista4/lista4.02/matrix.c
 
 
+
+#Bloca para compilar a questão 10 - lista 02
+l2.10: lista2.10.o 2.10.o
+	gcc  $(path_obj)lista2.10.o  $(path_obj)2.10.o -o  $(path_bin)l2.10
+	
+lista2.10.o: lista2/lista2.10/lista2.10.c
+	gcc -o  $(path_obj)lista2.10.o -c lista2/lista2.10/lista2.10.c
+	
+2.10.o: lista2/lista2.10/2.10.c
+	gcc -o $(path_obj)2.10.o -c lista2/lista2.10/2.10.c
 
 # Bloco para compilar a questão 07 - lista 04
 lista4.7: lista4.7.o sets_ab.o
