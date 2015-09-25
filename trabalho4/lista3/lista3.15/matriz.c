@@ -3,10 +3,10 @@
 
 
 
-int matriz(int **M, int *p)
+int matriz(int **M, int ordem)
 {
 	
-	int l, c, ordem=*p;
+	int l, c;
 
 	printf("Ordem da matriz: ");
 	scanf ("%d", &ordem);
@@ -38,15 +38,14 @@ int matriz(int **M, int *p)
 	return 0;
 }
 
-int teste_permutacao(int **M, int ordem)
+void teste_permutacao(int M[][100], int ordem)
 {
-    int  i, j, cont1=0, cont2=0;
+    int  i, j, cont1=0, cont2=0, aux=1;
     for (i=0; i < ordem; i++)
     {
-        
         for(j=0; j<ordem; j++)
         {
-            
+
             if(M[i][j]==0)
             {
                 cont1++;
@@ -56,9 +55,9 @@ int teste_permutacao(int **M, int ordem)
                 cont2++;
             }
         }
-      
+
     }
 
-    printf("valor de 1: %d \nvalor de 0: %d\n", cont1, cont2);
-    return 0;
+    printf("%d\n", cont1);
+    printf("%d\n", cont2);
 } 
