@@ -1,17 +1,14 @@
 all: lista2.15 
 
-lista2.15: media.o lista2.15.o util.o
-	gcc lista2.15.o media.o util.o -o lista2.15
+lista2.15: fl2.15.o lista2.15.o 
+	gcc lista2.15.o fl2.15.o -o lista2.15
 
 lista2.15.o: lista2.15.c
 	gcc -c lista2.15.c
 
-media.o: media.c
-	gcc -c media.c
+fl2.15.o: fl2.15.c
+	gcc -c fl2.15.c
 
-util.o: ../../util.c/util.c
-	gcc -c ../../util.c/util.c
-	
 clean:
 	rm -rf *.o
 

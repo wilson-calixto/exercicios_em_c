@@ -42,27 +42,29 @@ int main (void)
 
     tam =  len(palavra);
     
-    while (*f != '\0')
+    while (*f != '\0') //While pecorre cada caracter ate achar o '\0' (nulo - fim da linha)
     {
-        if (*f == *p)
+        if (*f == *p) //Procura por uma letra igual a primeira letra da palavra
         {   
             x = f;
-            bl = 1;
-            for (i = 0; i < (tam - 1); i++)
+            bl = 1; //Variavel boleana para saber se encontrou alguma letra diferente
+            for (i = 0; i < (tam - 1); i++) //Percorre as proximas letras da frase para procurar letras diferentes
             {
                 
-                if(*x != *p)
+                if(*x != *p) //Caso encontre uma letra diferente, a variavel boleana muda para falso
                     bl = 0;
                 x++;
                 p++;
             }
-            if (bl == 1)
+            if (bl == 1) //Caso a variavel boleana esteja em verdade, contabiliza a palavra
                 cont++;
             
             p = &palavra[0];       
         }
         f++;
     }
+
+    //Imprime a resposta
 
     printf("\nA palavra %s aparece %d vezes\n", palavra, cont);
 

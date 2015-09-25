@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10
+all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -223,7 +223,15 @@ lb.o:lista4/lista4.09/lb.c
 menor_do_vetor.o: lista4/lista4.09/menor_do_vetor.c
 	gcc -o $(path_obj)menor_do_vetor.o -c lista4/lista4.09/menor_do_vetor.c
 
+#Bloco para compilar a questão 15 - lista 02
+lista2.15: fl2.15.o lista2.15.o 
+	gcc $(path_obj)lista2.15.o $(path_obj)fl2.15.o -o $(path_bin)lista2.15
 
+lista2.15.o: lista2/lista2.15/lista2.15.c
+	gcc -o $(path_obj)lista2.15.o -c lista2/lista2.15/lista2.15.c
+
+fl2.15.o: lista2/lista2.15/fl2.15.c
+	gcc -o $(path_obj)fl2.15.o -c lista2/lista2.15/fl2.15.c
 # >>>> continue aqui <<<<
 
 

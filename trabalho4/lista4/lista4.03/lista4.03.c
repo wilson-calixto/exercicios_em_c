@@ -27,9 +27,8 @@ int main(int argc, const char *argv[])
     scanf("%d", &n);
 
     int val[m][n];
-    //int **p;
-
-    //p = (int *) malloc(sizeof(int));
+    
+    //Leitura de Matriz
 
     for (i = 0; i < m; i++)
     {
@@ -45,6 +44,8 @@ int main(int argc, const char *argv[])
 
     esc--;
 
+    //Soma dos itens da linha
+
     for (i = 0; i < n; i++)
     {
         resps = val[esc][i] + resps;
@@ -55,10 +56,14 @@ int main(int argc, const char *argv[])
 
     esc--;
 
+    //Multiplicacao dos itens da coluna
+
     for (i = 0; i < m; i++)
     {
         respp = val[i][esc] * respp;
     }
+
+    //Impressao
 
     printf("Soma da linha: %d\n", resps);
     printf("Produto da coluna: %d\n", respp);
