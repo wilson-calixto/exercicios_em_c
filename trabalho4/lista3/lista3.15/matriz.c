@@ -3,39 +3,37 @@
 
 
 
-int matriz(int **M, int ordem)
+void matriz(int M[][100], int ordem)
 {
 	
 	int l, c;
 
-	printf("Ordem da matriz: ");
-	scanf ("%d", &ordem);
-	printf("\n");
-
-	M = (int **)malloc(ordem * sizeof (int *));
+	/*M = (int **)malloc(ordem * sizeof (int *));
 	for (l = 0; l < ordem; ++l)
-	   M[l] = (int *)malloc(ordem * sizeof (int));
-
-	for (c = 0; c < ordem; ++c)
-		for (l = 0; l < ordem; ++l)
-		{	
-			printf("Valor[%d][%d]: ", l+1, c+1);
-			scanf ("%d", &M[l][c]);
-		}
-	printf("\n\n");
+	   M[l] = (int *)malloc(ordem * sizeof (int));*/
 
 	for (c = 0; c < ordem; ++c)
 	{
 		for (l = 0; l < ordem; ++l)
 		{	
-			printf("%d ", M[l][c]);
+			printf("Valor[%d][%d]: ", c, l);
+			scanf ("%d", &M[c][l]);
+		}
+		
+	}
+	
+	for (c = 0; c < ordem; c++)
+	{
+		for (l = 0; l < ordem; l++)
+		{	
+			printf("%d ", M[c][l]);
 		}
 		printf("\n");
 	}
 
-	free (M);
+	/*free (M);
 	M = NULL;
-	return 0;
+	return 0;*/
 }
 
 void teste_permutacao(int M[][100], int ordem)
