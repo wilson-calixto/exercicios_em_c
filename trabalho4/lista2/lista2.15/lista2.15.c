@@ -11,7 +11,7 @@
 *
 */
 #include<stdio.h>
-#include"fl2.15.c"
+#include"fl2.15.h"
 int main(int argc, const char *argv[])
 {
     int alu, prov, i, j, k;
