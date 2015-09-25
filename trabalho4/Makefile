@@ -83,7 +83,7 @@ matrix.o: lista4/lista4.02/matrix.c
 
 
 #Bloca para compilar a questão 10 - lista 02
-l2.10: lista2.10.o 2.10.o
+lista2.10: lista2.10.o 2.10.o
 	gcc  $(path_obj)lista2.10.o  $(path_obj)2.10.o -o  $(path_bin)l2.10
 	
 lista2.10.o: lista2/lista2.10/lista2.10.c
@@ -91,6 +91,7 @@ lista2.10.o: lista2/lista2.10/lista2.10.c
 	
 2.10.o: lista2/lista2.10/2.10.c
 	gcc -o $(path_obj)2.10.o -c lista2/lista2.10/2.10.c
+	
 
 # Bloco para compilar a questão 07 - lista 04
 lista4.7: lista4.7.o sets_ab.o
