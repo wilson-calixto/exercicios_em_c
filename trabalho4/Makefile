@@ -16,11 +16,14 @@ path_bin = bin/
 path_obj = obj/
 
 # Bloco para compilar a questão 04 - lista 01
-lista1.04: lista1.04.o
-	gcc $(path_obj)lista1.04.o -o $(path_bin)lista1.04
+lista1.04: lista1.04.o preencher.o 
+	gcc $(path_obj)lista1.04.o $(path_obj)preencher.o -o $(path_bin)lista1.04
 
 lista1.04.o: lista1/lista1.04/lista1.04.c
 	gcc -o $(path_obj)lista1.04.o -c lista1/lista1.04/lista1.04.c
+
+preencher.o: lista1/lista1.04/preencher.c
+	gcc -o $(path_obj)preencher.o -c lista1/lista1.04/preencher.c
 	
 
 # Bloco para compilar a questão 09 - lista 01

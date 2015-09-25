@@ -1,4 +1,4 @@
-void inicializar( int matriz[][100], int m, int n ) /* Função para preencher matriz 0*/
+void inicializar( int **matriz, int m, int n ) /* Função para preencher matriz 0*/
 {
 	int i, j, v = 1;
 
