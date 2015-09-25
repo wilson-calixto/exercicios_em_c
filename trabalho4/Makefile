@@ -223,7 +223,7 @@ lb.o:lista4/lista4.09/lb.c
 menor_do_vetor.o: lista4/lista4.09/menor_do_vetor.c
 	gcc -o $(path_obj)menor_do_vetor.o -c lista4/lista4.09/menor_do_vetor.c
 
-#lista2.15
+#Bloco para compilar a questão 15 - lista 02
 lista2.15: fl2.15.o lista2.15.o 
 	gcc $(path_obj)lista2.15.o $(path_obj)fl2.15.o -o $(path_bin)lista2.15
 
