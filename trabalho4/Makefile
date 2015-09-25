@@ -252,24 +252,24 @@ fl2.15.o: lista2/lista2.15/fl2.15.c
 lista2.06: lista2.06.o util.o
 	gcc $(path_obj)lista2.06.o $(path_obj)util.o -o $(path_bin)lista2.06
 
-lista2.06.o: lista2.06.c util.o
-	gcc -c $(path_obj)lista2.06.c
+lista2.06.o: lista2/lista2.06/lista2.06.c
+	gcc -o $(path_obj)lista2.06.o -c lista2/lista2.06/lista2.06.c
 
 #Bloco para compilar a questão 11 - lista 02
 
 lista2.11: lista2.11.o
 	gcc $(path_obj)lista2.11.o -o $(path_bin)lista2.11
 
-lista2.11.o: lista2.11.c
-	gcc -c $(path_obj)lista2.11.c
+lista2.11.o: lista2/lista2.11/lista2.11.c
+	gcc -c $(path_obj)lista2.11.o -c lista2/lista2.11/lista2.11.c
 
 #Bloco para compilar a questão 3 - lista 04
 
 lista4.03: lista4.03.o util.o
 	gcc $(path_obj)lista4.03.o $(path_obj)util.o -o $(path_bin)lista4.03
 
-lista4.03.o: lista4.03.c util.o
-	gcc -c $(path_obj)lista4.03.c
+lista4.03.o: lista4/lista4.03/lista4.03.c
+	gcc -o $(path_obj)lista4.03.o -c lista4/lista4.03/lista4.03.c
 
 #Bloco para compilar a questão 1 - lista 02
 
