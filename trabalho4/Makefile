@@ -127,7 +127,7 @@ lista2.17: lista2.17.o flista2.17.o
 	gcc $(path_obj)lista2.17.o $(path_obj)flista2.17.o -o $(path_bin)lista2.17
 
 lista2.17.o: lista2/lista2.17/lista2.17.c
-	gcc -o $(path_obj)lista4.7.o -c lista2/lista2.17/lista2.17.c
+	gcc -o $(path_obj)lista2.17.o -c lista2/lista2.17/lista2.17.c
 
 flista2.17.o: lista2/lista2.17/flista2.17.c
 	gcc -o $(path_obj)flista2.17.o -c lista2/lista2.17/flista2.17.c
