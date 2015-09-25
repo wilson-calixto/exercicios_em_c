@@ -28,7 +28,8 @@ int main( int argc, const char *argv[] )
 		matrx[ i ] = ( float * ) malloc( sizeof( float ) * 50 ); /* Alocando linhas da matriz na memória */
 
 	preencher( matrx, 50, 50 );
-	
+	print(matrx,50, 50);	
+		
 	for( i = 0; i < 50; i++ ) 
 		free( matrx[ i ] ); /* Liberando o espaço de memória alocado */
 	return 0;
