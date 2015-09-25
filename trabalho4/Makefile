@@ -113,6 +113,12 @@ lista1.01:lista1.01.o
 lista1.01.o:lista1/lista1.01/lista1.1.c
 	gcc -o $(path_obj)lista1.01.o -c lista1/lista1.01/lista1.1.c
 
+# Bloco para compilar a questao 06 - lista01
+lista1.06:lista1.06.o
+	gcc $(path_obj)lista1.06.o -o $(path_bin)lista1.06
+
+lista1.06.o:lista1/lista1.06/lista1.6.c
+	gcc -o $(path_obj)lista1.06.o -c lista1/lista1.06/lista1.6.c
 
 # Bloco para compilar a questão 02 - lista 02
 lista2.02:lista2.02.o process.o
