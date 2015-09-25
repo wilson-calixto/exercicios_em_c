@@ -166,6 +166,18 @@ lista3.09: lista3.09.o
 
 lista3.09.o: lista3/lista3.09/lista3.09.c
 	gcc -o $(path_obj)lista3.09.o -c lista3/lista3.09/lista3.09.c
+	
+
+#Bloco para compilar a questão 12 - lista 03
+
+lista3.12: lista3.12.o empresa.o
+	gcc $(path_obj)lista3.12.o $(path_obj)empresa.o -o $(path_bin)lista3.12
+	
+lista3.12.o: lista3/lista3.12/lista3.12.c
+	gcc -o $(path_obj)lista3.12.o -c lista3/lista3.12/lista3.12.c
+	
+empresa.o: lista3/lista3.12/empresa.c 
+	gcc -o $(path_obj)empresa.o -c lista3/lista3.12/empresa.c
 
 
 # Bloco para compilar a questão 14 - lista 03
