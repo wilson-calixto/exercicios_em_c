@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "util2.c"
+#include "../../util.c/util.h"
 
 int main (void)
 {
@@ -64,11 +64,11 @@ int main (void)
         f++;
     }
 
-    printf("\ncont: %d\n", cont);
+    printf("\nA palavra %s aparece %d vezes\n", palavra, cont);
 
-    free(f);
-    free(p);
-    free(x);
+    //free(f);
+    //free(p);
+    //free(x);
 
     return 0;
 }
