@@ -231,7 +231,7 @@ lista2.15.o: lista2/lista2.15/lista2.15.c
 	gcc -o $(path_obj)lista2.15.o -c lista2/lista2.15/lista2.15.c
 
 fl2.15.o: lista2/lista2.15/fl2.15.c
-	gcc -c $(path_obj)fl2.15.o -c lista2/lista2.15/flista2.15.c
+	gcc -c $(path_obj)fl2.15.o -c lista2/lista2.15/fl2.15.c
 # >>>> continue aqui <<<<
 
 
