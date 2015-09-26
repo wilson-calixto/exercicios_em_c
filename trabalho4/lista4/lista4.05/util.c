@@ -1,10 +1,8 @@
 #include <stdio.h>
-#define MAX 100
+#include <stdlib.h>
 
-int A[MAX][MAX]; 
-
-void preencher(int n)
-{		
+void preencher05(int A[][100],int n,int m)
+{	
 	int i,j;
  	for (i= 0; i<n;i++)
 	{
@@ -15,7 +13,7 @@ void preencher(int n)
   	}
 }
 
-int devolveMaior (int m[][MAX], int n, int *lin, int *col) {
+int devolveMaior (int m[][100], int n, int *lin, int *col) {
   int i, j;
   int maior = m[0][0];
   *lin = 0;
@@ -30,7 +28,8 @@ int devolveMaior (int m[][MAX], int n, int *lin, int *col) {
   return (maior);
  }
 
-void imprimeMaior(int n){
+void imprimeMaior05(int A[][100],int n){
+	
 	int i,maior,linha,coluna;	
 	for (i = 0; i < (n*n); i++) {
     		maior = devolveMaior(A, n, &linha, &coluna);

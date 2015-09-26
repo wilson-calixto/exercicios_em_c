@@ -1,3 +1,2 @@
-#define MAX 100
-void preencher(int n);
-int imprimeMaior(int n);
+void preencher05(int A[][100],int n);
+void imprimeMaior05(int A[][100],int n);
