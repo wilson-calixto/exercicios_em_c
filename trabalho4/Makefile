@@ -1,4 +1,4 @@
-all: bin obj lista1.04 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a
+all: bin obj lista1.04  lista2.18 lista4.05 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -24,6 +24,28 @@ lista1.04.o: lista1/lista1.04/lista1.04.c
 
 preencher.o: lista1/lista1.04/preencher.c
 	gcc -o $(path_obj)preencher.o -c lista1/lista1.04/preencher.c
+
+# Bloco para compilar a questão 18 - lista 02
+lista2.18: lista2.18.o p.o 
+	gcc $(path_obj)lista2.18.o $(path_obj)p.o -o $(path_bin)lista2.18
+
+lista2.18.o: lista2/lista2.18/lista2.18.c
+	gcc -o $(path_obj)lista2.18.o -c lista2/lista2.18/lista2.18.c
+
+p.o: lista2/lista2.18/p.c
+	gcc -o $(path_obj)p.o -c lista2/lista2.18/p.c
+
+
+# Bloco para compilar a questão 05 - lista 04
+lista4.05: lista4.05.o util5.o 
+	gcc $(path_obj)lista4.05.o $(path_obj)util5.o -o $(path_bin)lista4.05
+
+lista4.05.o: lista4/lista4.05/lista4.05.c
+	gcc -o $(path_obj)lista4.05.o -c lista4/lista4.05/lista4.05.c
+
+util5.o: lista4/lista4.05/util.c
+	gcc -o $(path_obj)util5.o -c lista4/lista4.05/util.c
+
 	
 
 # Bloco para compilar a questão 09 - lista 01
