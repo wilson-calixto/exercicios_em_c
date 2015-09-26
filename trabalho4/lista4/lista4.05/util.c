@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void preencher05(int A[][100],int n,int m)
+void preencher05(int A[][100],int n)
 {	
 	int i,j;
  	for (i= 0; i<n;i++)
