@@ -309,7 +309,7 @@ lista2.11: lista2.11.o
 	gcc $(path_obj)lista2.11.o -o $(path_bin)lista2.11
 
 lista2.11.o: lista2/lista2.11/lista2.11.c
-	gcc -c $(path_obj)lista2.11.o -c lista2/lista2.11/lista2.11.c
+	gcc -o $(path_obj)lista2.11.o -c lista2/lista2.11/lista2.11.c
 
 #Bloco para compilar a questão 3 - lista 04
 
