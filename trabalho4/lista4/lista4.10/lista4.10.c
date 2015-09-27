@@ -13,6 +13,7 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 
 
   float xanterior,x,epsilon,a[100],b[100];
@@ -31,7 +32,7 @@
   	valor=a[1];
 
  	for (i=2;i<=n+1;i++){
-		valor+= a[i] * ((x,(i-1))*(x,(i-1)));
+		valor+= a[i] * (pow(x,(i-1)));
 	}
 	return valor;
   }
