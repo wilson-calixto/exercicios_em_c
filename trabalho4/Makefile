@@ -409,7 +409,7 @@ imprimi_matriz.o: imprimi_matriz.c
 	gcc -c $(path_obj)imprimi_matriz.c
 
 
-
+#questoes do grupo Delrick 
 # Bloco para compilar a questão 04 - lista 02
 
 Produto_Escalar: lista2.04.o f2.4.o
