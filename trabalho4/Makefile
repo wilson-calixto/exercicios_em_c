@@ -324,8 +324,8 @@ lista4.03.o: lista4/lista4.03/lista4.03.c
 lista2.01: lista2.01.o util.o
 	gcc $(path_obj)lista2.01.o $(path_obj)util.o -o $(path_bin)lista2.01
 
-lista2.01.o: lista2.01.c
-	gcc -c $(path_obj)lista2.01.c
+lista2.01.o: lista2/lista2.01/lista2.01.c
+	gcc -o $(path_obj)lista2.01.o -c lista2/lista2.01/lista2.01.c
 
 #Bloco para compilar a questão 16 - lista 02
 
