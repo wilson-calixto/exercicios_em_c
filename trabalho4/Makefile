@@ -1,4 +1,4 @@
-all: bin obj lista1.04  lista2.18 lista4.05 lista2.08 lista3.05 lista3.10 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a
+all: bin obj lista1.04  lista2.18 lista4.05 lista2.08 lista3.05 lista3.10 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a Produto_Escalar lista2.9 lista2.14 Produto q3.6 lista3.11 Intersecao q41b lista4.6 q4.11.a q411b
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -407,6 +407,142 @@ matriz_transposta.o: matriz_transposta.c
 	gcc -c $(path_obj)matriz_transposta.c
 imprimi_matriz.o: imprimi_matriz.c
 	gcc -c $(path_obj)imprimi_matriz.c
+
+
+
+# Bloco para compilar a questão 04 - lista 02
+
+Produto_Escalar: lista2.04.o f2.4.o
+	gcc $(path_obj)lista2.04.o $(path_obj)f2.4.o -o $(path_bin)Produto_Escalar 
+
+lista2.04.o: lista2/lista2.04/lista2.04.c
+	gcc -o $(path_obj)lista2.04.o -c lista2/lista2.04/lista2.04.c
+
+f2.4.o: lista2/lista2.04/f2.4.c
+	gcc -o $(path_obj)f2.4.o -c lista2/lista2.04/f2.4.c
+
+
+# Bloco para compilar a questão 09 - lista 02
+
+lista2.9:	lista2.9.o f2.9.o
+	gcc $(path_obj)lista2.9.o $(path_obj)f2.9.o -o $(path_bin)lista2.9
+
+lista2.9.o: lista2/lista2.09/lista2.9.c
+	gcc -o $(path_obj)lista2.9.o -c lista2/lista2.09/lista2.9.c
+
+f2.9.o:  lista2/lista2.09/f2.9.c	
+	gcc -o $(path_obj)f2.9.o -c lista2/lista2.09/f2.9.c
+
+
+# Bloco para compilar a questão 14 - lista 02
+
+lista2.14: lista2.14.o f2.14.o
+	gcc $(path_obj)lista2.14.o $(path_obj)f2.14.o -o $(path_bin)lista2.14
+
+lista2.14.o: lista2/lista2.14/lista2.14.c
+	gcc -o $(path_obj)lista2.14.o -c lista2/lista2.14/lista2.14.c
+
+f2.14.o: lista2/lista2.14/f2.14.c
+	gcc -o $(path_obj)f2.14.o -c lista2/lista2.14/f2.14.c
+
+
+# Bloco para compilar a questão 01 - lista 03
+
+Produto:	lista3.01.o f3.1.o
+	gcc $(path_obj)lista3.01.o $(path_obj)f3.1.o -o $(path_bin)Produto
+
+lista3.01.o:	lista3/lista3.01/lista3.01.c
+	gcc -o $(path_obj)lista3.01.o -c lista3/lista3.01/lista3.01.c
+
+f3.1.o:	lista3/lista3.01/f3.1.c
+	gcc -o $(path_obj)f3.1.o -c lista3/lista3.01/f3.1.c
+
+
+# Bloco para compilar a questão 06 - lista 03
+
+q3.6: lista3.6.o f3.6.o
+	gcc $(path_obj)lista3.6.o $(path_obj)f3.6.o -o $(path_bin)q3.6
+
+lista3.6.o: lista3/lista3.06/lista3.6.c
+	gcc -o $(path_obj)lista3.6.o -c  lista3/lista3.06/lista3.6.c
+
+f3.6.o:  lista3/lista3.06/f3.6.c
+	gcc -o $(path_obj)f3.6.o -c lista3/lista3.06/f3.6.c
+
+
+# Bloco para compilar a questão 11 - lista 03
+
+lista3.11: lista3.11.o f3.11.o
+	gcc $(path_obj)lista3.11.o $(path_obj)f3.11.o -o $(path_bin)lista3.11
+
+lista3.11.o:	lista3/lista3.11/lista3.11.c
+	gcc -o $(path_obj)lista3.11.o -c lista3/lista3.11/lista3.11.c
+
+f3.11.o: lista3/lista3.11/f3.11.c
+	gcc -o $(path_obj)f3.11.o  -c lista3/lista3.11/f3.11.c
+
+
+# Bloco para compilar a questão 01 - lista 04 - letra a
+
+Intersecao:	lista4.01.a.o f4.1.a.o
+	gcc $(path_obj)lista4.01.a.o $(path_obj)f4.1.a.o -o $(path_bin)Intersecao
+
+lista4.01.a.o:	lista4/lista4.01/lista4.01.a/lista4.01.a.c
+	gcc -o $(path_obj)lista4.01.a.o -c lista4/lista4.01/lista4.01.a/lista4.01.a.c
+
+f4.1.a.o: lista4/lista4.01/lista4.01.a/f4.1.a.c 
+	gcc -o $(path_obj)f4.1.a.o -c lista4/lista4.01/lista4.01.a/f4.1.a.c
+
+
+# Bloco para compilar a questão 01 - lista 04 -letra b
+
+q41b: q4.1.b.o f4.1.b.o
+	gcc $(path_obj)q4.1.b.o $(path_obj)f4.1.b.o -o $(path_bin)q41b
+
+q4.1.b.o: lista4/lista4.01/lista4.01.b/q4.1.b.c
+	gcc -o $(path_obj)q4.1.b.o -c lista4/lista4.01/lista4.01.b/q4.1.b.c
+
+f4.1.b.o: lista4/lista4.01/lista4.01.b/f4.1.b.c	
+	gcc -o $(path_obj)f4.1.b.o -c lista4/lista4.01/lista4.01.b/f4.1.b.c
+
+
+# Bloco para compilar a questão 06 - lista 04
+
+lista4.6:	    lista4.6.o f4.6.o
+	gcc $(path_obj)lista4.6.o $(path_obj)f4.6.o -o $(path_bin)lista4.6
+
+lista4.6.o: lista4/lista4.06/lista4.6.c
+	gcc -o $(path_obj)lista4.6.o -c lista4/lista4.06/lista4.6.c
+
+f4.6.o:  lista4/lista4.06/f4.6.c
+	gcc -o $(path_obj)f4.6.o -c lista4/lista4.06/f4.6.c
+
+
+# Bloco para compilar a questão 11 - lista 04 - letra a 
+
+q4.11.a: mainq4.11.o f4.11.o
+	gcc $(path_obj)mainq4.11.o $(path_obj)f4.11.o -o $(path_bin)q4.11.a 
+
+mainq4.11.o: lista4/lista4.11/questao\ a\/mainq4.11.c
+	gcc -o $(path_obj)mainq4.11.o -c lista4/lista4.11/questao\ a\/mainq4.11.c
+
+f4.11.o: lista4/lista4.11/questao\ a\/f4.11.c
+	gcc -o $(path_obj)f4.11.o -c lista4/lista4.11/questao\ a\/f4.11.c
+
+
+# Bloco para compilar a questão 06 - lista 04 - letra b
+
+q411b: q4.11.b.o f4.11.b.o 
+	gcc $(path_obj)q4.11.b.o $(path_obj)f4.11.b.o -o $(path_bin)q411b
+
+q4.11.b.o: lista4/lista4.11/questao\ b\/q4.11.b.c
+	gcc -o $(path_obj)q4.11.b.o -c lista4/lista4.11/questao\ b\/q4.11.b.c
+
+f4.11.b.o: lista4/lista4.11/questao\ b\/f4.11.b.c
+	gcc -o $(path_obj)f4.11.b.o -c lista4/lista4.11/questao\ b\/f4.11.b.c
+
+
+
 
 # >>>> continue aqui <<<<
 
