@@ -37,7 +37,7 @@ int main()
 
 	putchar('\n'); //pula uma linha
 
-	puts("Informe os valores de A:"); 
+    puts("Informe os valores de A(insira os valores por coluna e nao por linha):"); 
 	insert_matrix(n, m, A);	//lê valores para a Matriz A
 
 	putchar('\n'); //pula outra linha
