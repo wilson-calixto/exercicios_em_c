@@ -549,11 +549,11 @@ f4.6.o:  lista4/lista4.06/f4.6.c
 q4.11.a: mainq4.11.o f4.11.o
 	gcc $(path_obj)mainq4.11.o $(path_obj)f4.11.o -o $(path_bin)q4.11.a 
 
-mainq4.11.o: lista4/lista4.11/questao\ a\/mainq4.11.c
-	gcc -o $(path_obj)mainq4.11.o -c lista4/lista4.11/questao\ a\/mainq4.11.c
+mainq4.11.o: lista4/lista4.11/questao_a/mainq4.11.c
+	gcc -o $(path_obj)mainq4.11.o -c lista4/lista4.11/questao_a/mainq4.11.c
 
-f4.11.o: lista4/lista4.11/questao\ a\/f4.11.c
-	gcc -o $(path_obj)f4.11.o -c lista4/lista4.11/questao\ a\/f4.11.c
+f4.11.o: lista4/lista4.11/questao_a/f4.11.c
+	gcc -o $(path_obj)f4.11.o -c lista4/lista4.11/questao_a/f4.11.c
 
 
 # Bloco para compilar a questão 06 - lista 04 - letra b
@@ -561,11 +561,11 @@ f4.11.o: lista4/lista4.11/questao\ a\/f4.11.c
 q411b: q4.11.b.o f4.11.b.o 
 	gcc $(path_obj)q4.11.b.o $(path_obj)f4.11.b.o -o $(path_bin)q411b
 
-q4.11.b.o: lista4/lista4.11/questao\ b\/q4.11.b.c
-	gcc -o $(path_obj)q4.11.b.o -c lista4/lista4.11/questao\ b\/q4.11.b.c
+q4.11.b.o: lista4/lista4.11/questao_b/q4.11.b.c
+	gcc -o $(path_obj)q4.11.b.o -c lista4/lista4.11/questao_b/q4.11.b.c
 
-f4.11.b.o: lista4/lista4.11/questao\ b\/f4.11.b.c
-	gcc -o $(path_obj)f4.11.b.o -c lista4/lista4.11/questao\ b\/f4.11.b.c
+f4.11.b.o: lista4/lista4.11/questao_b/f4.11.b.c
+	gcc -o $(path_obj)f4.11.b.o -c lista4/lista4.11/questao_b/f4.11.b.c
 
 
 
