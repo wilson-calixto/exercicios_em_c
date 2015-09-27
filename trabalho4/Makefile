@@ -1,4 +1,4 @@
-all: bin obj lista1.04  lista2.18 lista4.05 lista2.08 lista3.05 lista3.10 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a Produto_Escalar lista2.9 lista2.14 Produto q3.6 lista3.11 Intersecao q41b lista4.6 q4.11.a q411b
+all: bin obj lista1.04  lista2.18 lista4.05 lista2.08 lista3.05 lista3.10 lista2.13 lista3.15 lista2.03 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a Produto_Escalar lista2.9 lista2.14 Produto q3.6 lista3.11 Intersecao q41b lista4.6 q4.11.a q411b
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -73,6 +73,32 @@ lista3.10.o: lista3/lista3.10/lista3.10.c
 
 util52.o: lista3/lista3.10/funcao.c
 	gcc -o $(path_obj)util52.o -c lista3/lista3.10/funcao.c	
+
+# Bloco para compilar a questão 13 - lista 02
+lista2.13: lista2.13.o 
+	gcc $(path_obj)lista2.13.o -o $(path_bin)lista2.13
+
+lista2.13.o: lista2/lista2.13/lista2.13.c
+	gcc -o $(path_obj)lista2.13.o -c lista2/lista2.13/lista2.13.c
+
+# Bloco para compilar a questão 03 - lista 02
+lista2.03: lista2.03.o 
+	gcc $(path_obj)lista2.03.o -o $(path_bin)lista2.03
+
+lista2.03.o: lista2/lista2.03/lista2.03.c
+	gcc -o $(path_obj)lista2.03.o -c lista2/lista2.03/lista2.03.c
+
+# Bloco para compilar a questão 15 - lista 03
+lista3.15: lista3.15.o util53.o 
+	gcc $(path_obj)lista3.15.o $(path_obj)util53.o -o $(path_bin)lista3.15
+
+lista3.15.o: lista3/lista3.15/lista3.15.c
+	gcc -o $(path_obj)lista3.15.o -c lista3/lista3.15/lista3.15.c
+
+util53.o: lista3/lista3.15/matriz.c
+	gcc -o $(path_obj)util53.o -c lista3/lista3.15/matriz.c	
+
+
 
 # Bloco para compilar a questão 09 - lista 01
 lista1.09: lista1.09.o bubble_sort.o
