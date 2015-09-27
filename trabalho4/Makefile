@@ -1,4 +1,4 @@
-all: bin obj lista1.04  lista2.18 lista4.05 lista3.05 lista3.10 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a
+all: bin obj lista1.04  lista2.18 lista4.05 lista2.08 lista3.05 lista3.10 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -45,6 +45,14 @@ lista4.05.o: lista4/lista4.05/lista4.05.c
 
 util5.o: lista4/lista4.05/util.c
 	gcc -o $(path_obj)util5.o -c lista4/lista4.05/util.c
+
+# Bloco para compilar a questão 08 - lista 02
+lista2.08: lista2.8.o 
+	gcc $(path_obj)lista2.8.o -o $(path_bin)lista2.08
+
+lista2.8.o: lista2/lista2.08/lista2.8.c
+	gcc -o $(path_obj)lista2.8.o -c lista2/lista2.08/lista2.8.c
+
 
 # Bloco para compilar a questão 05 - lista 03
 lista3.05: lista3.5.o util51.o 
