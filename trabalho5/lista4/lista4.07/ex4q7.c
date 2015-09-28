@@ -1,6 +1,8 @@
 #include <stdio.h>
-#include<string.h>
-#include"ex4q7f.h"
+#include <string.h>
+#include <stdlib.h>
+#include "ex4q7.h"
+
 int main (int argc, const char *argv[])
 {
     char str[]="abcdefghijklm", str1[50];
