@@ -1,4 +1,4 @@
-all: bin obj lista1.04  lista2.18 lista4.05 lista2.08 lista3.05 lista3.10 lista2.13 lista3.15 lista2.03 lista4.10 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a Produto_Escalar lista2.9 lista2.14 Produto q3.6 lista3.11 Intersecao q41b lista4.6 q4.11.a q411b
+all: bin obj lista1.04  lista2.18 lista4.05 lista2.08 lista3.05 lista3.10 lista2.13 lista3.15 lista2.03 lista4.10 lista1.09 lista1.14 lista3.02 lista4.02 lista4.7 lista2.02 lista2.07 lista2.12 lista2.17 lista3.04 lista3.09 lista3.14 lista4.04 lista4.09.a lista4.09.b lista2.10 lista2.15 lista2.06 lista2.11 lista4.03 lista1.01 lista2.01 lista2.16 lista3.03 lista3.08 lista3.13a Produto_Escalar lista2.9 lista2.14 Produto q3.6 lista3.11 Intersecao q41b lista4.6 q4.11.a q411b lista4_08b lista4.08a lista4.08b lista4.08c lista4.08d matriz_identidade matriz_transposta imprimi_matriz produto_matriz
 
 # Cria pasta BIN
 # Todos os arquivos binários estarão nesse diretório
@@ -40,7 +40,7 @@ lista4.05: lista4.05.o util5.o
 
 lista4.05.o: lista4/lista4.05/lista4.05.c
 	gcc -o $(path_obj)lista4.05.o -c lista4/lista4.05/lista4.05.c
-
+lista4_08b.o
 util5.o: lista4/lista4.05/util.c
 	gcc -o $(path_obj)util5.o -c lista4/lista4.05/util.c
 
