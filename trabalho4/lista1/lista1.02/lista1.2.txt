@@ -1,0 +1,32 @@
+/*
+ * Programacao de Computadores e ALgoritmos
+ * Trabalho 4
+ * lista4.5
+ *
+ * Equipe:
+ *
+ *          Jackson Gomes
+ *          Paulo Marinho
+ *          Hermann
+ *          Elizabeth
+ *          Jailson
+ */
+
+Enunciado:
+
+(a) -Explique a diferença entre
+
+ p++;       (*p)++;        *(p++);
+
+-O que quer dizer *(p+10);?
+-Explique o que você entendeu da comparação entre ponteiros.
+
+Solução:
+- p++: incrementa o ponteiro, ou seja o endereço. Após esta instrução, o ponteiro p passará a apontar para a posição de memória imediatamente superior. Se em um vetor, o ponteiro passará a apontar a próxima posição do vetor.
+- (*p)++: Incrementa o conteúdo apontado por p, ou seja, o valor armazenado na variável para qual p está apontando.
+- *(p++): Incrementa p (como em p++) e acessa o valor encontrado na nova posição. Se em um vetor, esta expressão acessa o valor da posição imediatamente superior a armazenada em p antes do incremento.
+
+- *(p+10) Acessa o valor encontrado 10 posições a frente de p. Neste caso, o apontador não é incrementado. Se em um vetor, irá acessar a décima posição após a que está sendo apontada.
+
+- Dois ponteiros, como outras variaveis, podem ser comparados. Podemos verificar por exemplo se dois ponteiros apontam para a mesma posição de memória verificando se    p1 == p2 ou se p1 != p2
+Podemos comparar se um ponteiro e 'menor' ou 'maior' que outro, ou melhor, se aponta para uma posição superior a de outro. 

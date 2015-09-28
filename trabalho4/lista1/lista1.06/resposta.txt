@@ -1,0 +1,16 @@
+/* Programação de Computadores e Algoritmos
+ * Trabalho 4
+ *
+ * Equipe:
+ *		Paulo Henrique
+ *		Raí Santos
+ *		Jackson Kevin
+ *		Wilson Calisto
+ *		Ewerton Petillo
+ *
+ */
+ 
+Lista1.Questão6:
+A resposta de questão "Lista1.6" é um programa que 
+imprime um vetor com cinco números fracionários
+e indica o endereço deles.

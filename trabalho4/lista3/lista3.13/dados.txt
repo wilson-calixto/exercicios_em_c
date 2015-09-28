@@ -1,0 +1,6 @@
+3
+flamengo vasco 3 1
+santos vasco 1 1
+santos flamengo 1 0
+
+

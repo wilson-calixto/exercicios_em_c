@@ -1,0 +1,13 @@
+/* Programação de Computadores e Algoritmos
+ * Trabalho 4
+ *
+ * Equipe:
+ *		Paulo Henrique
+ *		Raí Santos
+ *		Jackson Kevin
+ *		Wilson Calisto
+ *		Ewerton Petillo
+ *
+ */
+ 
+ Lista1.Questão1:A resposta da questão "Lista1.1.c" é um programa que cria e imprime uma matriz com 3 linhas e 4 colunas.

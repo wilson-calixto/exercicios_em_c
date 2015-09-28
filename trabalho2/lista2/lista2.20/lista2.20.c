@@ -14,7 +14,7 @@
  */
 
 #include <stdio.h>
-#include "function.h"
+#include "calc_sum.h"
 int main ( int argc, const char *argv[] )
 {
     int result,n;

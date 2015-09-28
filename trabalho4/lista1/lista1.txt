@@ -1,0 +1,144 @@
+Lista de Exercícios – Ponteiros, Vetores e Matrizes
+Márcio Fantini – Setembro 2007
+1. O que imprime o programa a seguir? Tente entendê­lo e responder. A 
+seguir, execute­o e comprove o resultado.
+
+# include <stdio.h>
+int main()
+{
+     int t, i, M[3][4];
+     for (t=0; t<3; ++t)
+           for (i=0; i<4; ++i)
+                M[t][i] = (t*4)+i+1;
+     for (t=0; t<3; ++t)
+     {
+           for (i=0; i<4; ++i)
+                printf ("%3d ", M[t][i]);
+           printf ("\n");
+     }
+     return(0);
+}
+
+2. Responda as perguntas abaixo. Se achar necessário, faça testes no 
+programa em C.
+a) Explique a diferença entre
+ p++;            (*p)++;           *(p++);
+b) O que quer dizer *(p+10);?
+    
+ c) Explique o que você entendeu da comparação entre ponteiros (veja apostila 
+páginas 54 e 55)
+    
+3. Qual o valor de y no final do programa? Tente primeiro descobrir e 
+depois verifique no computador o resultado. A seguir, escreva um  /* 
+comentário */ em cada comando de atribuição explicando o que ele 
+faz e o valor da variável à esquerda do '=' após sua execução.int main()
+{
+       int y, *p, x;
+       y = 0;
+       p = &y;
+       x = *p;
+       x = 4;
+       (*p)++;
+       x­­;
+       (*p) += x;
+       printf ("y = %d\n", y);
+       return(0);
+}
+
+4. Reescreva o programa abaixo  usando ponteiros
+int main ()
+{
+      float matrx [50][50];
+      int i,j;
+      for (i=0;i<50;i++)
+            for (j=0;j<50;j++)
+                   matrx[i][j]=0.0;
+      return(0);
+}
+
+5. Diga quais expressoes abaixo sao válidas ou não. Considere as 
+declarações
+int vetor[10];
+int *ponteiro;
+a) vetor = vetor + 2; 
+b) vetor++;           
+c) vetor = ponteiro;  
+ d) ponteiro = vetor;      
+ e) ponteiro = vetor+2;   
+
+6. Explique o que faz o programa abaixomain(){
+      float vet[5] = {1.1,2.2,3.3,4.4,5.5};
+      float *f;
+      int i;
+      f = vet;
+      printf("contador/valor/valor/endereco/endereco");
+      for(i = 0 ; i <= 4 ; i++){
+            printf("\ni = %d",i);
+            printf("   vet[%d] = %.1f",i, vet[i]);
+            printf("   *(f + %d) = %.1f",i, *(f+i));
+            printf("   &vet[%d] = %X",i, &vet[i]);
+            printf("   (f + %d) = %X",i, f+i);
+      }
+}
+
+7. Assumindo que M1[] é um vetor do tipo int, quais das seguintes 
+expressões referenciam o valor do terceiro elemento de M1?
+a) *(M1 + 2)          b) *(M1 + 4)             c) M1 + 4                       d) M1 + 2
+8. Considere a declaração:
+int mat[4], *p, x; 
+Quais expressões são válidas? Justifique:
+a) p = mat + 1;       b) p = mat++;      c) p = ++mat;      d) x = (*mat)++;
+9. Faça um programa usando ponteiros, para ordenar 5 números e 
+mostrá­los ordenados na tela.
+
+10. Explique o que o progama abaixo faz
+main() {
+      int vet[] = {4,9,12};
+      int i,*ptr;
+      ptr = vet;
+      for(i = 0 ; i < 3 ; i++) {
+           printf("%d ",*ptr++);
+      }
+}
+11.Seja vet um vetor de 4 elementos: TIPO vet[4]. Supor que depois da 
+declaração, vet esteja armazenado no endereço de memória 4092 (ou 
+seja, o endereço de vet[0]). Supor também que na máquina usada 
+uma variável do tipo char ocupa 1 byte, do tipo int ocupa 2 bytes, do 
+tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes.
+Qual o valor de vet+1, vet+2 e vet+3 se:
+a)      vet for declarado como char?
+b)      vet for declarado como int?
+c)      vet for declarado como float?
+d) vet for declarado como double?
+12.Considere um micro cujo barramento de endereços possui 16 bits. 
+Considere um ponteiro p apontando para a primeira posição de 
+memória da figura abaixo.
+120A AB
+120B 01
+FF
+ED
+34
+4CResponda:
+qual o valor de p?
+qual o valor de *p?
+qual o valor de &p
+qual o valor de *(p+1)?
+qual o valor de (p+5)?
+qual o valor de (p+A)?
+qual o valor de *(p+2)?
+13.Verifique o programa abaixo. Encontre o seu erro e corrija­o para 
+que escreva o numero 10 na tela.
+#include <stdio.h>
+int main()
+{
+      int x, *p, **q;
+      p = &x;
+      q = &p;
+      x = 10;
+      printf("\n%d\n", &q);
+      return(0);
+}
+14. Escreva um programa que declare uma matriz 100x100 de inteiros. 
+Você deve inicializar a matriz com zeros usando ponteiros para endereçar 
+seus elementos. Preencha depois a matriz com os números de 1 a 10000, 
+também usando ponteiros.

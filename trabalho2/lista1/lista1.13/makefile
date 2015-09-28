@@ -6,7 +6,7 @@ lista1.13: retangulo.o lista1.13.o
 lista1.13.o: lista1.13.c
 	gcc -c lista1.13.c
 	
-retangulo.o: retangulo.c util.h
+retangulo.o: retangulo.c retangulo.h
 	gcc -c retangulo.c
 	
 clean:

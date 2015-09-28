@@ -12,7 +12,6 @@
  *  */
 
 
-#include        "iterate_number.h"
 #include	<stdio.h>
 
 int main ( int argc, char *argv[] )
@@ -20,7 +19,7 @@ int main ( int argc, char *argv[] )
 	int qtdseq;
 	printf ( "Digite a quantidade de seq..\n" );
 	scanf ( "%d", &qtdseq );
-	printf("Somatorio da sequencia = %.2f\n", iterate_number(qtdseq));
+	printf("Somatorio da sequencia = %d\n", iterate_number(qtdseq));
 	return 0;
 }				/* ----------  end of function main  ---------- */
 
