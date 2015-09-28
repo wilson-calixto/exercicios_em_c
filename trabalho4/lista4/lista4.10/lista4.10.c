@@ -14,6 +14,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include "derivada.h"
 
 float xanterior, x, epsilon, a[100], b[100];
 int i, n, nromaximodeiteracoes, iteracoes;
