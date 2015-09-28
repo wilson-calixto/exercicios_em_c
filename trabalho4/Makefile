@@ -422,7 +422,7 @@ lista4.08b.o: lista4/lista4.08/lista4.08b.c
 lista4.08c: lista4.08c.o  produto_matriz.o util.o matriz_transposta.o  imprimi_matriz.o
 	gcc $(path_obj)lista4.08c.o   $(path_obj)produto_matriz.o $(path_obj)util.o $(path_obj)matriz_transposta.o  $(path_obj)imprimi_matriz.o  -o $(path_bin)lista4.08c
 lista4.08c.o: lista4/lista4.08/lista4.08c.c
-	gcc -o $(path_obj)lista4.08c.o -c lista4/lista4.08/lista4.08.c
+	gcc -o $(path_obj)lista4.08c.o -c lista4/lista4.08/lista4.08c.c
 produto_matriz.o: lista4/lista4.08/produto_matriz.c
 	gcc -o $(path_obj)produto_matriz.o -c lista4/lista4.08/produto_matriz.c
 produto_escalar.o: lista4/lista4.08/produto_escalar.c
