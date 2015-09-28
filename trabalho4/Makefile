@@ -40,7 +40,7 @@ lista4.05: lista4.05.o util5.o
 
 lista4.05.o: lista4/lista4.05/lista4.05.c
 	gcc -o $(path_obj)lista4.05.o -c lista4/lista4.05/lista4.05.c
-lista4_08b.o
+
 util5.o: lista4/lista4.05/util.c
 	gcc -o $(path_obj)util5.o -c lista4/lista4.05/util.c
 
@@ -417,6 +417,9 @@ lista4.08b: lista4.08b.o  lista4_08b.o util.o
 	gcc  $(path_obj)lista4.08b.o  $(path_obj)lista4_08b.o $(path_obj)util.o  -o $(path_bin)lista4.08b
 lista4.08b.o: lista4/lista4.08/lista4.08b.c
 	gcc -o $(path_obj)lista4.08b.o -c lista4/lista4.08/lista4.08b.c
+lista4_08b.o: lista4/lista4.08/lista4_08b.c
+	gcc -o $(path_obj)lista4_08b.o -c lista4/lista4.08/lista4_08b.c
+
 
 ##c
 lista4.08c: lista4.08c.o  produto_matriz.o util.o matriz_transposta.o  imprimi_matriz.o
