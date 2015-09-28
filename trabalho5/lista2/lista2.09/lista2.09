@@ -1,0 +1,3 @@
+A diferença entre vazio e NULL é que o valor "vazio" tem endereço de memória, podendo assim fazer operações como concatenação e afins, enquanto NULL não tem qualquer referência na memória.
+
+
