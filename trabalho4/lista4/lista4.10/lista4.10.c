@@ -15,6 +15,9 @@
 #include <stdio.h>
 #include <math.h>
 
+float xanterior, x, epsilon, a[100], b[100];
+int i, n, nromaximodeiteracoes, iteracoes;
+
  int main(int argc, const char *argv[]){
 	printf("Digite a qtde da sequencia do polinomio: \n");	
 	scanf("%d",&n);

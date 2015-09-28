@@ -6,10 +6,7 @@
 		return x * power(x , y-1);
   }
 
-  float xanterior, x, epsilon, a[100], b[100];
-  int i, n, nromaximodeiteracoes, iteracoes;
-
-  void derivada (float a[],float b[],int n){
+    void derivada (float a[],float b[],int n){
   	int i;
   	for (i=1;i<=n;i++){
 		b[i]=i*a[i+1];
