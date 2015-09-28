@@ -32,10 +32,10 @@ int main (void)
     int i, cont = 0, tam, bl;
 
     printf("Digite a frase: \n");
-    gets(frase);
+    fgets(frase,200,stdin);
 
     printf("Digite a palavra: \n");
-    gets(palavra);
+    fgets(palavra,100,stdin);
 
     f = &frase[0];
     p = &palavra[0];
