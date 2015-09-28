@@ -36,6 +36,16 @@ lista5.04.o: lista5/lista5.04/lista5.04.c
 binary.o: lista5/lista5.04/binary.c
 	gcc -o $(path_obj)binary.o -c lista5/lista5.04/binary.c
 	
+#bloco da lista2.04
+NumeroChar: lista2.04.o NumeroChar.o
+	gcc $(path_obj)lista2.04.o $(path_obj)NumeroChar.o -o $(path_bin)NumeroChar
+
+lista2.04.o: lista2/lista2.04/lista2.04.c
+	gcc -o $(path_obj)lista2.04.o -c lista2/lista2/04/lista2.04.c
+	
+NumeroChar.o: lista2/lista2.04/NumeroChar.c
+	gcc -o $(path_obj)NumeroChar.o -c lista2/lista2.04/NumeroChar.c
+	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
