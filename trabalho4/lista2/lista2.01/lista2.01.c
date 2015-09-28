@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+#include "../../util.c/util.h"
 
 int main(int argc, const char *argv)
 {
