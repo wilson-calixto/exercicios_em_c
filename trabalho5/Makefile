@@ -1,4 +1,4 @@
-all: lista5.02
+all: bin lista5.02
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
