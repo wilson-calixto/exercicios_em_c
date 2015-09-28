@@ -406,10 +406,10 @@ ordena_tabela.o: lista3/lista3.13/ordena_tabela.c
 	
 #Bloco para compilar a questão 8 - lista 04	
 
-#a
+##a
 lista4.08a: lista4.08a.o matriz_transposta.o util.o imprimi_matriz.o
 	gcc $(path_obj)lista4.08a.o $(path_obj)matriz_transposta.o $(path_obj)util.o  -o $(path_bin)lista4.08a
-lista4.08a.o: lista3/lista4.08/lista4.08a.c
+lista4.08a.o: lista4/lista4.08/lista4.08a.c
 	gcc -o $(path_obj)lista4.08a.o -c lista4/lista4.08/lista4.08a.c
 
 ##b
