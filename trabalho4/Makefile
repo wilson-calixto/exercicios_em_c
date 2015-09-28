@@ -375,11 +375,11 @@ segmento.o: lista2/lista2.16/segmento.c
 lista3.03: funcao.o lista3.03.o
 	gcc $(path_obj)funcao.o $(path_obj)lista3.03.o -o $(path_bin)lista3.03
 
-funcao.o: funcao.c
-	gcc -c $(path_obj)funcao.c
+funcao.o: lista3/lista3.03/funcao.c
+	gcc -o $(path_obj)funcao.o -c lista3/lista3.03/funcao.c
 
-lista3.03.o: lista3.03.c
-	gcc -c $(path_obj)lista3.03.c
+lista3.03.o: lista3/lista3.03/lista3.03.c
+	gcc -o $(path_obj)lista3.03.o -c lista3/lista3.03/lista3.03.c
 
 #Bloco para compilar a questão 8 - lista 03
 
