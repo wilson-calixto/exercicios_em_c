@@ -16,7 +16,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+
 
 int main ( int argc, char *argv[] )
 {
@@ -30,7 +30,7 @@ int main ( int argc, char *argv[] )
 	insere_vetor(tamanho , vetor1);
 	insere_vetor(tamanho , vetor2);
 	
-	printf("O produto escalar dos vetores é = %d\n", produto_escalar(tamanho, vetor1, vetor2));	
+	printf("O produto escalar dos vetores é = %d\n", lista4_08b(tamanho, vetor1, vetor2));	
 	
 	free(vetor1);
 	free(vetor2);
