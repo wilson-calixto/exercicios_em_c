@@ -4,9 +4,9 @@
 
 int main( int argc, const char *argv[] ) {
 
-	char *string;
+	char string[ 50 ];
 
-	printf( "Informe a primeira string: " );
+	printf( "Informe uma string: " );
 	scanf( "%s", string );
 
 	printf( "%s\n", palindromo( string, strlen( string ) ) ? "Eh palindromo" : "Nao eh palindromo" );
