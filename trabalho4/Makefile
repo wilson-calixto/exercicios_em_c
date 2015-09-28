@@ -413,33 +413,41 @@ ordena_tabela.o: lista3/lista3.13/ordena_tabela.c
 	gcc -o $(path_obj)ordena_tabela.o -c lista3/lista3.13/ordena_tabela.c
 	
 #Bloco para compilar a questão 8 - lista 04	
-	
-	lista4.08d: lista4.08d.o matriz_identidade.o util.o 
-	gcc $(path_obj)lista4.08d.o $(path_obj)matriz_identidade.o $(path_obj)util.o  -o $(path_bin)lista4.08d
-lista4.08d.o: lista4.08d.c
-	gcc -c $(path_obj)lista4.08d.c
-matriz_identidade.o: matriz_identidade.c
-	gcc -c $(path_obj)matriz_identidade.c
+
+#a
 lista4.08a: lista4.08a.o matriz_transposta.o util.o imprimi_matriz.o
 	gcc $(path_obj)lista4.08a.o $(path_obj)matriz_transposta.o $(path_obj)util.o  -o $(path_bin)lista4.08a
-lista4.08a.o: lista4.08a.c
-	gcc -c $(path_obj)lista4.08a.c
+lista4.08a.o: lista3/lista4.08/lista4.08a.c
+	gcc -o $(path_obj)lista4.08a.o -c lista3/lista4.08/lista4.08a.c
+
+##b
 lista4.08b: lista4.08b.o  produto_escalar.o util.o
 	gcc  $(path_obj)lista4.08b.o  $(path_obj)produto_escalar.o $(path_obj)util.o  -o $(path_bin)lista4.08b
-lista4.08b.o: lista4.08b.c
-	gcc -c $(path_obj)lista4.08b.c
+lista4.08b.o: lista3/lista4.08/lista4.08b.c
+	gcc -o $(path_obj)lista4.08b.o -c lista3/lista4.08/lista4.08b.c
+
+##c
 lista4.08c: lista4.08c.o  produto_matriz.o util.o matriz_transposta.o  imprimi_matriz.o
 	gcc $(path_obj)lista4.08c.o   $(path_obj)produto_matriz.o $(path_obj)util.o $(path_obj)matriz_transposta.o  $(path_obj)imprimi_matriz.o  -o $(path_bin)lista4.08c
-lista4.08c.o: lista4.08c.c
-	gcc -c $(path_obj)lista4.08c.c
-produto_matriz.o: produto_matriz.c
-	gcc -c $(path_obj)produto_matriz.c 
-produto_escalar.o: produto_escalar.c
-	gcc -c $(path_obj)produto_escalar.c
-matriz_transposta.o: matriz_transposta.c
-	gcc -c $(path_obj)matriz_transposta.c
-imprimi_matriz.o: imprimi_matriz.c
-	gcc -c $(path_obj)imprimi_matriz.c
+lista4.08c.o: lista3/lista4.08/lista4.08c.c
+	gcc -o $(path_obj)lista4.08c.o -c lista3/lista4.08/lista4.08.c
+produto_matriz.o: lista3/lista4.08/produto_matriz.c
+	gcc -o $(path_obj)produto_matriz.o -c lista3/lista4.08/produto_matriz.c
+produto_escalar.o: lista3/lista4.08/produto_escalar.c
+	gcc -o $(path_obj)produto_escalar.o -c lista3/lista4.08/produto_escalar.c
+matriz_transposta.o: lista3/lista4.08/matriz_transposta.c
+	gcc -o $(path_obj)matriz_transposta.o -c lista3/lista4.08/matriz_transposta.c
+imprimi_matriz.o: lista3/lista4.08/imprimi_matriz.c
+	gcc -o $(path_obj)imprimi_matriz.o -c lista3/lista4.08/imprimi_matriz.c
+
+##d
+lista4.08d: lista4.08d.o matriz_identidade.o util.o 
+	gcc $(path_obj)lista4.08d.o $(path_obj)matriz_identidade.o $(path_obj)util.o  -o $(path_bin)lista4.08d
+lista4.08d.o: lista3/lista4.08/lista4.08d.c
+	gcc -o $(path_obj)lista4.08d.o -c lista3/lista4.08/lista4.08d.c
+matriz_identidade.o: lista3/lista4.08/matriz_identidade.c
+	gcc -o $(path_obj)matriz_identidade.o -c lista3/lista4.08/matriz_identidade.c
+
 
 
 #questoes do grupo Delrick 
