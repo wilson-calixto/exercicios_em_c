@@ -1,18 +1,9 @@
-all: lista5.02
-
 lista5.02: strparaint.o lista5.02.o
-	gcc lista5.02.o strparaint.o -o lista5.02
+	gcc $(path_obj)lista5.02.o $(path_obj)strparaint.o -o $(path_bin)lista5.02
 
-lista5.02.o: lista5.02.c
-	gcc -c lista5.02.c
+lista5.02.o: trabalho5/lista5/lista5.02/lista5.02.c
+	gcc -o $(path_obj)lista5.02.o -c trabalho5/lista5/lista5.02/lista5.02.c
 
-strparaint.o: strparaint.c
-	gcc -c strparaint.c
-
-clean:
-	rm -rf *.o
-
-mrproper:
-	rm -rf lista5.02
-
+strparaint.o: trabalho5/lista5/lista5.02/strparaint.c
+	gcc -o $(path_obj)strparaint.o -c trabalho5/lista5/lista5.02/strparaint.c
 
