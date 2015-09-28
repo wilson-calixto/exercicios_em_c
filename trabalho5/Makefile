@@ -1,4 +1,4 @@
-all: bin obj lista5.02
+all: bin obj lista5.02 lista5.04
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -25,19 +25,17 @@ lista5.02.o: lista5/lista5.02/lista5.02.c
 
 strparaint.o: lista5/lista5.02/strparaint.c
 	gcc -o $(path_obj)strparaint.o -c lista5/lista5.02/strparaint.c
-
-
+	
 #bloco da lista5.04
-lista5.04: binario.o lista5.04.o
-	gcc $(path_obj)lista5.04.o $(path_obj)binario.o -o $(path_bin)lista5.04
+lista5.04: binary.o lista5.04.o
+	gcc $(path_obj)lista5.04.o $(path_obj)binary.o -o $(path_bin)lista5.04
 
 lista5.04.o: lista5/lista5.04/lista5.04.c
 	gcc -o $(path_obj)lista5.04.o -c lista5/lista5.04/lista5.04.c
 
-binario.o: lista5/lista5.04/binario.c
-	gcc -o $(path_obj)binario.o -c lista5/lista5.04/binario.c
-
-
+binary.o: lista5/lista5.04/binary.c
+	gcc -o $(path_obj)binary.o -c lista5/lista5.04/binary.c
+	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
