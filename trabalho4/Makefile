@@ -404,7 +404,7 @@ insere_resultado.o: lista3/lista3.13/insere_resultado.c
 pesq_matriz.o: lista3/lista3.13/pesq_matriz.c
 	gcc -o $(path_obj)pesq_matriz.o -c lista3/lista3.13/pesq_matriz.c
 cria_tabela.o: lista3/lista3.13/cria_tabela.o 
-	gcc -o $(path_obj)cria_tabela. -c lista3/lista3.13/cria_tabela.c
+	gcc -o $(path_obj)cria_tabela.o -c lista3/lista3.13/cria_tabela.c
 imprime_tabela.o: lista3/lista3.13/imprime_tabela.c
 	gcc -o $(path_obj)imprime_tabela.o -c lista3/lista3.13/imprime_tabela.c
 gera_dados.o: lista3/lista3.13/gera_dados.c
