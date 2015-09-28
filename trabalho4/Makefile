@@ -395,21 +395,22 @@ lista3.08.o: lista3/lista3.08/lista3.08.c
 #Bloco para compilar a questão 13 - lista 03
 
 lista3.13a: lista3.13a.o insere_resultado.o pesq_matriz.o cria_tabela.o imprime_tabela.o gera_dados.o ordena_tabela.o
-	gcc $(path_obj)lista3.13a.o $(path_obj)insere_resultado.o $(path_obj)pesq_matriz.o $(path_obj)cria_tabela.o $(path_obj)imprime_tabela.o $(path_obj)gera_dados.o $(path_obj)ordena_tabela.o   -o $(path_bin)lista3.13a -g
-lista3.13a.o: lista3.13a.c
-	gcc -c $(path_obj)lista3.13a.c -g
-insere_resultado.o: insere_resultado.c
-	gcc -c  $(path_obj)insere_resultado.c -g
-pesq_matriz.o: pesq_matriz.c
-	gcc -c $(path_obj)pesq_matriz.c -g
-cria_tabela.o: pesq_matriz.o 
-	gcc -c $(path_obj)cria_tabela.c -g
-imprime_tabela.o: imprime_tabela.c
-	gcc -c $(path_obj)imprime_tabela.c -g
-gera_dados.o: gera_dados.c
-	gcc -c $(path_obj)gera_dados.c -g
-ordena_tabela.o: ordena_tabela.c
-	gcc -c $(path_obj)ordena_tabela.c
+	gcc $(path_obj)lista3.13a.o $(path_obj)insere_resultado.o $(path_obj)pesq_matriz.o $(path_obj)cria_tabela.o $(path_obj)imprime_tabela.o $(path_obj)gera_dados.o $(path_obj)ordena_tabela.o   -o $(path_bin)lista3.13a
+
+lista3.13a.o: lista3/lista3.13/lista3.13a.c
+	gcc -o $(path_obj)lista3.13a.o -c lista3/lista3.13/lista3.13a.c
+insere_resultado.o: lista3/lista3.13/insere_resultado.c
+	gcc -o  $(path_obj)insere_resultado.o -c lista3/lista3.13/insere_resultado.c
+pesq_matriz.o: lista3/lista3.13/pesq_matriz.c
+	gcc -o $(path_obj)pesq_matriz.o -c lista3/lista3.13/pesq_matriz.c
+cria_tabela.o: lista3/lista3.13/cria_tabela.o 
+	gcc -o $(path_obj)cria_tabela. -c lista3/lista3.13/cria_tabela.c
+imprime_tabela.o: lista3/lista3.13/imprime_tabela.c
+	gcc -o $(path_obj)imprime_tabela.o -c lista3/lista3.13/imprimi_tabela.c
+gera_dados.o: lista3/lista3.13/gera_dados.c
+	gcc -o $(path_obj)gera_dados.o -c lista3/lista3.13/gera_dados.c
+ordena_tabela.o: lista3/lista3.13/ordena_tabela.c
+	gcc -o $(path_obj)ordena_tabela.o -c lista3/lista3.13/ordena_tabela.c
 	
 #Bloco para compilar a questão 8 - lista 04	
 	
