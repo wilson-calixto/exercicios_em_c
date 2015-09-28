@@ -386,11 +386,11 @@ lista3.03.o: lista3/lista3.03/lista3.03.c
 lista3.08: comb.o lista3.08.o util.o	
 	gcc $(path_obj)comb.o $(path_obj)lista3.08.o $(path_obj)util.o -o $(path_bin)lista3.08
 
-comb.o: comb.c
-	gcc -c $(path_obj)comb.c
+comb.o: lista3/lista3.08/comb.c
+	gcc -o $(path_obj)comb.o -c lista3/lista3.08/comb.c
 
-lista3.08.o: lista3.08.c
-	gcc -c $(path_obj)lista3.08.c
+lista3.08.o: lista3/lista3.08/lista3.08.c
+	gcc -o $(path_obj)lista3.08.o -c lista3/lista3.08/lista3.08.c
 
 #Bloco para compilar a questão 13 - lista 03
 
