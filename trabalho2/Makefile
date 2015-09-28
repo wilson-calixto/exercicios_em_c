@@ -524,7 +524,7 @@ primos.o: trabalho2/lista3/desafio1/primos.c
 
 
 #bloco para compilar lista4.03a
-lista4.03a.o: bloco.o lista4.03a.o
+lista4.03a: bloco.o lista4.03a.o
 	gcc $(path_obj)lista4.03a.o $(path_obj)bloco.o -o $(path_bin)lista4.03a
 
 lista4.03a.o: trabalho2/lista4/lista4.03/lista4.03a.c
