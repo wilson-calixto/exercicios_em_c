@@ -22,24 +22,22 @@
 int main(int argc, const char *argv[])
 {
 
-    char s[TAM], *copia, ch[TAM];
+    char s[TAM], *copia, ch[TAM];// s - string, copia - copia da string, ch - vetor de chars 
 
-    copia = malloc(sizeof(char*) * strlen(s) + 1);
-
+    copia = malloc(sizeof(char*) * strlen(s) + 1); // copia recebe a qtd de endereços de memoria igual ao tamanho da 
+                                                   // string 's' + 1 (o delimitador)
     printf("Informe uma string:\n");
-    fgets(s, TAM, stdin); 
+    fgets(s, TAM, stdin); //recebe string
 
-    strcpy(copia, s);
+    strcpy(copia, s); //copia o conteudo de 's' para 'copia'
 
-    geraCh(copia, ch);
+    geraCh(copia, ch); //gera o vetor de chars
 
-    printS(s);
+    printS(s); //mostra a string
 
-    puts("");
+    puts(""); //pula uma linha
 
-    Lista(s, ch, copia);
+    Lista(s, ch, copia); //mostra a Lsita de chars e suas respectivas qtds dentro da string
 
     return 0;
 }
-
-
