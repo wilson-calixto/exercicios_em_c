@@ -39,7 +39,7 @@
 
 
  int main(int argc, const char *argv[]){
-	printf("Digite a qtde da sequencia do polinomio: /n");	
+	printf("Digite a qtde da sequencia do polinomio: \n");	
 	scanf("%d: ",&n);
 	for (i=1; i<=n+1;i++){
 		printf("Digite o %d valor",i);
