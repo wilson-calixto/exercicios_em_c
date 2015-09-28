@@ -34,17 +34,6 @@ lista2.18.o: lista2/lista2.18/lista2.18.c
 p.o: lista2/lista2.18/p.c
 	gcc -o $(path_obj)p.o -c lista2/lista2.18/p.c
 
-# Bloco para compilar a questão 10 - lista 04
-lista4.10: lista4.10.o derivada.o
-	gcc $(path_obj)lista4.10.o derivada.o -o $(path_bin)lista4.10 -lm
-
-lista4.10.o: lista4/lista4.10/lista4.10.c
-	gcc -o $(path_obj)lista4.10.o -c lista4/lista4.10/lista4.10.c
-
-derivada.o: lista4/lista4.05/derivada.c
-	gcc -o $(path_obj)derivada.o -c lista4/lista4.10/derivada.c
-
-
 # Bloco para compilar a questão 05 - lista 04
 lista4.05: lista4.05.o util5.o 
 	gcc $(path_obj)lista4.05.o $(path_obj)util5.o -o $(path_bin)lista4.05
@@ -584,8 +573,15 @@ q4.11.b.o: lista4/lista4.11/questao_b/q4.11.b.c
 f4.11.b.o: lista4/lista4.11/questao_b/f4.11.b.c
 	gcc -o $(path_obj)f4.11.b.o -c lista4/lista4.11/questao_b/f4.11.b.c
 
+# Bloco para compilar a questão 10 - lista 04
+lista4.10: lista4.10.o derivada.o
+	gcc $(path_obj)lista4.10.o derivada.o -lm -o $(path_bin)lista4.10 
 
+lista4.10.o: lista4/lista4.10/lista4.10.c
+	gcc -lm -o $(path_obj)lista4.10.o -c lista4/lista4.10/lista4.10.c
 
+derivada.o: lista4/lista4.10/derivada.c
+	gcc -lm -o $(path_obj)derivada.o -c lista4/lista4.10/derivada.c
 
 # >>>> continue aqui <<<<
 
