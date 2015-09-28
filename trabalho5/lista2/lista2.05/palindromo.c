@@ -4,5 +4,11 @@ int palindromo( char *string, int length )
 
 	for( i = 0, j = length - 1; i < length, j >= 0; i++, j-- )
 	{
-		if( 
+		if( string[ i ] != string[ j ] )
+		{
+			b = 0;
+		}
+	}
 	
+	return b; 
+}	

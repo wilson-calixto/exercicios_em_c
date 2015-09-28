@@ -5,16 +5,11 @@
 int main( int argc, const char *argv[] ) {
 
 	char *string;
-	int result;
 
 	printf( "Informe a primeira string: " );
-	scanf( "%s", string1 );
+	scanf( "%s", string );
 
-	result = palidromo( string, strlen( string ) );
-	if( result )
-		printf( "Eh palindromo\n" );
-	else
-		printf( "Nao eh palindromo\n" );
+	printf( "%s\n", palindromo( string, strlen( string ) ) ? "Eh palindromo" : "Nao eh palindromo" );
 
 	return 0;
 }
