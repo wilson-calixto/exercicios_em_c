@@ -18,10 +18,16 @@
 
 void retangulo(int linhas, int colunas)
 {
+
 	int i,j;
 	for(i=0;i<linhas;i++)
 	{
+		printf("|");
 		for(j=0;j<colunas;j++)
+<<<<<<< HEAD
+		{	
+			printf("+");
+=======
 		{
 			if(j == 0 || j == colunas-1)
 			{
@@ -31,7 +37,9 @@ void retangulo(int linhas, int colunas)
 			{
 				printf("+");
 			}
+>>>>>>> d9ce939ca01e3a4b4ebc049e6922e4957473be24
 		}
+		printf("|");
 		printf("\n");
 	}
 }
