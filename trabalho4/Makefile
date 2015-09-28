@@ -413,8 +413,8 @@ lista4.08a.o: lista4/lista4.08/lista4.08a.c
 	gcc -o $(path_obj)lista4.08a.o -c lista4/lista4.08/lista4.08a.c
 
 ##b
-lista4.08b: lista4.08b.o  produto_escalar.o util.o
-	gcc  $(path_obj)lista4.08b.o  $(path_obj)produto_escalar.o $(path_obj)util.o  -o $(path_bin)lista4.08b
+lista4.08b: lista4.08b.o  lista4_08b.o util.o
+	gcc  $(path_obj)lista4.08b.o  $(path_obj)lista4_08b.o $(path_obj)util.o  -o $(path_bin)lista4.08b
 lista4.08b.o: lista4/lista4.08/lista4.08b.c
 	gcc -o $(path_obj)lista4.08b.o -c lista4/lista4.08/lista4.08b.c
 
