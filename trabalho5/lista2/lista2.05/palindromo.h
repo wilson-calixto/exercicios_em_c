@@ -1,0 +1,1 @@
+int palindromo( char *, int );
