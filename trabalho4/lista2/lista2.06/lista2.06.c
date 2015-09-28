@@ -32,10 +32,12 @@ int main (void)
     int i, cont = 0, tam, bl;
 
     printf("Digite a frase: \n");
-    fgets(frase,200,stdin);
+    gets(frase); //Se for trocar esse comando, TESTE ANTES DE COMMITAR!!!! se nao der certo, deixe dando WARNIG 
+    //fgets(frase,200,stdin);
 
     printf("Digite a palavra: \n");
-    fgets(palavra,100,stdin);
+    gets(palavra); //Se for trocar esse comando, TESTE ANTES DE COMMITAR!!!! se nao der certo, deixe dando WARNIG
+    //fgets(palavra,100,stdin);
 
     f = &frase[0];
     p = &palavra[0];
