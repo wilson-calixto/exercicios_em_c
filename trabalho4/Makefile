@@ -35,12 +35,14 @@ p.o: lista2/lista2.18/p.c
 	gcc -o $(path_obj)p.o -c lista2/lista2.18/p.c
 
 # Bloco para compilar a questão 10 - lista 04
-lista4.10: lista4.10.o 
-	gcc $(path_obj)lista4.10.o -o $(path_bin)lista4.10 -lm
+lista4.10: lista4.10.o derivada.o
+	gcc $(path_obj)lista4.10.o derivada.o -o $(path_bin)lista4.10 -lm
 
 lista4.10.o: lista4/lista4.10/lista4.10.c
 	gcc -o $(path_obj)lista4.10.o -c lista4/lista4.10/lista4.10.c
 
+derivada.o: lista4/lista4.05/derivada.c
+	gcc -o $(path_obj)derivada.o -c lista4/lista4.10/derivada.c
 
 
 # Bloco para compilar a questão 05 - lista 04
