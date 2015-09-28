@@ -41,7 +41,7 @@ lista4.10: lista4.10.o derivada.o
 lista4.10.o: lista4/lista4.10/lista4.10.c
 	gcc -o $(path_obj)lista4.10.o -c lista4/lista4.10/lista4.10.c
 
-derivada.o: lista4/lista4.05/derivada.c
+derivada.o: lista4/lista4.10/derivada.c
 	gcc -o $(path_obj)derivada.o -c lista4/lista4.10/derivada.c
 
 
