@@ -579,7 +579,7 @@ f4.11.b.o: lista4/lista4.11/questao_b/f4.11.b.c
 
 # Bloco para compilar a questão 10 - lista 04
 lista4.10: lista4.10.o derivada.o
-	gcc $(path_obj)lista4.10.o derivada.o -lm -o $(path_bin)lista4.10 
+	gcc $(path_obj)lista4.10.o $(path_obj)derivada.o -lm -o $(path_bin)lista4.10 
 
 lista4.10.o: lista4/lista4.10/lista4.10.c
 	gcc -lm -o $(path_obj)lista4.10.o -c lista4/lista4.10/lista4.10.c
