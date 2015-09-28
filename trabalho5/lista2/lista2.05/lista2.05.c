@@ -4,17 +4,12 @@
 
 int main( int argc, const char *argv[] ) {
 
-	char *string;
-	int result;
+	char string[ 50 ];
 
-	printf( "Informe a primeira string: " );
-	scanf( "%s", string1 );
+	printf( "Informe uma string: " );
+	scanf( "%s", string );
 
-	result = palidromo( string, strlen( string ) );
-	if( result )
-		printf( "Eh palindromo\n" );
-	else
-		printf( "Nao eh palindromo\n" );
+	printf( "%s\n", palindromo( string, strlen( string ) ) ? "Eh palindromo" : "Nao eh palindromo" );
 
 	return 0;
 }

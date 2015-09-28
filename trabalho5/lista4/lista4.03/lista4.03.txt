@@ -1,0 +1,33 @@
+/*
+Programaçao de Computadores e Algoritmos
+Trabalho 5
+Questão 03 da Lista 4
+Grupo:
+	Davi Tavares;
+	Hermann Hernani;
+	Evandro Fernandes;
+	Lucas Frota;
+	Gabriel Faraco;
+*/
+
+
+
+3. Discuta as diferenças entre os três fragmentos de código a seguir:
+
+char a[8], b[8];
+strcpy (a, "abacate");
+strcpy (b, "banana");
+
+/*Desse jeito, será criado uma variavel Char com suporte até 8 caracteres que serão preenchidas pela palavra dada*\
+
+char *a, *b; 
+a = malloc (8); strcpy (a, "abacate");
+b = malloc (8); strcpy (b, "banana");
+
+/*Dessa outra forma, será criado um vetor com tamanho de 8 bits, onde será alocado as palavras das variaveis a e b*\
+
+char *a, *b; 
+a = "abacate";
+b = "banana";
+
+/*Criara aqui uma string constante onde pegará o tamanho da palavra, sem a determinação de um tamanho primario*\

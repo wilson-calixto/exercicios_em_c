@@ -1,8 +1,14 @@
-int palindromo( char *string, int length ) 
+int palindromo( char *string, int length ) /* Função para verificar se uma string é igual ao seu inverso */
 {
 	int i, j, b = 1;
 
 	for( i = 0, j = length - 1; i < length, j >= 0; i++, j-- )
 	{
-		if( 
+		if( string[ i ] != string[ j ] )
+		{
+			b = 0;
+		}
+	}
 	
+	return b; 
+}	
