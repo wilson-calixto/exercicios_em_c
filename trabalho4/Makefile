@@ -365,7 +365,7 @@ lista2.16: lista2.16.o segmento.o
 	gcc $(path_obj)lista2.16.o $(path_obj)segmento.o -o $(path_bin)lista2.16
 
 lista2.16.o: lista2/lista2.16/lista2.16.c
-	gcc -o $(path_obj)lista2.16 -c lista2/lista2.16/lista2.16.c
+	gcc -o $(path_obj)lista2.16.o -c lista2/lista2.16/lista2.16.c
 
 segmento.o: lista2/lista2.16/segmento.c
 	gcc -o $(path_obj)segmento.o -c lista2/lista2.16/segmento.c
