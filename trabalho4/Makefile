@@ -364,11 +364,11 @@ lista2.01.o: lista2/lista2.01/lista2.01.c
 lista2.16: lista2.16.o segmento.o
 	gcc $(path_obj)lista2.16.o $(path_obj)segmento.o -o $(path_bin)lista2.16
 
-lista2.16.o: lista2.16.c
-	gcc -c $(path_obj)lista2.16.c
+lista2.16.o: lista2/lista2.16/lista2.16.c
+	gcc -o $(path_obj)lista2.16 -c lista2/lista2.16/lista2.16.c
 
-segmento.o: segmento.c
-	gcc -c $(path_obj)segmento.c
+segmento.o: lista2/lista2.16/segmento.c
+	gcc -o $(path_obj)segmento.o -c lista2/lista2.16/segmento.c
 
 #Bloco para compilar a questão 3 - lista 03
 
