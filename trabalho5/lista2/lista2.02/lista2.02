@@ -1,0 +1,4 @@
+Diferenca entre "MNOP" e "MN0P": A posicao 2 da string "MNOP" e o caractere 'O' ja posicao 2 da string "MN0P" e o caractere '0', logo, sao vetores diferentes.
+Diferenca entre "MN\0P" e "MN0P": Na string "MN\0P" o caracter 'P' nao sera considerado, pois o caractere nulo marca o fim do vetor, logo temos um vetor com apenas os caracteres 'M' e 'N'.
+Diferenca entre "mno" e "m\no": Neste caso o vetor 2 tera "\n" como um comando para pular 1 linha, sendo assim, ao imprimirmos tal vetor sera impresso o caractere 'm' em uma linha e o caractere 'o' uma linha abaixo. Em "mno" temos um vetor composto por 3 caracteres nao nulos, sao eles 'm', 'n', e 'o'.
+
