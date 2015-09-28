@@ -3,12 +3,12 @@
 
 int binary(char n[TAM])
 {
-	int i, decimal = 1, tamanho;
+	int i, decimal = 0, tamanho;
 	tamanho = strlen(n); //Pega o tamanho da string
 
 	for(i = 0; i < tamanho;i++) //Percorre os valores da string	
 	{
-		decimal = (decimal*2) + n[i] - '0';
+		decimal = (decimal*2) + (n[i] - '0'); //Cálculo que multiplica o valor acumulado e soma com o inteiro n[i]
 	}
 	return decimal;
 }

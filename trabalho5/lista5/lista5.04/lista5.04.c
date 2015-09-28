@@ -7,9 +7,15 @@ int main()
 {
 	char n[TAM];
 	int new;
+	
+	//Entrada de dados
 	printf("Digite um numero binario: ");
 	scanf("%s",n);
+	
+	//Processamento de dados
 	new = binary(n);
+	
+	//Saída de dados
 	printf("O número %s em decimal eh: %d\n",n,new);
 	return 0;
 }
