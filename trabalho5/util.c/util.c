@@ -20,3 +20,14 @@ int find(char *str, char ch)
 }
 
 //--------------------------------------------------------------------------------------------------------------------
+//Função para copiar o conteudo de uma string para outra
+
+void copy(char *a, char *b)
+{
+    int i;
+    
+    for(i = 0; i < strlen(a); i++)
+    {
+        b[i] = a[i];
+    }
+}
