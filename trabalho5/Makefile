@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -37,8 +37,8 @@ binary.o: lista5/lista5.04/binary.c
 	gcc -o $(path_obj)binary.o -c lista5/lista5.04/binary.c
 	
 #bloco da lista2.04
-NumeroChar: lista2.04.o NumeroChar.o
-	gcc $(path_obj)lista2.04.o $(path_obj)NumeroChar.o -o $(path_bin)NumeroChar
+lista2.04: lista2.04.o NumeroChar.o
+	gcc $(path_obj)lista2.04.o $(path_obj)NumeroChar.o -o $(path_bin)lista2.04
 
 lista2.04.o: lista2/lista2.04/lista2.04.c
 	gcc -o $(path_obj)lista2.04.o -c lista2/lista2/04/lista2.04.c
