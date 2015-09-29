@@ -1,3 +1,18 @@
+/* Programacao de Computadores e ALgoritmos
+ * Trabalho 5
+ * Questao 5.01
+ *
+ * Equipe:
+ *
+ *          Paulo Henrique
+ *          Raí Santos 
+ *          Jackson Kelvin
+ *          Ewerton Petillo
+ *	    Jailson Pereira 
+ */
+
+//Autor:Raí Santos
+
 #include <stdio.h>
 #include <stdlib.h>
 
