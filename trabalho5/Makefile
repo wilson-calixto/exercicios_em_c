@@ -46,6 +46,19 @@ lista2.04.o: lista2/lista2.04/lista2.04.c
 NumeroChar.o: lista2/lista2.04/NumeroChar.c
 	gcc -o $(path_obj)NumeroChar.o -c lista2/lista2.04/NumeroChar.c
 	
+
+#bloco da lista5.03
+lista5.03: int2string.o lista5.03.o
+	gcc $(path_obj)lista5.03.o $(path_obj)int2string.o -o $(path_bin)lista5.03
+
+lista5.03.o: lista5/lista5.03/lista5.03.c
+	gcc -o $(path_obj)lista5.03.o -c lista5/lista5.03/lista5.03.c
+
+int2string.o: lista5/lista5.03/int2string.c
+	gcc -o $(path_obj)int2string.o -c lista5/lista5.03/int2string.C
+	
+	
+	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
