@@ -24,10 +24,11 @@ int find(char *str, char ch)
 
 void copy(char *a, char *b)
 {
-    int i;
+    int i; //i - contador
     
     for(i = 0; i < strlen(a); i++)
     {
-        b[i] = a[i];
+        b[i] = a[i]; //b no indice i recebe o conteudo de a no indice i
     }
 }
+//--------------------------------------------------------------------------------------------------------------------
