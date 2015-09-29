@@ -41,7 +41,7 @@ NumeroChar: lista2.04.o NumeroChar.o
 	gcc $(path_obj)lista2.04.o $(path_obj)NumeroChar.o -o $(path_bin)NumeroChar
 
 lista2.04.o: lista2/lista2.04/lista2.04.c
-	gcc -o $(path_obj)lista2.04.o -c lista2/lista2/04/lista2.04.c
+	gcc -o $(path_obj)lista2.04.o -c lista2/lista2.04/lista2.04.c
 	
 NumeroChar.o: lista2/lista2.04/NumeroChar.c
 	gcc -o $(path_obj)NumeroChar.o -c lista2/lista2.04/NumeroChar.c
