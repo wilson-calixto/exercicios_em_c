@@ -76,7 +76,7 @@ lista2.05: palindromo.o lista2.05.o
 lista2.05.o: lista2/lista2.05/lista2.05.c
 	gcc -o $(path_obj)lista2.05.o -c lista2/lista2.05/lista2.05.c
 
-palindromo.o: lista2/lista2.05/palindromo.o
+palindromo.o: lista2/lista2.05/palindromo.c
 	gcc -o $(path_obj)palindromo.o -c lista2/lista2.05/palindromo.c
 
 	
