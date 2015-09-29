@@ -55,7 +55,7 @@ lista5.03.o: lista5/lista5.03/lista5.03.c
 	gcc -o $(path_obj)lista5.03.o -c lista5/lista5.03/lista5.03.c
 
 int2string.o: lista5/lista5.03/int2string.c
-	gcc -o $(path_obj)int2string.o -c lista5/lista5.03/int2string.C
+	gcc -o $(path_obj)int2string.o -c lista5/lista5.03/int2string.c
 	
 	
 	
