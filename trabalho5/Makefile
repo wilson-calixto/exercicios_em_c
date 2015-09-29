@@ -69,17 +69,16 @@ sf_extend.o: lista4/lista4.06/sf_extend.c
 	gcc -o $(path_obj)sf_extend.o -c lista4/lista4.06/sf_extend.c
 	
 	
-#bloco da lista2.05
-lista2.05: lista2.05.o palindromo.o
+#bloco  da lista2.05
+lista2.05: palindromo.o lista2.05.o
 	gcc $(path_obj)lista2.05.o $(path_obj)palindromo.o -o $(path_bin)lista2.05
 
 lista2.05.o: lista2/lista2.05/lista2.05.c
 	gcc -o $(path_obj)lista2.05.o -c lista2/lista2.05/lista2.05.c
-	
-palindromo.o: lista2/lista2.05/palindromo.c
-	gcc -o $(path_obj)palindromo.o -c lista2/lista2.05/palindromo.c	
-	
-	
+
+palindromo.o: lista2/lista2.05/palindromo.o
+	gcc -o $(path_obj)palindromo.o -c lista2/lista2.05/palindromo.c
+
 	
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
