@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -67,6 +67,18 @@ lista4.06.o: lista4/lista4.06/lista4.06.c
 
 sf_extend.o: lista4/lista4.06/sf_extend.c
 	gcc -o $(path_obj)sf_extend.o -c lista4/lista4.06/sf_extend.c
+	
+	
+#bloco da lista2.05
+lista2.05: lista2.05.o palindromo.o
+	gcc $(path_obj)lista2.05.o $(path_obj)palindromo.o -o $(path_bin)lista2.05
+
+lista2.05.o: lista2/lista2.05/lista2.05.c
+	gcc -o $(path_obj)lista2.05.o -c lista2/lista2.05/lista2.05.c
+	
+palindromo.o: lista2/lista2.05/palindromo.c
+	gcc -o $(path_obj)palindromo.o -c lista2/lista2.05/palindromo.c	
+	
 	
 	
 	
