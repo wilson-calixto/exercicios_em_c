@@ -22,6 +22,8 @@ int main (int argc, const char *argv[])
 	printf("esta é a sua cópia:\n");	
 	printf("%s\n",string_copy(cs,s));
 	
-
 	return 0;
+			/*a diferença entre as funções strdup e strcpy é que a strdup ao invés de 
+			retornar uma cópia em uma string definida para receber essa cópia, ela retorna
+			um ponteiro para uma nova string*/
 }
