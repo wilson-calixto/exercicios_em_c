@@ -5,10 +5,11 @@
 
 int main (int argc, char *argv[])
 {
-    char v1[50];
+    char v1[100];
     
     printf ("digite a entrada da string:\n");
-    scanf ("%[^\n]s", v1);
+
+    fgets(v1,sizeof(v1),stdin);
 
     back(v1);
     
