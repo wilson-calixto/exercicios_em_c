@@ -1,3 +1,17 @@
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 5
+ *     Questão 5.04
+ *     
+       Equipe: 
+       Andressa
+       Delrick 
+ *     Juliany
+ *     Lucas Botinelly
+ *     Sérgio  
+ *   
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
