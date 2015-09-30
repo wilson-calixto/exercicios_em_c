@@ -1,1 +1,1 @@
-void back(char v1[]);
+void back(char v1[100]);
