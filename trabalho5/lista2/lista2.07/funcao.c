@@ -6,7 +6,7 @@ void cont_str()
 	char stri[100], c = ' ';
 	int cont = 0, maior = 0, i, a;
 	printf("digite sua string com ate 100 caracteres: ");
-	scanf("%s", stri);
+	gets(stri); //aqui nao se usou o scanf, se usou o gets que se adequa melhor a situacao.
 	stri[strlen(stri) + 1] = 'c';
 
 	for (i = 0; i < (strlen(stri) + 1); i++)
@@ -14,7 +14,6 @@ void cont_str()
 		if (stri[i] == c)
 		{
 			cont++;
-			printf("%d", cont);
 		}	
 		else
 		{
