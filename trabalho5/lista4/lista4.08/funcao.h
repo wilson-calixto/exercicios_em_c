@@ -1,1 +1,1 @@
-void string_copy (char *a, char *b);
+char *string_copy (char *a, char *b);
