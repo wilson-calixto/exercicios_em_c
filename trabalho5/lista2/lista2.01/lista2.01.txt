@@ -1,3 +1,17 @@
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 5
+ *     Questão 5.04
+ *     
+       Equipe: 
+       Andressa
+       Delrick 
+ *     Juliany
+ *     Lucas Botinelly
+ *     Sérgio  
+ *   
+ */
+
 As aspas duplas (") representam uma string, ou seja, um vetor de N caracteres.
 A aspa simples (') representa um character, ou seja, pode conter apenas uma letra/numero/simbolo.
 Logo, no caso "A", temos uma string, sendo A na casa [0] e "\0" na casa [1], pois todas as strings devem terminar com "\0".

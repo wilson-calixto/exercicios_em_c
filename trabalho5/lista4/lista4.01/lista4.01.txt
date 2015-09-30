@@ -1,0 +1,6 @@
+P:  Qual a diferença entre as expressões  "strcpy (s, t)"  e  "s = t" ? 
+
+R = Repare que STRINGs em C são implementadas como se fossem vetores: 
+fazendo s = t  você estaria atribuindo o endereço da primeira  string t ao endereço da primeira  string s. Em contrapartida a função strcpy(s, t) está copiando os caracteres de t para o "vetor" S até encontrar o caractere ('\0') na variável origem.  
+
+

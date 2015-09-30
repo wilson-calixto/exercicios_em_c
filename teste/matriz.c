@@ -31,13 +31,11 @@ int teste_permutacao(int matriz[MAX][MAX],int m,int n)
 				cont2++;
 			}
     	  	}
-        
 	  	if (cont1!=(n-1) || (cont2!=1))
-	    		{
-		    		aux=0;
-	 		}
-   		}
+	    	{
+		    	aux=0;
+	 	}
+   	}
 	
 	return aux;
 }
-

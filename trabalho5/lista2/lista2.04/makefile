@@ -1,7 +1,7 @@
-all: NumeroChar
+all: lista2.04
 
-NumeroChar: lista2.04.o NumeroChar.o
-	gcc lista2.04.o NumeroChar.o -o NumeroChar
+lista2.04: lista2.04.o NumeroChar.o
+	gcc lista2.04.o NumeroChar.o -o lista2.04
 
 lista2.04.o: lista2.04.c
 	gcc -c lista2.04.c
@@ -13,4 +13,4 @@ clean:
 	rm -rf *.o
 
 mrproper: clean
-	rm -rf NumeroChar
+	rm -rf lista2.04
