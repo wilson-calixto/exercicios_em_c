@@ -2,25 +2,29 @@
 #include <stdlib.h>
 #include <string.h>
 
-void back(char v1[])
+void back(char v1[100])
 {
-    int tam;
+    int tam, i, cont=0;
     tam=strlen(v1);
-    char v2[50];
-    int i;
     char a =' ';
 
     for (i=0; i < tam ;i++)
     {
-	if (v1[i] && v1[i]+1 != a)
-	{
-		v2[i]=v1[i];
-    	}
-    	else
-    	{
-    	    v2[i]=a;
-    	}
+        if(v1[i] != a)
+        {
+            printf("%c",v1[i]);
+        }
+        if(v1[i] == a)
+        {
+            cont=cont+1;
+        }
+        if(cont==1)
+        {
+            printf("%c",a);
+        }
+        if(v1[i] ==a && v1[i+1] != a)
+        {
+            cont=0;
+        }
     }
-
-printf("%s\n", v2);
 }
