@@ -1,8 +1,8 @@
 /*
  *  *  Programação de Computadores e Algoritmos
  *     Trabalho 5
- *     Questão 4.06.2
- *     Equipe: 
+ *     Questão 4.06.2 
+ *     Equipe:   
  *     Benjamin Borges
  *     Jackson Gomes
  *     Richardson 
