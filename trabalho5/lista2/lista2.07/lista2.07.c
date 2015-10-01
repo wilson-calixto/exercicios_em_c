@@ -13,7 +13,7 @@ Grupo:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "funcao.h"
+#include "cont_str.h"
 
 int main(int argc, const char *argv[])
 {

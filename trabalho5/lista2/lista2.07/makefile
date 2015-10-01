@@ -1,11 +1,11 @@
-main:	    lista2.07.o funcao.o
-	gcc lista2.07.o funcao.o -o lista2.07
+main:	    lista2.07.o cont_str.o
+	gcc lista2.07.o cont_str.o -o lista2.07
 
-main.o: lista2.07.c
+lista2.07.o: lista2.07.c
 	gcc -c lista2.07.c
 
-funcao.o:  funcao.c	funcao.h
-	gcc -c funcao.c
+cont_str.o:  cont_str.c	cont_str.h
+	gcc -c cont_str.c
 
 clean:
 	rm *.o

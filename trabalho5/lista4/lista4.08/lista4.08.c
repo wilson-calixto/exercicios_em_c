@@ -12,7 +12,7 @@ Grupo:
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "funcao.h"
+#include "string_copy.h"
 
 int main (int argc, const char *argv[])
 {

@@ -99,6 +99,19 @@ lista2.07.o: lista2/lista2.07/lista2.07.c
 cont_str.o: lista2/lista2.07/cont_str.c
 	gcc -o $(path_obj)cont_str.o -c lista2/lista2.07/cont_str.c
 
+#bloco da lista4.08
+lista4.08: string_copy.o lista4.08.o
+	gcc $(path_obj)lista4.08.o $(path_obj)string_copy.o -o $(path_bin)lista4.08
+	
+lista4.08.o: lista4/lista4.08/lista4.08.c
+	gcc -o $(path_obj)lista4.08.o -c lista4/lista4.08/lista4.08.c
+	
+string_copy.o: lista4/lista4.08/string_copy.c
+	gcc -o $(path_obj)string_copy.o -c lista4/lista4.08/string_copy.c
+
+
+
+
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
