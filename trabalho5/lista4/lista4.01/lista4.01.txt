@@ -1,3 +1,16 @@
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 5
+ *     Questão 4.01
+ *     Equipe: 
+ *     Benjamin Borges
+ *     Jackson Gomes
+ *     Richardson 
+ *     Luiz Brandão
+ *     Wilson Calixto
+ */
+
+
 P:  Qual a diferença entre as expressões  "strcpy (s, t)"  e  "s = t" ? 
 
 R = Repare que STRINGs em C são implementadas como se fossem vetores: 
