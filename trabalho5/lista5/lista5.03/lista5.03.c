@@ -1,14 +1,16 @@
-/*
+ /*
  *  *  Programação de Computadores e Algoritmos
  *     Trabalho 5
  *     Questão 5.03
  *     Equipe: 
  *     Benjamin Borges
  *     Jackson Gomes
- *     Richardson 
+ *     Richardson Souza
  *     Luiz Brandão
  *     Wilson Calixto
  */
+
+ 
 
 
 #include <string.h>
