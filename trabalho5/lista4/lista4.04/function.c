@@ -11,12 +11,9 @@
  *          Ewerton Petillo
  *          
 */
-#include<stdio.h>
-#include <string.h>
-
 int position_char(char s[], char c,int tam)
 {
-    int i, pos=0;
+    int i, pos=-1;
     for (i=0; i<tam; i++)
     {
        if(s[i] ==  c)
@@ -27,4 +24,16 @@ int position_char(char s[], char c,int tam)
     return pos;
 }
  
- 
+int position(char s1[], char c, int tam, int pos) 
+{
+    int i, position=0, cont = 0;
+    for (i=pos; i<tam; i++)
+    {
+        if(s1[i]==c)
+        {
+            position = cont;
+        }else
+            cont++;
+    }
+    return position;
+}
