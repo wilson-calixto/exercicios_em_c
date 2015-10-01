@@ -2,11 +2,12 @@
  *  *  Programação de Computadores e Algoritmos
  *     Trabalho 5
  *     Questão 5.03
- *     Equipe: Benjamin Borges
+ *     Equipe: 
+ *     Benjamin Borges
  *     Jackson Gomes
  *     Richardson 
  *     Luiz Brandão
- *     Wilson Calisto
+ *     Wilson Calixto
  */
 
 
