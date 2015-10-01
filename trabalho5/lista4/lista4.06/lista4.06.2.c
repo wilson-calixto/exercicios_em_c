@@ -1,13 +1,15 @@
-/* Programacao de Computadores e ALgoritmos
- * Trabalho 5
- * 
- * Equipe:
- *          Wilson Calixto
- *          Jackson Gomes
- *          Richardson Souza
- *          Benjamin Borges
- *          Luiz Fernando
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 5
+ *     Questão 4.06
+ *     Equipe: 
+ *     Benjamin Borges
+ *     Jackson Gomes
+ *     Richardson 
+ *     Luiz Brandão
+ *     Wilson Calixto
  */
+
 
 #include <stdio.h>
 #include <stdlib.h>
