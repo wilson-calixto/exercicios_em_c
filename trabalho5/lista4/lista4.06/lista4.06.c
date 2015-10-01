@@ -5,7 +5,7 @@
  *     Equipe: 
  *     Benjamin Borges
  *     Jackson Gomes
- *     Richardson 
+ *     Richardson Souza
  *     Luiz Brandão
  *     Wilson Calixto
  */
