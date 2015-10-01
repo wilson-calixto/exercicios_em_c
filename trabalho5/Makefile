@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista4.08
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -88,16 +88,6 @@ lista4.05.o: lista4/lista4.05/lista4.05.c
 	
 position.o: lista4/lista4.05/position.c
 	gcc -o $(path_obj)position.o -c lista4/lista4.05/position.c
-
-#bloco da lista4.08
-lista4.08: funcao.o lista4.08.o
-	gcc $(path_obj)lista4.08.o $(path_obj)funcao.o -o $(path_bin)lista4.08
-	
-lista4.08.o: lista4/lista4.08/lista4.08.c
-	gcc -o $(path_obj)lista4.08.o -c lista4/lista4.08/lista4.08.c
-	
-funcao.o: lista4/lista4.08/funcao.c
-	gcc -o $(path_obj)funcao.o -c lista4/lista4.08/funcao.c
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
