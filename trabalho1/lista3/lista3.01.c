@@ -11,7 +11,8 @@ Equipe:
 	Fernando Antonio
 	Jailson Pereira
 	Juliany Raiol
-	Raí Santos*/
+	Raí Santos
+*/
 
 #include <stdio.h>
 
