@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+
+//codigo incompleto
+
 int main()
 {
     
