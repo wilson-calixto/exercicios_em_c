@@ -18,7 +18,8 @@ int position_char(char s[], char c,int tam)
     {
        if(s[i] ==  c)
        {
-           pos = i; 
+           pos = i;
+           break;
        }
     }
     return pos;
