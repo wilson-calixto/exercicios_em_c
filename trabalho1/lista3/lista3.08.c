@@ -9,11 +9,13 @@ Equipe:
      Fernando Antonio
      Jailson Pereira
      Juliany Raiol
-     Raí santos*/
+     Raí santos
+
+*/
 #include<stdio.h>
 
 int main(int argc,const char *argv[])
- {
+{
    float media, num, soma;
    int i;
    soma = 0;
