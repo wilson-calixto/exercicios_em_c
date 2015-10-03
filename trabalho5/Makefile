@@ -131,6 +131,15 @@ lista4.04.o: lista4/lista4.04/lista4.04.c
 position.o: lista4/lista4.04/position.c
 	gcc -o $(path_obj)position.o -c lista4/lista4.04/position.c
 	
+	
+#bloco da lista5.01
+lista5.01: lista5.01.o
+	gcc $(path_obj)lista5.01.o -o $(path_bin)lista5.01
+	
+lista5.01.o: lista5/lista5.01/lista5.01.c
+	gcc -o $(path_obj)lista5.01.o -c lista5/lista5.01/lista5.01.c
+	
+	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
