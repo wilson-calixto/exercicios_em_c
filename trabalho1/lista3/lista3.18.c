@@ -18,17 +18,22 @@ int main(int argc, const char *argv[])
 	int i, soma=0, v, num, maior, menor;
 	printf("digite a quantidade de valores:");
 	scanf("%d",&v);			//leitura da quantidade v de valores
-	for (i=1;i<=v;i++){
+	for (i=1;i<=v;i++)
+	{
 		printf("digite um numero: ");
 		scanf("%d",&num);	//leitura dos numeros
 		
-		if (i==1){
+		if (i==1)
+		{
 			maior=num;	
 			menor=num;
 		}
-		if(num>=maior){
+		if(num>=maior)
+		{
 			maior=num;
-		}else if (num<menor){
+		}
+		else if (num<menor)
+		{
 			menor=num;
 		}
 		soma=soma+num;		//acumulador da soma dos numeros
