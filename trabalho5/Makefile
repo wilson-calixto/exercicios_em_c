@@ -110,7 +110,15 @@ string_copy.o: lista4/lista4.08/string_copy.c
 	gcc -o $(path_obj)string_copy.o -c lista4/lista4.08/string_copy.c
 
 
-
+#bloco da lista2.08
+lista2.08: lista2.08.o esp.o
+	gcc $(path_obj)lista2.08.o $(path_obj)esp.o -o $(path_bin)lista2.08
+	
+lista2.08.o: lista2/lista2.08/lista2.08.c
+	gcc -o $(path_obj)lista2.08.o -c lista2/lista2.08/lista2.08.c
+	
+esp.o: lista2/lista2.08/esp.c
+	gcc -o $(path_obj)esp.o -c lista2/lista2.08/esp.c
 
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
