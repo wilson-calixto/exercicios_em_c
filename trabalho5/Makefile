@@ -120,6 +120,16 @@ lista2.08.o: lista2/lista2.08/lista2.08.c
 esp.o: lista2/lista2.08/esp.c
 	gcc -o $(path_obj)esp.o -c lista2/lista2.08/esp.c
 
+
+#bloco da lista4.04
+lista4.04: lista4.04.o position.o
+	gcc $(path_obj)lista4.04.o $(path_obj)position.o -o $(path_bin)lista4.04
+	
+lista4.04.o: lista4/lista4.04/lista4.04.c
+	gcc -o $(path_obj)lista4.04.o -c lista4/lista4.04/lista4.04.c
+	
+position.o: lista4/lista4.04/position.c
+	gcc -o $(path_obj)position.o -c lista4/lista4.04/position.c
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
