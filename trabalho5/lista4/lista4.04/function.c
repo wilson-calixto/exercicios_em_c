@@ -32,7 +32,7 @@ int position(char s1[], char c, int tam, int pos)
     {
         if(s1[i]==c)
         {
-            position = cont;
+            position = i;
         }else
             cont++;
     }
