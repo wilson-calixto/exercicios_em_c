@@ -16,16 +16,9 @@ Rodrigo oliveira
  LISTA 3 QUESTÃO 28 */
 
 
-
-
-
-int main(){
+int main()
+{
 	
-
-
-
-
-
 	int n,i;
 	float media,valor;
 
@@ -33,13 +26,14 @@ int main(){
 	scanf("%d",&n);
 	
 
-	for(i=1;i<=n;i++){
+	for(i=1;i<=n;i++)
+	{
 	
 		printf("valor do cd numero %d\n",i);
 		scanf("%f",&valor);
 		media+=valor;
 
-		}
+	}
 	media=(media/n);
 	printf("A media é %.2f",media);
 	
