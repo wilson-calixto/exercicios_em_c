@@ -7,7 +7,7 @@ void cont_str()
 	char stri[100];
 	int cont = 0, maior = 0, i, a;
 	printf("digite sua string com ate 100 caracteres: ");
-	fgets(stri,100,stdin); //aqui nao se usou o scanf, se usou o gets que se adequa melhor a situacao.
+	fgets(stri,100,stdin); //aqui nao se usou o scanf, se usou o fgets que se adequa melhor a situacao.
 	stri[strlen(stri) + 1] = 'c';
 
 	for (i = 0; i < (strlen(stri) + 1); i++)// a funcao "strlen" da biblioteca string eh usada para se obter o numero de elementos de um vetor
