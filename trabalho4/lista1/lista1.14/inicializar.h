@@ -1,1 +1,2 @@
-void inicializar( int matriz[][100], int m, int n );
+void inicializar( int **matriz, int m, int n );
+void print( int **matriz , int m, int n );

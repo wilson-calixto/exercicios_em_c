@@ -13,11 +13,14 @@ Grupo:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "f2.14.h"
 
 int main(void)
 {
-	int n;
-	printf("digite o número de sequencia: \n");
-	scanf("%d", &n);
-	farey(n);
+	int n;//declarar variavel n
+	printf("digite o número de sequencia: \n");//saida na tela
+	scanf("%d", &n); //recebe o valor do numero.
+	farey(n); //mostra a sequencia de farey para o numero informado.
+	
+	return 0;//retorna 0
 }

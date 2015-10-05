@@ -1,14 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 //Inserindo os valores de n nos vetores
-void insere_vetor(int tamanho, char **nome, float *salario, float *ref,float *val, int *hed,int *hen,int *nd,int *fal,int *de)
+void insere_vetor(int tamanho, char nome[][100], float *salario, float *ref,float *val, int *hed,int *hen,int *nd,int *fal,float *de)
 {
 	int i;
 	for ( i = 0; i < tamanho; i++ ) 
 	{
 		printf("Digite um nome: ");
-		//gets(nome[i][]);
+		scanf("%s",nome[i]);
+		fflush(stdin);
 		printf("Digite o salário: ");
 		scanf("%f",&salario[i]);
 		printf("Digite as horas extras diurnas: ");
@@ -20,22 +22,29 @@ void insere_vetor(int tamanho, char **nome, float *salario, float *ref,float *va
 		printf("Digite as faltas em horas: ");
 		scanf("%d",&fal[i]);
 		printf("Digite os descontos eventuais: ");
-		scanf("%d",&de[i]);
+		scanf("%f",&de[i]);
 		printf("Digite os gastos com refeiçoes na empresa: ");
 		scanf("%f",&ref[i]);
 		printf("Digite vales tirados durante o mes: ");
-		scanf("%f",&val[i]);		
+		scanf("%f",&val[i]);
+		fflush(stdin);		
 	}
 }
 
 
-void print_vetor(int tamanho, char **nome, float *salario, float *ref,float *val, int *hed,int *hen,int *nd,int *fal,int *de)
+void print_vetor(int n, char nome[][100], float *salario, float *ref,float *val, int *hed,int *hen,int *nd,int *fal,float *de)
 {
 	int i;
 	float *he, *sf, *sb, *df, *sl;
 	
+	he = (float*)  malloc (n*sizeof(float*));
+	sf = (float*)  malloc (n*sizeof(float*));
+	sb = (float*)  malloc (n*sizeof(float*));
+	df = (float*)  malloc (n*sizeof(float*));
+	sl = (float*)  malloc (n*sizeof(float*));
+	
 	//Cálculo para emissão da folha de pagamento
-	for ( i = 0; i < tamanho; i += 1 ) 
+	for ( i = 0; i < n; i ++ ) 
 	{
 		//Cálculo das horas extras
 		he[i] = (hed[i] * (salario[i]/160)) + ((hen[i] * 1.2) * (salario[i]/160));
@@ -54,7 +63,7 @@ void print_vetor(int tamanho, char **nome, float *salario, float *ref,float *val
 	}
 	
 	//Impressão do vetores
-	for ( i = 0; i < tamanho; i += 1 ) 
+	for ( i = 0; i < n; i ++ ) 
 	{
 		printf("Nome: %s", nome[i]);
 		printf("\nHoras Extras: %f",he[i]);
@@ -62,7 +71,7 @@ void print_vetor(int tamanho, char **nome, float *salario, float *ref,float *val
 		printf("\nSalario Bruto: %f", sb[i]);
 		printf("\nDescontos efetuados: %f",df[i]);
 		printf("\nSalario Liquido: %f",sl[i]);
-		printf("\n");
+		printf("\n\n");
 	}
 }
 		

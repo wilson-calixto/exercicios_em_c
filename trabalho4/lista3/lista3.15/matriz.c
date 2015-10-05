@@ -3,50 +3,47 @@
 
 
 
-int matriz(int **M, int *p)
+void matriz(int M[][100], int ordem)
 {
 	
-	int l, c, ordem=*p;
+	int l, c;
 
-	printf("Ordem da matriz: ");
-	scanf ("%d", &ordem);
-	printf("\n");
-
-	M = (int **)malloc(ordem * sizeof (int *));
+	/*M = (int **)malloc(ordem * sizeof (int *));
 	for (l = 0; l < ordem; ++l)
-	   M[l] = (int *)malloc(ordem * sizeof (int));
-
-	for (c = 0; c < ordem; ++c)
-		for (l = 0; l < ordem; ++l)
-		{	
-			printf("Valor[%d][%d]: ", l+1, c+1);
-			scanf ("%d", &M[l][c]);
-		}
-	printf("\n\n");
+	   M[l] = (int *)malloc(ordem * sizeof (int));*/
 
 	for (c = 0; c < ordem; ++c)
 	{
 		for (l = 0; l < ordem; ++l)
 		{	
-			printf("%d ", M[l][c]);
+			printf("Valor[%d][%d]: ", c, l);
+			scanf ("%d", &M[c][l]);
+		}
+		
+	}
+	
+	for (c = 0; c < ordem; c++)
+	{
+		for (l = 0; l < ordem; l++)
+		{	
+			printf("%d ", M[c][l]);
 		}
 		printf("\n");
 	}
 
-	free (M);
+	/*free (M);
 	M = NULL;
-	return 0;
+	return 0;*/
 }
 
-int teste_permutacao(int **M, int ordem)
+void teste_permutacao(int M[][100], int ordem)
 {
-    int  i, j, cont1=0, cont2=0;
+    int  i, j, cont1=0, cont2=0, aux=1;
     for (i=0; i < ordem; i++)
     {
-        
         for(j=0; j<ordem; j++)
         {
-            
+
             if(M[i][j]==0)
             {
                 cont1++;
@@ -56,9 +53,9 @@ int teste_permutacao(int **M, int ordem)
                 cont2++;
             }
         }
-      
+
     }
 
-    printf("valor de 1: %d \nvalor de 0: %d\n", cont1, cont2);
-    return 0;
+    printf("%d\n", cont1);
+    printf("%d\n", cont2);
 } 

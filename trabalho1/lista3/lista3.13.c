@@ -21,7 +21,8 @@ int main(int argc, const char *argv[])
 	temp=a;
 	printf("Digite o segundo número: \n");
 	scanf("%d",&b);
-	for (i=1;i<b;i++){ 
+	for (i=1;i<b;i++)
+	{ 
 		result=temp*a;
 		temp=result;
 	}

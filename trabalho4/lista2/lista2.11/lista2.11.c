@@ -29,26 +29,34 @@ int main()
     
     p = &a[0];
 
+    //Leitura das razoes do polinomio do grau 0 ate o ultimo grau
+
     for (i = 0; i <= n; i++)
     {
         printf("Digire o valor de A de Ax^%i: ", i);
         scanf("%d", p);
         p++;
     }
+
+    //Impressao do polinomio
     
     printf("\n f(x) = ");
 
-     for (i = (n); i >= 0; i--)
+        for (i = (n); i >= 0; i--)
     {
         printf("%dx^%d", a[i], i);
         if (i != 0)
             printf(" + ");
     }
+
+    //Calculo da derivada em cada um dos graus
     
     for (i = 0; i < n; i++)
     {
         b[i] = a[i+1] * (i+1); 
     }
+
+    //Impressao da derivada
    
     printf("\n f'(x) = ");
 

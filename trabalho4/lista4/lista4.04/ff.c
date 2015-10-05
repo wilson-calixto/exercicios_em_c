@@ -1,3 +1,15 @@
+/* Programacao de Computadores e ALgoritmos
+ * Trabalho 4
+ * 
+ * Equipe:
+ *
+ *          Paulo Henrique
+ *          Rai Santos 
+ *          Jackson Kelvin
+ *          Wilson Calisto 
+ */
+//Autor:Jackson Kelvin de Souza
+
 #include <stdio.h>
 #include <stdlib.h>
 

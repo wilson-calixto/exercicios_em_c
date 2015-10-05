@@ -1,4 +1,4 @@
-all: bin obj lista1.02 lista2.03 lista1.07 lista1.10 lista2.11 lista3.d4 is_pos lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06 lista2.22 lista2.17 lista2.09 lista3desafio2
+all: bin obj lista1.02 lista2.03 lista1.07 lista1.10 lista2.11 lista3.d4 is_pos lista2.15 lista2.20 lista2.25 lista1.6 lista2.2 lista4.4.a desafio3 lista2.10 lista3.11 lista2.07 lista3.08 lista3.3 lista1.1 lista1.03 lista1.08 lista1.11 lista2.04 lista2.13 lista2.18 lista3.05  lista3.09 lista4.01a lista4.01b lista4.06 lista2.23 lista1.04 lista3.10 lista2.05 lista4.02 lista2.12 lista4.7 lista3.01 lista3.06 lista2.22 lista2.17 lista2.09 lista3desafio2 lista1.05 lista1.09 lista1.13 lista2.01 lista2.6 lista2.16 lista2.21 lista3.2 lista3.7 desafio1 lista4.03a lista4.03b
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -357,7 +357,7 @@ lista1.02: lista1.02.o p.o
 lista1.02.o: lista1/lista1.02/lista1.02.c
 	gcc -o $(path_obj)lista1.02.o -c lista1/lista1.02/lista1.02.c
 
-p.o: lista1/lista1.02/p.o
+p.o: lista1/lista1.02/p.c
 	gcc -o $(path_obj)p.o -c lista1/lista1.02/p.c
 
 #bloco para compilar lista1.07
@@ -427,6 +427,121 @@ lista3.d4.o: lista3/desafio4/lista3.d4.c
 reverse.o: lista3/desafio4/reverse.o
 	gcc -o $(path_obj)reverse.o -c lista3/desafio4/reverse.c
 
+#bloco para compilar lista1.05
+lista1.5: sum_imp.o lista1.5.o 
+	gcc $(path_obj)lista1.5.o $(path_obj))sum_imp.o -o $(path_bin)lista1.5
+
+lista1.5.o: lista1/lista1.05/lista1.5.c
+	gcc -o $(path_obj)lista1.5.o -c  lista1/lista1.05/lista1.5.c
+
+sum_imp.o: lista1/lista1.05/sum_imp.c
+	gcc -o $(path_obj)sum_imp.o -c  lista1/lista1.05/sum_imp.c
+
+#bloco para compilar lista1.09
+lista1.9: reverse_number.o lista1.9.o
+	gcc $(path_obj)lista1.9.o $(path_obj))reverse_number.o -o $(path_bin)lista1.9
+	
+lista1.9.o: lista1/lista1.09/lista1.9.c
+	gcc -o $(path_obj)lista1.9.o -c lista1/lista1.09/lista1.9.c
+	
+reverse_number.o: lista1/lista1.09/reverse_number.c
+	gcc -o $(path_obj)reverse_number.o -c lista1/lista1.09/reverse_number.c
+
+#bloco para compilar lista1.13
+lista1.13: retangulo.o lista1.13.o
+	gcc $(path_obj)lista1.13.o $(path_obj)retangulo.o -o $(path_bin)lista1.13
+	
+lista1.13.o: lista1/lista1.13/lista1.13.c
+	gcc -o $(path_obj)lista1.13.o -c lista1/lista1.13/lista1.13.c
+	
+retangulo.o: lista1/lista1.13/retangulo.c retangulo.h
+	gcc -o $(path_obj)retangulo.o -c lista1/lista1.13/retangulo.c
+	
+#bloco para compilar lista2.01
+lista2.1: volume_esfera.o lista2.1.o util.o
+	gcc $(path_obj)lista2.1.o $(path_obj)volume_esfera.o util.o  -o $(path_bin)lista2.1
+
+lista2.1.o: lista2/lista2.01/lista2.1.c util.h
+	gcc -o $(path_obj)lista2.1.o -c lista2/lista2.01/lista2.1.c
+
+volume_esfera.o: lista2/lista2.01/vvolume_esfera.c
+	gcc -o $(path_obj)volume_esfera.o -c lista2/lista2.01/volume_esfera.c 
+
+#bloco para compilar lista2.06
+lista2.6: idadedias.o lista2.6.o
+	gcc $(path_obj)lista2.6.o $(path_obj)idadedias.o -o $(path_bin)lista2.6
+
+lista2.6.o: lista2/lista2.06/lista2.6.c
+	gcc -o $(path_obj)lista2.6.o-c lista2/lista2.06/lista2.6.c
+
+idadedias.o: lista2/lista2.06/idadedias.c
+	gcc -o $(path_obj)lista2.6.o -c lista2/lista2.06/idadedias.c 
+	
+#bloco para compilar lista2.16
+lista2.16: funcao.o lista2.16.o
+	gcc $(path_obj)lista2.16.o $(path_obj)funcao.o -o $(path_bin)lista2.16
+
+lista2.16.o: lista2/lista2.16/lista2.16.c
+	gcc -o $(path_obj)lista2.16.o-c lista2/lista2.16/lista2.16.c
+
+funcao.o: lista2/lista2.16/funcao.c
+	gcc -o $(path_obj)funcao.o -c lista2/lista2.16/funcao.c
+	
+#bloco para compilar lista2.21
+lista2.21:funcao.o lista2.21.o
+	gcc $(path_obj)funcao.o $(path_obj)lista2.21.o -o $(path_bin)lista2.21
+funcao.o: lista2/lista2.21/funcao.c
+	gcc -o $(path_obj)funcao.o -c lista2/lista2.21/funcao.c
+lista2.21.o: lista2/lista2.21/lista2.21.c
+	gcc -o $(path_obj)funcao.o -c lista2/lista2.21/lista2.21.c
+
+#bloco para compilar lista3.02
+lista3.2: lista3.2.o delta.o
+	gcc $(path_obj)lista3.2.o $(path_obj)delta.o -o $(path_bin)lista3.2
+
+lista3.2.o: lista3/lista3.02/lista3.2.c
+	gcc -o $(path_obj)lista3.2.o -c lista3/lista3.02/lista3.2.c
+
+delta.o: lista3/lista3.02/delta.c
+	gcc -o $(path_obj)lista3.2.o -c lista3/lista3.02/delta.c
+
+#bloco para compilar lista3.07
+lista3.07:lista3.07.o util.o
+	gcc $(path_obj)lista2.21.o $(path_obj)util.o -o $(path_bin)lista2.21
+
+lista3.07.o: lista3/lista3.07/lista3.07.c
+	gcc -o $(path_obj)lista2.21.o -c lista3/listalista3.07/lista3.07.c
+
+#bloco para compilar desafio01
+desafio1: primos.o desafio1.o
+	gcc $(path_obj)desafio1.o $(path_obj)primos.o -o $(path_bin)desafio1
+
+desafio1.o: trabalho2/lista3/desafio1/desafio1.c
+	gcc -o $(path_obj)desafio1.o -c trabalho2/lista3/desafio1/desafio1.c
+
+primos.o: trabalho2/lista3/desafio1/primos.c
+	gcc -o $(path_obj)primos.o -c trabalho2/lista3/desafio1/primos.c
+
+
+#bloco para compilar lista4.03a
+lista4.03a: bloco.o lista4.03a.o
+	gcc $(path_obj)lista4.03a.o $(path_obj)bloco.o -o $(path_bin)lista4.03a
+
+lista4.03a.o: trabalho2/lista4/lista4.03/lista4.03a.c
+	gcc -o $(path_obj)lista4.03a.o -c trabalho2/lista4/lista4.03/lista4.03a.c
+
+bloco.o: trabalho2/lista4/lista4.03/bloco.c
+	gcc -o $(path_obj)bloco.o -c trabalho2/lista4/lista4.03/bloco.c
+	
+#bloco para compilar lista4.03b
+lista4.03b: bloco_b.o lista4.03b.o
+	gcc $(path_obj)lista4.03b.o $(path_obj)bloco_b.o -o $(path_bin)lista4.03b
+
+lista4.03b.o: trabalho2/lista4/lista4.03/lista4.03b.c
+	gcc -o $(path_obj)lista4.03b.o -c trabalho2/lista4/lista4.03/lista4.03b.c
+
+bloco_b.o: trabalho2/lista4/lista4.03/bloco_b.c
+	gcc -o $(path_obj)bloco_b.o -c trabalho2/lista4/lista4.03/bloco_b.c
 
 
 #-------<Continue Aqui >-------

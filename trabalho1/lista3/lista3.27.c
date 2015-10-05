@@ -33,10 +33,11 @@ for(i=1;i<=turmas;i++)
 	{
 		printf("Voce digitou um numero maior que 40\n");
 		i=i-1;
-	}else{
+	}else
+	{
 		acm=acm+alunos;		
 	
-		}
+	}
 
 
 

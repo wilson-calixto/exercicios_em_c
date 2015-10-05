@@ -13,31 +13,29 @@ Grupo:
 
 
 #include <stdio.h>
-#include "funcao.h"
+#include <stdlib.h>
+#include "f3.6.h"
 
 int main(int argc, const char *argv[])
 {
+	int **a, i, j, M, N; //matriz A, i - contador que ira iterar menos, j - contador que ira iterar
+			     //M - numero de linhas da matriz A, N - numero de colunas da matriz A
+	printf("Quatidade de linha\n");
+	scanf("%d", &M);
+	printf("Quantidade de Coluna\n");
+	scanf("%d", &N);
 
-	int a,b,i,j,*p;
-
-	printf("Digite o tamanho da matriz:\n");
-	scanf("%d",&a);
-	scanf("%d",&b);
-	
-	int matriz[a][b];
-	p = &matriz;
-	
-	printf("Digite os valores da matriz:\n");
-	for (i=0; i<a; i++)
+	a=(int **)malloc (M * sizeof(int **)); //aloca 'M' endereços de memoria para a matriz A
+	for (i=0; i<M; i++)
 	{
-		for (j=0;j<b;j++)
+		a[i]=(int *)malloc (N * sizeof(int *)); // aloca 'N' endereços de memoria para cada vetor A[i]
+		for (j=0; j<N; j++) 
 		{
-			scanf("%d",&matriz[i][j]);
+			printf("Informe a[%d][%d]: ", i, j);
+			scanf("%d", &a[i][j]); //recebe do usuario um valor para a matriz A na posiçao [i][j].
 		}
 	}
-
-	int nulas(matriz);
-	printf("%d linhas nulas e %d colunas nulas. \n" ln,cn);		
-
+	
+	matriz(a, M, N);
 	return 0;
-}
+} 

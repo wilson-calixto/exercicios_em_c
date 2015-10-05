@@ -18,9 +18,10 @@ int main(int argc, const char *argv[])
 	int i=1, num;
 	printf("Digite o número: \n");
 	scanf("%d",&num);
-	while (i<=10){
+	while (i<=10)
+	{
 		printf("%d x %d= %d\n",num,i,num*i);
 		i++;
-		}
+	}
 	return 0;
 }

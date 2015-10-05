@@ -16,6 +16,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "../../util.c/util.h"
 
 int main ( int argc, char *argv[] )
 {

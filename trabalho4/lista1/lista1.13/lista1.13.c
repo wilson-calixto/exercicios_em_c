@@ -16,7 +16,7 @@ Grupo:
 
 int main(int argc, const char *argv[])
 {
-	int x, *p, **q;
+	int x, *p, **q; // variaveis declaradas
 
 	p = &x; //p = 0x0000x, *p = x;
 	q = &p; //q = 0x0000p, *q = 0x0000x, **q = 10; 

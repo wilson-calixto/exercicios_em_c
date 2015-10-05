@@ -14,7 +14,7 @@ Grupo:
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "function.h"
+#include "f2.4.h"
 
 int main(int argc, const char *argv[])
 {

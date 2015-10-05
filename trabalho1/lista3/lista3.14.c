@@ -11,22 +11,25 @@
  *  Grupo 1 - 
  *  */
 
-#include	<stdio.h>
+#include <stdio.h>
 
 int main ( int argc, char *argv[] )
 {
 	int i, num, cpar = 0, cimp = 0;
-	for (i = 0; i <= 9; i++) {
+	for (i = 0; i <= 9; i++)
+	{
 		printf("Digite o %d numero\n", i+1);
 		scanf("%d", &num);
-		if (num % 2 == 0){
+		if (num % 2 == 0)
+		{
 			cpar++; 
-		}else{
+		}
+		else
+		{
 			cimp++;
 		}
 	}
 	printf("Quantidade de numeros pares: %d\n", cpar);	
 	printf("Quantidade de numeros impares: %d\n", cimp);	
 	return 0;
-}				// ----------  end of function main  ----------
-
+}

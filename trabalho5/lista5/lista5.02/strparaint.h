@@ -1,0 +1,1 @@
+int strparaint(char *string);

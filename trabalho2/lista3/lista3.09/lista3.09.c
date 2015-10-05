@@ -11,8 +11,6 @@
  *    
  *    */
 
-
- */
 int main ( int argc, char *argv[] )
 {
 	int i,num1=0,num2=0,num3=0,num4=0,num5=0,num6=0, numero;
