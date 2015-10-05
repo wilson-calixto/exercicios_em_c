@@ -139,6 +139,15 @@ lista5.01: lista5.01.o
 lista5.01.o: lista5/lista5.01/lista5.01.c
 	gcc -o $(path_obj)lista5.01.o -c lista5/lista5.01/lista5.01.c
 	
+#bloco da questao02
+Permutacao: questao02.o Permutacao.o
+	gcc $(path_obj)questao02.o $(path_obj)Permutacao.o -o $(path_bun)Permutacao
+	
+questao02.o: parte2/questao02/questao02.c
+	gcc -o $(path_obj)questao02.o -c parte2/questao02/questao02.c
+	
+Permutacao.o: parte2/questao02/Permutacao.c
+	gcc -o $(path_obj)Permutacao.o -c parte2/questao02/Permutacao.c 
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
