@@ -16,17 +16,17 @@
 
 int main()
 {
-    int *n, num, i;
+    int *n, num, i; //vetor do conjunto, num - numero de elementos, i - contador
 
     puts("Informe a quantidade de numeros:");
-    scanf("%d", &num);
+    scanf("%d", &num); //recebe o numero de elementos
 
-    n = malloc(sizeof(int) * num);
+    n = malloc(sizeof(int) * num); //aloca 'num' endereços de memoria para o vetor 'n'
 
     puts("Informe o valores:");
-    LerVetor(n, num);
+    LerVetor(n, num); //lê os valores para o vetor 'n'
 
-    ListP(n, num);   
+    ListP(n, num); //lista as permutaçoes do vetor 'n'
 
     return 0;
 }
