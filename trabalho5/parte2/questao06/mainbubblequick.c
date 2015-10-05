@@ -1,3 +1,16 @@
+ /*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 5
+ *     Questão 5.03
+ *     Equipe: 
+ *     Benjamin Borges
+ *     Jackson Gomes
+ *     Richardson Souza
+ *     Luiz Brandão
+ *     Wilson Calixto
+ */
+
+
 //Bibliotecas utilizadas
 #include <stdio.h>
 #include <stdlib.h>
