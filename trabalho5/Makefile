@@ -141,7 +141,7 @@ lista5.01.o: lista5/lista5.01/lista5.01.c
 	
 #bloco da questao02
 Permutacao: questao02.o Permutacao.o
-	gcc $(path_obj)questao02.o $(path_obj)Permutacao.o -o $(path_bun)Permutacao
+	gcc $(path_obj)questao02.o $(path_obj)Permutacao.o -o $(path_bin)Permutacao
 	
 questao02.o: parte2/questao02/questao02.c
 	gcc -o $(path_obj)questao02.o -c parte2/questao02/questao02.c
