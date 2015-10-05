@@ -1,0 +1,26 @@
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 5
+ *     Questão 4.02
+ *     
+       Equipe: 
+       Andressa
+       Delrick 
+ *     Juliany
+ *     Lucas Botinelly
+ *     Sérgio  
+ *   
+ */
+
+- Qual a diferença entre as expressões  “if (strcmp (s, t) < 0)”  e  “if (s < t)” ?
+
+A primeira função, irá inicialmente comparar os dois arrays (devolvendo um número positivo 
+se o primeiro for maior que o segundo,  0 se eles forem iguais e negativo se o segundo for maior que o primeiro), 
+e só então irá comparar esse valor com 0, onde se o mesmo for menor, a cadeia de comando será chamada.
+
+Já no segundo código, a verificação irá apenas comparar se um é menor que o outro, devolvendo um True ou false.
+
+ função strcmp (o nome é uma abreviatura de string compare) recebe duas strings e compara as duas lexicograficamente. 
+ Ela devolve um número estritamente negativo se a primeira string for lexicograficamente menor que a segunda, devolve 0 
+ se as duas strings são iguais e devolve um número estritamente positivo se a primeira string for lexicograficamente 
+ maior que a segunda.

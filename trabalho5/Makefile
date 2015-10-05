@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2
 
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
@@ -68,6 +68,20 @@ lista4.06.o: lista4/lista4.06/lista4.06.c
 sf_extend.o: lista4/lista4.06/sf_extend.c
 	gcc -o $(path_obj)sf_extend.o -c lista4/lista4.06/sf_extend.c
 	
+	
+
+#bloco da lista4.06.2
+lista4.06.2: sf_extend.o lista4.06.2.o
+	gcc $(path_obj)lista4.06.2.o $(path_obj)sf_extend.o -o $(path_bin)lista4.06.2
+
+lista4.06.2.o: lista4/lista4.06/lista4.06.2.c
+	gcc -o $(path_obj)lista4.06.2.o -c lista4/lista4.06/lista4.06.2.c
+
+sf_extend.o: lista4/lista4.06/sf_extend.c
+	gcc -o $(path_obj)sf_extend.o -c lista4/lista4.06/sf_extend.c
+
+
+
 	
 #bloco  da lista2.05
 lista2.05: palindromo.o lista2.05.o
@@ -139,6 +153,22 @@ lista5.01: lista5.01.o
 lista5.01.o: lista5/lista5.01/lista5.01.c
 	gcc -o $(path_obj)lista5.01.o -c lista5/lista5.01/lista5.01.c
 	
+#bloco da lista2.03
+lista2.03: lista2.03.o
+	gcc $(path_obj)lista2.03.o -o $(path_bin)lista2.03
+	
+lista2.03.o: lista2/lista2.03/lista2.03.c
+	gcc -o $(path_obj)lista2.03.o -c lista2/lista2.03/lista2.03.c
+	
+#bloco da questao02
+Permutacao: questao02.o Permutacao.o
+	gcc $(path_obj)questao02.o $(path_obj)Permutacao.o -o $(path_bin)Permutacao
+	
+questao02.o: parte2/questao02/questao02.c
+	gcc -o $(path_obj)questao02.o -c parte2/questao02/questao02.c
+	
+Permutacao.o: parte2/questao02/Permutacao.c
+	gcc -o $(path_obj)Permutacao.o -c parte2/questao02/Permutacao.c 
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
