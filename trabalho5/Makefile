@@ -139,6 +139,13 @@ lista5.01: lista5.01.o
 lista5.01.o: lista5/lista5.01/lista5.01.c
 	gcc -o $(path_obj)lista5.01.o -c lista5/lista5.01/lista5.01.c
 	
+#bloco da lista2.03
+lista2.03: lista2.03.o
+	gcc $(path_obj)lista2.03.o -o $(path_bin)lista2.03
+	
+lista2.03.o: lista2/lista2.03/lista2.03.c
+	gcc -o $(path_obj)lista2.03.o -c lista2/lista2.03/lista2.03.c
+	
 #bloco da questao02
 Permutacao: questao02.o Permutacao.o
 	gcc $(path_obj)questao02.o $(path_obj)Permutacao.o -o $(path_bin)Permutacao
