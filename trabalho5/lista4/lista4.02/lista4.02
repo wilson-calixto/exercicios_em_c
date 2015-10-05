@@ -1,4 +1,16 @@
-
+/*
+ *  *  Programação de Computadores e Algoritmos
+ *     Trabalho 5
+ *     Questão 4.02
+ *     
+       Equipe: 
+       Andressa
+       Delrick 
+ *     Juliany
+ *     Lucas Botinelly
+ *     Sérgio  
+ *   
+ */
 
 - Qual a diferença entre as expressões  “if (strcmp (s, t) < 0)”  e  “if (s < t)” ?
 
