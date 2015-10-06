@@ -2,10 +2,10 @@
  *  *  Programação de Computadores e Algoritmos
  *     Trabalho 5
  *     Questão 5.02
- *     Equipe: Manoel Victor
- *     Wilson Araujo
- *     Paulo Marinho
- *       
+ *     Equipe: 
+ *	Manoel Victor
+ *      Paulo Marinho
+ *      Wilson Araujo 
  *   
  */
 

@@ -16,7 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "NumeroChar.h"
-#define TAM 10
+#define TAM 10000
 
 
 int main(int argc, const char *argv[])

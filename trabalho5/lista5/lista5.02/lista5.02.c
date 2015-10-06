@@ -2,19 +2,19 @@
  *  *  Programação de Computadores e Algoritmos
  *     Trabalho 5
  *     Questão 5.02
- *     Equipe: Manoel Victor
- *     Wilson Araujo
- *     Paulo Marinho
- *       
+ *     Equipe: 
+ *	Manoel Victor
+ *      Paulo Marinho
+ *      Wilson Araujo 
  *   
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "strparaint.h"
-#define TAMANHO 10
+#define TAMANHO 10000
 
-int main()
+int main(int argc, const char *argv[])
 {
     int numero;
     char string[TAMANHO]; //declara o tamanho da string
