@@ -18,14 +18,14 @@
 
 int main ( int argc, char *argv[] )
 {
-    int x, y, z;
+    int x, y;
+    
     printf ( "digite o valor de x:\n" );
     scanf ( "%d", &x );
     printf ( "digite o valor de y:\n" );
     scanf ( "%d", &y );
-    
-    z = ( soma ( x , y ) );
-    printf ( "%d\n" , z );
-
+  
+    printf("%d", inc(x,y));
+  
     return 0;
 }
