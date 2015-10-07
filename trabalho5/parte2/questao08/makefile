@@ -1,7 +1,7 @@
 all: q08
 
 q08: soma.o q08.o
-	gcc soma.o q08.o -o q08.o
+	gcc soma.o q08.o -o q08
 
 soma.o: soma.c
 	gcc -c soma.c
