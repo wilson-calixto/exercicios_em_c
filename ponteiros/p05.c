@@ -4,7 +4,6 @@
 int main(int argc, const char *argv[])
 {
 	int *v;
-	int
 	int i;
 
 	v = malloc( 10 * sizeof(int) ); // int v[10]
