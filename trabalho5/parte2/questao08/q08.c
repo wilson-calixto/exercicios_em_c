@@ -1,4 +1,4 @@
-/* Programacao de Computadores e ALgoritmos
+/* Programacao de Computadores e Algoritmos
  * Trabalho 5 
  * 
  * Equipe:
@@ -18,14 +18,14 @@
 
 int main ( int argc, char *argv[] )
 {
-    int x, y;
+    int x, y; //numeros a serem somados
     
     printf ( "digite o valor de x:\n" );
-    scanf ( "%d", &x );
+    scanf ( "%d", &x ); //recebe o valor de x
     printf ( "digite o valor de y:\n" );
-    scanf ( "%d", &y );
+    scanf ( "%d", &y );//recebe o valor de y
   
-    printf("%d", inc(x,y));
+    printf("%d\n", inc(x,y)); //mostra o valor de 'y' incrementos sucessivos em 'x'
   
     return 0;
 }
