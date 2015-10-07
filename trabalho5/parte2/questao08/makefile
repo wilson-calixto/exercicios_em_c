@@ -1,16 +1,16 @@
-all:lista2.08
+all: q08
 
-lista2.08: esp.o lista2.08.o
-	gcc esp.o lista2.08.o -o lista2.08
+q08: soma.o q08.o
+	gcc soma.o q08.o -o q08.o
 
-esp.o: esp.c
-	gcc -c esp.c
+soma.o: soma.c
+	gcc -c soma.c
 
-lista2.08.o: lista2.08.c
-	gcc -c lista2.08.c
+q08.o: q08.c
+	gcc -c q08.c
 
 clean:
 	rm -rf *.o
 
 mrproper: clean
-	rm -rf lista2.08
+	rm -rf q08
