@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int contador = 0;
 
 int expo(int k, int n)
@@ -20,13 +18,7 @@ int expo(int k, int n)
     }
 }
 
-int main()
+int cont()
 {
-    int k, n;
-    printf("Informe numeros positivos nao nulos (Z*).\n");
-    scanf("%d %d", &k,&n);    
-    printf("%d\n", expo(k,n));
-    printf("%d\n", contador);
-   
-    return 0;
+    return contador;
 }
