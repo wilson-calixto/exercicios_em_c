@@ -187,7 +187,7 @@ exponenciacao: expo.o q07.o
 q07.o:	parte2/questao07/q07.c
 	gcc -o $(path_obj)q07.o -c parte2/questao07/q07.c
 	
-expo.o: parte2/questa07/expo.c
+expo.o: parte2/questao07/expo.c
 	gcc -o $(path_obj)expo.o -c parte2/questao07/expo.c
 #-----------------------------------------------------------------------------------
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
