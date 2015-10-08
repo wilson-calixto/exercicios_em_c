@@ -22,12 +22,4 @@ int main()
             matriz[linha][coluna]=a;
         }
     }
-    // imprimindo a matriz na tela
-    for(linha = 0 ; linha < TAM ; linha++)
-    {
-        for(coluna = 0 ; coluna < TAM ; coluna++)
-            printf("%d", matriz[linha][coluna]);
-
-        printf("\n"); //após cada linha ser impressa, um salto de linha
-    }
 }
