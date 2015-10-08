@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick exponenciacao
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick parte2.07
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -179,12 +179,12 @@ mainbubblquick.o: parte2/questao06/mainbubblequick.c
 quick.o: parte2/questao06/quick.c
 	gcc -o $(path_obj)quick.o -c parte2/questao06/quick.c
 	
-#bloco da questao exponenciao sucessiva -- parte2 q07
+#bloco da questao exponenciao sucessiva -- parte2.07
 
-exponenciacao: expo.o parte2.07.o
-	gcc $(path_obj)expo.o $(path_obj)parte2.07.o -o $(path_bin)exponenciacao
+parte2.07: expo.o parte2.07.o
+	gcc $(path_obj)expo.o $(path_obj)parte2.07.o -o $(path_bin)parte2.07
 	
-parte2.07.o:	parte2/questao07/parte2.07.c
+parte2.07.o: parte2/questao07/parte2.07.c
 	gcc -o $(path_obj)parte2.07.o -c parte2/questao07/parte2.07.c
 	
 expo.o: parte2/questao07/expo.c
