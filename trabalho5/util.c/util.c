@@ -71,8 +71,6 @@ void LerVetor(int n[], int num)
 //Função Quick Sort : Ordenação de numeros
 
 
-#include 
-
 void Quick(int vetor[], int inicio, int fim){
    
    int pivo, aux, i, j, meio;
