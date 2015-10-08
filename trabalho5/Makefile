@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 mainbubblequick
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -170,15 +170,14 @@ Permutacao.o: parte2/questao02/Permutacao.c
 	gcc -o $(path_obj)Permutacao.o -c parte2/questao02/Permutacao.c 
 	
 #bloco da questao07
-mainbubblequick: mainbubblequick.o quick.o
-	gcc $(path_obj)mainbubblequick.o $(path_obj)quick.o -o $(path_bin)mainbubblequick
+quick: mainbubblequick.o quick.o
+	gcc $(path_obj)mainbubblequick.o $(path_obj)quick.o -o $(path_bin)quick
 	
-mainbubblequick.o: parte2/questao06/mainbubblequick.c
+mainbubblquick.o: parte2/questao06/mainbubblequick.c
 	gcc -o $(path_obj)mainbubblequick.o -c parte2/questao06/mainbubblequick.c
 	
 quick.o: parte2/questao06/quick.c
-
-	gcc -o $(path_obj)quick.o -c parte2/questao06/mainbubblequick.c
+	gcc -o $(path_obj)quick.o -c parte2/questao06/quick.c
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
