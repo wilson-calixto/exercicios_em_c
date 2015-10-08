@@ -173,7 +173,7 @@ Permutacao.o: parte2/questao02/Permutacao.c
 quick: mainbubblequick.o quick.o
 	gcc $(path_obj)mainbubblequick.o $(path_obj)quick.o -o $(path_bin)quick
 	
-mainbubblquick.o: parte2/questao06/mainbubblequick.c
+mainbubblequick.o: parte2/questao06/mainbubblequick.c
 	gcc -o $(path_obj)mainbubblequick.o -c parte2/questao06/mainbubblequick.c
 	
 quick.o: parte2/questao06/quick.c
