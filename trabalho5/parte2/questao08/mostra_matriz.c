@@ -28,8 +28,9 @@ void mostra_caminho(float **mat)
         	if(mat[i][j]==2)
         	{
             	printf ( "0");
-            }else{
-            
+            }
+            else
+            {
             	printf ( "1");
             }
             
