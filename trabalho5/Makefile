@@ -173,12 +173,12 @@ Permutacao.o: parte2/questao02/Permutacao.c
 mainbubblequick: mainbubblequick.o quick.o
 	gcc $(path_obj)mainbubblequick.o $(path_obj)quick.o -o $(path_bin)mainbubblequick
 	
-questao02.o: parte2/questao02/questao02.c
-	gcc -o $(path_obj)questao02.o -c parte2/questao02/questao02.c
+mainbubblequick.o: parte2/questao06/mainbubblequick.c
+	gcc -o $(path_obj)mainbubblequick.o -c parte2/questao06/mainbubblequick.c
 	
-Permutacao.o: parte2/questao02/Permutacao.c
+quick.o: parte2/questao06/quick.c
 
-	gcc -o $(path_obj)Permutacao.o -c parte2/questao02/Permutacao.c 
+	gcc -o $(path_obj)quick.o -c parte2/questao06/mainbubblequick.c
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
