@@ -2,10 +2,12 @@
 // FUNCAO PARA CRIAR A MATRIZ COM NUMEROS DE 0 A 1
 //wilson-neto
 
+#include <stdlib.h>
 #include <time.h>
 //definindo tamanho da matriz 10x10
 #define TAM 10
-int main()
+
+void criar_matriz()
 {
 	int matriz[TAM][TAM],a;
 	int linha, coluna;
