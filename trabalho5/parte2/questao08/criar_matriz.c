@@ -3,6 +3,7 @@
 //wilson-neto
 
 #include <stdlib.h>
+//bibloteca para usar a função rand()
 #include <time.h>
 //definindo tamanho da matriz 10x10
 #define TAM 10
@@ -20,6 +21,7 @@ void criar_matriz(float **mat)
 		for(coluna = 0 ; coluna < TAM ; coluna++)
 		{
 			//gera numeros aleatoros de 0 até 149
+			//valor depois % é até o numero-1 que irá chegar
 			a=rand() %150;
 			//diminui a probabilidade de gerar o numero 1
 			if(a<40)
