@@ -70,7 +70,6 @@ void LerVetor(int n[], int num)
 //--------------------------------------------------------------------------------------------------------------------
 //Função Quick Sort : Ordenação de numeros
 
-//Bibliotecas utilizadas
 #include <stdio.h>
 #include <stdlib.h>
 
