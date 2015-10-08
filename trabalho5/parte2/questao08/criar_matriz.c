@@ -26,11 +26,13 @@ void criar_matriz(float **mat)
 			//diminui a probabilidade de gerar o numero 1
 			if(a<40)
 			{
+				//gera numero '1' de acordo com a probabilidade
 				matriz[linha][coluna]=1;
 			}
 			//aumenta a possibilidade e gerar o numero 0
 			else
 			{
+				//gera o numero '0' de acordo com a probabilidade
 				matriz[linha][coluna]=0;
 			}
 		}
