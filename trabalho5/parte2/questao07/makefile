@@ -1,7 +1,7 @@
-all: exponenciacao
+all: parte2.07
 
-exponenciacao: parte2.07.o expo.o
-	gcc expo.o parte2.07.o -o exponenciacao
+parte2.07: parte2.07.o expo.o
+	gcc expo.o parte2.07.o -o parte2.07
 
 expo.o: expo.c
 	gcc -c expo.c
@@ -13,4 +13,4 @@ clear:
 	rm -rf *.o
 
 mrproper:
-	rm -rf exponenciacao
+	rm -rf parte2.07
