@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick parte2.07
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick parte2.07 incremento
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -173,7 +173,7 @@ Permutacao.o: parte2/questao02/Permutacao.c
 quick: mainbubblequick.o quick.o
 	gcc $(path_obj)mainbubblequick.o $(path_obj)quick.o -o $(path_bin)quick
 	
-mainbubblequick.o: parte2/questao06/mainbubblequick.c
+mainbubblquick.o: parte2/questao06/mainbubblequick.c
 	gcc -o $(path_obj)mainbubblequick.o -c parte2/questao06/mainbubblequick.c
 	
 quick.o: parte2/questao06/quick.c
@@ -189,7 +189,18 @@ parte2.07.o: parte2/questao07/parte2.07.c
 	
 expo.o: parte2/questao07/expo.c
 	gcc -o $(path_obj)expo.o -c parte2/questao07/expo.c
-#-----------------------------------------------------------------------------------
+	
+#bloco da questao incremento sucessivo -- questao 09 parte 2
+
+incremento: soma.o q09.o
+	gcc $(path_obj)soma.o $(path_obj)q09.o -o $(path_bin)incremento
+	
+soma.o: parte2/questao07/soma.c
+	gcc -o $(path_obj)soma.o -c parte2/questao07/soma.c
+	
+q09.o: parte2/questao07/q09.c
+	gcc -o $(path_obj)q09.o -c parte2/questao07/q09.c
+#----------------------------------------------------------------------------------
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
