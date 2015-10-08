@@ -1,13 +1,13 @@
 all: exponenciacao
 
-exponenciacao: q07.o expo.o
-	gcc expo.o q07.o -o exponenciacao
+exponenciacao: parte2.07.o expo.o
+	gcc expo.o parte2.07.o -o exponenciacao
 
 expo.o: expo.c
 	gcc -c expo.c
 
-q07.o: q07.c
-	gcc -c q07.c
+parte2.07.o: parte2.07.c
+	gcc -c parte2.07.c
 
 clear:
 	rm -rf *.o
