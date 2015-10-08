@@ -15,8 +15,8 @@ int main ( int argc, const char *argv[] )
     // cria um vetor desordenado
     b=create_vec_rand(n);
     //print_vec(n,b);
-    gettimeofday(&inicio,NULL);
-    bubblesort (n,b); // funcao para organizar vetor desordenado
+    gettimeofday(&inicio, NULL);
+    bubblesort (b,n); // funcao para organizar vetor desordenado
     for ( j = 0; j < 10; j++ )
         for ( i = 0; i < 1387634340; i++ );
     gettimeofday(&final, NULL);
@@ -26,7 +26,7 @@ int main ( int argc, const char *argv[] )
 
     //print_vec(n,b);
     gettimeofday(&inicio,NULL);
-    bubblesort(n,b); // chama novamente a funcao para um vetor ja ordenado
+    bubblesort(b,n); // chama novamente a funcao para um vetor ja ordenado
     for ( j = 0; j < 10; j++ )
         for ( i = 0; i < 1387634340; i++ );
     gettimeofday(&final, NULL);

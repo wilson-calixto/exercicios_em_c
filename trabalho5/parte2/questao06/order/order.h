@@ -1,4 +1,4 @@
-void bubblesort (int n, int *v);
+void bubblesort (int *v, int n);
 
 int *create_vec_rand(int n);
 

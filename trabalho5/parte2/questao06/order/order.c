@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
+/* Funcao cria um vetor n posições com valores aleatótios entre 0 a n-1 */
 int *create_vec_rand(int n)
 {
     int *v, i;
@@ -17,6 +18,8 @@ int *create_vec_rand(int n)
     return v;
 }
 
+
+/* Função cria um vetor de n posições com valores ordenados de 0 a n */
 int *create_vec_ord(int n)
 {
     int *v, i;
@@ -31,6 +34,7 @@ int *create_vec_ord(int n)
     return v;
 }
 
+/* Função imprime um vetor de n posições */
 void print_vec(int n, int *v)
 {
     int i;
@@ -39,11 +43,11 @@ void print_vec(int n, int *v)
     {
         printf ( "%d ", v[i] );
     } 
-
     printf ( "\n" );
 }
 
-void bubblesort (int n, int *v)
+/* Função implementa o modo de bolha recursivo para ordenação de um vetor de n posições */
+void bubblesort (int *v, int n)
 {
     int j, change=0;
 
@@ -59,10 +63,11 @@ void bubblesort (int n, int *v)
     }
     if (change != 0)
     {
-        bubblesort (n-1,v);
+        bubblesort (v,n-1);
     }
 }
 
+/* Função implementa um quicksort para ordenação de um vetorde n posições */
 void quick( int *v, int inicio, int fim)
 {
     int pivo, temp, i, j, meio;
@@ -82,8 +87,7 @@ void quick( int *v, int inicio, int fim)
         while (v[j] > pivo)
         {
             j=j-1;
-        }
-        
+        }      
         if(i<=j)
         {
             temp=v[i];
@@ -92,7 +96,6 @@ void quick( int *v, int inicio, int fim)
             i=i+1;
             j=j-1;
         }
-
     }
 
     if (inicio < j)
@@ -103,7 +106,4 @@ void quick( int *v, int inicio, int fim)
     {
         quick(v, i, fim);
     }
-
 }
-
-
