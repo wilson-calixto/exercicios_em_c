@@ -14,7 +14,7 @@
 //Bibliotecas utilizadas
 #include <stdio.h>
 #include <stdlib.h>
-#include "util.h"
+#include "../../util.c/util.h"
  
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
