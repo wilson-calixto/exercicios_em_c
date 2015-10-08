@@ -7,7 +7,7 @@
 //definindo tamanho da matriz 10x10
 #define TAM 10
 
-void criar_matriz()
+void criar_matriz(float **mat)
 {
 	int matriz[TAM][TAM],a;
 	int linha, coluna;
