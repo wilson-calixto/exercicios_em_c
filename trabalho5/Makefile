@@ -195,11 +195,11 @@ expo.o: parte2/questao07/expo.c
 parte2.09: soma.o parte2.09.o
 	gcc $(path_obj)soma.o $(path_obj)parte2.09.o -o $(path_bin)incremento
 	
-soma.o: parte2/questao07/soma.c
-	gcc -o $(path_obj)soma.o -c parte2/questao07/soma.c
+soma.o: parte2/questao09/soma.c
+	gcc -o $(path_obj)soma.o -c parte2/questao09/soma.c
 	
-parte2.09.o: parte2/questao07/parte2.09.c
-	gcc -o $(path_obj)parte2.09.o -c parte2/questao07/parte2.09.c
+parte2.09.o: parte2/questao09/parte2.09.c
+	gcc -o $(path_obj)parte2.09.o -c parte2/questao09/parte2.09.c
 #----------------------------------------------------------------------------------
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
