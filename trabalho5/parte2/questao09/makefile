@@ -1,10 +1,10 @@
-all: q08
+all: incremento
 
-q08: soma.o q08.o
-	gcc soma.o q08.o -o q08
+incremento: soma.o q09.o
+	gcc soma.o q09.o -o incremento
 
-q08.o: q08.c
-	gcc -c q08.c
+q09.o: q09.c
+	gcc -c q09.c
 
 soma.o: soma.c
 	gcc -c soma.c
@@ -13,4 +13,4 @@ clean:
 	rm -rf *.o
 
 mrproper: clean
-	rm -rf q08
+	rm -rf incremento
