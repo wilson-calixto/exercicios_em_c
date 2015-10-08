@@ -170,13 +170,14 @@ Permutacao.o: parte2/questao02/Permutacao.c
 	gcc -o $(path_obj)Permutacao.o -c parte2/questao02/Permutacao.c 
 	
 #bloco da questao07
-Permutacao: questao02.o Permutacao.o
-	gcc $(path_obj)questao02.o $(path_obj)Permutacao.o -o $(path_bin)Permutacao
+mainbubblequick: mainbubblequick.o quick.o
+	gcc $(path_obj)mainbubblequick.o $(path_obj)quick.o -o $(path_bin)mainbubblequick
 	
 questao02.o: parte2/questao02/questao02.c
 	gcc -o $(path_obj)questao02.o -c parte2/questao02/questao02.c
 	
 Permutacao.o: parte2/questao02/Permutacao.c
+
 	gcc -o $(path_obj)Permutacao.o -c parte2/questao02/Permutacao.c 
 	
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
