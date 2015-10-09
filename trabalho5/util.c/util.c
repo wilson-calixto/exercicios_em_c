@@ -42,7 +42,7 @@ int select_sort(int num[], int tam)
 		min=i;
 		for(j=(i+1);j<tam;j++)
 		{
-			if(num[j] < num[min]
+			if(num[j] < num[min])
 				min=j;
 		}
 		if (i!=min)
