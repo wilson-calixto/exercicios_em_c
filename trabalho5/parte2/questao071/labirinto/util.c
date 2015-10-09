@@ -2,7 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*
+/* 
+ * Função cria uma matriz 10x10 com elementos 0 ou 1 
+ * incrementados randomicamente
+ * com p[0][0]=0 e p[9][9]=0
+ * retornando a matriz
+ */
 int **create_matrix()
 {
     int **p, i, j;
@@ -24,8 +29,8 @@ int **create_matrix()
 
     return p;
 }
-*/
 
+/*
 int **create_matrix()
 {
     int **p,i,j;
@@ -40,6 +45,7 @@ int **create_matrix()
     }
     return p;
 }
+*/
 
 void print_matrix (int **m)
 {
@@ -57,56 +63,107 @@ void print_matrix (int **m)
 
 int find_exit (int **m, int x, int y)
 {
-
+    // se chegar na posição m[9][9] retorna 1
     if (x==9 && y==9)
     {
         return 1;
     }
-
-    else if (x>0 && m[x][y+1]==0 && y<10)
+    // se m[0][0] pode ir uma posição para direita ou uma para abaixo
+    // chama a função novamente com a posição atualizada
+    // se não não a saida retornando 0
+    else if (x==0 && y==0)
     {
-        //return 1;
-        return find_exit(m,x,y+1);
+        if (m[x][y+1]==0)
+        {
+            return find_exit(m,x,y+1);
+        }
+        else if (m[x+1][y]==0)
+        {
+            return find_exit(m,x+1,y);
+        }
+        else
+        {
+            return 0;
+        }
     }
-
-    else if (x<10 && m[x+1][y] == 0)
+    // se m[x][0] pode ir uma posição para direita ou uma para baixo,
+    // pode ir uma posição para baixo,
+    // ou pode retorna a posição anterior, atualizando a atual com 2
+    // se não retorna 0
+    else if (x>0 && y==0)
     {
-        //return 1;
-        return find_exit(m,x+1,y);
+        if(m[x][y+1]==0 && y<9)
+        {
+            return find_exit(m,x,y+1);
+        }
+        else if (m[x+1][y]==0 && x<9)
+        {
+            return find_exit(m,x+1,y);
+        }
+        else if (m[x-1][y]==0 && x>1)
+        {
+            m[x][y]=2;
+            return find_exit(m,x-1,y);
+        }
+        else
+        {
+            return 0;
+        }
     }
-    
-    /* 
-    else if (x<10 && (m[x+1][y] != 0 || m[x][y+1] != 0))
+    // se m[0][y] pode ir uma posição para a direita ou uma para baixo,
+    // ou pode retorna para a posição anterior, atualizando a atual com 2
+    // se não retorna 0
+    else if (x==0 && y>0)
     {
-        m[x][y]=2;
-        return  find_exit(m,x-1,y);
+        if(m[x][y+1]==0 && y<9)
+        {
+            return find_exit(m,x,y+1);
+        }
+        else if(m[x+1][y]==0 && x<9)
+        {
+            return find_exit(m,x+1,y);
+        }
+        else if (m[x][y-1]==0 && y>1)
+        {
+            m[x][y-1]=2;
+            return find_exit(m,x,y-1);
+        }
+        else
+        {
+            return 0;
+        }
     }
-    */
-
-    else if (y>0 && m[x+1][y]==0 && x<10)
+    // para m[x][y] pode ir uma posição para a direita, ou uma posição
+    // para baixo, ou uma posição para cima e ou uma posição para a esquerda
+    // se não, retorna 0
+    else if (x>0 && y>0)
     {
-        return find_exit(m,x+1,y);
+        if (m[x][y+1]==0 && y<9)
+        {
+            return find_exit(m,x,y+1);
+        }
+        else if(m[x+1][y]==0 && x<9)
+        {
+            return find_exit(m,x+1,y);
+        }
+        else if (m[x-1][y]==0 && x>0)
+        {
+            m[x][y]=2;
+            return find_exit(m,x-1,y);
+        }
+        else if (m[x][y-1]==0 && y>0)
+        {
+            m[x][y]=2;
+            return find_exit(m,x,y-1);
+        }
+        else
+        {
+            return 0;
+        }
     }
-
-    else if (y<10 && m[x][y+1] == 0)
-    {
-        //return 1;
-        return find_exit(m,x,y+1);
-    }
-
+    // retorna 0 se não houver solução
     else
     {
         return 0;
-    }
-    
-    //m[y][x]=2;
-    /* 
-    for ( i = 0; i < 10; i++ )
-    {
-        free(m[i]);
-    }
-    free(m);
-    */
-    //return 0;
-    
+    }    
 }
