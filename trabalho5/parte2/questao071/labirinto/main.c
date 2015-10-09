@@ -31,20 +31,13 @@ int main ( int argc, const char *argv[] )
         printf ( "%d", n );
         printf ( "\n" );
         print_matrix(m);
+        
+        for ( i = 0; i < 10; i++ )
+        {
+            free(m[i]);
+        }
+        free(m);
     }
 
-    printf ( "\n" );
-    printf ( "Matriz Atualizada: \n" );
-    print_matrix(m);
-    printf ( "\n" );
-
-    for ( i = 0; i < 10; i++ )
-    {
-        free(m[i]);
-    }
-    free(m);
-
-
-    
     return 0;
 }
