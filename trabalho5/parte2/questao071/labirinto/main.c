@@ -18,11 +18,33 @@ int main ( int argc, const char *argv[] )
     {
         free(m[i]);
     }
+    free(m);
+    // Gera inúmeras matrizes
+    // Para quando uma matriz gerada tiver saida (1)
+    while (n==0)
+    {
+        printf ( "\n" );
+        m=create_matrix();
+        print_matrix(m);
+        printf ( "\n" );
+        n=find_exit(m,0,0);
+        printf ( "%d", n );
+        printf ( "\n" );
+        print_matrix(m);
+    }
 
+    printf ( "\n" );
+    printf ( "Matriz Atualizada: \n" );
+    print_matrix(m);
+    printf ( "\n" );
+
+    for ( i = 0; i < 10; i++ )
+    {
+        free(m[i]);
+    }
     free(m);
 
-    // imprime o resultado de n
-    printf ( "%d\n", n );
+
     
     return 0;
 }
