@@ -139,11 +139,11 @@ int find_exit (int **m, int x, int y)
     // se não, retorna 0
     else if (x>0 && y>0)
     {
-        if (m[x][y+1]==0 && y<9)
+        if (y<9 && m[x][y+1]==0)
         {
             return find_exit(m,x,y+1);
         }
-        else if(m[x+1][y]==0 && x<9)
+        else if(x<9 && m[x+1][y]==0)
         {
             return find_exit(m,x+1,y);
         }
