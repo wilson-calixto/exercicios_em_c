@@ -20,6 +20,7 @@ int **create_matrix()
         p[i] = (int *) malloc (10 * sizeof(int));
         for ( j = 0; j < 10; j++)
         {
+            //p[i][j] = 0;
             p[i][j] = rand() % 2;
         } 
     }
@@ -55,7 +56,7 @@ void print_matrix (int **m)
     {   
         for ( j = 0; j < 10; j += 1 )
         {
-            printf ( "%d\t", m[i][j] );
+            printf ( "%d  ", m[i][j] );
         }
         printf ( "\n" );
     }

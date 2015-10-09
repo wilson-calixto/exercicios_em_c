@@ -4,39 +4,35 @@
 int main ( int argc, const char *argv[] )
 {
     int **m, n, i;
+    n=0;
 
-    // cria uma matriz
-    m=create_matrix();
-    // imprime uma matriz
-    print_matrix(m);
-    printf ( "\n" );
-    
-    // recebe o resultado da função find_exit 0 ou 1
-    n=find_exit(m,0,0);
+    printf ( "Gerando Matriz valida aguarde!\n" );
 
-    for ( i = 0; i < 10; i++ )
-    {
-        free(m[i]);
-    }
-    free(m);
     // Gera inúmeras matrizes
     // Para quando uma matriz gerada tiver saida (1)
+    // pode ocorrer falha de seguimentação
     while (n==0)
     {
-        printf ( "\n" );
+        printf ( "============================\n" );
         m=create_matrix();
+        printf ( "antes de entrar na função:\n" );
         print_matrix(m);
         printf ( "\n" );
         n=find_exit(m,0,0);
-        printf ( "%d", n );
-        printf ( "\n" );
+        printf ( "depois de passar pela função:\n" );
         print_matrix(m);
+        printf ( "\n" );
+        printf ( "%d\n", n );
+        //printf ( "\n" );
+        //print_matrix(m);
         
         for ( i = 0; i < 10; i++ )
         {
             free(m[i]);
+            m[i]=NULL;
         }
         free(m);
+        m=NULL;
     }
 
     return 0;
