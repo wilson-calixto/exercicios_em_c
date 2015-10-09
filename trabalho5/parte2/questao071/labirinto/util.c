@@ -125,7 +125,7 @@ int find_exit (int **m, int x, int y)
         }
         else if (m[x][y-1]==0 && y>1)
         {
-            m[x][y-1]=2;
+            m[x][y]=2;
             return find_exit(m,x,y-1);
         }
         else
