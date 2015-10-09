@@ -185,6 +185,6 @@ util.o: util.c/util.c
 # Limpar objetos criados na complicação
 clean:
 	rm -rf $(path_obj)*.o
-
+ 
 mrproper:
 	rm -rf $(path_bin)*
