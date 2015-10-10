@@ -176,21 +176,25 @@ quick: m.o util.o
 m.o: parte2/questao06/m.c
 	gcc -o $(path_obj)m.o -c parte2/questao06/m.c
 	
-#bloco da questao062
+#bloco da questao06 a e b
+
+
 main: main.o order.o
-	gcc main.o order.o -o main
+	gcc $(path_obj)main.o $(path_obj)order.o -o $(path_bin)main
+	
+main.o: parte2/questao06/order/main.c
+	gcc -o $(path_obj)main.o -c parte2/questao06/order/main.c
+	
+order.o: parte2/questao06/order/order.c
+	gcc -o $(path_obj)order.o -c parte2/questao06/order/order.c
 
-main.o: main.c
-	gcc -c main.c
 
-util.o: order.c
-	gcc -c order.c
 
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
 	gcc -o $(path_obj)util.o -c util.c/util.c
-
+ 
 # Limpar objetos criados na complicação
 clean:
 	rm -rf $(path_obj)*.o
