@@ -1,4 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick lista5.2.062
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -176,6 +176,15 @@ quick: m.o util.o
 m.o: parte2/questao06/m.c
 	gcc -o $(path_obj)m.o -c parte2/questao06/m.c
 	
+#bloco da questao062
+main: main.o order.o
+	gcc main.o order.o -o main
+
+main.o: main.c
+	gcc -c main.c
+
+util.o: order.c
+	gcc -c order.c
 
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
