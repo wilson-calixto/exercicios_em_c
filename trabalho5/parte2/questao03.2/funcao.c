@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Permutacao.h"
+#include "funcao.h"
 
 void ListP(int n[], int num)
 {
