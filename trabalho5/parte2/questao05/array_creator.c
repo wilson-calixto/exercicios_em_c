@@ -6,9 +6,10 @@
 void array_creator()    
 {
     
-    int i, cont, n= 0;
+    int i, cont,n;
     scanf("%d", &n);
-    int *vetor = (int *) malloc(n*sizeof(int));	
+    int *vetor;
+    vetor = (int *) malloc(n*sizeof(int));	
     // srand(time(NULL));
     
     for(i = 0; i < n; i++)
@@ -17,11 +18,13 @@ void array_creator()
 	// vetor[i] = rand()%n;
     }
 
-    /* for (cont = 0; i < n; cont++)
+    for (cont = 0; cont < n; cont++)
     {
-        printf("%d", vetor[i]);
-    } */
-    printf("%d", *vetor);
+        printf("%d", vetor[cont]);
+    }
+    printf("\n");
+    free(vetor);   
+
 }
 
 int main(int argv, const char *argc[])
