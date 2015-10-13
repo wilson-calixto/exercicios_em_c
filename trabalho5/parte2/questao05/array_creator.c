@@ -17,11 +17,11 @@ void array_creator()
 	// vetor[i] = rand()%n;
     }
 
-    for (cont = 0; i < n; cont++)
+    /* for (cont = 0; i < n; cont++)
     {
         printf("%d", vetor[i]);
-    }
-    
+    } */
+    printf("%d", *vetor);
 }
 
 int main(int argv, const char *argc[])
