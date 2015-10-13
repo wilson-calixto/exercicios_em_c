@@ -3,24 +3,30 @@
 #include <time.h>
 #include <string.h>
 
-void array_creator()    
+int array_creator(int n)    
 {
-    int vetor[5000], i, cont, n = 0;
+    int i, cont;
+    int *vetor = (int *) malloc(n*sizeof(int));	
     srand(time(NULL));
     
     for(i = 0; i < n; i++)
     {
-        vetor[i] = rand()%n;
+        scanf("%d", &vetor[i]);
+	// vetor[i] = rand()%n;
     }
 
     for (cont = 0; i < n; cont++)
     {
-        printf("%d", vetor[5000]);
+        return("%d", vetor[i]);
     }
+    free(vetor);
 }
 
 int main()
 {
-    array_creator();
+    int num;
+    printf("Informe um tamanho para o vetor: ");
+    scanf("%d", &num);
+    array_creator(num);
     return 0;
 }
