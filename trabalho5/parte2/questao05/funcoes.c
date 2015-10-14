@@ -7,7 +7,6 @@
 fim, devolve o vetor preenchido, serve para testa as funcoes busca sequencial e busca binaria*/
 void array_creator()    
 {
-    clock_t tempoInicial, tempoFinal;
     int i, cont,n; // variaveis e contadores
     scanf("%d", &n); // entrada do tamanho do vetor desejado
     int *vetor; // definição do vetor
@@ -35,7 +34,6 @@ int busca_binaria (int x, int n, int v[])
 {
    int e, m, d; // definiciao das variaveis
    e = 0; d = n-1;                  
-   tempoInicial = clock();
    while (e <= d) 
    {                          
       m = (e + d)/2; // divide o vetor ao meio                        
