@@ -17,12 +17,13 @@ int main(int argc, const char *argv[])
     ti1 = clock();
     busca_binaria(x, n, v);
     tf1 = clock();
-    printf("Tempo da busca binária: ")
+    printf("Tempo da busca binária: ");
     tempo(ti1, tf1);
     
     ti2 = clock();
     buscaSequencial(n, v, x);
     tf2 = clock();
+    printf("Tempo da busca sequencial: ");
     tempo(ti2,tf2);
 
 
