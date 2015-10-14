@@ -13,7 +13,7 @@ int main(int argc, const char *argv[])
     array_creator(n, v);
  
     printf("digite o termo a ser procurado:\n");
-    scanf("%d",&x)
+    scanf("%d",&x);
     ti1 = clock();
     busca_binaria(x, n, v);
     tf1 = clock();
