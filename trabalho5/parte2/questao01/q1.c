@@ -9,15 +9,17 @@ void comb(int beg, int n, int k)
         {
                 seq[k-1] = beg;
                 
-                for(i=n-2;i--;)
+                for(i=n;i>=0;i--)
                 { 
-                        printf("%d ",seq[i]);
+                        if(seq[i]!=0)
+                        {
+                             printf("%d ",seq[i]);
+                        }
                 }
                 printf("\n");
-                return;
         }
         
-        for(i = beg+1;i <= n-k+2;i++)
+        for(i = beg+1;i <= n;i++)
         {
                 seq[k-1] = beg;
                 comb(i,n, k-1);
@@ -29,10 +31,9 @@ int main()
         int i,n,k;
         scanf("%d%d",&n,&k);
 
-        for(i = 1;i <= n-k+1;i++) 
+        for(i = 1;i <= n-1;i++)
         {
-                comb(i,n,k);
+                 comb(i,n,k);
         }
-        
         return 0;
 }
