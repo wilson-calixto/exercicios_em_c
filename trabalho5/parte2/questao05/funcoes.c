@@ -63,7 +63,7 @@ void tempo(clock_t tempoInicial, clock_t tempoFinal)
 {
 	double tempoGasto; // definindo parametros
 	tempoGasto = (tempoFinal-tempoInicial)/(CLOCKS_PER_SEC); // calculando o tempo gasto
-	printf("Tempo em segundos: %f", tempoGasto);
+	printf("Tempo em segundos: %f\n", tempoGasto);
 }
 
     
