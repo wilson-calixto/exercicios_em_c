@@ -9,7 +9,7 @@ int main(int argc, const char *argv[])
     int v[5000], x, n;
     clock_t ti1, tf1, ti2, tf2;
     printf("digite o tamanho do vetor:\n");
-    scanf("%d",&n)
+    scanf("%d",&n);
     array_creator(n, v);
  
     printf("digite o termo a ser procurado:\n");
