@@ -25,7 +25,7 @@ int main ( int argc, char *argv[] )
     printf ( "digite o valor de y:\n" );
     scanf ( "%d", &y );//recebe o valor de y
   
-    printf("resultado:\n %d \n", inc(x,y)); //mostra o valor da soma recursiva de 'y' + 'x'.
+    printf("resultado:\n%d\n", inc(x,y)); //mostra o valor da soma recursiva de 'y' + 'x'.
   
     return 0;
 }
