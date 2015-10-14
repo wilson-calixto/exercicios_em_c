@@ -7,7 +7,7 @@
 fim, devolve o vetor preenchido, serve para testa as funcoes busca sequencial e busca binaria*/
 void array_creator()    
 {
-    
+    clock_t tempoInicial, tempoFinal;
     int i, cont,n; // variaveis e contadores
     scanf("%d", &n); // entrada do tamanho do vetor desejado
     int *vetor; // definição do vetor
@@ -34,7 +34,8 @@ vetor ordenado.*/
 int busca_binaria (int x, int n, int v[]) 
 {
    int e, m, d; // definiciao das variaveis
-   e = 0; d = n-1;                           
+   e = 0; d = n-1;                  
+   tempoInicial = clock();
    while (e <= d) 
    {                          
       m = (e + d)/2; // divide o vetor ao meio                        
@@ -50,7 +51,7 @@ int busca_binaria (int x, int n, int v[])
 	{
 		d = m - 1; // busca reversa no vetor, ordem reversa
 	}
-   }  
+   }
    return -1;  // caso nao encontra o valor retorna -1
 }            
 
@@ -67,16 +68,11 @@ int buscaSequencial(int tamanho, int vetor[],int p) // recebe o tamanho do vetor
  return -1; // caso nao encontra o valor, retorna -1
 }
 // funcao tempo, calcula o tempo de execução de um determinado programa
-int tempo() 
+void tempo(clock_t tempoInicial, clock_t tempoFinal) 
 {
-	clock_t tempoInicial, tempoFinal; //definindo parametros
 	double tempoGasto; // definindo parametros
-	tempoInicial = clock(); //pegando o tempo Inicial
-	tempoFinal = clock(); // pegando o tempo final
-
 	tempoGasto = (tempoFinal-tempoInicial)/CLOCKS_PER_SEC); // calculando o tempo gasto
 	printf("Tempo em segundos: %f", tempoGasto);
-	return 0;
 }
 
     
