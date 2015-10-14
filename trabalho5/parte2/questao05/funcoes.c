@@ -5,9 +5,9 @@
 
 /* funcao array_creator cria um vetor de n posicoes informadas pelo usuario e o preenche com numeros randomicos, no 
 fim, devolve o vetor preenchido, serve para testa as funcoes busca sequencial e busca binaria*/
-void array_creator()    
+void array_creator(int n)    
 {
-    int i, cont,n; // variaveis e contadores
+    int i, cont; // variaveis e contadores
     scanf("%d", &n); // entrada do tamanho do vetor desejado
     int *vetor; // definição do vetor
     vetor = (int *) malloc(n*sizeof(int)); // usando a alocação dinamina para alocar a quantidade certa de memoria
