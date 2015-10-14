@@ -21,7 +21,7 @@ int main(int argc, const char *argv[])
     tempo(ti1, tf1);
     
     ti2 = clock();
-    buscaSequencial(n, v, x);
+    busca_sequencial(n, v, x);
     tf2 = clock();
     printf("Tempo da busca sequencial: ");
     tempo(ti2,tf2);
