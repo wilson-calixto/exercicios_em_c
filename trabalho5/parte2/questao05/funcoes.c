@@ -5,26 +5,18 @@
 
 /* funcao array_creator cria um vetor de n posicoes informadas pelo usuario e o preenche com numeros randomicos, no 
 fim, devolve o vetor preenchido, serve para testa as funcoes busca sequencial e busca binaria*/
-void array_creator()    
+void array_creator(int n, int *vetor)    
 {
-    clock_t tempoInicial, tempoFinal;
-    int i, cont,n; // variaveis e contadores
-    scanf("%d", &n); // entrada do tamanho do vetor desejado
-    int *vetor; // definição do vetor
+    int i, cont; // variaveis e contadores
+    
     vetor = (int *) malloc(n*sizeof(int)); // usando a alocação dinamina para alocar a quantidade certa de memoria
     srand(time(NULL)); // funcao para chamar o equivalente ao random em c.
     
     for(i = 0; i < n; i++) //laço de preenchimento do vetor
     {
-	vetor[i] = rand()%n; // preenchimento do vetor com numeros aleatorios
-    }
-
-    for (cont = 0; cont < n; cont++) // laço para printar o vetor
-    {
-        printf("%d", vetor[cont]); 
+	vetor[i] = rand()%500; // preenchimento do vetor com numeros aleatorios
     }
     printf("\n"); // pula uma linha no final
-    free(vetor);   // funcao para limpar a memoria depois de alocada
 
 }
 
@@ -35,7 +27,6 @@ int busca_binaria (int x, int n, int v[])
 {
    int e, m, d; // definiciao das variaveis
    e = 0; d = n-1;                  
-   tempoInicial = clock();
    while (e <= d) 
    {                          
       m = (e + d)/2; // divide o vetor ao meio                        
