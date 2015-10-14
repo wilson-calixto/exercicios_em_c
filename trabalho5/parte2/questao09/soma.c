@@ -6,8 +6,8 @@ int inc(int x, int y)
         return x; // 'x' + 0 = x
     if(y < 0)
     {
-        soma = inc(x, y+1);
-        return(--soma);
+        soma = inc(x, y+1); //y < 0 incrementa para poder chegar em 0
+        return(--soma); //como y é negativo, descrementa o valor
     }
     else
     {
