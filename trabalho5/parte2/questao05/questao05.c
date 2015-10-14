@@ -17,6 +17,7 @@ int main(int argc, const char *argv[])
     ti1 = clock();
     busca_binaria(x, n, v);
     tf1 = clock();
+    printf("Tempo da busca binária: ")
     tempo(ti1, tf1);
     
     ti2 = clock();
