@@ -1,0 +1,4 @@
+tempo - bubblesort - vetor desordenado: 53404
+tempo - bubblesort - vetor ordenado: 49645
+tempo - quicksort - vetor desordenado: 54154
+tempo - quicksort - vetor ordenado: 51033

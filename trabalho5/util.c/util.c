@@ -42,7 +42,7 @@ int select_sort(int num[], int tam)
 		min=i;
 		for(j=(i+1);j<tam;j++)
 		{
-			if(num[j] < num[min]
+			if(num[j] < num[min])
 				min=j;
 		}
 		if (i!=min)
@@ -56,3 +56,48 @@ int select_sort(int num[], int tam)
 
 }
 //--------------------------------------------------------------------------------------------------------------------
+//Função para ler valores para um vetor
+
+void LerVetor(int n[], int num)
+{
+    int i; //i - contador
+
+    for(i = 0; i < num; i++)
+    {
+        scanf("%d", &n[i]); //lê valores para o vetor
+    }
+}
+//--------------------------------------------------------------------------------------------------------------------
+//Função Quick Sort : Ordenação de numeros
+
+
+void Quick(int vetor[], int inicio, int fim){
+   
+   int pivo, aux, i, j, meio;
+   
+   i = inicio;
+   j = fim;
+   
+   meio = (int) ((i + j) / 2);
+   pivo = vetor[meio];
+   
+   do{
+      while (vetor[i] < pivo) i = i + 1;
+      while (vetor[j] > pivo) j = j - 1;
+      
+      if(i <= j){
+         aux = vetor[i];
+         vetor[i] = vetor[j];
+         vetor[j] = aux;
+         i = i + 1;
+         j = j - 1;
+      }
+   }while(j > i);
+   
+   if(inicio < j) Quick(vetor, inicio, j);
+   if(i < fim) Quick(vetor, i, fim);
+}
+
+ 
+//--------------------------------------------------------------------------------------------------------------------
+

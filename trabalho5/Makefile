@@ -1,5 +1,4 @@
-all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01
-
+all: bin obj lista5.02 lista5.04 lista5.03 lista4.06 lista2.04 lista2.05 lista4.05 lista2.07 lista4.08 lista2.08 lista4.04 lista5.01 lista2.03 Permutacao lista4.06.2 quick main
 # Cria pasta BIN
 # Todos os arquivos binário estrão nesse diretório
 bin:
@@ -68,6 +67,20 @@ lista4.06.o: lista4/lista4.06/lista4.06.c
 sf_extend.o: lista4/lista4.06/sf_extend.c
 	gcc -o $(path_obj)sf_extend.o -c lista4/lista4.06/sf_extend.c
 	
+	
+
+#bloco da lista4.06.2
+lista4.06.2: sf_extend.o lista4.06.2.o
+	gcc $(path_obj)lista4.06.2.o $(path_obj)sf_extend.o -o $(path_bin)lista4.06.2
+
+lista4.06.2.o: lista4/lista4.06/lista4.06.2.c
+	gcc -o $(path_obj)lista4.06.2.o -c lista4/lista4.06/lista4.06.2.c
+
+sf_extend.o: lista4/lista4.06/sf_extend.c
+	gcc -o $(path_obj)sf_extend.o -c lista4/lista4.06/sf_extend.c
+
+
+
 	
 #bloco  da lista2.05
 lista2.05: palindromo.o lista2.05.o
@@ -139,15 +152,52 @@ lista5.01: lista5.01.o
 lista5.01.o: lista5/lista5.01/lista5.01.c
 	gcc -o $(path_obj)lista5.01.o -c lista5/lista5.01/lista5.01.c
 	
+#bloco da lista2.03
+lista2.03: lista2.03.o
+	gcc $(path_obj)lista2.03.o -o $(path_bin)lista2.03
 	
+lista2.03.o: lista2/lista2.03/lista2.03.c
+	gcc -o $(path_obj)lista2.03.o -c lista2/lista2.03/lista2.03.c
+	
+#bloco da questao02
+Permutacao: questao02.o Permutacao.o
+	gcc $(path_obj)questao02.o $(path_obj)Permutacao.o -o $(path_bin)Permutacao
+	
+questao02.o: parte2/questao02/questao02.c
+	gcc -o $(path_obj)questao02.o -c parte2/questao02/questao02.c
+	
+Permutacao.o: parte2/questao02/Permutacao.c
+	gcc -o $(path_obj)Permutacao.o -c parte2/questao02/Permutacao.c 
+	
+#bloco da questao07
+quick: m.o util.o
+	gcc $(path_obj)m.o $(path_obj)util.o -o $(path_bin)quick
+	
+m.o: parte2/questao06/m.c
+	gcc -o $(path_obj)m.o -c parte2/questao06/m.c
+	
+#bloco da questao06 a e b
+
+
+main: main.o order.o
+	gcc $(path_obj)main.o $(path_obj)order.o -o $(path_bin)main
+	
+main.o: parte2/questao06/order/main.c
+	gcc -o $(path_obj)main.o -c parte2/questao06/order/main.c
+	
+order.o: parte2/questao06/order/order.c
+	gcc -o $(path_obj)order.o -c parte2/questao06/order/order.c
+
+
+
 ## ===== TERMINA O BLOCO DAS QUESTOES =====
 # Bloco referente a biblioteca UTIL
 util.o: util.c/util.c
 	gcc -o $(path_obj)util.o -c util.c/util.c
-
+ 
 # Limpar objetos criados na complicação
 clean:
 	rm -rf $(path_obj)*.o
-
+ 
 mrproper:
 	rm -rf $(path_bin)*

@@ -12,6 +12,10 @@ int main(int argc, const char *argv[])
 	vetor[3] = 6;
 	p = vetor;
 	
+	printf("%p\n", vetor);
+	printf("%p\n", p);
+
+
 	*p = 7;
 	p++;
 	
@@ -20,6 +24,7 @@ int main(int argc, const char *argv[])
 	printf("%p\n", p);
 	printf("%d\n", *p);
 	
+	//p--;
 	p--;
 
 	free(p);
