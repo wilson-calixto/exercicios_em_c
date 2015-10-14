@@ -4,6 +4,11 @@ int inc(int x, int y)
     
     if(y==0)
         return x; // 'x' + 0 = x
+    if(y < 0)
+    {
+        soma = inc(x, y+1);
+        return(--soma);
+    }
     else
     {
         soma = inc(x,y-1); //não é possivel incrementar o valor de funçoes, uma variavel deve receber o valor antes realizar os incrementos
