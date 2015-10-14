@@ -62,8 +62,7 @@ int buscaSequencial(int tamanho, int vetor[],int p) // recebe o tamanho do vetor
 void tempo(clock_t tempoInicial, clock_t tempoFinal) 
 {
 	double tempoGasto; // definindo parametros
-	tempoGasto = (tempoFinal-tempoInicial)/(CLOCKS_PER_SEC); // calculando o tempo gasto
-	printf("Tempo em segundos: %f \n", tempoGasto);
+	printf("%lf\n",((double)(tempoFinal-tempoInicial)/CLOCKS_PER_SEC));
 }
 
     
