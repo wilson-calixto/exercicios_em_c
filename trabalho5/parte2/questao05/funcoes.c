@@ -47,7 +47,7 @@ int busca_binaria (int x, int n, int v[])
 }            
 
 // funcao busca sequencial
-int buscaSequencial(int tamanho, int vetor[],int p) // recebe o tamanho do vetor, um vetor, o que se quer encontrar
+int busca_sequencial(int tamanho, int vetor[],int p) // recebe o tamanho do vetor, um vetor, o que se quer encontrar
 {
  int i; // contador para o laço
  for(i=0;i<=tamanho;i++) //percorre o vetor de forma crescente
