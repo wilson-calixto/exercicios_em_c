@@ -8,7 +8,6 @@ fim, devolve o vetor preenchido, serve para testa as funcoes busca sequencial e 
 void array_creator(int n)    
 {
     int i, cont; // variaveis e contadores
-    scanf("%d", &n); // entrada do tamanho do vetor desejado
     int *vetor; // definição do vetor
     vetor = (int *) malloc(n*sizeof(int)); // usando a alocação dinamina para alocar a quantidade certa de memoria
     srand(time(NULL)); // funcao para chamar o equivalente ao random em c.
