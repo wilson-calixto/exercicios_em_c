@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /* Funcao que verifica se uma jogada é valida ou nao percorrendo o vetor de jogas ja realizadas*/
 
 // Programador: wilson calisto 
