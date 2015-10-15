@@ -34,24 +34,32 @@ int main()
 	    else
 	    {
 	        
-	        /*retira as coordenadads invalidas*/
+	        /*retira as coordenadas invalidas*/
 	        do{            
 	            printf("Digite a jogada jogador 2");
 	            scanf("%d",&jogada);
 	        }while(jogada>9 || jogada<1);
 	        
+	        
+	         /*se a jogada ja existir no vetor peca denovo (retira as coordenadadas ja usadas) */
+	        while(jogada_valida(jogada))
+	        {            
+	            printf("Digite a jogada jogador 2");
+	            scanf("%d",&jogada);
+	        }
+	        
+	        
 	        /*converte um numero em um endereco*/
-	        pede_jogada(vetor_de_posicao,vetor_de_endereco,jogada);
+	        converte_jogada(vetor_de_posicao,vetor_de_endereco,jogada);
 	        
 	        /*ve  se ainda tiver jogada */       
           
-	                do
-	                {
+	         
 	                	
 	                    
 	                joga(vetor_de_posicao,matriz);
 	                ganhou();
-	                }while(valida_jogada(vetor_de_endereco,jogada));
+	         	valida_jogada(vetor_de_endereco,jogada);
 	                else
 	                {
 	                	printf("jogada invalida");
