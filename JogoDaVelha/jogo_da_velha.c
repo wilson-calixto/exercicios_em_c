@@ -28,7 +28,7 @@ void joga(int *vet, char **matriz) //recebe o vetor da  ultima jogada e a matriz
 
 // Programador: Hermann J. Hernani.
 
-int valida_jogada(char vet[9], int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
+int jogada_valida(char vet[9], int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
 {
    int i;
    for(i = 0; i < 9; i++) // percorre o vetor
