@@ -9,14 +9,12 @@ int valida_jogada(char vet[9], int jogada) //recebe o vetor de jogadas realizada
    int i;
    for(i = 0; i < 9; i++) // percorre o vetor
    {
-       if (jogada == vet[i]) // se a jogada existir no vetor, ou seja, ja foi realizada retorna 0, valor para falso.
+       if (jogada == vet[i]) // se a jogada existir no vetor, ou seja, ja foi realizada retorna 0, valor para false.
        {
            return 0;
        }
-       else // caso contrario retorna 1, valor para verdadeiro
-       {
-           return 1;
-       }
-   
+ 
    }
+    return 1; //  se a jogada não existir ele retorn 1, valor para true
 }
+
