@@ -41,15 +41,21 @@ int main()
 	        }while(jogada>9 || jogada<1);
 	        
 	        /*converte um numero em um endereco*/
-	        pede_jogada(jogada);
+	        pede_jogada(vetor_de_posicao,vetor_de_endereco,jogada);
 	        
-	        /* se ainda tiver jogada */       
+	        /*ve  se ainda tiver jogada */       
           
-	                valida_jogada();
+	                do
+	                {
+	                	
 	                    
-	                joga();
+	                joga(vetor_de_posicao,matriz);
 	                ganhou();
-	                velhou();
+	                }while(valida_jogada(vetor_de_endereco,jogada));
+	                else
+	                {
+	                	printf("jogada invalida");
+	                }
 	                
 	       
 	            
