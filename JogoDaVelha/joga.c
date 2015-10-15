@@ -11,12 +11,14 @@ void joga(int *vet, char **matriz) //recebe o vetor da  ultima jogada e a matriz
     len=strlen(vet);
     coluna=vet[len-1];
     linha=vet[len-2];
-    if(cont_global%2==0)
+    if(i_global%2==0)
     {
             matriz[linha][coluna]='0';
+            cont_global++;
     }
     else
     {
+        cont_global++;
          matriz[linha][coluna]='X';
     }
 }
