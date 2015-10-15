@@ -65,9 +65,9 @@ int velhou(char *vet) //recebe o vetor de jogadas e retorna: 1 pra velhou e 0 pa
 
 // Programador: wilson calisto 
 
-int tem_jogada(int cont_global) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
+int tem_jogada(int i) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
 {
-    if(cont==9) /*se os jogadsores ja fizeram 9 jogadas ele retorna 0 False*/
+    if(i==9) /*se os jogadsores ja fizeram 9 jogadas ele retorna 0 False*/
     {
         return 0;
     }
