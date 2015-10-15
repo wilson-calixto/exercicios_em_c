@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/* Funcao que verifica se uma jogada é valida ou nao percorrendo o vetor de jogas ja realizadas*/
+/* Funcao que marca com X ou O*/
 
-// Programador: Hermann J. Hernani.
+// Programador: wilson calisto 
 
-void joga(int *vet, char **matriz) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
+void joga(int *vet, char **matriz) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {
     int i,cont,len;
     len=strlen(vet);
