@@ -15,33 +15,33 @@
 #include <stdlib.h>
 #include "util.h"
 
-extern const Jogador jogador1, jogador2;
+extern const Jogador jogador1, jogador2; //Usando variáveis globais entre arquivos
 
 int main(int argc, const char *argv[])
 {
-    char vetor[9];
-    Jogador jogador;
+    char vetor[9]; //declara vetor de 9 elementos
+    Jogador jogador; //declara variável do tipo Jogador
 
-    jogador = jogador2;
+    jogador = jogador2; //'jogador' é iniciada
 
-    cria_vetor(vetor);
+    cria_vetor(vetor);//preenche vetor com os valores de 1 a 9 em decimal
     
     while(!velhou() && !ganhou(vetor,jogador))
     {
-        troca(&jogador);
-        mostra(vetor);
-        printf("Turno do jogador %d.\n", jogador.num);
-        pede_jogada(vetor,jogador);
+        troca(&jogador);//troca valores da variável 'jogador'
+        mostra(vetor);//mostra o vetor 
+        printf("Turno do jogador %d.\n", jogador.num); //informa de quem é a vez
+        pede_jogada(vetor,jogador);//pede que o jogador jogue
     }
  
-    putchar('\n');
+    putchar('\n'); //pula uma linha
 
     if(ganhou(vetor,jogador))
         printf("Jogador %d ganhou!\n",jogador.num);
     if(velhou())
         printf("Velhou!\n");
     
-    mostra(vetor);
+    mostra(vetor); //mostra o vetor final
 
     return 0;
 }
