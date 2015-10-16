@@ -101,10 +101,11 @@ int jogada_valida(char *vetor_de_posicao, int jogada) //recebe o vetor de jogada
 
 void joga(int *vetor_de_endereco, char **matriz,int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {
-    int j,cont,len;
-    len=strlen(vet);
-    coluna=vet[len-1];
-    linha=vet[len-2];
+    int j,cont,len,linha,coluna;
+    len=strlen(vetor_de_endereco);
+    linha=vetor_de_endereco[len-2];
+    coluna=vetor_de_endereco[len-1];
+   
     if(i%2==0)
     {
             matriz[linha][coluna]='0';
