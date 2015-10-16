@@ -54,7 +54,7 @@ int main()
 	        /* colocar limpa tela*/
 	        
 	      joga(*vetor_de_endereco,**matriz,i)
-	   
+	      velhou(vetor_de_jogadas);
 	                
 	      ganhou();
 	         
