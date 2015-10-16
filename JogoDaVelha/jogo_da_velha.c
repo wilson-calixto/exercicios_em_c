@@ -43,6 +43,9 @@ int jogada_valida(char vet[9], int jogada) //recebe o vetor de jogadas realizada
 }
 
 /*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
+
+// Programador: Raí Santos
+
 void pede_jodada(int posicao)
 {
     int i = 0, j =0;
