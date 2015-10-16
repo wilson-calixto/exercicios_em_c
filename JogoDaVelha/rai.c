@@ -28,38 +28,39 @@ int main()
     for(i=1;i<=9:i++){
     
 	    mostra_matriz(matriz);
-	
-	    if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
-	    {
-	
-	    }
-	    else
-	    {
-	        /*retira as coordenadas invalidas*/
-	        do{            
-	            printf("Digite a jogada jogador 2");
+	    /*retira as coordenadas invalidas*/
+	    do{            
+	            printf("Digite a jogada ");
 	            scanf("%d",&jogada);
-	        }while(jogada>9 || jogada<1);
+	     }while(jogada>9 || jogada<1);
 	        /*colocar um limpa tela*/
 	        
 	          /*converte um numero em um endereco*/
-	        converte_jogada(jogada);
+	     converte_jogada(jogada);
 	        
 	         /*se a jogada ja existir no vetor peca denovo (retira as coordenadadas ja usadas) */
-	        while(!jogada_valida(vetor_de_posicao,jogada))
-	        {            
+	     while(!jogada_valida(vetor_de_posicao,jogada))
+	     {            
 	            printf("Digite a jogada jogador 2");
 	            scanf("%d",&jogada);
-	        }
-	        /* colocar limpa tela*/
-	        
-	       joga(*vetor_de_endereco,**matriz,i)
-	       velhou(vetor_de_jogadas);
-	       
-	       if(ganhou(matriz)){
-	       	printf("jogador 2 ganhou ");
-	       }
-	    }
+	     }
+	     /* colocar limpa tela*/
+	     /* joga e verifica se alguem ganhou*/
+	     if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
+ 	     {
+		       joga(*vetor_de_endereco,**matriz,i)
+		       if(ganhou(matriz))
+		       {
+		       	printf("jogador 1 ganhou ");
+		       } 	     
+  	     else
+	     {
+		       joga(*vetor_de_endereco,**matriz,i)
+		       if(ganhou(matriz))
+		       {
+		       	printf("jogador 2 ganhou ");
+		       }
+	      }
 	}
     return 0;
 }
