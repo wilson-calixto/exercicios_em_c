@@ -150,3 +150,19 @@ int tem_jogada(int i) //recebe o vetor de jogadas realizadas e a jogada que se d
         return 1; /* se ainda tiver jogada ele retorna 1 true*/
     }
 }
+
+
+int ganhou(char **mat)
+{
+    if((mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) || (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) || (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) || (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) || (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) || (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) ||  (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2]) || (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+
