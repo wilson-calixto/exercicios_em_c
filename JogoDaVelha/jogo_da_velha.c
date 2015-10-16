@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+/*comentando*/
 void mostra_matriz(char **matriz)
 {
     printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",matriz[0][0],matriz[0][1],matriz[0][2],matriz[1][0],matriz[1][1],matriz[1][2],matriz[2][0],matriz[2][1],matriz[2][2]);	
@@ -8,59 +9,8 @@ void mostra_matriz(char **matriz)
 
 
 
-/* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
- se a jogada ja saiu retorna 0, se nao 1.
- */
 
-// Programador: Hermann J. Hernani.
-
-int jogada_valida(char *vetor_de_posicao, int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
-{
-   int i;
-   for(i = 0; i < 9; i++) // percorre o vetor
-   {
-       if (jogada == vetor_de_posicao[i]) // se a jogada existir no vetor, ou seja, ja foi realizada retorna 0, valor para false.
-       {
-           return 0;
-       }
- 
-   }
-    return 1; //  se a jogada não existir ele retorna 1, valor para true
-}
-
-
-
-
-
-
-
-/* Funcao que marca com X ou O*/
-
-// Programador: wilson calisto 
-
-void joga(int *vet, char **matriz) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
-{
-    int i,cont,len;
-    len=strlen(vet);
-    coluna=vet[len-1];
-    linha=vet[len-2];
-    if(i_global%2==0)
-    {
-            matriz[linha][coluna]='0';
-            cont_global++;
-    }
-    else
-    {
-        cont_global++;
-         matriz[linha][coluna]='X';
-    }
-}
-
-/*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
-
-// Programador: Raí Santos
-
-void pede_jodada(int posicao)
+void converte_jodada(int posicao)
 {
     int i = 0, j =0;
 
@@ -117,6 +67,63 @@ void pede_jodada(int posicao)
 }
 
 /* Funcao que verifica se uma o jogo acabou*/
+
+
+
+
+
+/* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
+ se a jogada ja saiu retorna 0, se nao 1.
+ */
+
+// Programador: Hermann J. Hernani.
+
+int jogada_valida(char *vetor_de_posicao, int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
+{
+   int i;
+   for(i = 0; i < 9; i++) // percorre o vetor
+   {
+       if (jogada == vetor_de_posicao[i]) // se a jogada existir no vetor, ou seja, ja foi realizada retorna 0, valor para false.
+       {
+           return 0;
+       }
+ 
+   }
+    return 1; //  se a jogada não existir ele retorna 1, valor para true
+}
+
+
+
+
+
+
+
+/* Funcao que marca com X ou O*/
+
+// Programador: wilson calisto 
+
+void joga(int *vet, char **matriz) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
+{
+    int i,cont,len;
+    len=strlen(vet);
+    coluna=vet[len-1];
+    linha=vet[len-2];
+    if(i_global%2==0)
+    {
+            matriz[linha][coluna]='0';
+            cont_global++;
+    }
+    else
+    {
+        cont_global++;
+         matriz[linha][coluna]='X';
+    }
+}
+
+/*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
+
+// Programador: Raí Santos
+
 
 // Programador: wilson calisto
 
