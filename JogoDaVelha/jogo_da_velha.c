@@ -125,10 +125,10 @@ void joga(int *vetor_de_endereco, char **matriz,int i) //recebe o vetor da  ulti
 
 // Programador: wilson calisto
 
-int velhou(char *vet) //recebe o vetor de jogadas e retorna: 1 pra velhou e 0 para falso
+int velhou(char *vetor_de_jogadas) //recebe o vetor de jogadas e retorna: 1 pra velhou e 0 para falso
 {
    int len;
-   len=strlen(vet);
+   len=strlen(vetor_de_jogadas);
    if(len=9)
    {
         return 1;
