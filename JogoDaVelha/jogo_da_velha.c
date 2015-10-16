@@ -97,7 +97,8 @@ void pede_jodada(int posicao)
                 vetor_de_endereco[i] = 2;
                 vetor_de_endereco[i+1] = 2;
                 break;
-
+        
+        default: printf("Posicao invalida! \n")
         }
 }
 
