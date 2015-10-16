@@ -53,20 +53,12 @@ int main()
 	        }
 	        /* colocar limpa tela*/
 	        
-	      
-	        
-	        /*ve  se ainda tiver jogada */       
-          
+	      joga(*vetor_de_endereco,**matriz,i)
+	   
+	                
+	      ganhou();
 	         
-	                	
-	                    
-	                joga(vetor_de_posicao,matriz);
-	                ganhou();
-	         	valida_jogada(vetor_de_endereco,jogada);
-	                else
-	                {
-	                	printf("jogada invalida");
-	                }
+	              
 	                
 	       
 	            
