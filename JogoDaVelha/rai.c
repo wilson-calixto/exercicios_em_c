@@ -47,7 +47,7 @@ int main()
 	            printf("Digite a jogada jogador 2");
 	            scanf("%d",&jogada);
 	        }
-	        
+	        /* colocar limpa tela*/
 	        
 	        /*converte um numero em um endereco*/
 	        converte_jogada(vetor_de_posicao,vetor_de_endereco,jogada);
