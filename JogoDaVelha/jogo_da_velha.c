@@ -8,11 +8,11 @@ void mostra_matriz(char **matriz)
 }
 
 
+
+
 /*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
 
 // Programador: Raí Santos
-
-
 void converte_jodada(int posicao)
 {
     int i = 0, j =0;
@@ -69,10 +69,6 @@ void converte_jodada(int posicao)
         }
 }
 
-/* Funcao que verifica se uma o jogo acabou*/
-
-
-
 
 
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
@@ -122,10 +118,10 @@ void joga(int *vetor_de_endereco, char **matriz,int i) //recebe o vetor da  ulti
 }
 
 
-
+ //recebe o vetor de jogadas e retorna: 1 pra velhou e 0 para falso
 // Programador: wilson calisto
 
-int velhou(char *vetor_de_jogadas) //recebe o vetor de jogadas e retorna: 1 pra velhou e 0 para falso
+int velhou(char *vetor_de_jogadas)
 {
    int len;
    len=strlen(vetor_de_jogadas);
