@@ -8,6 +8,9 @@ void mostra_matriz(char **matriz)
 }
 
 
+/*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
+
+// Programador: Raí Santos
 
 
 void converte_jodada(int posicao)
@@ -96,33 +99,28 @@ int jogada_valida(char *vetor_de_posicao, int jogada) //recebe o vetor de jogada
 
 
 
-
-
 /* Funcao que marca com X ou O*/
 
 // Programador: wilson calisto 
 
-void joga(int *vet, char **matriz) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
+void joga(int *vetor_de_endereco, char **matriz,int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {
-    int i,cont,len;
+    int j,cont,len;
     len=strlen(vet);
     coluna=vet[len-1];
     linha=vet[len-2];
-    if(i_global%2==0)
+    if(i%2==0)
     {
             matriz[linha][coluna]='0';
-            cont_global++;
+        
     }
     else
     {
-        cont_global++;
+        
          matriz[linha][coluna]='X';
     }
 }
 
-/*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
-
-// Programador: Raí Santos
 
 
 // Programador: wilson calisto
