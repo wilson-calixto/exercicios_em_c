@@ -35,9 +35,7 @@ int main()
 	     }while(jogada>9 || jogada<1);
 	        /*colocar um limpa tela*/
 	        
-	          /*converte um numero em um endereco*/
-	     converte_jogada(jogada);
-	        
+	     
 	         /*se a jogada ja existir no vetor peca denovo (retira as coordenadadas ja usadas) */
 	     while(!jogada_valida(vetor_de_posicao,jogada))
 	     {            
@@ -45,6 +43,10 @@ int main()
 	            scanf("%d",&jogada);
 	     }
 	     /* colocar limpa tela*/
+	     
+	     /*converte um numero em um endereco*/
+	     converte_jogada(jogada);
+	     
 	     /* joga e verifica se alguem ganhou*/
 	     if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
  	     {
