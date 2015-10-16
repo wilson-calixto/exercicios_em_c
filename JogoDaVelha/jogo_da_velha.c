@@ -42,7 +42,7 @@ int jogada_valida(char vet[9], int jogada) //recebe o vetor de jogadas realizada
     return 1; //  se a jogada não existir ele retorn 1, valor para true
 }
 
-
+/*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
 void pede_jodada(int posicao)
 {
     int i = 0, j =0;
