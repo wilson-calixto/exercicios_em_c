@@ -13,6 +13,8 @@ printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|_
 }
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "jogo_da_velha.h"
 
 int vetor_de_endereco[17];
 int vetor_posicao[17];
@@ -33,7 +35,6 @@ int main()
 	    }
 	    else
 	    {
-	        
 	        /*retira as coordenadas invalidas*/
 	        do{            
 	            printf("Digite a jogada jogador 2");
@@ -44,7 +45,6 @@ int main()
 	          /*converte um numero em um endereco*/
 	        converte_jogada(jogada);
 	        
-	        
 	         /*se a jogada ja existir no vetor peca denovo (retira as coordenadadas ja usadas) */
 	        while(!jogada_valida(vetor_de_posicao,jogada))
 	        {            
@@ -53,18 +53,13 @@ int main()
 	        }
 	        /* colocar limpa tela*/
 	        
-	      joga(*vetor_de_endereco,**matriz,i)
-	      velhou(vetor_de_jogadas);
-	                
-	      ganhou();
-	         
-	              
-	                
+	       joga(*vetor_de_endereco,**matriz,i)
+	       velhou(vetor_de_jogadas);
 	       
-	            
-	       
+	       if(ganhou(char **matriz)){
+	       	printf("jogador 2 ganhou ");
+	       }
 	    }
-	
 	}
     return 0;
 }
