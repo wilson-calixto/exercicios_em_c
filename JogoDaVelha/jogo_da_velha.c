@@ -153,7 +153,7 @@ int tem_jogada(int i) //recebe o vetor de jogadas realizadas e a jogada que se d
     }
 }
 
-
+/* Funcao que verifica se o jogador ganhou*/
 // Programador: Delrick 
 int ganhou(char **mat)
 {
