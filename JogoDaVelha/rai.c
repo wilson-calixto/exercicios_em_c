@@ -56,7 +56,7 @@ int main()
 	       joga(*vetor_de_endereco,**matriz,i)
 	       velhou(vetor_de_jogadas);
 	       
-	       if(ganhou(char **matriz)){
+	       if(ganhou(matriz)){
 	       	printf("jogador 2 ganhou ");
 	       }
 	    }
