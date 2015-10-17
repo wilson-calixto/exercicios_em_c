@@ -6,6 +6,8 @@
 
 
 
+
+
 int vetor_posicao[9];
 int main()
 {

@@ -10,6 +10,8 @@
 
 
 /*funca retorna :
+
+
 1 se o jogo é para um facil 
 2 se o jogo é para um dificil 
 3 para sair 
