@@ -5,3 +5,4 @@ void joga(int jogada,char matriz[3][3],int i);
 int velhou(int i);
 
 int ganhou(char mat[3][3]);
+void para_um(char matriz[3][3],int vetor_posicao[9]);
