@@ -32,10 +32,8 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
 
 
 
-/*funcao que recebe um numero de 1 a 9 e o armazena em um vetor global, assim como o seu endereco em outro vetor */
-
 // Programador: Raí Santos
-void converte_jodada(int posicao)
+void converte_jodada(int posicao,int *vetor_de_endereco,int *vetor_posicao)
 {
     int i = 0, j =0;
 
@@ -87,10 +85,9 @@ void converte_jodada(int posicao)
                 vetor_de_endereco[i+1] = 2;
                 break;
         
-        default: printf("Posicao invalida! \n")
+        default: printf("Posicao invalida! \n");
         }
 }
-
 
 
 
