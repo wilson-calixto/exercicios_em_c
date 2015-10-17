@@ -44,7 +44,7 @@ int main()
 	     }
 	     /* colocar limpa tela*/     
 	     /*converte um numero em um endereco*/
-	     converte_jodada(jogada,i,vetor_posicao);
+	     marca_jodada(jogada,i,vetor_posicao);
 	          /* joga */ 	     
 	     joga(jogada,matriz,i);		 
 	     

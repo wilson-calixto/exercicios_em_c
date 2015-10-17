@@ -33,7 +33,7 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
 
 
 // Programador: Raí Santos
-void converte_jodada(int posicao,int i,int *vetor_posicao)
+void marca_jodada(int posicao,int i,int *vetor_posicao)
 {
     
 vetor_posicao[i] = posicao;
