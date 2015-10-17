@@ -29,6 +29,10 @@ int main()
 		     	break;		     
 		     }	     
 	     }
+	     if(velhou(i))
+	     {
+	     		printf("\nVelhou\n");
+	     }
 	        /*retira as coordenadas invalidas e as que ja sairam*/
 	    do{            
 	            

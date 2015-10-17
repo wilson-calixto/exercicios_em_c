@@ -131,35 +131,21 @@ void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada
  //recebe o vetor de jogadas e retorna: 1 pra velhou e 0 para falso
 // Programador: wilson calisto
 
-int velhou(char *vetor_de_jogadas)
+int velhou(int i)
 {
-   int len;
-   len=strlen(vetor_de_jogadas);
-   if(len=9)
+   if(i==9)
    {
         return 1;
-   }else{
+   }
+   else
+   {
    
         return 0;
-    }
+   }
    
 }
 
-/* Funcao que verifica se uma jogada é valida ou nao percorrendo o vetor de jogas ja realizadas*/
 
-// Programador: wilson calisto 
-
-int tem_jogada(int i) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
-{
-    if(i==9) /*se os jogadsores ja fizeram 9 jogadas ele retorna 0 False*/
-    {
-        return 0;
-    }
-    else
-    {
-        return 1; /* se ainda tiver jogada ele retorna 1 true*/
-    }
-}
 
 /* Funcao que verifica se o jogador ganhou*/
 // Programador: Delrick 
