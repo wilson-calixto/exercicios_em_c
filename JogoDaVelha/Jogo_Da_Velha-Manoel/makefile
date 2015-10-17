@@ -12,5 +12,5 @@ util.o: util.c
 clear:
 	rm -rf *.o
 
-mrproper:
+mrproper: clear
 	rm -rf Velha
