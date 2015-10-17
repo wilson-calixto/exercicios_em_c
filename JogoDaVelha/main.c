@@ -8,7 +8,7 @@ int vetor_posicao[17];
 int main()
 {
     int i,jogada;
-	char matriz[3][4] ={{'1','2','3'},
+	char matriz[3][3] ={{'1','2','3'},
 					   {'4','5','6'},
 					   {'7','8','9',}};
 
@@ -33,6 +33,8 @@ int main()
      
 	     /*converte um numero em um endereco*/
 	     converte_jodada(jogada,vetor_de_endereco,vetor_posicao);
+	     
+	     /* joga e verifica se alguem ganhou*/
 	     
 	     /* joga e verifica se alguem ganhou*/
 	     if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
