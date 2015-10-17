@@ -8,6 +8,39 @@
   #define limpa_tela system("/usr/bin/clear") //limpa tela
 #endif
 
+
+
+int show_menu()
+{
+    int jogs = 0;
+
+    while (jogs == 0)
+    {
+        limpa_tela; //limpando a tela	        
+
+        printf("******* JOGO DA VELHA *******");
+        printf("\n\n1. 1 jogador\n2. 2 jogadores\n3. Sair\n");
+        scanf("%d", &jogs);
+		
+        if (jogs == 2)
+        {
+            jogs = 4;
+	    }
+
+
+        if (jogs == 1)
+        {
+            printf("Dificuldade: \n1. Facil\n2. Dificil\n");
+            scanf("%d", &jogs);		        
+    	}
+    }
+    return jogs;
+}
+
+
+
+
+
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
  se a jogada ja saiu retorna 0, se nao 1.
  */
@@ -168,11 +201,14 @@ int ganhou(char mat[3][3])
 
 
 
-void para_um(char matriz[3][3],int vetor_posicao[9])
+void para_dois(char matriz[3][3],int vetor_posicao[9])
 {
     int i,jogada;
     for(i=1;i<=9;i++)
     {       
+	      limpa_tela; //limpando a tela	        
+		
+		  mostra_matriz(matriz);
 	
 	        /*retira as coordenadas invalidas e as que ja sairam*/
 	     do{            
@@ -220,4 +256,11 @@ void para_um(char matriz[3][3],int vetor_posicao[9])
 	     
 	 }
 
+}
+void para_um_facil(char matriz[3][3],int vetor_posicao[9]){
+	printf("incompleta facil");
+}
+
+void para_um_dificil(char matriz[3][3],int vetor_posicao[9]){
+	printf("incompleta dificil" );
 }
