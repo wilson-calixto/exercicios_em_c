@@ -2,6 +2,50 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef WIN32  //se for windows
+  #define limpa_tela system("cls") //limpa tela
+#else //senão, ex.: linux
+  #define limpa_tela system("/usr/bin/clear") //limpa tela
+#endif
+
+
+/*funca retorna :
+1 se o jogo é para um facil 
+2 se o jogo é para um dificil 
+3 para sair 
+4 se o jogo é para dois 
+*/
+int show_menu()
+{
+    int jogs = 0;
+
+    while (jogs == 0)
+    {
+        limpa_tela; //limpando a tela	        
+
+        printf("******* JOGO DA VELHA *******");
+        printf("\n\n1. 1 jogador\n2. 2 jogadores\n3. Sair\n");
+        scanf("%d", &jogs);
+		
+        if (jogs == 2)
+        {
+            jogs = 4;
+	    }
+
+
+        if (jogs == 1)
+        {
+            printf("Dificuldade: \n1. Facil\n2. Dificil\n");
+            scanf("%d", &jogs);		        
+    	}
+    }
+    return jogs;
+}
+
+
+
+
+
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
  se a jogada ja saiu retorna 0, se nao 1.
  */
@@ -35,6 +79,28 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
 }
 
 
+
+/*retira as coordenadas invalidas e as que ja sairam e retorna uma jogada valida*/   
+// programador : WISON CALIXTO
+ int jogada_correta(int vetor_posicao[9],int i)
+ {
+ int jogada;
+        do{            
+	            
+	            if(i%2==0)// se i é par é o '0'
+	            {
+	            	printf("Digite a jogada jogador 2\n");
+	            }
+	            else// se i é impar é o 'X'
+	            {
+	            	printf("Digite a jogada jogador 1\n");
+	            }
+	            
+	            scanf("%d",&jogada);
+	      }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
+ return jogada;
+ 
+ }
 
 /* Funcao que marca as jogadas que ja sairam.
  */
@@ -127,31 +193,22 @@ void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada
 }
 
 
- //recebe o vetor de jogadas e retorna: 1 pra velhou e 0 para falso
-// Programador: wilson calisto
 
-int velhou(int i)
-{
-   if(i==9)
-   {
-        return 1;
-   }
-   else
-   {
-   
-        return 0;
-   }
-   
-}
-
-
-
-/* Funcao que verifica se o jogador ganhou*/
+/* Funcao que verifica se o jogador e quem ganhou ganhou*/
 // Programador: Delrick 
-int ganhou(char mat[3][3])
+int ganhou(char mat[3][3],int i)
 {
     if((mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) || (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) || (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) || (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) || (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) || (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) ||  (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2]) || (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]))
-    {
+    {      
+    
+	      	 if(i%2==0)// se i é par é o '0'
+		     {
+		     	printf("jogador 2 o 'O' ganhou");			     
+		     }
+		     else// se i é impar é o 'X'
+		     {
+		     	printf("jogador 1 o 'X' ganhou");
+		     }       
         return 1;
     }
     else
@@ -160,5 +217,47 @@ int ganhou(char mat[3][3])
     }
 }
 
+        
+	     
 
 
+void para_dois(char matriz[3][3],int vetor_posicao[9])
+{
+    int i,jogada;
+    for(i=1;i<=9;i++)
+    {       
+	      limpa_tela; //limpando a tela	   
+		  mostra_matriz(matriz);	
+	        /*retira as coordenadas invalidas e as que ja sairam*/    
+ 		  jogada=jogada_correta(vetor_posicao,i);	        
+			 /*marca as jogadas ja feitas */
+	      marca_jodada(jogada,i,vetor_posicao);
+	          /* joga */ 	     
+	      joga(jogada,matriz,i);		 	
+          limpa_tela; //limpando a tela	 	
+		  mostra_matriz(matriz);		     
+	     /* verifica se um jogador ganhou*/
+	      if(ganhou(matriz,i))
+	      {
+	      	break;
+	      }
+		     /* verifica se velhou*/
+	     if(i==9)
+	     {
+	     		printf("\nVelhou\n");
+	     }
+	     
+	 }
+
+}
+
+
+
+
+void para_um_facil(char matriz[3][3],int vetor_posicao[9]){
+	printf("incompleta facil");
+}
+
+void para_um_dificil(char matriz[3][3],int vetor_posicao[9]){
+	printf("incompleta dificil" );
+}
