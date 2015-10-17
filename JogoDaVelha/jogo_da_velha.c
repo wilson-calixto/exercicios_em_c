@@ -13,12 +13,12 @@ void mostra_matriz(char matriz[3][4])
 
 // Programador: Hermann J. Hernani.
 
-int jogada_valida(char *vetor_de_posicao, int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
+int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
 {
    int i;
    for(i = 0; i < 9; i++) // percorre o vetor
    {
-       if (jogada == vetor_de_posicao[i]) // se a jogada existir no vetor, ou seja, ja foi realizada retorna 0, valor para false.
+       if (jogada == vetor_posicao[i]) // se a jogada existir no vetor, ou seja, ja foi realizada retorna 0, valor para false.
        {
            return 0;
        }
@@ -26,6 +26,8 @@ int jogada_valida(char *vetor_de_posicao, int jogada) //recebe o vetor de jogada
    }
     return 1; //  se a jogada não existir ele retorna 1, valor para true
 }
+
+
 
 
 

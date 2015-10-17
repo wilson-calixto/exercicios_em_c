@@ -24,7 +24,7 @@ int main()
 	        
 	     
 	         /*se a jogada ja existir no vetor peca denovo (retira as coordenadadas ja usadas) */
-	     while(!jogada_valida(vetor_de_posicao,jogada))
+	     while(!jogada_valida(vetor_posicao,jogada))
 	     {            
 	            printf("Digite a jogada jogador 2");
 	            scanf("%d",&jogada);
