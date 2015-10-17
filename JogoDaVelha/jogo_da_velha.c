@@ -33,60 +33,12 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
 
 
 // Programador: Raí Santos
-void converte_jodada(int posicao,int *vetor_de_endereco,int *vetor_posicao)
+void converte_jodada(int posicao,int i,int *vetor_posicao)
 {
-    int i = 0, j =0;
-
-    switch(posicao)
-    {
-
-        case 1: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 0;
-                vetor_de_endereco[i+1] = 0;
-                break;
-        
-        case 2: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 0;
-                vetor_de_endereco[i+1] = 1;
-                break;
-
-        case 3: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 0;
-                vetor_de_endereco[i+1] = 2;
-                break;
-
-        case 4: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 1;
-                vetor_de_endereco[i+1] = 0;
-                break;
-
-        case 5: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 1;
-                vetor_de_endereco[i+1] = 1;
-                break;
-
-        case 6: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 1;
-                vetor_de_endereco[i+1] = 2;
-                break;
-
-        case 7: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 2;
-                vetor_de_endereco[i+1] = 0;
-                break;
-
-        case 8: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 2;
-                vetor_de_endereco[i+1] = 1;
-                break;
-
-        case 9: vetor_posicao[j] = posicao;
-                vetor_de_endereco[i] = 2;
-                vetor_de_endereco[i+1] = 2;
-                break;
-        
-        default: printf("Posicao invalida! \n");
-        }
+    
+vetor_posicao[i] = posicao;
+             
+                
 }
 
 

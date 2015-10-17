@@ -21,54 +21,32 @@ int main()
 		     if(i%2==0)
 		     {
 		     	printf("jogador 1 o 'X' ganhou");
-		     	break;
-		     
+		     	break;		     
 		     }
 		     else
 		     {
 		     	printf("jogador 2 o 'O' ganhou");
-		     	break;
-		     
-		     }
-		     
+		     	break;		     
+		     }	     
 	     }
-    
-    
-
-	    /*retira as coordenadas invalidas*/
+	        /*retira as coordenadas invalidas*/
 	    do{            
 	            printf("Digite a jogada ");
 	            scanf("%d",&jogada);
 	     }while(jogada>9 || jogada<1);
-	        /*colocar um limpa tela*/
+	        /*colocar um limpa tela*/     
 	        
-	     
 	         /*se a jogada ja existir no vetor peca denovo (retira as coordenadadas ja usadas) */
 	     while(!jogada_valida(vetor_posicao,jogada))
 	     {            
 	            printf("Digite a jogada jogador 2");
 	            scanf("%d",&jogada);
 	     }
-	     /* colocar limpa tela*/
-     
+	     /* colocar limpa tela*/     
 	     /*converte um numero em um endereco*/
-	     converte_jodada(jogada,vetor_de_endereco,vetor_posicao);
-	     
-	     /* joga e verifica se alguem ganhou*/
-	     
-	     /* joga e verifica se alguem ganhou*/
-	     
-	     
-	     
+	     converte_jodada(jogada,i,vetor_posicao);
+	          /* joga */ 	     
 	     joga(jogada,matriz,i);		 
-
-	     
-	     
-	     
-	     
-	     
-	     
-	     
 	     
 	}
     return 0;
