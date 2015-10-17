@@ -3,6 +3,12 @@
 #include <string.h>
 #include "jogo_da_velha.h"
 
+#ifdef WIN32  //se for windows
+  #define limpa_tela system("cls") //limpa tela
+#else //senão, ex.: linux
+  #define limpa_tela system("/usr/bin/clear") //limpa tela
+#endif
+
 
 int vetor_posicao[9];
 int main()
@@ -31,14 +37,16 @@ int main()
 	            
 	            scanf("%d",&jogada);
 	      }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
-	        /*colocar um limpa tela*/     
 	        
-
-	      /*marca as jogadas ja feitas */
+			 /*marca as jogadas ja feitas */
 	      marca_jodada(jogada,i,vetor_posicao);
 	          /* joga */ 	     
 	      joga(jogada,matriz,i);		 
-			     mostra_matriz(matriz);
+	
+          limpa_tela; //limpando a tela	        
+		
+		  mostra_matriz(matriz);
+			     
 	     /* verifica se um jogador ganhou*/
 	      if(ganhou(matriz))
 	      {
@@ -58,7 +66,7 @@ int main()
 	     {
 	     		printf("\nVelhou\n");
 	     }
-	     	/* mostra a matriz modificada*/
+
 
     
 	}
