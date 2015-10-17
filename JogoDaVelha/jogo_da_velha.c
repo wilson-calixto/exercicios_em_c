@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+/* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
+ se a jogada ja saiu retorna 0, se nao 1.
+ */
+
+// Programador: Jackson kelvin
+
 void mostra_matriz(char matriz[3][3])
 {
     printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",matriz[0][0],matriz[0][1],matriz[0][2],matriz[1][0],matriz[1][1],matriz[1][2],matriz[2][0],matriz[2][1],matriz[2][2]);	
@@ -29,21 +36,13 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
 
 
 
-
-
-
+/* Funcao que marca as jogadas que ja sairam.
+ */
 // Programador: Raí Santos
 void marca_jodada(int posicao,int i,int *vetor_posicao)
 {
-    
-vetor_posicao[i] = posicao;
-             
-                
+vetor_posicao[i] = posicao;               
 }
-
-
-
-
 
 /* Funcao que marca com X ou O*/
 

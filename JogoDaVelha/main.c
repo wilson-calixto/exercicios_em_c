@@ -11,6 +11,7 @@ int main()
 	char matriz[3][3] ={{'1','2','3'},
 					   {'4','5','6'},
 					   {'7','8','9',}};
+		/* mostra a matriz inicial*/
 	mostra_matriz(matriz);
 	
     for(i=1;i<=9;i++)
@@ -18,11 +19,11 @@ int main()
 	        /*retira as coordenadas invalidas e as que ja sairam*/
 	     do{            
 	            
-	            if(i%2==0)
+	            if(i%2==0)// se i é par é o '0'
 	            {
 	            	printf("Digite a jogada jogador 2\n");
 	            }
-	            else
+	            else// se i é impar é o 'X'
 	            {
 	            	printf("Digite a jogada jogador 1\n");
 	            }
@@ -36,32 +37,28 @@ int main()
 	      marca_jodada(jogada,i,vetor_posicao);
 	          /* joga */ 	     
 	      joga(jogada,matriz,i);		 
-	     
+	     /* verifica se um jogador ganhou*/
 	      if(ganhou(matriz))
 	      {
-		     if(i%2==0)
+		     if(i%2==0)// se i é par é o '0'
 		     {
 		     	printf("jogador 2 o 'O' ganhou");
 		     	break;		     
 		     }
-		     else
+		     else// se i é impar é o 'X'
 		     {
 		     	printf("jogador 1 o 'X' ganhou");
 		     	break;		     
 		     }	     
 	      }
-	     
+	     /* verifica se velhou*/
 	     if(velhou(i))
 	     {
 	     		printf("\nVelhou\n");
 	     }
-	     	
+	     	/* mostra a matriz modificada*/
 	     mostra_matriz(matriz);
-	     
-	     
-	     
-	     
-	     
+    
 	}
     return 0;
 }
