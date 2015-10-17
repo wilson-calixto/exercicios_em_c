@@ -8,7 +8,7 @@ int vetor_posicao[17];
 int main()
 {
     int i,jogada;
-	char matriz[3][3] ={{'1','2','3'},
+	char matriz[3][4] ={{'1','2','3'},
 					   {'4','5','6'},
 					   {'7','8','9',}};
 
