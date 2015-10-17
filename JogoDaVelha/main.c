@@ -16,6 +16,7 @@ int main()
 	
     for(i=1;i<=9;i++)
     {       
+	
 	        /*retira as coordenadas invalidas e as que ja sairam*/
 	     do{            
 	            
@@ -37,6 +38,7 @@ int main()
 	      marca_jodada(jogada,i,vetor_posicao);
 	          /* joga */ 	     
 	      joga(jogada,matriz,i);		 
+			     mostra_matriz(matriz);
 	     /* verifica se um jogador ganhou*/
 	      if(ganhou(matriz))
 	      {
@@ -57,7 +59,7 @@ int main()
 	     		printf("\nVelhou\n");
 	     }
 	     	/* mostra a matriz modificada*/
-	     mostra_matriz(matriz);
+
     
 	}
     return 0;
