@@ -11,30 +11,12 @@ int main()
 	char matriz[3][3] ={{'1','2','3'},
 					   {'4','5','6'},
 					   {'7','8','9',}};
-
+	mostra_matriz(matriz);
+	
     for(i=1;i<=9;i++)
-    {
-    	
-    	 mostra_matriz(matriz);
-         if(ganhou(matriz))
-	     {
-		     if(i%2==0)
-		     {
-		     	printf("jogador 1 o 'X' ganhou");
-		     	break;		     
-		     }
-		     else
-		     {
-		     	printf("jogador 2 o 'O' ganhou");
-		     	break;		     
-		     }	     
-	     }
-	     if(velhou(i))
-	     {
-	     		printf("\nVelhou\n");
-	     }
+    {       
 	        /*retira as coordenadas invalidas e as que ja sairam*/
-	    do{            
+	     do{            
 	            
 	            if(i%2==0)
 	            {
@@ -46,14 +28,39 @@ int main()
 	            }
 	            
 	            scanf("%d",&jogada);
-	     }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
+	      }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
 	        /*colocar um limpa tela*/     
 	        
 
-	     /*converte um numero em um endereco*/
-	     marca_jodada(jogada,i,vetor_posicao);
+	      /*marca as jogadas ja feitas */
+	      marca_jodada(jogada,i,vetor_posicao);
 	          /* joga */ 	     
-	     joga(jogada,matriz,i);		 
+	      joga(jogada,matriz,i);		 
+	     
+	      if(ganhou(matriz))
+	      {
+		     if(i%2==0)
+		     {
+		     	printf("jogador 2 o 'O' ganhou");
+		     	break;		     
+		     }
+		     else
+		     {
+		     	printf("jogador 1 o 'X' ganhou");
+		     	break;		     
+		     }	     
+	      }
+	     
+	     if(velhou(i))
+	     {
+	     		printf("\nVelhou\n");
+	     }
+	     	
+	     mostra_matriz(matriz);
+	     
+	     
+	     
+	     
 	     
 	}
     return 0;
