@@ -97,23 +97,82 @@ void converte_jodada(int posicao,int *vetor_de_endereco,int *vetor_posicao)
 
 // Programador: wilson calisto 
 
-void joga(int *vetor_de_endereco, char **matriz,int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
+void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {
-    int j,cont,len,linha,coluna;
-    len=strlen(vetor_de_endereco);
-    linha=vetor_de_endereco[len-2];
-    coluna=vetor_de_endereco[len-1];
+    
    
-    if(i%2==0)
-    {
-            matriz[linha][coluna]='0';
+        if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
+ 	     {
+		           	switch(jogada)
+					{
+
+					case 1: matriz[0][0]='0';
+							  break;        
+					case 2: 
+						  matriz[0][1]='0';
+						    break;
+
+					case 3: matriz[0][2]='0';
+						    break;
+
+					case 4: matriz[1][0]='0';
+						    break;
+
+					case 5: matriz[1][1]='0';
+						    break;
+
+					case 6: matriz[1][2]='0';
+						    break;
+
+					case 7: matriz[2][0]='0';
+						    break;
+
+					case 8: matriz[2][1]='0';
+						    break;
+
+					case 9: matriz[2][2]='0';
+						    break;
+				
+					default: printf("Posicao invalida! \n");
+			  		}
+		 }
+    	else
+   		 {
+    
+		           	switch(jogada)
+					{
+
+					case 1: matriz[0][0]='X';
+							  break;        
+					case 2: 
+						  	matriz[0][1]='X';
+						    break;
+
+					case 3: matriz[0][2]='X';
+						    break;
+
+					case 4: matriz[1][0]='X';
+						    break;
+
+					case 5: matriz[1][1]='X';
+						    break;
+
+					case 6: matriz[1][2]='X';
+						    break;
+
+					case 7: matriz[2][0]='X';
+						    break;
+
+					case 8: matriz[2][1]='X';
+						    break;
+
+					case 9: matriz[2][2]='X';
+						    break;
+				
+					default: printf("Posicao invalida! \n");
+			  		}
         
-    }
-    else
-    {
-        
-         matriz[linha][coluna]='X';
-    }
+     }   
 }
 
 
@@ -152,7 +211,7 @@ int tem_jogada(int i) //recebe o vetor de jogadas realizadas e a jogada que se d
 
 /* Funcao que verifica se o jogador ganhou*/
 // Programador: Delrick 
-int ganhou(char **mat)
+int ganhou(char mat[3][3])
 {
     if((mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) || (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) || (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) || (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) || (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) || (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) ||  (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2]) || (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]))
     {

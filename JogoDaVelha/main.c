@@ -12,9 +12,29 @@ int main()
 					   {'4','5','6'},
 					   {'7','8','9',}};
 
-    for(i=1;i<=9;i++){
+    for(i=1;i<=9;i++)
+    {
+    	
+    	 mostra_matriz(matriz);
+         if(ganhou(matriz))
+	     {
+		     if(i%2==0)
+		     {
+		     	printf("jogador 1 o 'X' ganhou");
+		     	break;
+		     
+		     }
+		     else
+		     {
+		     	printf("jogador 2 o 'O' ganhou");
+		     	break;
+		     
+		     }
+		     
+	     }
     
-	    mostra_matriz(matriz);
+    
+
 	    /*retira as coordenadas invalidas*/
 	    do{            
 	            printf("Digite a jogada ");
@@ -37,21 +57,19 @@ int main()
 	     /* joga e verifica se alguem ganhou*/
 	     
 	     /* joga e verifica se alguem ganhou*/
-	     if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
- 	     {
-		       joga(vetor_de_endereco,matriz,i);
-		       if(ganhou(matriz))
-		       {
-		       	printf("jogador 1 ganhou ");
-		       } 	     
-  	     else
-	     {
-		       joga(vetor_de_endereco,matriz,i);
-		       if(ganhou(matriz))
-		       {
-		       	printf("jogador 2 ganhou ");
-		       }
-	      }
+	     
+	     
+	     
+	     joga(jogada,matriz,i);		 
+
+	     
+	     
+	     
+	     
+	     
+	     
+	     
+	     
 	}
     return 0;
 }
