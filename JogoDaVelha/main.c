@@ -37,14 +37,14 @@ int main()
 	     /* joga e verifica se alguem ganhou*/
 	     if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
  	     {
-		       joga(*vetor_de_endereco,**matriz,i)
+		       joga(vetor_de_endereco,matriz,i);
 		       if(ganhou(matriz))
 		       {
 		       	printf("jogador 1 ganhou ");
 		       } 	     
   	     else
 	     {
-		       joga(*vetor_de_endereco,**matriz,i)
+		       joga(vetor_de_endereco,matriz,i);
 		       if(ganhou(matriz))
 		       {
 		       	printf("jogador 2 ganhou ");
