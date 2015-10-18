@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define limpa_tela() system("/usr/bin/clear")
+#define limpa_tela() system("/usr/bin/clear") //comando para limpar a tela
 
 typedef struct jogador
 {
@@ -94,7 +94,7 @@ void hXh(Jogador *jogador, char *vetor)
  
     while(!velhou() && !ganhou(vetor,*jogador))
     {
-        limpa_tela();
+        limpa_tela();//limpa a tela
         troca(&*jogador);//troca valores da variável 'jogador'
         mostra(vetor);//mostra o vetor 
         printf("Turno do jogador %d.\n", (*jogador).num); //informa de quem é a vez
@@ -103,7 +103,7 @@ void hXh(Jogador *jogador, char *vetor)
  
     putchar('\n'); //pula uma linha
     
-    limpa_tela();
+    limpa_tela();//limpa a tela
 
     mostra(vetor); //mostra o vetor no fim do jogo
 
@@ -147,7 +147,7 @@ void hXm(Jogador *jogador, char *vetor)
 
     while(!velhou() && !ganhou(vetor,*jogador))
     {
-        limpa_tela();
+        limpa_tela();//limpa a tela
         troca(&*jogador); //troca de jogador
         mostra(vetor);//mostra o vetor
         printf("Turno do jogador %d\n",(*jogador).num);//informa de quem é o turno
@@ -159,7 +159,7 @@ void hXm(Jogador *jogador, char *vetor)
 
     putchar('\n');//pula uma linha
 
-    limpa_tela();
+    limpa_tela();//limpa  a tela
 
     mostra(vetor);//mostra o vetor no fim do jogo
 }
