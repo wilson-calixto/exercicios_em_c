@@ -1,7 +1,6 @@
 /*
  * Programacao de Computadores e Algoritmos
- * Trabalho 5
- * teste2.c
+ * Jogo da Velha
  *
  * Equipe:
  *
@@ -14,10 +13,14 @@
 #include <stdlib.h>
 #include "util.h"
 
+#define limpa_tela() system("/usr/bin/clear")
+
 extern const Jogador jogador1, jogador2; //Usando variáveis globais entre arquivos
 
 int main(int argc, const char *argv[])
 {
+   
+   limpa_tela();//limpa a tela
    
     char vetor[9]; //declara vetor de 9 elementos
     Jogador jogador; //declara variável do tipo Jogador
