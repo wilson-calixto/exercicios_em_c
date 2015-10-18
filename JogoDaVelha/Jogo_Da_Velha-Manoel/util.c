@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#define limpa_tela() system("/usr/bin/clear")
+
 typedef struct jogador
 {
     int num, marca;
@@ -87,19 +89,22 @@ int ganhou(char *vetor, Jogador jogador)//função para verificar se algum jogad
     return 0;
 }
 
-void hXh(Jogador jogador, char *vetor)
+void hXh(Jogador *jogador, char *vetor)
 {
  
-    while(!velhou() && !ganhou(vetor,jogador))
+    while(!velhou() && !ganhou(vetor,*jogador))
     {
-        troca(&jogador);//troca valores da variável 'jogador'
+        limpa_tela();
+        troca(&*jogador);//troca valores da variável 'jogador'
         mostra(vetor);//mostra o vetor 
-        printf("Turno do jogador %d.\n", jogador.num); //informa de quem é a vez
-        pede_jogada(vetor,jogador);//pede que o jogador jogue
+        printf("Turno do jogador %d.\n", (*jogador).num); //informa de quem é a vez
+        pede_jogada(vetor,*jogador);//pede que o jogador jogue
     }
  
     putchar('\n'); //pula uma linha
     
+    limpa_tela();
+
     mostra(vetor); //mostra o vetor no fim do jogo
 
 }
@@ -137,20 +142,24 @@ void maquina_joga(char *vetor, Jogador jogador)
     }
 }
 
-void hXm(Jogador jogador, char *vetor)
+void hXm(Jogador *jogador, char *vetor)
 {
-    while(!velhou() && !ganhou(vetor,jogador))
+
+    while(!velhou() && !ganhou(vetor,*jogador))
     {
-        troca(&jogador); //troca de jogador
+        limpa_tela();
+        troca(&*jogador); //troca de jogador
         mostra(vetor);//mostra o vetor
-        printf("Turno do jogador %d\n",jogador.num);//informa de quem é o turno
-        if(jogador.num == jogador1.num)
-            pede_jogada(vetor,jogador);//se jogador for a o usuário então pede a jogada
+        printf("Turno do jogador %d\n",(*jogador).num);//informa de quem é o turno
+        if((*jogador).num == jogador1.num)
+            pede_jogada(vetor,*jogador);//se jogador for a o usuário então pede a jogada
         else
-            maquina_joga(vetor,jogador);//se for a maquina, a maquina joga 
+            maquina_joga(vetor,*jogador);//se for a maquina, a maquina joga 
     }
 
     putchar('\n');//pula uma linha
+
+    limpa_tela();
 
     mostra(vetor);//mostra o vetor no fim do jogo
 }

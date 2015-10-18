@@ -33,11 +33,11 @@ int main(int argc, const char *argv[])
     switch(op)
     {
         case 2:
-            hXh(jogador,vetor);
+            hXh(&jogador,vetor);
             break;
         
         case 1:
-            hXm(jogador,vetor);
+            hXm(&jogador,vetor);
             break;
         
         default:
