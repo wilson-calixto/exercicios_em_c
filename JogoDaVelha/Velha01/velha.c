@@ -5,9 +5,9 @@
 
 int main ()
 {
-   int jogs;/*aa*qsds/q*
+   int jogs;
    jogs = show_menu();
-
+/*ss*/
    if (jogs == 3) return 0;
 
    char ** mat, ** aux;
