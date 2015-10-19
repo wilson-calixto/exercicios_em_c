@@ -7,7 +7,7 @@ int main ()
 {
    int jogs;
    jogs = show_menu();
-/*slnoenfeofehijhjhjjsjwods*/
+/*slnoenfeofenkjhkhjhijhjhjjsjwods*/
    if (jogs == 3) return 0;
 
    char ** mat, ** aux;
