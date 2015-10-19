@@ -9,8 +9,8 @@ velha.o: velha.c
 util.o: util.c
 	gcc -c util.c
 
-clear:
+clean:
 	rm -rf *.o
 
-mrproper: clear
+mrproper: clean
 	rm -rf Velha
