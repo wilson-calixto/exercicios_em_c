@@ -12,5 +12,5 @@ jogo_da_velha.o: jogo_da_velha.c
 clean:
 	rm -rf *.o
 
-mrproper:
+mrproper: clean
 	rm -rf main
