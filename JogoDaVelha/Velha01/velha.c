@@ -10,7 +10,7 @@ int main ()
 /*slnoenfeofenkjhkhjhijhjhjjsjwods*/
    if (jogs == 3) return 0;
 
-   char ** mat, ** aux;
+   char ** mat, ** aumjx;
    mat = malloc(3 * sizeof(char));
    aux = malloc(3 * sizeof(char));
    *//fokjojfdsasad*
