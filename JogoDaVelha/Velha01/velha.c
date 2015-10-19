@@ -5,7 +5,7 @@
 
 int main ()
 {
-   int jogs;
+   int jogs;/*aa*qsds/q*
    jogs = show_menu();
 
    if (jogs == 3) return 0;
