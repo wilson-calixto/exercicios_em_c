@@ -1,73 +1,13 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include "funv.c"
 
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-#ifdef WIN32  //se for windows
-  #define limpa_tela system("cls") //limpa tela
-#else //senão, ex.: linux
-  #define limpa_tela system("/usr/bin/clear") //limpa tela
-#endif
-
-
-/*funca retorna :
-
-
-1 se o jogo é para um facil 
-2 se o jogo é para um dificil 
-3 para sair 
-4 se o jogo é para dois 
-*/
-int show_menu()
-{
-    int jogs = 0;
-
-    while (jogs == 0)
-    {
-        limpa_tela; //limpando a tela	        
-
-        printf("******* JOGO DA VELHA *******");
-        printf("\n\n1. 1 jogador\n2. 2 jogadores\n3. Sair\n");
-        scanf("%d", &jogs);
-		
-        if (jogs == 2)
-        {
-            jogs = 4;
 	    }
 
 
-        if (jogs == 1)
-        {
-            printf("Dificuldade: \n1. Facil\n2. Dificil\n");
-            scanf("%d", &jogs);		        
-    	}
-    }
-    return jogs;
-}
 
 
-
-
-
-/* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
- se a jogada ja saiu retorna 0, se nao 1.
- */
-
-// Programador: Jackson kelvin
-
-void mostra_matriz(char matriz[3][3])
-{
-    printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",matriz[0][0],matriz[0][1],matriz[0][2],matriz[1][0],matriz[1][1],matriz[1][2],matriz[2][0],matriz[2][1],matriz[2][2]);	
-}			
-
-
-/* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
- se a jogada ja saiu retorna 0, se nao 1.
+nao 1.
  */
 
 // Programador: Hermann J. Hernani.
