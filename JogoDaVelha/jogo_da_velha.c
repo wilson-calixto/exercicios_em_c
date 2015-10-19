@@ -257,9 +257,9 @@ void para_dois(char matriz[3][3],int vetor_posicao[9])
 
 
 void para_um_facil(char matriz[3][3],int vetor_posicao[9]){
-	printf("incompleta facil");
+	printf("incompleta facil\n");
 }
 
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9]){
-	printf("incompleta dificil" );
+	printf("incompleta dificil\n" );
 }
