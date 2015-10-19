@@ -1,29 +1,24 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "jogo_da_velha.h"
-
-
-
-
-
-
 int vetor_posicao[9];
 int main()
 {
-	int jogs,i;
+	int resposta,i;
 	char matriz[3][3] ={{'1','2','3'},
 					   {'4','5','6'},
 					   {'7','8','9',}};
-		/* mostra a matriz inicial*/
 		
-	 jogs=show_menu();
+		
+	 resposta=show_menu();
 	//mostra_matriz(matriz);
 	
 		for(i=0;i<1;i++)
 		{
 
-		   	switch(jogs)
+		   	switch(resposta)
 			{
 			case 1: para_um_facil(matriz,vetor_posicao);// para um facil
 					  break;        
@@ -34,8 +29,7 @@ int main()
 			case 4: para_dois(matriz,vetor_posicao);// para um facil
 					break;
 			}
-			
-			
+		
 		}
 	
 	
