@@ -13,7 +13,7 @@ int main ()
    char ** mat, ** aux;
    mat = malloc(3 * sizeof(char));
    aux = malloc(3 * sizeof(char));
-   *//fokjojfd*
+   *//fokjojfdsasad*
    int i, j, cont = 1, vencedor = 0;
 
    for (i = 0; i < 3; i++)
