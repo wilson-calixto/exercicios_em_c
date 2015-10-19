@@ -17,7 +17,7 @@ int main ()
    int i, j, cont = 1, vencedor = 0;
 
    for (i = 0; i < 3; i++)
-   {
+   {//iouih
        mat[i] = malloc(3 * sizeof(char));
        aux[i] = malloc(3 * sizeof(char));
    }
