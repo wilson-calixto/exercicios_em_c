@@ -199,5 +199,5 @@ util.o: util.c/util.c
 clean:
 	rm -rf $(path_obj)*.o
  
-mrproper:
+mrproper: clean
 	rm -rf $(path_bin)*
