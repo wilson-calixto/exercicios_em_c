@@ -294,5 +294,26 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
 }
 
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9]){
-	printf("incompleta dificil\n" );
+	int jogada, ai,  i;
+	for(i=0;i<9;i++)
+	{
+		limpa_tela;
+		mostra_matriz(matriz);
+		
+		joga(jogada,matriz[3][3],i);
+		
+		ai = mimax(matriz, vetor_posicao[9]);
+		marca_jodada(jogada,i,vetor_posicao);
+		mostra_matriz(matriz);
+		
+		
+	}
+}
+
+int minimax(char matriz[3][3],int vetor_posicao[9])
+{
+	int posicao;
+	
+	
+	return posicao;
 }
