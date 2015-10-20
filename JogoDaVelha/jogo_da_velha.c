@@ -269,15 +269,20 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
     for(i=1;i<=9;i++)
     {       
 	      limpa_tela; //limpando a tela	   
-		  mostra_matriz(matriz);	
-	        /*retira as coordenadas invalidas e as que ja sairam*/    
- 		  jogada=play_easy_bot(vetor_posicao,i);	        
-			 /*marca as jogadas ja feitas */
+	      mostra_matriz(matriz);	
+	      
+	      /*retira as coordenadas invalidas e as que ja sairam*/
+	      jogada=play_easy_bot(vetor_posicao,i);	        
+	      
+	      /*marca as jogadas ja feitas */
 	      marca_jodada(jogada,i,vetor_posicao);
-	          /* joga */ 	     
+	          
+	      /* joga */ 	     
 	      joga(jogada,matriz,i);		 	
-          limpa_tela; //limpando a tela	 	
-		  mostra_matriz(matriz);		     
+              
+              limpa_tela; //limpando a tela	 	
+	      
+	      mostra_matriz(matriz);		     
 	     /* verifica se um jogador ganhou*/
 	      if(ganhou(matriz,i))
 	      {
@@ -293,27 +298,63 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
 
 }
 
-void para_um_dificil(char matriz[3][3],int vetor_posicao[9]){
-	int jogada, ai,  i;
-	for(i=0;i<9;i++)
+/* Função que utiliza do minimax - IA  
+   Programadora: Juliany 
+*/
+
+int jogada_bot(int vetor_posicao[9],int i)
+{
+	int posicao;
+	
+	if(i%2)
 	{
-		limpa_tela;
-		mostra_matriz(matriz);
-		
-		joga(jogada,matriz[3][3],i);
-		
-		ai = mimax(matriz, vetor_posicao[9]);
-		marca_jodada(jogada,i,vetor_posicao);
-		mostra_matriz(matriz);
-		
+		printf("Jogador 1 digite sua jogada: ");
+		scanf("%d",&posicao);
+	}
+	
+	else
+	{
 		
 	}
+	return posicao;
 }
 
-int minimax(char matriz[3][3],int vetor_posicao[9])
+//Passa como parâmetro 
+int minimax(int no, int profundidade)
 {
 	int posicao;
 	
 	
+	
+	//Retorna a melhor posição para a cpu jogar 
 	return posicao;
 }
+
+void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
+{
+	int jogada, i, bot, best;
+	
+	for(i=0;i<9;i++)
+	{
+		//Jogador Humano é sempre o 1
+		//Jogador Máquina é sempre o 2
+		
+		limpa_tela;
+		mostra_matriz;
+		
+		jogada_bot(vetor_posicao, i);
+		 
+		/*Jogador Humano*/
+		jogada = jogada_bot(vetor_posicao, i); //Jogador Humano faz sua jogada
+		marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
+		
+		limpa_tela;
+		mostra_matriz;
+		
+		/*Jogador Máquina*/
+		bot = jogada_bot(vetor_posicao, i); //Jogador Máquina faz sua jogada
+		marca_jodada(bot,i,vetor_posicao); //Marca as jogadas já feitas
+		
+	}
+}
+
