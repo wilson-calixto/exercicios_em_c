@@ -347,14 +347,27 @@ void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 		/*Jogador Humano*/
 		jogada = jogada_bot(vetor_posicao, i); //Jogador Humano faz sua jogada
 		marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
-		
+		joga(jogada,matriz,i)  /* Marca as jogadas na matriz */ 	     
+	      
 		limpa_tela;
 		mostra_matriz;
 		
 		/*Jogador Máquina*/
 		bot = jogada_bot(vetor_posicao, i); //Jogador Máquina faz sua jogada
 		marca_jodada(bot,i,vetor_posicao); //Marca as jogadas já feitas
+		joga(jogada,matriz,i)  /* Marca as jogadas na matriz */
 		
+	}
+	
+	/* verifica se um jogador ganhou*/
+	if(ganhou(matriz,i))
+	{
+	      	break;
+	}
+		     /* verifica se velhou*/
+	else if(i==9)
+	{
+	    printf("\nVelhou\n");
 	}
 }
 
