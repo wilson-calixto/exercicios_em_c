@@ -298,7 +298,7 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
 
 }
 
-/* Função que utiliza do minimax - IA  
+/* Funções para utilizar o minimax - IA  
    Programadora: Juliany 
 */
 
@@ -307,12 +307,13 @@ int minimax(int no, int profundidade)
 {
 	int posicao;
 	
-	
+	//To be continued 
 	
 	//Retorna a melhor posição para a cpu jogar 
 	return posicao;
 }
 
+//Função que administra as jogadas
 int jogada_bot(int vetor_posicao[9],int i)
 {
 	int posicao;
