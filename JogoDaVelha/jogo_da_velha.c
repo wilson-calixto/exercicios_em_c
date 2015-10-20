@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
@@ -8,9 +9,7 @@
   #define limpa_tela system("/usr/bin/clear") //limpa tela
 #endif
 
-
 /*funca retorna :
-
 
 1 se o jogo é para um facil 
 2 se o jogo é para um dificil 
@@ -44,10 +43,6 @@ int show_menu()
     return jogs;
 }
 
-
-
-
-
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
  se a jogada ja saiu retorna 0, se nao 1.
  */
@@ -80,8 +75,6 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
     return 1; //  se a jogada não existir ele retorna 1, valor para true
 }
 
-
-
 /*retira as coordenadas invalidas e as que ja sairam e retorna uma jogada valida*/   
 // programador : WISON CALIXTO
  int jogada_correta(int vetor_posicao[9],int i)
@@ -102,6 +95,27 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
 	      }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
  return jogada;
  
+ }
+
+/* Função com jogadas randomicas de 1 a 9 */
+int play_easy_bot(int vetor_posicao[9],int i)
+{
+    int jogada;
+    srand( (unsigned)time(NULL) );
+    
+    do{
+        if(i%2==0)// se i é par é o '0'
+	    {
+			jogada=1 + ( rand() % 8 );
+	    }
+	    else// se i é impar é o 'X'
+        {
+	       	printf("Digite a jogada jogador 1\n");
+			scanf("%d",&jogada);
+	    }
+    }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
+ 
+    return jogada;
  }
 
 /* Funcao que marca as jogadas que ja sairam.
@@ -205,11 +219,11 @@ int ganhou(char mat[3][3],int i)
     
 	      	 if(i%2==0)// se i é par é o '0'
 		     {
-		     	printf("jogador 2 o 'O' ganhou");			     
+		     	printf("jogador 2 o 'O' ganhou\n");			     
 		     }
 		     else// se i é impar é o 'X'
 		     {
-		     	printf("jogador 1 o 'X' ganhou");
+		     	printf("jogador 1 o 'X' ganhou\n");
 		     }       
         return 1;
     }
@@ -218,10 +232,6 @@ int ganhou(char mat[3][3],int i)
         return 0;
     }
 }
-
-        
-	     
-
 
 void para_dois(char matriz[3][3],int vetor_posicao[9])
 {
@@ -253,11 +263,34 @@ void para_dois(char matriz[3][3],int vetor_posicao[9])
 
 }
 
+void para_um_facil(char matriz[3][3],int vetor_posicao[9])
+{
+    int i,jogada;
+    for(i=1;i<=9;i++)
+    {       
+	      limpa_tela; //limpando a tela	   
+		  mostra_matriz(matriz);	
+	        /*retira as coordenadas invalidas e as que ja sairam*/    
+ 		  jogada=play_easy_bot(vetor_posicao,i);	        
+			 /*marca as jogadas ja feitas */
+	      marca_jodada(jogada,i,vetor_posicao);
+	          /* joga */ 	     
+	      joga(jogada,matriz,i);		 	
+          limpa_tela; //limpando a tela	 	
+		  mostra_matriz(matriz);		     
+	     /* verifica se um jogador ganhou*/
+	      if(ganhou(matriz,i))
+	      {
+	      	break;
+	      }
+		     /* verifica se velhou*/
+	     if(i==9)
+	     {
+	     		printf("\nVelhou\n");
+	     }
+	     
+	 }
 
-
-
-void para_um_facil(char matriz[3][3],int vetor_posicao[9]){
-	printf("incompleta facil\n");
 }
 
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9]){
