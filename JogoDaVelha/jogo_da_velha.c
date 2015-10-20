@@ -302,6 +302,17 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
    Programadora: Juliany 
 */
 
+//Passa como parâmetro 
+int minimax(int no, int profundidade)
+{
+	int posicao;
+	
+	
+	
+	//Retorna a melhor posição para a cpu jogar 
+	return posicao;
+}
+
 int jogada_bot(int vetor_posicao[9],int i)
 {
 	int posicao;
@@ -314,19 +325,9 @@ int jogada_bot(int vetor_posicao[9],int i)
 	
 	else
 	{
-		
+		posicao = minimax();
+		printf("Jogador 2 fez a jogada na posiçaõ: %d\n", posicao);
 	}
-	return posicao;
-}
-
-//Passa como parâmetro 
-int minimax(int no, int profundidade)
-{
-	int posicao;
-	
-	
-	
-	//Retorna a melhor posição para a cpu jogar 
 	return posicao;
 }
 
