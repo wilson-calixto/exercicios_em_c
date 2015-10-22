@@ -8,4 +8,7 @@ int ganhou(char mat[3][3],int i);
 
 void para_dois(char matriz[3][3],int vetor_posicao[9]);
 void para_um_facil(char matriz[3][3],int vetor_posicao[9]);
+
+int vencedor(char b[3][3]);
+int minimax(int val, int profundidade, char matriz[3][3]);
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9]);

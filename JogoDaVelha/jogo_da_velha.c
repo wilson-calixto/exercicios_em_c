@@ -302,74 +302,80 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
    Programadora: Juliany 
 */
 
-//Passa como parâmetro 
-int minimax(int no, int profundidade)
+int vencedor(char matriz[3][3])
 {
-	int posicao;
-	
-	//To be continued 
-	
-	//Retorna a melhor posição para a cpu jogar 
-	return posicao;
+	int i;
+	for (i = 0; i < 3; i++) {
+		if (matriz[i][0] && matriz[i][1] == matriz[i][0] && matriz[i][2] == matriz[i][0])
+			return matriz[i][0];
+		if (matriz[0][i] && matriz[1][i] == matriz[0][i] && matriz[2][i] == matriz[0][i])
+			return matriz[0][i];
+	}
+	if (!matriz[1][1]) return 0;
+ 
+	if (matriz[1][1] == matriz[0][0] && matriz[2][2] == matriz[0][0]) return matriz[0][0];
+	if (matriz[1][1] == matriz[2][0] && matriz[0][2] == matriz[1][1]) return matriz[1][1];
+ 
+	return 0;
 }
-
-//Função que administra as jogadas
-int jogada_bot(int vetor_posicao[9],int i)
+//Função para calcular a 
+int best_i, best_j; 
+int minimax(int val, int profundidade, char matriz[3][3])
 {
-	int posicao;
-	
-	if(i%2)
+	int i, j, pontuacao;
+	int best = -1, changed = 0;
+ 
+	if ((pontuacao = vencedor(matriz))) return (pontuacao == val) ? 1 : -1;
+ 
+	for (i = 0; i < 3; i++)
 	{
-		printf("Jogador 1 digite sua jogada: ");
-		scanf("%d",&posicao);
-	}
-	
-	else
-	{
-		posicao = minimax();
-		printf("Jogador 2 fez a jogada na posiçaõ: %d\n", posicao);
-	}
-	return posicao;
+		for (j = 0; j < 3; j++) 
+		{
+			if (matriz[i][j]) continue;
+	 
+			changed = matriz[i][j] = val;
+			pontuacao = -minimax(-val, profundidade + 1, matriz);
+			matriz[i][j] = 0;
+	 
+			if (pontuacao <= best) continue;
+			if (!profundidade) {
+				best_i = i;
+				best_j = j;
+			}
+			best = pontuacao;
+		}
+ 	}
+ 	
+ 	return changed ? best : 0;
 }
 
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 {
-	int jogada, i, bot, best;
-	
+	int jogada, i, bot, best, c;
+	limpa_tela;
 	for(i=0;i<9;i++)
 	{
 		//Jogador Humano é sempre o 1
 		//Jogador Máquina é sempre o 2
+		mostra_matriz(matriz);	
+		if(i%2 == 0)
+		{
+			
+			printf("Jogador 1 digite sua jogada: ");
+			scanf("%d",&jogada);
 		
-		limpa_tela;
-		mostra_matriz;
+			marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
+			joga(jogada,matriz,i); /* Marca as jogadas na matriz */
+		}
 		
-		jogada_bot(vetor_posicao, i);
-		 
-		/*Jogador Humano*/
-		jogada = jogada_bot(vetor_posicao, i); //Jogador Humano faz sua jogada
-		marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
-		joga(jogada,matriz,i)  /* Marca as jogadas na matriz */ 	     
-	      
-		limpa_tela;
-		mostra_matriz;
-		
-		/*Jogador Máquina*/
-		bot = jogada_bot(vetor_posicao, i); //Jogador Máquina faz sua jogada
-		marca_jodada(bot,i,vetor_posicao); //Marca as jogadas já feitas
-		joga(jogada,matriz,i)  /* Marca as jogadas na matriz */
-		
-	}
-	
-	/* verifica se um jogador ganhou*/
-	if(ganhou(matriz,i))
-	{
-	      	break;
-	}
-		     /* verifica se velhou*/
-	else if(i==9)
-	{
-	    printf("\nVelhou\n");
-	}
+		else
+		{
+			minimax(-1, 0, matriz);
+			c = best_i * 3 + best_j + 1;
+			joga(c, matriz, i);
+			mostra_matriz(matriz);
+			printf("My moveake: %d\n",c );
+			
+		}
+	}	
 }
-
