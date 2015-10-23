@@ -352,13 +352,25 @@ int minimax(int val, int profundidade, char matriz[3][3])
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 {
 	int jogada, i, bot, best, c;
-	limpa_tela;
-	for(i=0;i<9;i++)
+	for(i=1;i<9;i++)
 	{
 		//Jogador Humano é sempre o 1
 		//Jogador Máquina é sempre o 2
+		limpa_tela;
 		mostra_matriz(matriz);	
 		if(i%2 == 0)
+		{
+			marca_jodada(jogada,i,vetor_posicao);
+			minimax(-1, 0, matriz);
+			c = best_i * 3 + best_j + 1;
+			joga(c, matriz, i);
+			limpa_tela;
+			mostra_matriz(matriz);
+			printf("My moveake: %d\n",c );
+			
+		}
+		
+		else
 		{
 			
 			printf("Jogador 1 digite sua jogada: ");
@@ -366,15 +378,8 @@ void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 		
 			marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
 			joga(jogada,matriz,i); /* Marca as jogadas na matriz */
-		}
-		
-		else
-		{
-			minimax(-1, 0, matriz);
-			c = best_i * 3 + best_j + 1;
-			joga(c, matriz, i);
+			limpa_tela;
 			mostra_matriz(matriz);
-			printf("My moveake: %d\n",c );
 			
 		}
 	}	
