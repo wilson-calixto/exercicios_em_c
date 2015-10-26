@@ -3,6 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include "jogo_da_velha.h"
+
+#ifdef WIN32  //se for windows
+  #define limpa_tela system("cls") //limpa tela
+#else //senão, ex.: linux
+  #define limpa_tela system("/usr/bin/clear") //limpa tela
+#endif
+
 int vetor_posicao[9];
 int main()
 {
@@ -14,10 +21,11 @@ int main()
 	char mprint[3][3]={{'1', '2', '3'},
                            {'4', '5', '6'},
                            {'7', '8', '9'}};
-		
-		
+	
 	modo_de_jogo=show_menu();
-	printf("\n%d\n",modo_de_jogo);
+	limpa_tela;
+	mostra_matriz(matriz,mprint);
+
 	for(i=1;i<=9;i++)
 	{
 		if(modo_de_jogo == 1)//multiplayer
@@ -43,10 +51,18 @@ int main()
 			}
 		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
-		
-		if(ganhou(matriz,i))
+		limpa_tela;
+		mostra_matriz(matriz,mprint);
+		if(ganhou(matriz))
 		{
-			printf("\nganhou\n");
+		     if(i%2==0)// se i é par é o '0'
+		     {
+		     	printf("jogador 2 o 'O' ganhou\n");			     
+		     }
+		     else// se i é impar é o 'X'
+		     {
+		     	printf("jogador 1 o 'X' ganhou\n");
+		     }       
 			break;
 		}
 			/* verifica se velhou*/
