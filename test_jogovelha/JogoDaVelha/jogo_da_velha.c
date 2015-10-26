@@ -371,6 +371,4 @@ int converte_saida()
                 return 2;
             if (best_j == 2)
                 return 3;
-        break;
-        case 1:
             if (best_j == 0)
