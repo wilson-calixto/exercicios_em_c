@@ -383,8 +383,3 @@ int converte_saida()
         case 2:
             if (best_j == 0)
                 return 7;
-            if (best_j == 1)
-                return 8;
-            if (best_j == 2)
-                return 9;
-        break;
