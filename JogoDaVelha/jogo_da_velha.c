@@ -123,7 +123,7 @@ int play_easy_bot(int vetor_posicao[9],int i)
 // Programador: Raí Santos
 void marca_jodada(int posicao,int i,int *vetor_posicao)
 {
-vetor_posicao[i] = posicao;               
+        vetor_posicao[i] = posicao;               
 }
 
 /* Funcao que marca com X ou O*/
@@ -139,31 +139,31 @@ void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada
 		           	switch(jogada)
 					{
 
-					case 1: matriz[0][0]='0';
+					case 1: matriz[0][0]='O';
 							  break;        
 					case 2: 
-						  matriz[0][1]='0';
+						  matriz[0][1]='O';
 						    break;
 
-					case 3: matriz[0][2]='0';
+					case 3: matriz[0][2]='O';
 						    break;
 
-					case 4: matriz[1][0]='0';
+					case 4: matriz[1][0]='O';
 						    break;
 
-					case 5: matriz[1][1]='0';
+					case 5: matriz[1][1]='O';
 						    break;
 
-					case 6: matriz[1][2]='0';
+					case 6: matriz[1][2]='O';
 						    break;
 
-					case 7: matriz[2][0]='0';
+					case 7: matriz[2][0]='O';
 						    break;
 
-					case 8: matriz[2][1]='0';
+					case 8: matriz[2][1]='O';
 						    break;
 
-					case 9: matriz[2][2]='0';
+					case 9: matriz[2][2]='O';
 						    break;
 				
 					default: printf("Posicao invalida! \n");
@@ -246,7 +246,7 @@ void para_dois(char matriz[3][3],int vetor_posicao[9])
 	      marca_jodada(jogada,i,vetor_posicao);
 	          /* joga */ 	     
 	      joga(jogada,matriz,i);		 	
-          limpa_tela; //limpando a tela	 	
+              limpa_tela; //limpando a tela	 	
 		  mostra_matriz(matriz);		     
 	     /* verifica se um jogador ganhou*/
 	      if(ganhou(matriz,i))
@@ -302,7 +302,7 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
    Programadora: Juliany 
 */
 
-int vencedor(char matriz[3][3])
+int vencedor(int matriz[3][3])
 {
 	int i;
 	for (i = 0; i < 3; i++) {
@@ -318,64 +318,69 @@ int vencedor(char matriz[3][3])
  
 	return 0;
 }
-//Função para calcular a 
-int best_i, best_j; 
-int minimax(int val, int profundidade, char matriz[3][3])
+
+void converter(int b[3][3], char matriz[3][3])
 {
-	int i, j, pontuacao;
-	int best = -1, changed = 0;
- 
-	if ((pontuacao = vencedor(matriz))) return (pontuacao == val) ? 1 : -1;
- 
-	for (i = 0; i < 3; i++)
-	{
-		for (j = 0; j < 3; j++) 
-		{
-			if (matriz[i][j]) continue;
-	 
-			changed = matriz[i][j] = val;
-			pontuacao = -minimax(-val, profundidade + 1, matriz);
-			matriz[i][j] = 0;
-	 
-			if (pontuacao <= best) continue;
-			if (!profundidade) {
-				best_i = i;
-				best_j = j;
-			}
-			best = pontuacao;
-		}
- 	}
- 	
- 	return changed ? best : 0;
+        int i, j;
+        for(i=0;i<3;i++)
+        {
+           for(j=0;j<3;j++)  
+             {
+                if (matriz[i][j] == 'X')
+                {
+                    b[i][j] = 1;
+                }
+                else
+                {
+                    if (matriz[i][j] == 'O')
+                        b[i][j] = -1;
+                    else b[i][j] = 0;
+                }               
+             }
+         }
 }
+
+
+/*
+int jogada_da_maquina(int vetor_posicao[9],int matriz[3][3])
+ {
+ int jogada;
+        do{            
+	           jogada=joga_minimax(matriz);
+                
+	            
+	      }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
+ return jogada;
+ 
+ }
+*/
 
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 {
 	int jogada, i, bot, best, c;
+	int best_i = 0, best_j = 0, b[3][3];
 	for(i=1;i<9;i++)
 	{
 		//Jogador Humano é sempre o 1
 		//Jogador Máquina é sempre o 2
-		limpa_tela;
+		//limpa_tela;
 		mostra_matriz(matriz);	
+		
+		converter(b,matriz);
 		if(i%2 == 0)
-		{
-			marca_jodada(jogada,i,vetor_posicao);
-			minimax(-1, 0, matriz);
-			c = best_i * 3 + best_j + 1;
-			joga(c, matriz, i);
+		{	   
+		        jogada=joga_minimax(matriz);		
+			marca_jodada(jogada,i,vetor_posicao);			
+			joga(jogada, matriz, i);
 			limpa_tela;
 			mostra_matriz(matriz);
-			printf("My moveake: %d\n",c );
+			//printf("Meu movimento: %d\n",c );
 			
 		}
 		
 		else
 		{
-			
-			printf("Jogador 1 digite sua jogada: ");
-			scanf("%d",&jogada);
-		
+		        jogada=jogada_correta(vetor_posicao,i);
 			marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
 			joga(jogada,matriz,i); /* Marca as jogadas na matriz */
 			limpa_tela;
@@ -384,3 +389,140 @@ void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 		}
 	}	
 }
+
+
+
+
+
+
+
+int b2[3][3]; /* board. 0: blank; -1: computer; 1: human */
+ 
+int check_winner()
+{
+	int i;
+	for (i = 0; i < 3; i++) 
+	{
+	
+		if (b2[i][0] && b2[i][1] == b2[i][0] && b2[i][2] == b2[i][0])
+			return b2[i][0];
+		if (b2[0][i] && b2[1][i] == b2[0][i] && b2[2][i] == b2[0][i])
+			return b2[0][i];
+	}
+	if (!b2[1][1]) return 0;
+ 
+	if (b2[1][1] == b2[0][0] && b2[2][2] == b2[0][0]) return b2[0][0];
+	if (b2[1][1] == b2[2][0] && b2[0][2] == b2[1][1]) return b2[1][1];
+ 
+	return 0;
+}
+ 
+#define for_ij for (i = 0; i < 3; i++) for (j = 0; j < 3; j++)
+int best_i, best_j;
+int test_move(int val, int depth)
+{
+	int i, j, score;
+	int best = -1, changed = 0;
+ 
+	if ((score = check_winner())) return (score == val) ? 1 : -1;
+ 
+	for_ij {
+		if (b2[i][j]) continue;
+ 
+		changed = b2[i][j] = val;
+		score = -test_move(-val, depth + 1);
+		b2[i][j] = 0;
+ 
+		if (score <= best) continue;
+		if (!depth) {
+			best_i = i;
+			best_j = j;
+		}
+		best = score;
+	}
+ 
+	return changed ? best : 0;
+}
+
+int joga_minimax(char **mat)
+{
+    int i,j;
+
+    for_ij 
+    {
+        if (mat[i][j] == 'X')
+        {
+            b2[i][j] = 1;
+        }
+        else
+        {
+            if (mat[i][j] == 'O')
+                b2[i][j] = -1;
+            else b2[i][j] = 0;
+        }               
+    }
+
+    test_move(-1,0);
+
+    return converte_saida();
+}
+
+int converte_saida()
+{
+    switch (best_i)
+    {
+        case 0:
+            if (best_j == 0)
+                return 1;
+            if (best_j == 1)
+                return 2;
+            if (best_j == 2)
+                return 3;
+        break;
+        case 1:
+            if (best_j == 0)
+                return 4;
+            if (best_j == 1)
+                return 5;
+            if (best_j == 2)
+                return 6;
+        break;
+        case 2:
+            if (best_j == 0)
+                return 7;
+            if (best_j == 1)
+                return 8;
+            if (best_j == 2)
+                return 9;
+        break;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
