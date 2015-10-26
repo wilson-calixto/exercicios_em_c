@@ -16,25 +16,32 @@ int main()
                            {'7', '8', '9'}};
 		
 		
-	 resposta=show_menu();
-	//mostra_matriz(matriz);
-	
-		for(i=0;i<1;i++)
+	modo_de_jogo=show_menu();
+	for(i=1;i=<9;i++)
+	{
+		if(modo_de_jogo == 1)//multiplayer
 		{
-
-		   	switch(resposta)
+			jogada=jogada_correta();//pedindo jogada do USUARIO 			
+		{		
+		else 
+		{
+			if(i%2==0)//pedindo jogada
 			{
-			case 1: para_um_facil(matriz,vetor_posicao, mprint);// para um facil
-					  break;        
-			case 2: para_um_dificil(matriz,vetor_posicao, mprint);// para um dificil
-					  break;        
-			case 3: printf("\nsaindo\n");
-					break;
-			case 4: para_dois(matriz,vetor_posicao, mprint);// para um facil
-					break;
+				if(modo_de_jogo==2)//facil 
+				{				
+					jogada=jogada_facil;//MAQUINA JOGA FACIL
+				}
+				else
+				{
+					jogada=jogada_dificil;//MAQUINA JOGA DIFICIL
+				}
 			}
-		
-		}
+			else
+			{
+				jogada=jogada_correta();//pedindo jogada do USUARIO
+			}			
+		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
+	}
 	
 	
     return 0;
