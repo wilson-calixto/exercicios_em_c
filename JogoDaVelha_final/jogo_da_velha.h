@@ -12,6 +12,5 @@ int minimax(int val, int profundidade, int matriz[3][3], int best_i, int best_j)
 int jogada_da_maquina(int vetor_posicao[9],int b[3][3],int best_i,int best_j);
 int check_winner();
 int test_move(int val, int depth);
-int joga_minimax(char **mat);
-int converte_saida();
+
 int play_easy_bot(int vetor_posicao[9]);
