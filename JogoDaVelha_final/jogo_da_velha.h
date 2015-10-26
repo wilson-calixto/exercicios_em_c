@@ -14,3 +14,4 @@ int check_winner();
 int test_move(int val, int depth);
 int joga_minimax(char **mat);
 int converte_saida();
+int play_easy_bot(int vetor_posicao[9]);
