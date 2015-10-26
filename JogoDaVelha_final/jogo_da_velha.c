@@ -221,14 +221,7 @@ int ganhou(int mat[3][3],int i)
     if((mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) || (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) || (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) || (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) || (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) || (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) ||  (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2]) || (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]))
     {      
     
-	      	 if(i%2==0)// se i é par é o '0'
-		     {
-		     	printf("jogador 2 o 'O' ganhou\n");			     
-		     }
-		     else// se i é impar é o 'X'
-		     {
-		     	printf("jogador 1 o 'X' ganhou\n");
-		     }       
+	        
         return 1;
     }
     else
@@ -267,31 +260,6 @@ int vencedor(int matriz[3][3])
  
 	return 0;
 }
-
-void converter(int b[3][3], int matriz[3][3])
-{
-        int i, j;
-        for(i=0;i<3;i++)
-        {
-           for(j=0;j<3;j++)  
-             {
-                if (matriz[i][j] == 'X')
-                {
-                    b[i][j] = 1;
-                }
-                else
-                {
-                    if (matriz[i][j] == 'O')
-                        b[i][j] = -1;
-                    else b[i][j] = 0;
-                }               
-             }
-         }
-}
-
-
-
-
 
 
 
