@@ -39,7 +39,9 @@ int main()
 				if(modo_de_jogo==2)//facil 
 				{				
 					jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL
+					
 					printf("joguei no %d",jogada);
+					
 				}
 				else
 				{
@@ -52,8 +54,10 @@ int main()
 			}
 		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
+		
 		limpa_tela;
 		mostra_matriz(matriz,mprint);
+		
 		if(ganhou(matriz))
 		{
 		     if(i%2==0)// se i é par é o '0'
@@ -73,7 +77,6 @@ int main()
 			break;
 		}
 	}
-	
 	
     return 0;
 }
