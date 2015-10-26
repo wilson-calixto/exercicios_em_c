@@ -25,11 +25,7 @@ int show_menu()
         limpa_tela; //limpando a tela	        
 
         printf("******* JOGO DA VELHA *******");
-        printf("\n\n1. 1 jogador\n2. 2 jogadores\n3. Sair\n");
-        scanf("%d", &jogs);
-		
-        if (jogs == 2)
-        {
+ 
             jogs = 4;
 	    }
 
