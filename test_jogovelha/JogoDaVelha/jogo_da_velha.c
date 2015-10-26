@@ -363,8 +363,3 @@ int converte_saida()
     switch (best_i)
     {
         case 0:
-            if (best_j == 0)
-                return 1;
-            if (best_j == 1)
-                return 2;
-            if (best_j == 2)
