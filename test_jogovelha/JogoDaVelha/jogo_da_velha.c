@@ -331,8 +331,3 @@ int test_move(int val, int depth)
 			best_i = i;
 			best_j = j;
 		}
-		best = score;
-	}
- 
-	return chan
-   
