@@ -244,70 +244,7 @@ int ganhou(int mat[3][3],int i)
     }
 }
 
-void para_dois(int matriz[3][3],int vetor_posicao[9], char mprint[3][3])
-{
-    int i,jogada;
-    for(i=1;i<=9;i++)
-    {       
-	      limpa_tela; //limpando a tela	   
-		  mostra_matriz(matriz, mprint);	
-	        /*retira as coordenadas invalidas e as que ja sairam*/    
- 		  jogada=jogada_correta(vetor_posicao,i);	        
-			 /*marca as jogadas ja feitas */
-	      marca_jodada(jogada,i,vetor_posicao);
-	          /* joga */ 	     
-	      joga(jogada,matriz,i);		 	
-              limpa_tela; //limpando a tela	 	
-		  mostra_matriz(matriz, mprint);		     
-	     /* verifica se um jogador ganhou*/
-	      if(ganhou(matriz,i))
-	      {
-	      	break;
-	      }
-		     /* verifica se velhou*/
-	     if(i==9)
-	     {
-	     		printf("\nVelhou\n");
-	     }
-	     
-	 }
 
-}
-
-void para_um_facil(int matriz[3][3],int vetor_posicao[9], char mprint[3][3])
-{
-    int i,jogada;
-    for(i=1;i<=9;i++)
-    {       
-	      limpa_tela; //limpando a tela	   
-	      mostra_matriz(matriz, mprint);	
-	      
-	      /*retira as coordenadas invalidas e as que ja sairam*/
-	      jogada=play_easy_bot(vetor_posicao,i);	        
-	      
-	      /*marca as jogadas ja feitas */
-	      marca_jodada(jogada,i,vetor_posicao);
-	          
-	      /* joga */ 	     
-	      joga(jogada,matriz,i);		 	
-              
-              limpa_tela; //limpando a tela	 	
-	      
-	      mostra_matriz(matriz, mprint);		     
-	     /* verifica se um jogador ganhou*/
-	      if(ganhou(matriz,i))
-	      {
-	      	break;
-	      }
-		     /* verifica se velhou*/
-	     if(i==9)
-	     {
-	     		printf("\nVelhou\n");
-	     }
-	     
-	 }
-
-}
 
 /* Funções para utilizar o minimax - IA  
    Programadora: Juliany 
