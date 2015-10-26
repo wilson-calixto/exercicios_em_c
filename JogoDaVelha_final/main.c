@@ -21,7 +21,7 @@ int main()
 	{
 		if(modo_de_jogo == 1)//multiplayer
 		{
-			jogada=jogada_correta();//pedindo jogada do USUARIO 			
+			jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO 			
 		{		
 		else 
 		{
@@ -38,7 +38,7 @@ int main()
 			}
 			else
 			{
-				jogada=jogada_correta();//pedindo jogada do USUARIO
+				jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO
 			}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
 	}
