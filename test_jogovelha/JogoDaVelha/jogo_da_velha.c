@@ -25,7 +25,6 @@ int show_menu()
             jogs = 4;
 	    }
 
-
         if (jogs == 1)
         {
             printf("Dificuldade: \n1. Facil\n2. Dificil\n");
