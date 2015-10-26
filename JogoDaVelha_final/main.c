@@ -39,6 +39,7 @@ int main()
 				if(modo_de_jogo==2)//facil 
 				{				
 					jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL
+					printf("joguei no %d",jogada);
 				}
 				else
 				{
