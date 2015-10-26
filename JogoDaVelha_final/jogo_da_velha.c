@@ -21,11 +21,11 @@ int show_menu()
 {
     int jogs = 0;
 
-    while (jogs>4 || jogs<0)//retira jogadas invalidas
+    while (jogs==0)//retira jogadas invalidas
     {
         limpa_tela; //limpando a tela
         printf("******* JOGO DA VELHA *******");
-        printf("\n\n1 multiplayer\n2. 1 alone\n3. Sair\n");
+        printf("\n\n1 multiplayer\n2  alone\n3. Sair\n");
         scanf("%d", &jogs);		
         if (jogs == 3)
         {
@@ -242,19 +242,7 @@ void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogad
 {					
 	marca_jodada(jogada,i,vetor_posicao);		     
 	joga(jogada,matriz,i);
-	if(ganhou(matriz,i))
-	{
-		printf("\nVelhou\n");
-		break;
-	}
-		/* verifica se velhou*/
-	if(i==9)
-	{
-		printf("\nVelhou\n");
-	}
-
 }
-
 
 
 
@@ -411,7 +399,6 @@ int converte_saida()
 
     }
 }
-
 
 
 
