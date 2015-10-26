@@ -7,12 +7,7 @@
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux
   #def
-        printf("******* JOGO DA VELHA *******");
-        printf("\n\n1 multiplayer\n2  alone\n3. Sair\n");
-        scanf("%d", &jogs);
-// Programador: Jackson kelvin
-
-void mostra_matriz(int matriz[3][3], char mprint[3][3])
+        printf("rint[3][3])
 {
     int i,j;
     printf("\n");
