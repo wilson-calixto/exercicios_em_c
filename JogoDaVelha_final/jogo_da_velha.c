@@ -244,6 +244,26 @@ int ganhou(int mat[3][3],int i)
     }
 }
 
+//wilson
+void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogada);
+{					
+	marca_jodada(jogada,i,vetor_posicao);		     
+	joga(jogada,matriz,i);
+	if(ganhou(matriz,i))
+	{
+		printf("\nVelhou\n");
+		break;
+	}
+		/* verifica se velhou*/
+	if(i==9)
+	{
+		printf("\nVelhou\n");
+	}
+
+}
+
+
+
 
 
 /* Funções para utilizar o minimax - IA  
