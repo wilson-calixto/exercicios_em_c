@@ -8,7 +8,7 @@
 int main()
 {
     
-    int nconjelem, nsubconj,contador, *nelem;
+    int nconjelem, nsubconj, contador, *nelem, i;
     printf("Quantos elementos o conjunto possui: ");
     scanf("%d", &nconjelem);
     printf("Quantos subconjuntos o conjunto possui: ");
@@ -17,11 +17,11 @@ int main()
     {
         contador=nsubconj;
         printf("Quantos elemento o subconjunto possui: ");
-        scanf("%d", &nsubconjelem);
+        scanf("%d", &nsubconj);
         for(i=0;i==nconjelem;i++)
         {
             printf("Qual elemento: ");
-            scanf("%d", *nelem);
+            scanf("%d", nelem);
 
         }
 

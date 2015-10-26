@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "funcao.h"
+#include "desarranjo.h"
 
 void ListP(int n[], int num)
 {
