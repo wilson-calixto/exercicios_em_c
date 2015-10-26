@@ -289,54 +289,6 @@ void converter(int b[3][3], int matriz[3][3])
 }
 
 
-/*
-int jogada_da_maquina(int vetor_posicao[9],int matriz[3][3])
- {
- int jogada;
-        do{            
-	           jogada=joga_minimax(matriz);
-                
-	            
-	      }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
- return jogada;
- 
- }
-*/
-
-void para_um_dificil(int matriz[3][3],int vetor_posicao[9], char mprint[3][3])
-{
-	int jogada, i, bot, best, c;
-	int best_i = 0, best_j = 0, b[3][3];
-	for(i=1;i<9;i++)
-	{
-		//Jogador Humano é sempre o 1
-		//Jogador Máquina é sempre o 2
-		//limpa_tela;
-		mostra_matriz(matriz, mprint);	
-		
-		converter(b,matriz);
-		if(i%2 == 0)
-		{	   
-		        jogada=joga_minimax(matriz);		
-			marca_jodada(jogada,i,vetor_posicao);			
-			joga(jogada, matriz, i);
-			limpa_tela;
-			mostra_matriz(matriz, mprint);
-			//printf("Meu movimento: %d\n",c );
-			
-		}
-		
-		else
-		{
-		        jogada=jogada_correta(vetor_posicao,i);
-			marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
-			joga(jogada,matriz,i); /* Marca as jogadas na matriz */
-			limpa_tela;
-			mostra_matriz(matriz, mprint);
-			
-		}
-	}	
-}
 
 
 
