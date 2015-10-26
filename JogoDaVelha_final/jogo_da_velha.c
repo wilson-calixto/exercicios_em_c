@@ -9,34 +9,31 @@
   #define limpa_tela system("/usr/bin/clear") //limpa tela
 #endif
 
-/*funca retorna :
 
-1 se o jogo é para um facil 
-2 se o jogo é para um dificil 
-3 para sair 
-4 se o jogo é para dois 
+/*funca retorna :
+1 se o jogo é para dois 
+2 se o jogo é para um facil 
+3 se o jogo é para um dificil 
+4 para sair 
+
 */
 int show_menu()
 {
     int jogs = 0;
 
-    while (jogs == 0)
+    while (jogs>4 || jogs<0)//retira jogadas invalidas
     {
-        limpa_tela; //limpando a tela	        
-
+        limpa_tela; //limpando a tela
         printf("******* JOGO DA VELHA *******");
-        printf("\n\n1. 1 jogador\n2. 2 jogadores\n3. Sair\n");
-        scanf("%d", &jogs);
-		
-        if (jogs == 2)
+        printf("\n\n1 multiplayer\n2. 1 alone\n3. Sair\n");
+        scanf("%d", &jogs);		
+        if (jogs == 3)
         {
             jogs = 4;
-	    }
-
-
-        if (jogs == 1)
+	}
+        if (jogs == 2)
         {
-            printf("Dificuldade: \n1. Facil\n2. Dificil\n");
+            printf("Dificuldade: \n2. easy\n3. hard\n");
             scanf("%d", &jogs);		        
     	}
     }
