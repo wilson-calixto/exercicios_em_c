@@ -368,5 +368,3 @@ int converte_saida()
             if (best_j == 1)
                 return 2;
             if (best_j == 2)
-                return 3;
-            if (best_j == 0)
