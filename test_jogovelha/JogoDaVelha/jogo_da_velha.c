@@ -330,4 +330,3 @@ int test_move(int val, int depth)
 		if (!depth) {
 			best_i = i;
 			best_j = j;
-		}
