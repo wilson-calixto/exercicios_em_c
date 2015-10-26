@@ -208,7 +208,7 @@ void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada 
 
 /* Funcao que verifica se o jogador e quem ganhou ganhou*/
 // Programador: Delrick 
-int ganhou(int mat[3][3],int i)
+int ganhou(int mat[3][3])
 {
     if((mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) || (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) || (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) || (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) || (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) || (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) ||  (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2]) || (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]))
     {      
