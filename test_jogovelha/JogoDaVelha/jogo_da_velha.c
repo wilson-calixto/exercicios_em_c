@@ -9,14 +9,7 @@
   #def
         printf("******* JOGO DA VELHA *******");
         printf("\n\n1 multiplayer\n2  alone\n3. Sair\n");
-        scanf("%d", &jogs);		
-        if (jogs == 3)
-}
-
-/* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
- se a jogada ja saiu retorna 0, se nao 1.
- */
-
+        scanf("%d", &jogs);
 // Programador: Jackson kelvin
 
 void mostra_matriz(int matriz[3][3], char mprint[3][3])
