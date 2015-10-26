@@ -345,12 +345,4 @@ int joga_minimax(char **mat)
     {
         if (mat[i][j] == 'X')
         }
-        else
-        {
-            if (mat[i][j] == 'O')
-                b2[i][j] = -1;
-            else b2[i][j] = 0;
-        }               
-    }
-
    
