@@ -344,26 +344,3 @@ int test_move(int val, int depth)
  
 	return changed ? best : 0;
 }
-
-int joga_minimax(char **mat)
-{
-    int i,j;
-
-    for_ij 
-    {
-        if (mat[i][j] == 'X')
-        {
-            b2[i][j] = 1;
-        }
-        else
-        {
-            if (mat[i][j] == 'O')
-                b2[i][j] = -1;
-            else b2[i][j] = 0;
-        }               
-    }
-
-    test_move(-1,0);
-
-    return converte_saida();
-}
