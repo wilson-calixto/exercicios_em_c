@@ -46,3 +46,26 @@ int entrada()
     
     return jogs;
 }
+
+//programador Raí Santos
+//funcao para printar a matriz preenchida com X e O
+
+void mostra_matriz(int matriz[3][3], char mprint[3][3])
+{
+    int i,j;
+    for (i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            if(matriz[i][j]==-1)
+            {
+                mprint[i][j]= 'O';
+            }
+            if(matriz[i][j]==-2)
+            {
+                mprint[i][j]='X';
+            }
+        }
+    }
+    printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",mprint[0][0],mprint[0][1],mprint[0][2],mprint[1][0],mprint[1][1],mprint[1][2],mprint[2][0],mprint[2][1],mprint[2][2]);	
+}
