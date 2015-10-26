@@ -36,6 +36,8 @@ void saida(int saida, char matriz[3][3])
 
 }
 
+//A função pega a entrada de dados, serão processados em uma outra função.
+// Programador: Wilson Oliveira Neto.
 void entrada(int entrada)
 {
     int jogs=0;
