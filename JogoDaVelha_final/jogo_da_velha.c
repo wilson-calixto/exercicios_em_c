@@ -49,6 +49,7 @@ int show_menu()
 void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
     int i,j;
+    printf("\n");
     for (i=0; i<3; i++)
     {
         for(j=0; j<3; j++)
@@ -82,6 +83,7 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
        {
            return 0;
        }
+ 
    }
     return 1; //  se a jogada não existir ele retorna 1, valor para true
 }
@@ -91,7 +93,8 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
  int jogada_correta(int vetor_posicao[9],int i)
  {
  int jogada;
-        do{      
+        do{            
+	            
 	            if(i%2==0)// se i é par é o '0'
 	            {
 	            	printf("Digite a jogada jogador 2\n");
@@ -100,6 +103,7 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
 	            {
 	            	printf("Digite a jogada jogador 1\n");
 	            }
+	            
 	            scanf("%d",&jogada);
 	      }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
  return jogada;
@@ -111,9 +115,12 @@ int play_easy_bot(int vetor_posicao[9])
 {
     int jogada;
     srand( (unsigned)time(NULL) );
+    
     do{
         	jogada=1 + ( rand() % 8 );
+	    
     }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
+ 
     return jogada;
  }
 
@@ -131,7 +138,9 @@ void marca_jodada(int posicao,int i,int *vetor_posicao)
 
 void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {
-	if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
+    
+   
+        if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
  	     {
 		           	switch(jogada)
 					{
@@ -211,8 +220,8 @@ void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada 
 int ganhou(int mat[3][3])
 {
     if((mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) || (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) || (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) || (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) || (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) || (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) ||  (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2]) || (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]))
-    {      
-    	return 1;
+    {           	 
+        return 1;
     }
     else
     {
@@ -221,7 +230,7 @@ int ganhou(int mat[3][3])
 }
 
 //wilson
-void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogada);
+void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogada)
 {					
 	marca_jodada(jogada,i,vetor_posicao);		     
 	joga(jogada,matriz,i);
@@ -250,8 +259,3 @@ int vencedor(int matriz[3][3])
  
 	return 0;
 }
-
-
-
-
-
