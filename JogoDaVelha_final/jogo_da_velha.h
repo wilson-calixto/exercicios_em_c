@@ -9,6 +9,5 @@ void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogad
 int vencedor(int matriz[3][3]);
 void converter(int b[3][3], int matriz[3][3]);
 int minimax(int val, int profundidade, int matriz[3][3], int best_i, int best_j);
-int jogada_da_maquina(int vetor_posicao[9],int b[3][3],int best_i,int best_j);
 
 int play_easy_bot(int vetor_posicao[9]);
