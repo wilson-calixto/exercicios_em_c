@@ -35,3 +35,14 @@ void saida(int saida, char matriz[3][3])
     }
 
 }
+
+void entrada(int entrada)
+{
+    int jogs=0;
+    switch(entrada)
+    {   
+        case 1: scanf("%d", &jogs);
+                break;
+    }
+
+}
