@@ -11,16 +11,6 @@
         printf("\n\n1 multiplayer\n2  alone\n3. Sair\n");
         scanf("%d", &jogs);		
         if (jogs == 3)
-        {
-            jogs = 4;
-	}
-        if (jogs == 2)
-        {
-            printf("Dificuldade: \n2. easy\n3. hard\n");
-            scanf("%d", &jogs);		        
-    	}
-    }
-    return jogs;
 }
 
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
