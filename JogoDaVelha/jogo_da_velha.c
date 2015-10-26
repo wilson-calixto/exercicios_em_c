@@ -302,7 +302,7 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
    Programadora: Juliany 
 */
 
-int vencedor(char matriz[3][3])
+int vencedor(int matriz[3][3])
 {
 	int i;
 	for (i = 0; i < 3; i++) {
@@ -318,9 +318,29 @@ int vencedor(char matriz[3][3])
  
 	return 0;
 }
-//Função para calcular a 
-int best_i, best_j; 
-int minimax(int val, int profundidade, char matriz[3][3])
+
+void converter(int b[3][3], char matriz[3][3])
+{
+        int i, j;
+        for(i=0;i<3;i++)
+        {
+           for(j=0;j<3;j++)  
+             {
+                if (matriz[i][j] == 'X')
+                {
+                    b[i][j] = 1;
+                }
+                else
+                {
+                    if (matriz[i][j] == '0')
+                        b[i][j] = -1;
+                    else b[i][j] = 0;
+                }               
+             }
+         }
+}
+
+int minimax(int val, int profundidade, int matriz[3][3], int best_i, int best_j)
 {
 	int i, j, pontuacao;
 	int best = -1, changed = 0;
@@ -334,7 +354,7 @@ int minimax(int val, int profundidade, char matriz[3][3])
 			if (matriz[i][j]) continue;
 	 
 			changed = matriz[i][j] = val;
-			pontuacao = -minimax(-val, profundidade + 1, matriz);
+			pontuacao = -minimax(-val, profundidade + 1, matriz, best_i, best_j);
 			matriz[i][j] = 0;
 	 
 			if (pontuacao <= best) continue;
@@ -352,21 +372,24 @@ int minimax(int val, int profundidade, char matriz[3][3])
 void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 {
 	int jogada, i, bot, best, c;
+	int best_i = 0, best_j = 0, b[3][3];
 	for(i=1;i<9;i++)
 	{
 		//Jogador Humano é sempre o 1
 		//Jogador Máquina é sempre o 2
-		limpa_tela;
+		//limpa_tela;
 		mostra_matriz(matriz);	
+		
+		converter(b,matriz);
 		if(i%2 == 0)
 		{
 			marca_jodada(jogada,i,vetor_posicao);
-			minimax(-1, 0, matriz);
+			minimax(-1, 0, b, best_i, best_j);
 			c = best_i * 3 + best_j + 1;
 			joga(c, matriz, i);
 			limpa_tela;
 			mostra_matriz(matriz);
-			printf("My moveake: %d\n",c );
+			printf("Meu movimento: %d\n",c );
 			
 		}
 		
