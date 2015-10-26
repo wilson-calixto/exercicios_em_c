@@ -388,8 +388,3 @@ int converte_saida()
             if (best_j == 2)
                 return 9;
         break;
-
-    }
-}
-
-
