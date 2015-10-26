@@ -297,25 +297,3 @@ void converter(int b[3][3], int matriz[3][3])
 
 
 
-int b2[3][3]; /* board. 0: blank; -1: computer; 1: human */
- 
-int check_winner()
-{
-	int i;
-	for (i = 0; i < 3; i++) 
-	{
-	
-		if (b2[i][0] && b2[i][1] == b2[i][0] && b2[i][2] == b2[i][0])
-			return b2[i][0];
-		if (b2[0][i] && b2[1][i] == b2[0][i] && b2[2][i] == b2[0][i])
-			return b2[0][i];
-	}
-	if (!b2[1][1]) return 0;
- 
-	if (b2[1][1] == b2[0][0] && b2[2][2] == b2[0][0]) return b2[0][0];
-	if (b2[1][1] == b2[2][0] && b2[0][2] == b2[1][1]) return b2[1][1];
- 
-	return 0;
-}
- 
-
