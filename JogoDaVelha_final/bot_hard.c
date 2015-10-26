@@ -30,7 +30,7 @@ int minimax(int posicao[9], int player)
     return score;
 }
 
-void movimento_bot(int posicao[9]) {
+int movimento_bot(int posicao[9]) {
     int move = -1;
     int score = -2;
     int i;
@@ -46,8 +46,9 @@ void movimento_bot(int posicao[9]) {
         }
     }
     //É o melhor movimento.
-    posicao[move] = 1;
+    return move;
 }
+
 
 
 
