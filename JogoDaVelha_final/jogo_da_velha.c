@@ -49,9 +49,24 @@ int show_menu()
 
 // Programador: Jackson kelvin
 
-void mostra_matriz(char matriz[3][3])
+void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
-    printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",matriz[0][0],matriz[0][1],matriz[0][2],matriz[1][0],matriz[1][1],matriz[1][2],matriz[2][0],matriz[2][1],matriz[2][2]);	
+    int i,j;
+    for (i=0; i<3; i++)
+    {
+        for(j=0; j<3; j++)
+        {
+            if(matriz[i][j]==-1)
+            {
+                mprint[i][j]= 'O';
+            }
+            if(matriz[i][j]==-2)
+            {
+                mprint[i][j]='X';
+            }
+        }
+    }
+    printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",mprint[0][0],mprint[0][1],mprint[0][2],mprint[1][0],mprint[1][1],mprint[1][2],mprint[2][0],mprint[2][1],mprint[2][2]);	
 }			
 
 
@@ -130,7 +145,7 @@ void marca_jodada(int posicao,int i,int *vetor_posicao)
 
 // Programador: wilson calisto 
 
-void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
+void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {
     
    
@@ -139,31 +154,30 @@ void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada
 		           	switch(jogada)
 					{
 
-					case 1: matriz[0][0]='O';
+					case 1: matriz[0][0]=-1;
 							  break;        
-					case 2: 
-						  matriz[0][1]='O';
+					case 2: matriz[0][1]=-1;
 						    break;
 
-					case 3: matriz[0][2]='O';
+					case 3: matriz[0][2]=-1;
 						    break;
 
-					case 4: matriz[1][0]='O';
+					case 4: matriz[1][0]=-1;
 						    break;
 
-					case 5: matriz[1][1]='O';
+					case 5: matriz[1][1]=-1;
 						    break;
 
-					case 6: matriz[1][2]='O';
+					case 6: matriz[1][2]=-1;
 						    break;
 
-					case 7: matriz[2][0]='O';
+					case 7: matriz[2][0]=-1;
 						    break;
 
-					case 8: matriz[2][1]='O';
+					case 8: matriz[2][1]=-1;
 						    break;
 
-					case 9: matriz[2][2]='O';
+					case 9: matriz[2][2]=-1;
 						    break;
 				
 					default: printf("Posicao invalida! \n");
@@ -175,31 +189,31 @@ void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada
 		           	switch(jogada)
 					{
 
-					case 1: matriz[0][0]='X';
+					case 1: matriz[0][0]=-2;
 							  break;        
 					case 2: 
-						  	matriz[0][1]='X';
+						  	matriz[0][1]=-2;
 						    break;
 
-					case 3: matriz[0][2]='X';
+					case 3: matriz[0][2]=-2;
 						    break;
 
-					case 4: matriz[1][0]='X';
+					case 4: matriz[1][0]=-2;
 						    break;
 
-					case 5: matriz[1][1]='X';
+					case 5: matriz[1][1]=-2;
 						    break;
 
-					case 6: matriz[1][2]='X';
+					case 6: matriz[1][2]=-2;
 						    break;
 
-					case 7: matriz[2][0]='X';
+					case 7: matriz[2][0]=-2;
 						    break;
 
-					case 8: matriz[2][1]='X';
+					case 8: matriz[2][1]=-2;
 						    break;
 
-					case 9: matriz[2][2]='X';
+					case 9: matriz[2][2]=-2;
 						    break;
 				
 					default: printf("Posicao invalida! \n");
@@ -212,7 +226,7 @@ void joga(int jogada,char matriz[3][3],int i) //recebe o vetor da  ultima jogada
 
 /* Funcao que verifica se o jogador e quem ganhou ganhou*/
 // Programador: Delrick 
-int ganhou(char mat[3][3],int i)
+int ganhou(int mat[3][3],int i)
 {
     if((mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2]) || (mat[1][0] == mat[1][1] && mat[1][1] == mat[1][2]) || (mat[2][0] == mat[2][1] && mat[2][1] == mat[2][2]) || (mat[0][0] == mat[1][0] && mat[1][0] == mat[2][0]) || (mat[0][1] == mat[1][1] && mat[1][1] == mat[2][1]) || (mat[0][2] == mat[1][2] && mat[1][2] == mat[2][2]) ||  (mat[0][0] == mat[1][1] && mat[1][1] == mat[2][2]) || (mat[0][2] == mat[1][1] && mat[1][1] == mat[2][0]))
     {      
@@ -233,13 +247,13 @@ int ganhou(char mat[3][3],int i)
     }
 }
 
-void para_dois(char matriz[3][3],int vetor_posicao[9])
+void para_dois(int matriz[3][3],int vetor_posicao[9], char mprint[3][3])
 {
     int i,jogada;
     for(i=1;i<=9;i++)
     {       
 	      limpa_tela; //limpando a tela	   
-		  mostra_matriz(matriz);	
+		  mostra_matriz(matriz, mprint);	
 	        /*retira as coordenadas invalidas e as que ja sairam*/    
  		  jogada=jogada_correta(vetor_posicao,i);	        
 			 /*marca as jogadas ja feitas */
@@ -247,7 +261,7 @@ void para_dois(char matriz[3][3],int vetor_posicao[9])
 	          /* joga */ 	     
 	      joga(jogada,matriz,i);		 	
               limpa_tela; //limpando a tela	 	
-		  mostra_matriz(matriz);		     
+		  mostra_matriz(matriz, mprint);		     
 	     /* verifica se um jogador ganhou*/
 	      if(ganhou(matriz,i))
 	      {
@@ -263,13 +277,13 @@ void para_dois(char matriz[3][3],int vetor_posicao[9])
 
 }
 
-void para_um_facil(char matriz[3][3],int vetor_posicao[9])
+void para_um_facil(int matriz[3][3],int vetor_posicao[9], char mprint[3][3])
 {
     int i,jogada;
     for(i=1;i<=9;i++)
     {       
 	      limpa_tela; //limpando a tela	   
-	      mostra_matriz(matriz);	
+	      mostra_matriz(matriz, mprint);	
 	      
 	      /*retira as coordenadas invalidas e as que ja sairam*/
 	      jogada=play_easy_bot(vetor_posicao,i);	        
@@ -282,7 +296,7 @@ void para_um_facil(char matriz[3][3],int vetor_posicao[9])
               
               limpa_tela; //limpando a tela	 	
 	      
-	      mostra_matriz(matriz);		     
+	      mostra_matriz(matriz, mprint);		     
 	     /* verifica se um jogador ganhou*/
 	      if(ganhou(matriz,i))
 	      {
@@ -319,7 +333,7 @@ int vencedor(int matriz[3][3])
 	return 0;
 }
 
-void converter(int b[3][3], char matriz[3][3])
+void converter(int b[3][3], int matriz[3][3])
 {
         int i, j;
         for(i=0;i<3;i++)
@@ -355,7 +369,7 @@ int jogada_da_maquina(int vetor_posicao[9],int matriz[3][3])
  }
 */
 
-void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
+void para_um_dificil(int matriz[3][3],int vetor_posicao[9], char mprint[3][3])
 {
 	int jogada, i, bot, best, c;
 	int best_i = 0, best_j = 0, b[3][3];
@@ -364,7 +378,7 @@ void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 		//Jogador Humano é sempre o 1
 		//Jogador Máquina é sempre o 2
 		//limpa_tela;
-		mostra_matriz(matriz);	
+		mostra_matriz(matriz, mprint);	
 		
 		converter(b,matriz);
 		if(i%2 == 0)
@@ -373,7 +387,7 @@ void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 			marca_jodada(jogada,i,vetor_posicao);			
 			joga(jogada, matriz, i);
 			limpa_tela;
-			mostra_matriz(matriz);
+			mostra_matriz(matriz, mprint);
 			//printf("Meu movimento: %d\n",c );
 			
 		}
@@ -384,7 +398,7 @@ void para_um_dificil(char matriz[3][3],int vetor_posicao[9])
 			marca_jodada(jogada,i,vetor_posicao); //Marca as jogadas já feitas
 			joga(jogada,matriz,i); /* Marca as jogadas na matriz */
 			limpa_tela;
-			mostra_matriz(matriz);
+			mostra_matriz(matriz, mprint);
 			
 		}
 	}	
@@ -498,5 +512,31 @@ int converte_saida()
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
