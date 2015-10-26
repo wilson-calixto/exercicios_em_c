@@ -6,8 +6,47 @@
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux
-  #def
-        printf("rint[3][3])
+  #define limpa_tela system("/usr/bin/clear") //limpa tela
+#endif
+
+
+/*funca retorna :
+1 se o jogo é para dois 
+2 se o jogo é para um facil 
+3 se o jogo é para um dificil 
+4 para sair 
+
+*/
+int show_menu()
+{
+    int jogs = 0;
+
+    while (jogs==0)//retira jogadas invalidas
+    {
+        limpa_tela; //limpando a tela
+        printf("******* JOGO DA VELHA *******");
+        printf("\n\n1 multiplayer\n2  alone\n3. Sair\n");
+        scanf("%d", &jogs);		
+        if (jogs == 3)
+        {
+            jogs = 4;
+	}
+        if (jogs == 2)
+        {
+            printf("Dificuldade: \n2. easy\n3. hard\n");
+            scanf("%d", &jogs);		        
+    	}
+    }
+    return jogs;
+}
+
+/* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
+ se a jogada ja saiu retorna 0, se nao 1.
+ */
+
+// Programador: Jackson kelvin
+
+void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
     int i,j;
     printf("\n");
@@ -252,7 +291,15 @@ void converter(int b[3][3], int matriz[3][3])
 
 int b2[3][3]; /* board. 0: blank; -1: computer; 1: human */
  
-int check_winner()i])
+int check_winner()
+{
+	int i;
+	for (i = 0; i < 3; i++) 
+	{
+	
+		if (b2[i][0] && b2[i][1] == b2[i][0] && b2[i][2] == b2[i][0])
+			return b2[i][0];
+		if (b2[0][i] && b2[1][i] == b2[0][i] && b2[2][i] == b2[0][i])
 			return b2[0][i];
 	}
 	if (!b2[1][1]) return 0;
@@ -268,4 +315,106 @@ int best_i, best_j;
 int test_move(int val, int depth)
 {
 	int i, j, score;
-	int best 
+	int best = -1, changed = 0;
+ 
+	if ((score = check_winner())) return (score == val) ? 1 : -1;
+ 
+	for_ij {
+		if (b2[i][j]) continue;
+ 
+		changed = b2[i][j] = val;
+		score = -test_move(-val, depth + 1);
+		b2[i][j] = 0;
+ 
+		if (score <= best) continue;
+		if (!depth) {
+			best_i = i;
+			best_j = j;
+		}
+		best = score;
+	}
+ 
+	return changed ? best : 0;
+}
+
+int joga_minimax(char **mat)
+{
+    int i,j;
+
+    for_ij 
+    {
+        if (mat[i][j] == 'X')
+        {
+            b2[i][j] = 1;
+        }
+        else
+        {
+            if (mat[i][j] == 'O')
+                b2[i][j] = -1;
+            else b2[i][j] = 0;
+        }               
+    }
+
+    test_move(-1,0);
+
+    return converte_saida();
+}
+
+int converte_saida()
+{
+    switch (best_i)
+    {
+        case 0:
+            if (best_j == 0)
+                return 1;
+            if (best_j == 1)
+                return 2;
+            if (best_j == 2)
+                return 3;
+        break;
+        case 1:
+            if (best_j == 0)
+                return 4;
+            if (best_j == 1)
+                return 5;
+            if (best_j == 2)
+                return 6;
+        break;
+        case 2:
+            if (best_j == 0)
+                return 7;
+            if (best_j == 1)
+                return 8;
+            if (best_j == 2)
+                return 9;
+        break;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
