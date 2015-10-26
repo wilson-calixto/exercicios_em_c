@@ -315,10 +315,4 @@ int best_i, best_j;
 int test_move(int val, int depth)
 {
 	int i, j, score;
-	int best = -1, changed = 0;
- 
-	if ((score = check_winner())) return (score == val) ? 1 : -1;
- 
-	for_ij {
-		if (b2[i][j]) continue;
- 
+	int best 
