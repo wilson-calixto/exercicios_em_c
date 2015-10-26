@@ -399,8 +399,3 @@ int converte_saida()
 
 
 
-
-
-
-
-
