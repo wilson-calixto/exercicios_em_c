@@ -110,21 +110,14 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
  }
 
 /* Função com jogadas randomicas de 1 a 9 */
-int play_easy_bot(int vetor_posicao[9],int i)
+int play_easy_bot(int vetor_posicao[9])
 {
     int jogada;
     srand( (unsigned)time(NULL) );
     
     do{
-        if(i%2==0)// se i é par é o '0'
-	    {
-			jogada=1 + ( rand() % 8 );
-	    }
-	    else// se i é impar é o 'X'
-        {
-	       	printf("Digite a jogada jogador 1\n");
-			scanf("%d",&jogada);
-	    }
+        	jogada=1 + ( rand() % 8 );
+	    
     }while((jogada>9 || jogada<1)||!jogada_valida(vetor_posicao,jogada));
  
     return jogada;
