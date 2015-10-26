@@ -6,16 +6,7 @@
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux
-  #define limpa_tela system("/usr/bin/clear") //limpa tela
-#endif
-
-
-/*funca retorna :
-1 se o jogo é para dois 
-2 se o jogo é para um facil 
-3 se o jogo é para um dificil 
-4 para sair 
-
+  #def
 */
 int show_menu()
 {
