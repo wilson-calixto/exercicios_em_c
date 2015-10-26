@@ -33,7 +33,7 @@ int main()
 				}
 				else
 				{
-					jogada=jogada_dificil;//MAQUINA JOGA DIFICIL
+					//jogada=jogada_dificil;MAQUINA JOGA DIFICIL
 				}
 			}
 			else
