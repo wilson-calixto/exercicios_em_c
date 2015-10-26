@@ -24,13 +24,13 @@ int main()
 
 		   	switch(resposta)
 			{
-			case 1: para_um_facil(matriz,vetor_posicao);// para um facil
+			case 1: para_um_facil(matriz,vetor_posicao, mprint);// para um facil
 					  break;        
-			case 2: para_um_dificil(matriz,vetor_posicao);// para um dificil
+			case 2: para_um_dificil(matriz,vetor_posicao, mprint);// para um dificil
 					  break;        
 			case 3: printf("\nsaindo\n");
 					break;
-			case 4: para_dois(matriz,vetor_posicao);// para um facil
+			case 4: para_dois(matriz,vetor_posicao, mprint);// para um facil
 					break;
 			}
 		
