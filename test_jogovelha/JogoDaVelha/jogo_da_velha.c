@@ -9,9 +9,7 @@
   #define limpa_tela system("/usr/bin/clear") //limpa tela
 #endif
 
-1 se o jogo é para um facil 
-2 se o jogo é para um dificil 
-3 para sair 
+1 se o jogo é para um fac
 4 se o jogo é para dois 
 */
 int show_menu()
