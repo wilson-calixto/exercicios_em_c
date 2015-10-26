@@ -322,11 +322,3 @@ int test_move(int val, int depth)
 	for_ij {
 		if (b2[i][j]) continue;
  
-		changed = b2[i][j] = val;
-		score = -test_move(-val, depth + 1);
-		b2[i][j] = 0;
- 
-		if (score <= best) continue;
-		if (!depth) {
-			best_i = i;
-			best_j = j;
