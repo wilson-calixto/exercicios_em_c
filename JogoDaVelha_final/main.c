@@ -29,7 +29,7 @@ int main()
 			{
 				if(modo_de_jogo==2)//facil 
 				{				
-					jogada=jogada_facil;//MAQUINA JOGA FACIL
+					jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL
 				}
 				else
 				{
