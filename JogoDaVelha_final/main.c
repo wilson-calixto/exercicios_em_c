@@ -6,7 +6,7 @@
 int vetor_posicao[9];
 int main()
 {
-	int modo_de_jogo,i;
+	int jogada,modo_de_jogo,i;
 	int matriz[3][3] ={{'1','2','3'},
 			    {'4','5','6'},
 			    {'7','8','9',}};
@@ -17,12 +17,13 @@ int main()
 		
 		
 	modo_de_jogo=show_menu();
-	for(i=1;i=<9;i++)
+	printf("\n%d\n",modo_de_jogo);
+	for(i=1;i<=9;i++)
 	{
 		if(modo_de_jogo == 1)//multiplayer
 		{
 			jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO 			
-		{		
+		}		
 		else 
 		{
 			if(i%2==0)//pedindo jogada
@@ -39,8 +40,21 @@ int main()
 			else
 			{
 				jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO
-			}			
+			}
+		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
+		
+		if(ganhou(matriz,i))
+		{
+			printf("\nganhou\n");
+			break;
+		}
+			/* verifica se velhou*/
+		if(i==9)
+		{
+			printf("\nVelhou\n");
+			break;
+		}
 	}
 	
 	
