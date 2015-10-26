@@ -337,12 +337,6 @@ int test_move(int val, int depth)
 	return changed ? best : 0;
 }
 
-int joga_minimax(char **mat)
-{
-    int i,j;
 
-    for_ij 
-    {
-        if (mat[i][j] == 'X')
         }
    
