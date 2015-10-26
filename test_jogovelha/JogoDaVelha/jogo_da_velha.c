@@ -7,14 +7,6 @@
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux
   #def
-*/
-int show_menu()
-{
-    int jogs = 0;
-
-    while (jogs==0)//retira jogadas invalidas
-    {
-        limpa_tela; //limpando a tela
         printf("******* JOGO DA VELHA *******");
         printf("\n\n1 multiplayer\n2  alone\n3. Sair\n");
         scanf("%d", &jogs);		
