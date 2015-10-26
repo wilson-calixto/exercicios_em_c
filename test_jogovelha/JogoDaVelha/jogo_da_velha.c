@@ -353,13 +353,4 @@ int joga_minimax(char **mat)
         }               
     }
 
-    test_move(-1,0);
-
-    return converte_saida();
-}
-
-int converte_saida()
-{
-    switch (best_i)
-    {
-        case 0:
+   
