@@ -344,8 +344,6 @@ int joga_minimax(char **mat)
     for_ij 
     {
         if (mat[i][j] == 'X')
-        {
-            b2[i][j] = 1;
         }
         else
         {
