@@ -31,24 +31,21 @@ int main()
 
 	for(i=1;i<=9;i++)
 	{
-		if(modo_de_jogo == 1 || i%2!=0)//multiplayer ou se a vez é do humano
+		if(modo_de_jogo == 1 || i%2!=0)//se é multiplayer ou se a vez é do humano
 		{
-			jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO 			
+			jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO (humano) 			
 		}		
 		else 
 		{
-			if(modo_de_jogo==2)//facil 
+			if(modo_de_jogo==2)//se a vez é da maquina nivel facil 
 			{				
 				jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL
-				
-				printf("joguei no %d",jogada);
-				
 			}
-			else
+			else//se a vez é da maquina nivel facil DIFICIL
 			{
-				//jogada=jogada_dificil;MAQUINA JOGA DIFICIL
+				//jogada=jogada_dificil;MAQUINA JOGA no  nivel DIFICIL
 			}
-			
+			printf("joguei no %d",jogada);//mostra onde a maquina jogou
 			
 		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
