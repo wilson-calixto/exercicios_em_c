@@ -3,13 +3,8 @@
 #include <string.h>
 #include "jogo_da_velha.h"
 #include "i_o.h"
-
-#ifdef WIN32  //se for windows
-  #define limpa_tela system("cls") //limpa tela
-#else //senão, ex.: linux
-  #define limpa_tela system("/usr/bin/clear") //limpa tela
-#endif
-
+#include "bot_easy.h"
+#include "human.h"
 int vetor_posicao[9];
 int main()
 {
@@ -31,30 +26,23 @@ int main()
 
 	for(i=1;i<=9;i++)
 	{
-		if(modo_de_jogo == 1)//multiplayer
+		if(modo_de_jogo == 1 || i%2!=0)//multiplayer ou quando é a vez do jogador um(humano)
 		{
 			jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO 			
 		}		
 		else 
 		{
-			if(i%2==0)//pedindo jogada
-			{
-				if(modo_de_jogo==2)//facil 
-				{				
-					jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL
-					
-					saida(12,jogada);
-					
-				}
-				else
-				{
-					//jogada=jogada_dificil;MAQUINA JOGA DIFICIL
-				}
+		
+			if(modo_de_jogo==2)//facil 
+			{				
+				jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL				
+							
 			}
 			else
 			{
-				jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO
+				//jogada=jogada_dificil;MAQUINA JOGA DIFICIL
 			}
+			saida(12,jogada);//maquina fala onde jogou
 		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
 		
