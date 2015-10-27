@@ -21,6 +21,11 @@ int main()
 
 
 	modo_de_jogo=show_menu();
+	if(modo_de_jogo==4) 
+	{
+		saida(11,0);	
+		return 0;
+	}
 	saida(3,0);
 	mostra_matriz(matriz,mprint);
 

@@ -34,7 +34,7 @@ void saida(int controle,int saida)
                 break;
         case 10: printf("O");
                 break;
-        case 11: printf("X");
+        case 11: printf("\nsaindo\n");
                 break;
         case 12: printf("joguei no %d",saida);
                 break;
