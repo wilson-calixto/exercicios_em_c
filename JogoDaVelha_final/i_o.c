@@ -71,3 +71,34 @@ void mostra_matriz(int matriz[3][3], char mprint[3][3])
     }
     printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",mprint[0][0],mprint[0][1],mprint[0][2],mprint[1][0],mprint[1][1],mprint[1][2],mprint[2][0],mprint[2][1],mprint[2][2]);	
 }
+
+
+/*funca retorna :
+1 se o jogo é para dois 
+2 se o jogo é para um facil 
+3 se o jogo é para um dificil 
+4 para sair 
+
+*/
+int show_menu()
+{
+    int jogs = 0;
+
+    while (jogs==0)//retira jogadas invalidas
+    {
+        limpa_tela; //limpando a tela
+        saida(1);      
+        scanf("%d", &jogs);		
+        if (jogs == 3)
+        {
+            jogs = 4;
+	}
+        if (jogs == 2)
+        {
+            saida(2);
+            scanf("%d", &jogs);		        
+    	}
+    }
+    return jogs;
+}
+
