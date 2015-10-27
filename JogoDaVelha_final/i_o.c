@@ -9,7 +9,7 @@
 //A função retorna a saidas, que correspondem ao numero do parametro de entrada "saida"
 //A matriz dada como entrada é pelo case 3, que agora é o antigo MOSTRA_MATRIZ.
 // Programador: Wilson Oliveira Neto.
-char saida(int saida)
+void saida(int saida)
 {
     switch(saida)
     {
