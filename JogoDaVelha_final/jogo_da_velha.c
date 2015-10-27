@@ -68,7 +68,6 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
  {
  int jogada;
         do{            
-	            
 	            if(i%2==0)// se i é par é o '0'
 	            {
 	            	printf("Digite a jogada jogador 2\n");
