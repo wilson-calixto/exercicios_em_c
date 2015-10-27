@@ -1,12 +1,7 @@
-
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux
@@ -24,7 +19,7 @@ char saida(int saida)
                 break;
         case 2: printf("Dificuldade: \n2. easy\n3. hard\n");
                 break;
-        case 3: printf("error \n");
+        case 3: limpa_tela;
                 break;
         case 4: printf("Digite a jogada jogador 2\n");
                 break;
