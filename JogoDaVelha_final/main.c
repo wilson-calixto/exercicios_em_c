@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "jogo_da_velha.h"
+#include "jogo_da_velha.h"
 #include "i_o.h"
 
 #ifdef WIN32  //se for windows
