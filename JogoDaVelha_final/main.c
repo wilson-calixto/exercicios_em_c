@@ -20,7 +20,7 @@ int main()
 
 
 	modo_de_jogo=show_menu();
-	saida(3);
+	saida(3); //limpa a tela
 	mostra_matriz(matriz,mprint);
 
 	for(i=1;i<=9;i++)
@@ -51,18 +51,18 @@ int main()
 		{
 		     if(i%2==0)// se i é par é o '0'
 		     {
-		     	saida(7);		     
+		     	saida(7); // Jogador 2 o 'O' ganhou		     
 		     }
 		     else// se i é impar é o 'X'
 		     {
-		     	saida(8);
+		     	saida(8); // Jogador 1 o 'X' ganhou
 		     }       
 			break;
 		}
 			// verifica se velhou
 		if(i==9)
 		{
-			saida(9);
+			saida(9); // Velhou
 			break;
 		}
 	}
