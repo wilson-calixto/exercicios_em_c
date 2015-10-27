@@ -44,7 +44,7 @@ int main()
 		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
 		
-		saida(3);
+		saida(3); // limpa a tela
 		mostra_matriz(matriz,mprint);
 		
 		if(ganhou(matriz))
