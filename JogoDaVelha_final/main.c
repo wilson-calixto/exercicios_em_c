@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,12 +5,6 @@
 #include "human.h"
 #include "i_o.h"
 #include "jogo_da_velha.h"
-
-#ifdef WIN32  //se for windows
-  #define limpa_tela system("cls") //limpa tela
-#else //senão, ex.: linux
-  #define limpa_tela system("/usr/bin/clear") //limpa tela
-#endif
 
 int vetor_posicao[9];
 int main()
@@ -28,7 +20,7 @@ int main()
 
 
 	modo_de_jogo=show_menu();
-	limpa_tela;
+	saida(3);
 	mostra_matriz(matriz,mprint);
 
 	for(i=1;i<=9;i++)
@@ -52,7 +44,7 @@ int main()
 		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
 		
-		limpa_tela;
+		saida(3);
 		mostra_matriz(matriz,mprint);
 		
 		if(ganhou(matriz))
