@@ -25,8 +25,7 @@ int show_menu()
     while (jogs==0)//retira jogadas invalidas
     {
         limpa_tela; //limpando a tela
-        printf("******* JOGO DA VELHA *******");
-        printf("\n\n1 multiplayer\n2  alone\n3. Sair\n");
+        saida(1);      
         scanf("%d", &jogs);		
         if (jogs == 3)
         {
@@ -34,7 +33,7 @@ int show_menu()
 	}
         if (jogs == 2)
         {
-            printf("Dificuldade: \n2. easy\n3. hard\n");
+            saida(2);
             scanf("%d", &jogs);		        
     	}
     }
@@ -232,4 +231,3 @@ int vencedor(int matriz[3][3])
  
 	return 0;
 }
-
