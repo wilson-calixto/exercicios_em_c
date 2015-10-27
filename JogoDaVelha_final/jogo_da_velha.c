@@ -45,7 +45,7 @@ int show_menu()
  */
 
 // Programador: Jackson kelvin
-
+/*
 void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
     int i,j;
@@ -66,7 +66,7 @@ void mostra_matriz(int matriz[3][3], char mprint[3][3])
     }
     printf("   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n___|___|___\n   |   |\n %c | %c | %c\n   |   |\n",mprint[0][0],mprint[0][1],mprint[0][2],mprint[1][0],mprint[1][1],mprint[1][2],mprint[2][0],mprint[2][1],mprint[2][2]);	
 }			
-
+*/
 
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
  se a jogada ja saiu retorna 0, se nao 1.
@@ -259,3 +259,5 @@ int vencedor(int matriz[3][3])
  
 	return 0;
 }
+
+

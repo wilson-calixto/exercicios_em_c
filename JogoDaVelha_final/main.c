@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "jogo_da_velha.h"
+//#include "jogo_da_velha.h"
+#include "i_o.h"
 
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
@@ -22,6 +23,9 @@ int main()
                            {'4', '5', '6'},
                            {'7', '8', '9'}};
 	
+	saida(11,matriz,mprint);//trocar os prints por essa funcao
+
+
 	modo_de_jogo=show_menu();
 	limpa_tela;
 	mostra_matriz(matriz,mprint);
@@ -56,24 +60,24 @@ int main()
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
 		
 		limpa_tela;
-		mostra_matriz(matriz,mprint);
+		mostra_matriz(matriz,mprint);//deve ser substituido por saida(3,matriz,mprint);
 		
 		if(ganhou(matriz))
 		{
 		     if(i%2==0)// se i é par é o '0'
 		     {
-		     	printf("jogador 2 o 'O' ganhou\n");			     
+		     	saida(7,matriz,mprint);		     
 		     }
 		     else// se i é impar é o 'X'
 		     {
-		     	printf("jogador 1 o 'X' ganhou\n");
+		     	saida(8,matriz,mprint);
 		     }       
 			break;
 		}
-			/* verifica se velhou*/
+			// verifica se velhou
 		if(i==9)
 		{
-			printf("\nVelhou\n");
+			saida(9,matriz,mprint);;
 			break;
 		}
 	}
