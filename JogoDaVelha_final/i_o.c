@@ -13,9 +13,9 @@ void saida(int controle,int saida)
 {
     switch(controle)
     {
-        case 1: printf("******* JOGO DA VELHA *****\n\n1 multiplayer\n2  alone\n3.Exit\n");
+        case 1: printf("******* JOGO DA VELHA *****\n\n1. Multiplayer\n2. Single Player\n3. Exit\n");
                 break;
-        case 2: printf("Dificuldade: \n2. easy\n3. hard\n");
+        case 2: printf("Dificuldade: \n2. Easy\n3. Hard\n");
                 break;
         
         case 3: limpa_tela;
@@ -26,17 +26,17 @@ void saida(int controle,int saida)
                 break;
         case 6: printf("Posicao invalida! \n");
                 break;
-        case 7: printf("jogador 2 o 'O' ganhou\n");
+        case 7: printf("Jogador 2 o 'O' ganhou\n");
                 break;
-        case 8: printf("jogador 1 o 'X' ganhou\n");
+        case 8: printf("Jogador 1 o 'X' ganhou\n");
                 break;
         case 9: printf("\nVelhou\n");
                 break;
         case 10: printf("O");
                 break;
-        case 11: printf("\nsaindo\n");
+        case 11: printf("\nSaindo\n");
                 break;
-        case 12: printf("joguei no %d",saida);
+        case 12: printf("Joguei no %d",saida);
                 break;
 
     }
