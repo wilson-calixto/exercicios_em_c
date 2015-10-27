@@ -31,30 +31,25 @@ int main()
 
 	for(i=1;i<=9;i++)
 	{
-		if(modo_de_jogo == 1)//multiplayer
+		if(modo_de_jogo == 1 || i%2!=0)//multiplayer ou se a vez é do humano
 		{
 			jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO 			
 		}		
 		else 
 		{
-			if(i%2==0)//pedindo jogada
-			{
-				if(modo_de_jogo==2)//facil 
-				{				
-					jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL
-					
-					printf("joguei no %d",jogada);
-					
-				}
-				else
-				{
-					//jogada=jogada_dificil;MAQUINA JOGA DIFICIL
-				}
+			if(modo_de_jogo==2)//facil 
+			{				
+				jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL
+				
+				printf("joguei no %d",jogada);
+				
 			}
 			else
 			{
-				jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO
+				//jogada=jogada_dificil;MAQUINA JOGA DIFICIL
 			}
+			
+			
 		}			
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
 		
