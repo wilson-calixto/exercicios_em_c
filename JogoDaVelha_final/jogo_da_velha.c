@@ -2,7 +2,6 @@
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
  se a jogada ja saiu retorna 0, se nao 1.
  */
-
 // Programador: Hermann J. Hernani.
 
 int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
@@ -14,8 +13,7 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
        {
            return 0;
        }
- 
-   }
+    }
     return 1; //  se a jogada não existir ele retorna 1, valor para true
 }
 
@@ -27,77 +25,54 @@ void marca_jodada(int posicao,int i,int *vetor_posicao)
         vetor_posicao[i] = posicao;               
 }
 
-/* Funcao que marca com X ou O*/
-
+/* Funcao que marca a matriz com -1=O ou -1=X*/
 // Programador: wilson calisto 
-
 void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
-{
-    
-   
-        if(i%2==0) /*se par o jogador é o 1==O se impar é 2==X */
+{       
+        if(i%2==0) /*se par o jogador é o -1==O se impar é -2==X */
  	     {
 		           	switch(jogada)
 					{
-
 					case 1: matriz[0][0]=-1;
-							  break;        
+							  break;       
 					case 2: matriz[0][1]=-1;
 						    break;
-
 					case 3: matriz[0][2]=-1;
 						    break;
-
 					case 4: matriz[1][0]=-1;
 						    break;
-
 					case 5: matriz[1][1]=-1;
 						    break;
-
 					case 6: matriz[1][2]=-1;
 						    break;
-
 					case 7: matriz[2][0]=-1;
 						    break;
-
 					case 8: matriz[2][1]=-1;
 						    break;
-
 					case 9: matriz[2][2]=-1;
-						    break;			
-					
+						    break;	
 			  		}
 		 }
     	else
-   		 {
-    
+   		 {   
 		           	switch(jogada)
 					{
-
 					case 1: matriz[0][0]=-2;
 							  break;        
-					case 2: 
-						  	matriz[0][1]=-2;
+					case 2: matriz[0][1]=-2;
 						    break;
-
 					case 3: matriz[0][2]=-2;
 						    break;
-
 					case 4: matriz[1][0]=-2;
 						    break;
-
 					case 5: matriz[1][1]=-2;
 						    break;
-
 					case 6: matriz[1][2]=-2;
 						    break;
-
 					case 7: matriz[2][0]=-2;
 						    break;
-
 					case 8: matriz[2][1]=-2;
 						    break;
-
 					case 9: matriz[2][2]=-2;
 						    break;
 				
@@ -122,7 +97,7 @@ int ganhou(int mat[3][3])
         return 0;
     }
 }
-
+/* Funcao que joga*/
 //wilson
 void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogada)
 {					

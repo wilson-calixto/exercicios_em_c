@@ -6,8 +6,8 @@
   #define limpa_tela system("/usr/bin/clear") //limpa tela
 #endif
 
-//A função retorna a saidas, que correspondem ao numero do parametro de entrada "saida"
-//A matriz dada como entrada é pelo case 3, que agora é o antigo MOSTRA_MATRIZ.
+//A função retorna a saidas, que correspondem ao numero do parametro de entrada "CONTROLE" caso seja 12 ele mostra o parametro saida
+
 // Programador: Wilson Oliveira Neto.
 void saida(int controle,int saida)
 {
