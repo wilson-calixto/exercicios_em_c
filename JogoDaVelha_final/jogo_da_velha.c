@@ -4,6 +4,7 @@
 #include <string.h>
 #include <time.h>
 
+
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux

@@ -1,7 +1,7 @@
 all: main
 
-main: main.o jogo_da_velha.o i_o.o bot_easy.o bot_hard.o
-	gcc main.o jogo_da_velha.o i_o.o bot_easy.o bot_hard.o -o main
+main: main.o jogo_da_velha.o i_o.o bot_easy.o human.o
+	gcc main.o jogo_da_velha.o i_o.o bot_easy.o human.o -o main
 
 main.o: main.c
 	gcc -c main.c
@@ -15,8 +15,10 @@ i_o.o: i_o.c
 bot_easy.o: bot_easy.c
 	gcc -c bot_easy.c
 
-bot_hard.o: bot_hard.c
-	gcc -c bot_hard.c
+	
+human.o: human.c
+	gcc -c human.c
+	
 clean:
 	rm -rf *.o
 

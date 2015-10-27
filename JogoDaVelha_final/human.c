@@ -1,4 +1,9 @@
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
 /*retira as coordenadas invalidas e as que ja sairam e retorna uma jogada valida*/   
 // programador : WISON CALIXTO
  int jogada_correta(int vetor_posicao[9],int i)

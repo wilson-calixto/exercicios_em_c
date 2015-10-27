@@ -1,6 +1,17 @@
 
-#include <stdio.h>
 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#ifdef WIN32  //se for windows
+  #define limpa_tela system("cls") //limpa tela
+#else //senão, ex.: linux
+  #define limpa_tela system("/usr/bin/clear") //limpa tela
+#endif
 
 //A função retorna a saidas, que correspondem ao numero do parametro de entrada "saida"
 //A matriz dada como entrada é pelo case 3, que agora é o antigo MOSTRA_MATRIZ.

@@ -1,4 +1,9 @@
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
 /* Função com jogadas randomicas de 1 a 9 */
 int play_easy_bot(int vetor_posicao[9])
 {
