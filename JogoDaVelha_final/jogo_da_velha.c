@@ -142,27 +142,3 @@ void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogad
 	marca_jodada(jogada,i,vetor_posicao);		     
 	joga(jogada,matriz,i);
 }
-
-
-
-
-/* Funções para utilizar o minimax - IA  
-   Programadora: Juliany 
-*/
-
-int vencedor(int matriz[3][3])
-{
-	int i;
-	for (i = 0; i < 3; i++) {
-		if (matriz[i][0] && matriz[i][1] == matriz[i][0] && matriz[i][2] == matriz[i][0])
-			return matriz[i][0];
-		if (matriz[0][i] && matriz[1][i] == matriz[0][i] && matriz[2][i] == matriz[0][i])
-			return matriz[0][i];
-	}
-	if (!matriz[1][1]) return 0;
- 
-	if (matriz[1][1] == matriz[0][0] && matriz[2][2] == matriz[0][0]) return matriz[0][0];
-	if (matriz[1][1] == matriz[2][0] && matriz[0][2] == matriz[1][1]) return matriz[1][1];
- 
-	return 0;
-}
