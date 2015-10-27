@@ -93,7 +93,7 @@ int show_menu()
 
     while (jogs==0)//retira jogadas invalidas
     {
-        limpa_tela; //limpando a tela
+        saida(3); //limpando a tela
         saida(1);      
         jogs=entrada();		
         if (jogs == 3)
