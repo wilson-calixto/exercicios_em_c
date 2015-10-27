@@ -21,9 +21,7 @@ int main()
 			    
 	char mprint[3][3]={{'1', '2', '3'},
                            {'4', '5', '6'},
-                           {'7', '8', '9'}};
-	
-	saida(11,matriz,mprint);//trocar os prints por essa funcao
+                           {'7', '8', '9'}};	
 
 
 	modo_de_jogo=show_menu();
@@ -60,24 +58,24 @@ int main()
 		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
 		
 		limpa_tela;
-		mostra_matriz(matriz,mprint);//deve ser substituido por saida(3,matriz,mprint);
+		mostra_matriz(matriz,mprint);
 		
 		if(ganhou(matriz))
 		{
 		     if(i%2==0)// se i é par é o '0'
 		     {
-		     	saida(7,matriz,mprint);		     
+		     	saida(7);		     
 		     }
 		     else// se i é impar é o 'X'
 		     {
-		     	saida(8,matriz,mprint);
+		     	saida(8);
 		     }       
 			break;
 		}
 			// verifica se velhou
 		if(i==9)
 		{
-			saida(9,matriz,mprint);;
+			saida(9);
 			break;
 		}
 	}
