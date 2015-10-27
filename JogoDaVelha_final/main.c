@@ -3,8 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "jogo_da_velha.h"
+#include "bot_easy.h"
+#include "human.h"
 #include "i_o.h"
+#include "jogo_da_velha.h"
 
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
