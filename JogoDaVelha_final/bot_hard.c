@@ -6,10 +6,10 @@
 
 
 
-int minimax(int posicao[9], int player, int matriz[3][3]) 
+int minimax(int posicao[9], int player) 
 {
     //Descobre a melhor posição para jogar
-    int winner 
+    int winner, move;
     
     /*= ganhou(matriz);
     if(winner != 0) return winner*player;*/
