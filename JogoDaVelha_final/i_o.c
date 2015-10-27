@@ -5,7 +5,7 @@
 //A função retorna a saidas, que correspondem ao numero do parametro de entrada "saida"
 //A matriz dada como entrada é pelo case 3, que agora é o antigo MOSTRA_MATRIZ.
 // Programador: Wilson Oliveira Neto.
-void saida(int saida, int matriz[3][3], char mprint[3][3])
+void saida(int saida)
 {
     switch(saida)
     {
@@ -13,8 +13,8 @@ void saida(int saida, int matriz[3][3], char mprint[3][3])
                 break;
         case 2: printf("Dificuldade: \n2. easy\n3. hard\n");
                 break;
-        //CASE 3 AGORA É O NOVO MOSTRA_MATRIZ, quando quiser chamar é só chamar essa função e pedir o primeiro parametro é ele.
-        case 3: //mostra_matriz(matriz,mprint); //fazer funcionar
+        
+        case 3: printf("error \n");
                 break;
         case 4: printf("Digite a jogada jogador 2\n");
                 break;
