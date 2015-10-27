@@ -69,11 +69,11 @@ int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas re
         do{            
 	            if(i%2==0)// se i é par é o '0'
 	            {
-	            	printf("Digite a jogada jogador 2\n");
+	            	saida(4);
 	            }
 	            else// se i é impar é o 'X'
 	            {
-	            	printf("Digite a jogada jogador 1\n");
+	            	saida(5);
 	            }
 	            
 	            scanf("%d",&jogada);
@@ -141,9 +141,8 @@ void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada 
 						    break;
 
 					case 9: matriz[2][2]=-1;
-						    break;
-				
-					default: printf("Posicao invalida! \n");
+						    break;			
+					
 			  		}
 		 }
     	else
@@ -179,7 +178,7 @@ void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada 
 					case 9: matriz[2][2]=-2;
 						    break;
 				
-					default: printf("Posicao invalida! \n");
+					
 			  		}
         
      }   
