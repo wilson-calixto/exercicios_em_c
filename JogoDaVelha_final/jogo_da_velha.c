@@ -1,3 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#ifdef WIN32  //se for windows
+  #define limpa_tela system("cls") //limpa tela
+#else //senão, ex.: linux
+  #define limpa_tela system("/usr/bin/clear") //limpa tela
+#endif
+
+
 
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
  se a jogada ja saiu retorna 0, se nao 1.

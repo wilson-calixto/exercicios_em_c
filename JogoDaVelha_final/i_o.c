@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <time.h>
+
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux
@@ -9,14 +12,15 @@
 //A função retorna a saidas, que correspondem ao numero do parametro de entrada "saida"
 //A matriz dada como entrada é pelo case 3, que agora é o antigo MOSTRA_MATRIZ.
 // Programador: Wilson Oliveira Neto.
-void saida(int saida)
+void saida(int controle,int saida)
 {
-    switch(saida)
+    switch(controle)
     {
-        case 1: printf("******* JOGO DA VELHA *****\n\n1. Multiplayer\n2. Alone\n3. Exit\n");
+        case 1: printf("******* JOGO DA VELHA *****\n\n1 multiplayer\n2  alone\n3.Exit\n");
                 break;
         case 2: printf("Dificuldade: \n2. easy\n3. hard\n");
                 break;
+        
         case 3: limpa_tela;
                 break;
         case 4: printf("Digite a jogada jogador 2\n");
@@ -35,8 +39,8 @@ void saida(int saida)
                 break;
         case 11: printf("X");
                 break;
-	case 12: printf("\n");
-		break;
+        case 12: printf("joguei no %d",saida);
+                break;
 
     }
 
@@ -59,18 +63,18 @@ int entrada()
 void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
     int i,j;
-    saida(12); // Saida 12= Pula uma linha : \n
+    printf("\n");
     for (i=0; i<3; i++)
     {
         for(j=0; j<3; j++)
         {
             if(matriz[i][j]==-1)
             {
-                mprint[i][j]= 'O'; // Saida 10 = 'O'
+                mprint[i][j]= 'O';
             }
             if(matriz[i][j]==-2)
             {
-                mprint[i][j]='X';  // Saida 11 = 'X'
+                mprint[i][j]='X';
             }
         }
     }
@@ -91,8 +95,8 @@ int show_menu()
 
     while (jogs==0)//retira jogadas invalidas
     {
-        saida(3); //limpando a tela
-        saida(1);      
+        limpa_tela; //limpando a tela
+        saida(1,0);      
         jogs=entrada();		
         if (jogs == 3)
         {
@@ -100,8 +104,8 @@ int show_menu()
 	}
         if (jogs == 2)
         {
-            saida(2);
-            jogs=entrada();	        
+            saida(2,0);
+            jogs=entrada();
     	}
     }
     return jogs;

@@ -11,6 +11,7 @@ jogo_da_velha.o: jogo_da_velha.c
 
 i_o.o: i_o.c
 	gcc -c i_o.c
+
 	
 bot_easy.o: bot_easy.c
 	gcc -c bot_easy.c

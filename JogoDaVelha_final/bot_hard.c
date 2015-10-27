@@ -1,5 +1,4 @@
 /* Implementado por Juliany, Evandro */
-
 #include <stdio.h>
 #define max 3
 
