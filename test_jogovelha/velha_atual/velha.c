@@ -38,8 +38,10 @@ int win(const int board[9]) {
 int minimax(int board[9], int player) {
     //How is the position like for player (their turn) on board?
     
-    int move, winner = win(board);
-    if(winner != 0) return winner*player;
+    int move;
+    
+    //winner = win(board);
+    //if(winner != 0) return winner*player;
 
     move = -1;
     int score = -2;//Losing moves are preferred to no move

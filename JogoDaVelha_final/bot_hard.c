@@ -2,15 +2,17 @@
 #include <stdio.h>
 #define max 3
 
-int best_i, best_j; /* Melhor posição */
-
 /* Implementação do MiniMax */
 
-int minimax(int posicao[9], int player) 
+
+
+int minimax(int posicao[9], int player, int matriz[3][3]) 
 {
     //Descobre a melhor posição para jogar
-    int winner = win(posicao);
-    if(winner != 0) return winner*player;
+    int winner 
+    
+    /*= ganhou(matriz);
+    if(winner != 0) return winner*player;*/
 
     move = -1;
     int score = -2;//Perde os movimentos anteriores
@@ -26,6 +28,8 @@ int minimax(int posicao[9], int player)
             posicao[i] = 0;//Se ele não achou, tenta novamente
         }
     }
+    
+    
     if(move == -1) return 0;
     return score;
 }
