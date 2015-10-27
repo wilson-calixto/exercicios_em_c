@@ -21,55 +21,54 @@ int main()
 
 
 	modo_de_jogo=show_menu();
-	if(modo_de_jogo==4) 
+	if(modo_de_jogo==4) //SE FOR 4 ELE FINALIZA
 	{
 		saida(11,0);	
 		return 0;
 	}
-	saida(3,0);
+	saida(3,0);//LIMPA A TELA
 	mostra_matriz(matriz,mprint);
 
 	for(i=1;i<=9;i++)
 	{
-		if(modo_de_jogo == 1 || i%2!=0)//multiplayer ou quando é a vez do jogador um(humano)
+		if(modo_de_jogo == 1 || i%2!=0)// SE FOR MULTPLAYER OU SE O JOGADOR FOR HUMANO
 		{
-			jogada=jogada_correta(vetor_posicao,i);//pedindo jogada do USUARIO 			
+			jogada=jogada_correta(vetor_posicao,i);//PEDINDO JOGADA DO USUARIO 		
 		}		
 		else 
 		{
 		
-			if(modo_de_jogo==2)//facil 
+			if(modo_de_jogo==2)//NIVEL FACIL
 			{				
-				jogada=play_easy_bot(vetor_posicao);//MAQUINA JOGA FACIL				
-							
+				jogada=play_easy_bot(vetor_posicao);// A MAQUINA JOGA NO MODO FACIL											
 			}
 			else
 			{
-				//jogada=jogada_dificil;MAQUINA JOGA DIFICIL
+				//jogada=jogada_dificil;//MAQUINA JOGA NO MODO DIFICIL
 			}
-			saida(12,jogada);//maquina fala onde jogou
+			saida(12,jogada);//MAQUINA MOSTRA ONDE JOGOU
 		}			
-		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);
+		play(matriz,vetor_posicao,i,modo_de_jogo,jogada);//A JOGADA É REALIZADA
 		
-		saida(3,0);
+		saida(3,0);//LIMPA A TELA
 		mostra_matriz(matriz,mprint);
 		
 		if(ganhou(matriz))
 		{
-		     if(i%2==0)// se i é par é o '0'
+		     if(i%2==0)// se i é par é o '0' QUE GANHOU
 		     {
-		     	saida(7,0);		     
+		     	saida(7,0);//MOSTRA QUEM GANHOU
 		     }
-		     else// se i é impar é o 'X'
+		     else// se i é impar é o 'X' QUE GANHOU
 		     {
-		     	saida(8,0);
+		     	saida(8,0);//MOSTRA QUEM GANHOU
 		     }       
 			break;
 		}
-			// verifica se velhou
+			// VERIFICA SE VELHOU
 		if(i==9)
 		{
-			saida(9,0);
+			saida(9,0);//MOSTRA VELHOU
 			break;
 		}
 	}
