@@ -61,9 +61,9 @@ void mostra_matriz(int matriz[LINHA][COLUNA], char mprint[LINHA][COLUNA])
 {
     int i,j;
     printf("\n");
-    for (i=0; i<3; i++)
+    for (i=0; i<LINHA; i++)
     {
-        for(j=0; j<3; j++)
+        for(j=0; j<COLUNA; j++)
         {
             if(matriz[i][j]==-3)
             {
