@@ -4,7 +4,7 @@
  */
 // Programador: Hermann J. Hernani.
 
-int jogada_valida(int *vetor_posicao, int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
+int jogada_valida(int vetor_posicao[9], int jogada) //recebe o vetor de jogadas realizadas e a jogada que se deseja fazer
 {
    int i;
    for(i = 0; i < 9; i++) // percorre o vetor
