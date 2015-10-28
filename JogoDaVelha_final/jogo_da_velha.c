@@ -93,7 +93,7 @@ int ganhou(int mat[LINHA][COLUNA])
     }
 }
 
-int ganhou_jogador(int mat[3][3])
+int ganhou_jogador(int mat[LINHA][COLUNA])
 {
 
     if(mat[0][0] == mat[0][1] && mat[0][1] == mat[0][2])
