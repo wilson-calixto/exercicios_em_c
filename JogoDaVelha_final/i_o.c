@@ -60,7 +60,7 @@ int entrada()
 void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
     int i,j;
-    saida(10,0)
+    saida(10,0);
     for (i=0; i<3; i++)
     {
         for(j=0; j<3; j++)

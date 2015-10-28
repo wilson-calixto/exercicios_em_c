@@ -1,6 +1,6 @@
 /* Implementado por Juliany, Evandro e Richardson*/
 #include <stdio.h>
-#include "jogodavelha.h"
+#include "jogo_da_velha.h"
 #define max 3
 
 /* Implementação do MiniMax */
@@ -57,15 +57,6 @@ void movimento_bot(int matriz[3][3]) {
     }
     //É o melhor movimento.
     matriz[move_i][move_j] = -2;
-    
-    for(i=0;i<3;i++)
-    {
-    	for(j=0;j<3;j++)
-    	{
-    		printf("%d ",
-    	}
-    }
-    
 }
 
 
