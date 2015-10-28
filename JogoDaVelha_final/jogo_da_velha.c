@@ -135,7 +135,7 @@ int ganhou_jogador(int mat[LINHA][COLUNA])
 }
 /* Funcao que joga*/
 //wilson
-void play(int matriz[3][3],int vetor_posicao[9],int i,int modo_de_jogo,int jogada)
+void play(int matriz[LINHA][COLUNA],int vetor_posicao[9],int i,int modo_de_jogo,int jogada)
 {					
 	marca_jodada(jogada,i,vetor_posicao);		     
 	joga(jogada,matriz,i);
