@@ -19,9 +19,9 @@ int main()
 			    	   {4,5,6},
 			           {7,8,9}};
 			    
-	char mprint[3][3]={{'1','2','3'},
-                       {'4','5','6'},
-                       {'7','8','9'}};	
+	char mprint[LINHA][COLUNA]={{'1','2','3'},
+                       		    {'4','5','6'},
+                       		    {'7','8','9'}};	
 
 	modo_de_jogo=show_menu();
 	if(modo_de_jogo==exit) //SE FOR 4 ELE FINALIZA
