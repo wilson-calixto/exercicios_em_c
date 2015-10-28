@@ -5,6 +5,11 @@
 #include "i_o.h"
 #include "bot_easy.h"
 #include "human.h"
+#define singleplayer_hard 3
+#define multiplayer 1
+#define singleplayer_easy 2
+#define exit 4
+#define max_jogadas 9
 int vetor_posicao[9];
 int main()
 {
@@ -18,7 +23,7 @@ int main()
                        {'7','8','9'}};	
 
 	modo_de_jogo=show_menu();
-	if(modo_de_jogo==4) //SE FOR 4 ELE FINALIZA
+	if(modo_de_jogo==exit) //SE FOR 4 ELE FINALIZA
 	{
 		saida(11,0);	
 		return 0;
@@ -26,16 +31,16 @@ int main()
 	saida(3,0);//LIMPA A TELA
 	mostra_matriz(matriz,mprint);
 
-	for(i=1;i<=9;i++)
+	for(i=1;i<=max_jogadas;i++)
 	{
-		if(modo_de_jogo == 1 || i%2!=0)// SE FOR MULTPLAYER OU SE O JOGADOR FOR HUMANO
+		if(modo_de_jogo == multiplayer || i%2!=0)// SE FOR MULTPLAYER OU SE O JOGADOR FOR HUMANO
 		{
 			jogada=jogada_correta(vetor_posicao,i);//PEDINDO JOGADA DO USUARIO 		
 		}		
 		else 
 		{
 		
-			if(modo_de_jogo==2)//NIVEL FACIL
+			if(modo_de_jogo==singleplayer_easy)//NIVEL FACIL
 			{				
 				jogada=play_easy_bot(vetor_posicao);// A MAQUINA JOGA NO MODO FACIL											
 			}
