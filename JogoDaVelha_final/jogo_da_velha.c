@@ -27,7 +27,7 @@ void marca_jodada(int posicao,int i,int vetor_posicao[9])
 
 /* Funcao que marca a matriz com -1=O ou -1=X*/
 // Programador: wilson calisto 
-void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
+void joga(int jogada,int matriz[LINHA][COLUNA],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {       
         if(i%2==0) /*se par o jogador é o -1==O se impar é -2==X */
  	     {
