@@ -9,7 +9,7 @@
 //A função retorna a saidas, que correspondem ao numero do parametro de entrada "CONTROLE" caso seja 12 ele mostra o parametro saida
 
 // Programador: Wilson Oliveira Neto.
-void saida(int controle,int saida)
+void saida(int controle)
 {
     switch(controle)
     {
@@ -35,8 +35,6 @@ void saida(int controle,int saida)
         case 10: printf("O");
                 break;
         case 11: printf("\nSaindo\n");
-                break;
-        case 12: printf("Joguei no %d",saida);
                 break;
 
     }
