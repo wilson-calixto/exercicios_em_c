@@ -9,7 +9,7 @@
 //A função retorna a saidas, que correspondem ao numero do parametro de entrada "CONTROLE" caso seja 12 ele mostra o parametro saida
 
 // Programador: Wilson Oliveira Neto.
-void saida(int controle, int saida)
+void saida(int controle,int saida)
 {
     switch(controle)
     {
@@ -32,7 +32,7 @@ void saida(int controle, int saida)
                 break;
         case 9: printf("\nVelhou\n");
                 break;
-        case 10: printf("\n");
+        case 10: printf("O");
                 break;
         case 11: printf("\nSaindo\n");
                 break;
@@ -60,12 +60,12 @@ int entrada()
 void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
     int i,j;
-    saida(10,0);
+    printf("\n");
     for (i=0; i<3; i++)
     {
         for(j=0; j<3; j++)
         {
-            if(matriz[i][j]==-1)
+            if(matriz[i][j]==-3)
             {
                 mprint[i][j]= 'O';
             }
