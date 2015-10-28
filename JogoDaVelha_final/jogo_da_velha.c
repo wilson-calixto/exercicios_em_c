@@ -20,7 +20,7 @@ int jogada_valida(int vetor_posicao[9], int jogada) //recebe o vetor de jogadas 
 /* Funcao que marca as jogadas que ja sairam.
  */
 // Programador: Raí Santos
-void marca_jodada(int posicao,int i,int *vetor_posicao)
+void marca_jodada(int posicao,int i,int vetor_posicao[9])
 {
         vetor_posicao[i] = posicao;               
 }
