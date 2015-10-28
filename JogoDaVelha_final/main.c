@@ -10,6 +10,7 @@
 #define singleplayer_easy 2
 #define exit 4
 #define max_jogadas 9
+
 int vetor_posicao[9];
 int main()
 {
@@ -68,7 +69,7 @@ int main()
 			break;
 		}
 			// VERIFICA SE VELHOU
-		if(i==9)
+		if(i==max_jogadas)
 		{
 			saida(9,0);//MOSTRA VELHOU
 			break;
