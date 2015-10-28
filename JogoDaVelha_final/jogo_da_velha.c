@@ -25,7 +25,7 @@ void marca_jodada(int posicao,int i,int *vetor_posicao)
         vetor_posicao[i] = posicao;               
 }
 
-/* Funcao que marca a matriz com -1=O ou -1=X*/
+/* Funcao que marca a matriz com -1=O ou -2=X*/
 // Programador: wilson calisto 
 void joga(int jogada,int matriz[3][3],int i) //recebe o vetor da  ultima jogada e a matriz e modifica a matriz
 {       
