@@ -5,7 +5,7 @@
 
 /* Implementação do MiniMax */
 
-int minimax(int m[3][3], int player) 
+int minimax(int m[LINHA][COLUNA], int player)
 {
     int move_i = -1;
 	int move_j = -1;
@@ -18,9 +18,9 @@ int minimax(int m[3][3], int player)
 		return winner * player;
 	}
 
-    for(i=0;i<3;i++)
+    for(i=0;i<LINHA;i++)
 	{
-		for(j=0;j<3;j++)
+		for(j=0;j<COLUNA;j++)
 		{
 	        if(m[i][j] == 0)
 			{
@@ -40,7 +40,7 @@ int minimax(int m[3][3], int player)
     return score;
 }
 
-int movimento_bot(int posicao[3][3])
+int movimento_bot(int posicao[LINHA][COLUNA])
 {
     int move_i = -1;
 	int move_j = -1;
@@ -50,9 +50,9 @@ int movimento_bot(int posicao[3][3])
 			      {0,0,0},
 			      {0,0,0}};
     //computer squares are 1, player squares are -1.
-	for(i=0;i<3;i++)
+	for(i=0;i<LINHA;i++)
 	{
-		for(j=0;j<3;j++)
+		for(j=0;j<COLUNA;j++)
 		{
 			if (posicao[i][j]==-2)
 			{
@@ -65,9 +65,9 @@ int movimento_bot(int posicao[3][3])
 		}
 	}
 	
-    for(i=0;i<3;i++)
+    for(i=0;i<LINHA;i++)
 	{
-		for (j=0;j<3;j++)
+		for (j=0;j<COLUNA;j++)
 		{
 	        if(m[i][j] == 0)
 			{
