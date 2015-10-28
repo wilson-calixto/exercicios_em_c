@@ -4,4 +4,4 @@
 
 int minimax(int matriz[3][3], int player);
 
-void movimento_bot(int matriz[3][3]);
+int movimento_bot(int posicao[3][3])

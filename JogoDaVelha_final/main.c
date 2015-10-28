@@ -10,15 +10,12 @@ int main()
 {
 	int jogada,modo_de_jogo,i;
 	int matriz[3][3] ={{1,2,3},
-			    {4,5,6},
-			    {7,8,9,}};
+			    	   {4,5,6},
+			           {7,8,9}};
 			    
-	char mprint[3][3]={{'1', '2', '3'},
-                           {'4', '5', '6'},
-                           {'7', '8', '9'}};	
-
-
-
+	char mprint[3][3]={{'1','2','3'},
+                       {'4','5','6'},
+                       {'7','8','9'}};	
 
 	modo_de_jogo=show_menu();
 	if(modo_de_jogo==4) //SE FOR 4 ELE FINALIZA
@@ -44,7 +41,7 @@ int main()
 			}
 			else
 			{
-				movimento_bot(matriz);//MAQUINA JOGA NO MODO DIFICIL
+				jogada=movimento_bot(matriz);//MAQUINA JOGA NO MODO DIFICIL
 			}
 			saida(12,jogada);//MAQUINA MOSTRA ONDE JOGOU
 		}			
