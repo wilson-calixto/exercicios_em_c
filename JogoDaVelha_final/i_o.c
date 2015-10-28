@@ -57,7 +57,7 @@ int entrada()
 //programador Raí Santos
 //funcao para printar a matriz preenchida com X e O
 
-void mostra_matriz(int matriz[3][3], char mprint[3][3])
+void mostra_matriz(int matriz[LINHA][COLUNA], char mprint[LINHA][COLUNA])
 {
     int i,j;
     printf("\n");
