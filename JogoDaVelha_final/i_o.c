@@ -32,7 +32,7 @@ void saida(int controle, int saida)
                 break;
         case 9: printf("\nVelhou\n");
                 break;
-        case 10: printf("O");
+        case 10: printf("\n");
                 break;
         case 11: printf("\nSaindo\n");
                 break;
@@ -60,7 +60,7 @@ int entrada()
 void mostra_matriz(int matriz[3][3], char mprint[3][3])
 {
     int i,j;
-    printf("\n");
+    saida(10,0)
     for (i=0; i<3; i++)
     {
         for(j=0; j<3; j++)
