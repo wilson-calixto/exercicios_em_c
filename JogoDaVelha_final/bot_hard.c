@@ -86,7 +86,9 @@ int movimento_bot(int posicao[3][3])
 		}
     }
     //returns a score based on minimax tree at a given node.
-    m[move_i][move_j] = 1;
 	result = posicao[move_i][move_j];
+	if (result > 0);
+	{
 	return result;
+	}
 }
