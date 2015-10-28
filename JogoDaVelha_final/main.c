@@ -44,7 +44,7 @@ int main()
 			}
 			else
 			{
-				jogada=movimento_bot(vetor_posicao);//MAQUINA JOGA NO MODO DIFICIL
+				movimento_bot(matriz);//MAQUINA JOGA NO MODO DIFICIL
 			}
 			saida(12,jogada);//MAQUINA MOSTRA ONDE JOGOU
 		}			
