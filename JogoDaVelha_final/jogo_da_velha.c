@@ -1,4 +1,7 @@
 #include <string.h>
+
+#define LINHA 3
+#define COLUNA 3
 /* Funcao que verifica se uma jogada ja saiu ou nao percorrendo o vetor de jogas ja realizadas
  se a jogada ja saiu retorna 0, se nao 1.
  */
