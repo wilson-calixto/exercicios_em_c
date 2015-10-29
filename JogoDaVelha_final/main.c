@@ -20,19 +20,17 @@
 #define PLAYER2_GANHOU 7
 #define VELHOU 9
 #define MENSAGEM_SAIDA 11
-#define LINHA 3
-#define COLUNA 3
 #define PRINT_NULO 0
 
 int vetor_posicao[9];
 int main()
 {
 	int jogada,modo_de_jogo,i;
-	int matriz[LINHA][COLUNA] ={{1,2,3},
+	int matriz[TAMANHO][TAMANHO] ={{1,2,3},
 			    	   {4,5,6},
 			           {7,8,9}};
 			    
-	char mprint[LINHA][COLUNA]={{'1','2','3'},
+	char mprint[TAMANHO][TAMANHO]={{'1','2','3'},
                        		    {'4','5','6'},
                        		    {'7','8','9'}};	
 
