@@ -1,8 +1,29 @@
-/* Implementado por Juliany, Evandro */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "jogo_da_velha.h"
-
+#include "i_o.h"
+#include "bot_easy.h"
+#include "human.h"
+// defines de modo de jogo
+#define HARD 3
+#define EASY 2
+#define MULTIPLAYER 1
+#define SINGLEPLAYER 2
+#define EXIT 4
+#define MAX_JOGADAS 9
+#define TAMANHO 3
+// defines de impressão
+#define LIMPA_TELA 3
+#define ONDE_JOGOU 12
+#define PLAYER1_GANHOU 8
+#define PLAYER2_GANHOU 7
+#define VELHOU 9
+#define MENSAGEM_SAIDA 11
+#define LINHA 3
+#define COLUNA 3
+#define PRINT_NULO 0
+/* Implementado por Juliany, Evandro */
 /* Implementação do MiniMax */
 
 int minimax(int m[LINHA][COLUNA], int player)
