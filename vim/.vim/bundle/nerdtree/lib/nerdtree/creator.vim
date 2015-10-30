@@ -42,11 +42,6 @@ endfunction
 "name: the name of a bookmark or a directory
 function! s:Creator.createPrimary(name)
     let path = self._pathForString(a:name)
-    
-    "abort if exception was thrown (bookmark/dir doesn't exist)
-    if empty(path)
-        return
-    endif
 
     "if instructed to, then change the vim CWD to the dir the NERDTree is
     "inited in
@@ -55,8 +50,8 @@ function! s:Creator.createPrimary(name)
     endif
 
     if g:NERDTree.ExistsForTab()
-        if g:NERDTree.IsOpen()
-            call g:NERDTree.Close()
+        if nerdtree#isTreeOpen()
+            call nerdtree#closeTree()
         endif
         unlet t:NERDTreeBufName
     endif
@@ -168,8 +163,8 @@ function! s:Creator.createMirror()
         return
     endif
 
-    if g:NERDTree.ExistsForTab() && g:NERDTree.IsOpen()
-        call g:NERDTree.Close()
+    if g:NERDTree.ExistsForTab() && nerdtree#isTreeOpen()
+        call nerdtree#closeTree()
     endif
 
     let t:NERDTreeBufName = bufferName
@@ -333,14 +328,14 @@ endfunction
 "initialized.
 function! s:Creator.togglePrimary(dir)
     if g:NERDTree.ExistsForTab()
-        if !g:NERDTree.IsOpen()
+        if !nerdtree#isTreeOpen()
             call self._createTreeWin()
             if !&hidden
                 call b:NERDTree.render()
             endif
             call b:NERDTree.ui.restoreScreenState()
         else
-            call g:NERDTree.Close()
+            call nerdtree#closeTree()
         endif
     else
         call self.createPrimary(a:dir)
