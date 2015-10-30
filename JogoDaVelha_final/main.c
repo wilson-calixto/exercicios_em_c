@@ -5,23 +5,37 @@
 #include "i_o.h"
 #include "bot_easy.h"
 #include "human.h"
+// defines de modo de jogo
+#define HARD 3
+#define EASY 2
+#define MULTIPLAYER 1
+#define SINGLEPLAYER 2
+#define EXIT 4
+#define MAX_JOGADAS 9
+#define TAMANHO 3
+// defines de impressão
+#define LIMPA_TELA 3
+#define ONDE_JOGOU 12
+#define PLAYER1_GANHOU 8
+#define PLAYER2_GANHOU 7
+#define VELHOU 9
+#define MENSAGEM_SAIDA 11
+#define PRINT_NULO 0
+
 int vetor_posicao[9];
 int main()
 {
 	int jogada,modo_de_jogo,i;
-	int matriz[3][3] ={{1,2,3},
-			    {4,5,6},
-			    {7,8,9,}};
+	int matriz[TAMANHO][TAMANHO] ={{1,2,3},
+			    	   {4,5,6},
+			           {7,8,9}};
 			    
-	char mprint[3][3]={{'1', '2', '3'},
-                           {'4', '5', '6'},
-                           {'7', '8', '9'}};	
-
-
-
+	char mprint[TAMANHO][TAMANHO]={{'1','2','3'},
+                       		    {'4','5','6'},
+                       		    {'7','8','9'}};	
 
 	modo_de_jogo=show_menu();
-	if(modo_de_jogo==4) //SE FOR 4 ELE FINALIZA
+	if(modo_de_jogo==exit) //SE FOR 4 ELE FINALIZA
 	{
 		saida(11,0);	
 		return 0;
@@ -29,22 +43,22 @@ int main()
 	saida(3,0);//LIMPA A TELA
 	mostra_matriz(matriz,mprint);
 
-	for(i=1;i<=9;i++)
+	for(i=1;i<=max_jogadas;i++)
 	{
-		if(modo_de_jogo == 1 || i%2!=0)// SE FOR MULTPLAYER OU SE O JOGADOR FOR HUMANO
+		if(modo_de_jogo == multiplayer || i%2!=0)// SE FOR MULTPLAYER OU SE O JOGADOR FOR HUMANO
 		{
 			jogada=jogada_correta(vetor_posicao,i);//PEDINDO JOGADA DO USUARIO 		
 		}		
 		else 
 		{
 		
-			if(modo_de_jogo==2)//NIVEL FACIL
+			if(modo_de_jogo==singleplayer_easy)//NIVEL FACIL
 			{				
 				jogada=play_easy_bot(vetor_posicao);// A MAQUINA JOGA NO MODO FACIL											
 			}
 			else
 			{
-				movimento_bot(matriz);//MAQUINA JOGA NO MODO DIFICIL
+				jogada=movimento_bot(matriz);//MAQUINA JOGA NO MODO DIFICIL
 			}
 			saida(12,jogada);//MAQUINA MOSTRA ONDE JOGOU
 		}			
@@ -66,7 +80,7 @@ int main()
 			break;
 		}
 			// VERIFICA SE VELHOU
-		if(i==9)
+		if(i==max_jogadas)
 		{
 			saida(9,0);//MOSTRA VELHOU
 			break;

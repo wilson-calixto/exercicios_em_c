@@ -1,5 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include "jogo_da_velha.h"
+#include "i_o.h"
+#include "bot_easy.h"
+#include "human.h"
+// defines de modo de jogo
+#define HARD 3
+#define EASY 2
+#define MULTIPLAYER 1
+#define SINGLEPLAYER 2
+#define EXIT 4
+#define MAX_JOGADAS 9
+#define TAMANHO 3
+// defines de impressão
+#define LIMPA_TELA 3
+#define ONDE_JOGOU 12
+#define PLAYER1_GANHOU 8
+#define PLAYER2_GANHOU 7
+#define VELHOU 9
+#define MENSAGEM_SAIDA 11
+#define LINHA 3
+#define COLUNA 3
+#define PRINT_NULO 0
+
 #ifdef WIN32  //se for windows
   #define limpa_tela system("cls") //limpa tela
 #else //senão, ex.: linux
@@ -9,7 +33,7 @@
 //A função retorna a saidas, que correspondem ao numero do parametro de entrada "CONTROLE" caso seja 12 ele mostra o parametro saida
 
 // Programador: Wilson Oliveira Neto.
-void saida(int controle, int saida)
+void saida(int controle,int saida)
 {
     switch(controle)
     {
@@ -32,7 +56,7 @@ void saida(int controle, int saida)
                 break;
         case 9: printf("\nVelhou\n");
                 break;
-        case 10: printf("\n");
+        case 10: printf("O");
                 break;
         case 11: printf("\nSaindo\n");
                 break;
@@ -57,15 +81,15 @@ int entrada()
 //programador Raí Santos
 //funcao para printar a matriz preenchida com X e O
 
-void mostra_matriz(int matriz[3][3], char mprint[3][3])
+void mostra_matriz(int matriz[LINHA][COLUNA], char mprint[LINHA][COLUNA])
 {
     int i,j;
-    saida(10,0)
-    for (i=0; i<3; i++)
+    printf("\n");
+    for (i=0; i<LINHA; i++)
     {
-        for(j=0; j<3; j++)
+        for(j=0; j<COLUNA; j++)
         {
-            if(matriz[i][j]==-1)
+            if(matriz[i][j]==-3)
             {
                 mprint[i][j]= 'O';
             }

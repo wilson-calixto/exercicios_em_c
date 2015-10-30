@@ -2,6 +2,9 @@
 
 #include <stdio.h>
 
-int minimax(int matriz[3][3], int player);
+#define LINHA 3
+#define COLUNA 3
 
-void movimento_bot(int matriz[3][3]);
+int minimax(int m[LINHA][COLUNA], int player);
+
+int movimento_bot(int posicao[LINHA][COLUNA]);

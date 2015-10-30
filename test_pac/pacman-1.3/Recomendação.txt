@@ -1,0 +1,1 @@
+Procurem pela biblioteca curses para consegui compilar o Pacman. Precisa instalar a biblioteca, ela serve para o processo grafico do jogo

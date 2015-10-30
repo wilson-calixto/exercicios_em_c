@@ -1,73 +1,111 @@
-/* Implementado por Juliany, Evandro e Richardson*/
 #include <stdio.h>
-#include "jogodavelha.h"
-#define max 3
-
+#include <stdlib.h>
+#include <string.h>
+#include "jogo_da_velha.h"
+#include "i_o.h"
+#include "bot_easy.h"
+#include "human.h"
+// defines de modo de jogo
+#define HARD 3
+#define EASY 2
+#define MULTIPLAYER 1
+#define SINGLEPLAYER 2
+#define EXIT 4
+#define MAX_JOGADAS 9
+#define TAMANHO 3
+// defines de impressão
+#define LIMPA_TELA 3
+#define ONDE_JOGOU 12
+#define PLAYER1_GANHOU 8
+#define PLAYER2_GANHOU 7
+#define VELHOU 9
+#define MENSAGEM_SAIDA 11
+#define LINHA 3
+#define COLUNA 3
+#define PRINT_NULO 0
+/* Implementado por Juliany, Evandro */
 /* Implementação do MiniMax */
 
-
-
-int minimax(int matriz[3][3], int player) 
+int minimax(int m[LINHA][COLUNA], int player)
 {
-    //Descobre a melhor posição para jogar
-    int move_i, move_j, winner = ganhou(matriz);
-    if(winner != 0) return winner*player;
+    int move_i = -1;
+	int move_j = -1;
+    int score = -2;
+    int i,j;
 
-    move_i = -1;
-    move_j = -1;
-    
-    int score = -2;//Perde os movimentos anteriores
-    int i, j;
-    for(i = 0; i < 3; ++i) {//Pesquisa todos os movimentos,
-    	for(j = 0; j < 3; ++j) {
-        if(matriz[i][j] != -1 || matriz[i][j] != -2) {//Se posição estiver vazia, ou seja, não tiver nenhuma jogada
-            matriz[i][j] = player;//Testa o movimento
-            int thisScore = -minimax(matriz, player*-1);
-            if(thisScore > score) {
-                score = thisScore;
-                move_i = i;
-                move_j = j;
-            }//Escolhe o que é pior para o adversário, ou seja, aquela jogada que o bot tem mais chances de ganhar
-            matriz[i][j] = 0;//Se ele não achou, tenta novamente
-        }
-    }
-    
+    int winner = ganhou_jogador(m);
+    if(winner != 0)
+	{
+		return winner * player;
+	}
+
+    for(i=0;i<LINHA;i++)
+	{
+		for(j=0;j<COLUNA;j++)
+		{
+	        if(m[i][j] == 0)
+			{
+    	        m[i][j] = player;
+    	        int this_score = minimax(m, player*-1);
+    	        if(this_score > score)
+				{
+    	            score = this_score;
+    	            move_i = i;
+					move_j = j;
+    	        }
+    	        m[i][j] = 0;
+    	    }
+		}
     }
     if(move_i == -1 && move_j == -1) return 0;
     return score;
 }
 
-void movimento_bot(int matriz[3][3]) {
-    int move_i = -1, move_j = -1;
+int movimento_bot(int posicao[LINHA][COLUNA])
+{
+    int move_i = -1;
+	int move_j = -1;
     int score = -2;
-    int i, j;
-    for(i = 0; i < 3; ++i) {
-    	for(j = 0; j < 3; ++j) {
-        if(matriz[i] == 0) {
-            matriz[i][j] = 1;
-            int tempScore = -minimax(matriz, -1);
-            matriz[i][j] = 0;
-            if(tempScore > score) {
-                score = tempScore;
-                move_i = i;
-                move_j = j;
-            }
-        }
+    int i,j, result;
+	int m[3][3] ={{0,0,0},
+			      {0,0,0},
+			      {0,0,0}};
+    //computer squares are 1, player squares are -1.
+	for(i=0;i<LINHA;i++)
+	{
+		for(j=0;j<COLUNA;j++)
+		{
+			if (posicao[i][j]==-2)
+			{
+				m[i][j]=-1;
+			}
+			else if (posicao[i][j]==-3)
+			{
+				m[i][j]=1;
+			}
+		}
+	}
+	
+    for(i=0;i<LINHA;i++)
+	{
+		for (j=0;j<COLUNA;j++)
+		{
+	        if(m[i][j] == 0)
+			{
+	            m[i][j] = 1;
+	            int temp_score = minimax(m,-1);
+	            m[i][j] = 0;
+	            if(temp_score > score)
+				{
+	                score = temp_score;
+	                move_i = i;
+					move_j = j;
+	            }
+	        }
+		}
     }
-    }
-    //É o melhor movimento.
-    matriz[move_i][move_j] = -2;
-    
-    for(i=0;i<3;i++)
-    {
-    	for(j=0;j<3;j++)
-    	{
-    		printf("%d ",
-    	}
-    }
-    
+    //returns a score based on minimax tree at a given node.
+    m[move_i][move_j] = 1;
+	result = posicao[move_i][move_j];
+	return result;
 }
-
-
-
-
