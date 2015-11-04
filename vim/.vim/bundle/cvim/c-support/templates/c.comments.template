@@ -45,17 +45,17 @@
 == Comments.file description impl == map:cfdi, shortcut:c, start, noindent ==
 /*
  * Programacao de Computadores e ALgoritmos
- * Trabalho 1
+ * Trabalho 2
  * |FILENAME|
  *
  * Equipe:
  *
- *          Delrick
- *          Elisabeth
- *          Hermann
- *          Luana
- *          Luis
- *          Richardson 
+ *          Ewerton Petillo
+ *          Hermann Hernani
+ *          Jailson
+ *          Lucas Botinelly
+ *          Richardson Souza
+ *          Wilson Calisto
  */
 
 == Comments.file description header == map:cfdh, shortcut:h, start, noindent ==
