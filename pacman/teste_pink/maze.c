@@ -6,6 +6,18 @@ void print_maze (char maze[L][C])
 {
   int i, j;
 
+  for (i=0; i<C; i++)
+  {
+	if (i < 10)
+	{
+	  printf(" %d ", i);
+	}else
+	{
+	  printf("%d ", i);
+	}
+  }
+  printf("\n");
+
   for ( i = 0; i < L; i++ )
   {
     for ( j = 0; j < C; j++ )
