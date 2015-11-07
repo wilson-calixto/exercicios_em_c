@@ -41,7 +41,6 @@ int main ( int argc, const char *argv[] )
 //  printf ( "\n" );
 //  printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
   printf ( "\n" );
-
   print_maze (maze);
 //  printf ( "Ghost: " );
 //  scanf ( "%d", &ghost );
@@ -49,7 +48,7 @@ int main ( int argc, const char *argv[] )
   switch (ghost)
   {
     case BLINK:
-      position (maze,ghost);
+      			position (maze,ghost);
       break;
 			position (maze,ghost);
     case PINK:
