@@ -5,7 +5,7 @@
 void print_maze (char maze[L][C])
 {
   int i, j,k;
-  printf("  ");
+  printf("   ");
   for (i=0; i<C; i++)
   {
 	if (i < 10)
@@ -20,7 +20,13 @@ void print_maze (char maze[L][C])
   k = 0;
   for ( i = 0; i < L; i++ )
   {
-    printf("%d ", k++);
+   	if (k < 10)
+	{
+	  printf("%d  ", k++);
+	}else
+	{
+	  printf("%d ", k++);
+	}
     for ( j = 0; j < C; j++ )
     {
       switch (maze[i][j])
