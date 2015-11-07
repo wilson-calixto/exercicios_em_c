@@ -64,6 +64,8 @@ void position(char maze[L][C], int ghost)
     {
       status = 0;
       maze[y_pacman][x_pacman]='P';
+      clear_screen(); // limpa a tela
+      print_maze(maze);
       printf ( "Qual a direção do PACMAN?\n" );
       printf ( "1.UP - 2.RIGHT - 3.DOWN - 4.LEFTH\n" );
       printf ( "Posição: " );

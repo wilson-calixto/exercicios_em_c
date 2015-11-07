@@ -4,8 +4,8 @@
 
 void print_maze (char maze[L][C])
 {
-  int i, j;
-
+  int i, j,k;
+  printf("  ");
   for (i=0; i<C; i++)
   {
 	if (i < 10)
@@ -17,9 +17,10 @@ void print_maze (char maze[L][C])
 	}
   }
   printf("\n");
-
+  k = 0;
   for ( i = 0; i < L; i++ )
   {
+    printf("%d ", k++);
     for ( j = 0; j < C; j++ )
     {
       switch (maze[i][j])
@@ -36,6 +37,10 @@ void print_maze (char maze[L][C])
 	      case 'G':
 		      printf(" G "); 
 		      break;
+	      case 'P':
+		      printf(" P "); 
+		      break;
+
 	      case ' ':
 		      printf("   ");
 		      break;      

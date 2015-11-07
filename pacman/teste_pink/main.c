@@ -37,15 +37,15 @@ int main ( int argc, const char *argv[] )
                     {'0',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','7',' ','7',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','0'},
                     {'0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'}};
 
-  printf ( "\t>>> GHOSTS <<<\n" );
-  printf ( "\n" );
-  printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
+//  printf ( "\t>>> GHOSTS <<<\n" );
+//  printf ( "\n" );
+//  printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
   printf ( "\n" );
 
   print_maze (maze);
-  printf ( "Ghost: " );
-  scanf ( "%d", &ghost );
-
+//  printf ( "Ghost: " );
+//  scanf ( "%d", &ghost );
+  ghost = 2;
   switch (ghost)
   {
     case BLINK:
