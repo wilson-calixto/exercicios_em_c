@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define C 30
+#define L 23
 
 /* Função para definir as posições e direção iniciais do fantasma
  * e do pacman */

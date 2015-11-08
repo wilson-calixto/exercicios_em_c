@@ -11,7 +11,7 @@
 
 int main ( int argc, const char *argv[] )
 {
-  int ghost;
+  int ghost,x_ghost,y_ghost,x_pacman, y_pacman;
 
   char maze[L][C] = {{'0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'},
                     {'0',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ','0'},
@@ -45,24 +45,44 @@ int main ( int argc, const char *argv[] )
 //  printf ( "Ghost: " );
 //  scanf ( "%d", &ghost );
   ghost = 2;
+  do
+  {
+  	printf ( "Qual a posição do GHOST? (x,y)\n" );
+  	printf ( "x: " );
+  	scanf ( "%d", &x_ghost ); // referente a coluna - ghost
+  	printf ( "y: " );
+  	scanf ( "%d", &y_ghost ); // referente a linha - ghost
+  }while (!validate_position(maze,x_ghost,y_ghost));
+	position (maze,x_ghost,y_ghost,'G');
+  do 
+  {
+	clear_screen();
+  	print_maze (maze);
+  	printf ( "Qual a posição do Pacman? (x,y)\n" );
+  	printf ( "x: " );
+  	scanf ( "%d", &x_pacman ); // referente a coluna - ghost
+  	printf ( "y: " );
+  	scanf ( "%d", &y_pacman ); // referente a linha - ghost
+  }while (!validate_position(maze,x_pacman,y_pacman));
+  
+  position (maze, x_pacman, y_pacman, 'P' );
+  clear_screen();
+  print_maze (maze);
+ 
   switch (ghost)
   {
     case BLINK:
-      			position (maze,ghost);
+      			//position (maze,ghost);
       break;
-			position (maze,ghost);
+			//position (maze,ghost);
     case PINK:
-			position (maze,ghost);
       break;
-			position (maze,ghost);
+			//position (maze,ghost);
     case INKY:
       break;
     case CLYDE:
-			position (maze,ghost);
+		//	position (maze,ghost);
       break;
   }/* -----  end switch  ----- */
-
-
-
   return 0;
 }
