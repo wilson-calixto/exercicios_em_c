@@ -76,6 +76,7 @@ int main ( int argc, const char *argv[] )
       break;
 			//position (maze,ghost);
     case PINK:
+      			persegue_alvo();
       break;
 			//position (maze,ghost);
     case INKY:
