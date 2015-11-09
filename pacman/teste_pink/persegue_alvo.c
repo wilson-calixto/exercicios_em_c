@@ -1,7 +1,8 @@
 #include <stdio.h>
 int persegue_alvo(int labirinto[23][30],int x_ghost,int y_ghost,int x_pacman,int y_pacman,int caminho[100][2])
 {
-		int cordenadas[2],i,j;
+        return 0;
+	int cordenadas[2],i,j;
        		cordenadas[0] = y_ghost;
                 cordenadas[1] = x_ghost;
                 while(cordenadas[0] != y_pacman || cordenadas[1] != x_pacman )
@@ -17,6 +18,6 @@ int persegue_alvo(int labirinto[23][30],int x_ghost,int y_ghost,int x_pacman,int
                         printf("(%d,%d)",caminho[j][0],caminho[j][1]);
                 }
 		 
-		return caminho;
+		//return caminho;
 
 }
