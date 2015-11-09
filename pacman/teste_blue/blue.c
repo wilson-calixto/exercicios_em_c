@@ -433,6 +433,7 @@ int main(int argc, const char *argv[])
     	//printf("qual a linha e coluna que vc deseja colocar o red ghost?\n");
     	//scanf("%d",&c);
     	//scanf("%d",&d);
+    	
     
 
     return 0;   
