@@ -1,6 +1,10 @@
 #include "validate_position.h"
 #include "def_target_pink.h"
 
+
+#include<stdio.h>
+
+
 #define C 30
 #define L 23
 #define BLINK 1
@@ -12,25 +16,26 @@
 #define DOWN 3
 #define LEFT 4
 
-void def_target(char maze[L][C], int ghost, int x, int y, int d)
+void def_target_pink(char maze[L][C],int ghost[3], int d)
 {
-  if (ghost == BLINK)
+        
+ if (ghost[3] == BLINK)
   {
 
   }
-  else if (ghost == PINK)
+  else if (ghost[3] == PINK)
   {
-    def_target_pink(maze,x,y,d);
+  def_target_pink1(maze,ghost,d);
+        printf("consegui \n\n");
   }
-  else if (ghost == INKY)
+  else if (ghost[3] == INKY)
   {
 
   }
-  else if (ghost == CLYDE)
+  else if (ghost[3] == CLYDE)
   {
 
   }
 }
-
 
 
