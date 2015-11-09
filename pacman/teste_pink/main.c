@@ -12,7 +12,7 @@
 int main ( int argc, const char *argv[] )
 {
   int ghost,x_ghost,y_ghost,x_pacman, y_pacman;
-
+  int caminho[30][2];
   char maze[L][C] = {{'0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'},
                     {'0',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ','0'},
                     {'0',' ','0','0','0','0',' ','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0',' ','0','0','0','0','0',' ','0'},
@@ -68,22 +68,7 @@ int main ( int argc, const char *argv[] )
   position (maze, x_pacman, y_pacman, 'P' );
   clear_screen();
   print_maze (maze);
- 
-  switch (ghost)
-  {
-    case BLINK:
-      			//position (maze,ghost);
-      break;
-			//position (maze,ghost);
-    case PINK:
-      			persegue_alvo();
-      break;
-			//position (maze,ghost);
-    case INKY:
-      break;
-    case CLYDE:
-		//	position (maze,ghost);
-      break;
-  }/* -----  end switch  ----- */
+  persegue_alvo(maze,x_ghost, y_ghost, x_pacman, y_pacman,caminho);
+  
   return 0;
 }
