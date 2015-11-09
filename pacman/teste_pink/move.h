@@ -1,2 +1,1 @@
-void position(char maze[L][C], int player_x, int player_y, char player);
-
+void position(char maze[L][C], int numbers_player[3], char player);
