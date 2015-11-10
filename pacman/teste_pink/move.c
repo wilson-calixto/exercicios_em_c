@@ -6,7 +6,7 @@
 /* Função para definir as posições e direção iniciais do fantasma
  * e do pacman */
 
-void position(char maze[L][C], int numbers_player[3], char player)
+void position(char maze[L][C], int numbers_player[3], int player)
 {
   int i,j;       
   i=numbers_player[0];
