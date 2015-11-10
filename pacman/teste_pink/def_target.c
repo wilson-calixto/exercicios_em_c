@@ -15,8 +15,9 @@
 #define RIGHT 2
 #define DOWN 3
 #define LEFT 4
-
-void def_target_pink(char maze[L][C],int ghost[3], int d)
+/*Funcao que decide qual o fatasma sera chamado,
+conforme o numero da terceira posicao do vetor ghost*/
+void def_target(char maze[L][C],int ghost[3], int d)
 {
         
  if (ghost[3] == BLINK)
