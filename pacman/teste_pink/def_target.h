@@ -1,1 +1,1 @@
-void def_target(char maze[L][C],int ghost[3], int d);
+void def_target(char maze[L][C],int ghost[3], int ghost_number);
