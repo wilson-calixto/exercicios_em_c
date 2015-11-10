@@ -26,7 +26,7 @@ void def_target(char maze[L][C],int ghost[3], int ghost_number)
   }
   else if (ghost_number == PINK)
   {
-  def_target_pink1(maze,ghost,d);
+  def_target_pink(maze,ghost);
         printf("consegui \n\n");
   }
   else if (ghost_number == INKY)
