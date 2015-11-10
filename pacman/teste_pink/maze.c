@@ -57,9 +57,6 @@ void print_maze (int maze[L][C])
     }
     printf ( "\n" );
   }
-
-    printf ( "\n" );
-    printf ( "\n" );
 //    printf ( "\n" );
 //    printf ( "\n" );
 //for ( i = 0; i < L; i++ )
