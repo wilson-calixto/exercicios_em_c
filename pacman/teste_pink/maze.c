@@ -2,7 +2,7 @@
 #define C 30
 #define L 23
 
-void print_maze (char maze[L][C])
+void print_maze (int maze[L][C])
 {
   int i, j,k;
   printf("   ");
@@ -31,23 +31,23 @@ void print_maze (char maze[L][C])
     {
       switch (maze[i][j])
       {
-	      case '0':
+	      case 0:
 		      printf("[X]");
 		      break;
-	      case '7':
+	      case 7:
 		      printf("   ");
       		      break;
-	      case '6':
+	      case 6:
 		      printf("   ");
 		      break;
-	      case 'G':
+	      case 1,2,3,4:
 		      printf(" G "); 
 		      break;
-	      case 'P':
+	      case 5:
 		      printf(" P "); 
 		      break;
 
-	      case ' ':
+	      case 8:
 		      printf("   ");
 		      break;      
       }
