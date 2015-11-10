@@ -9,39 +9,43 @@
 #define C 30
 #define L 23
 
-int main ( int argc, char *argv[] )
+		/* ----------  end of function main  ---------- */
+
+int main (int argc, char *argv[])
 {
   int ghost[3],pacman[3], number_ghost;
-  int maze[L][C],i,j;
- 
-  for (i=0;i<23;i++)
+  int maze[L][C];
+  int i,j;
+  FILE *fp;
+  fp = fopen(argv[1],"r" );
+  for (i=0;i<L;i++)
   {
-	 for (j = 0; j < 30; j++)
-	 {
-		 scanf("%d", &maze[i][j]);
-	 } 
+	  for (j=0;j<C;j++)
+	  {
+		  fscanf(fp, "%d", &maze[i][j]);
+	  }
   }
-  printf("\n");
+  fclose(fp);
+  clear_screen();
   printf ( "\t>>> GHOSTS <<<\n" );
-  printf ( "\n" );
   printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
-  printf ( "\n" );
-  print_maze (maze); 
-  
   do
-  {  	  printf ( "Qual o numero do Ghost? : " );
+  {  	  
+  	  printf ( "Qual o numero do Ghost? = " );
           scanf ("%d", &number_ghost);
-          printf ( "Direção do ghost:" );
+	  printf ( "Direção do ghost = " );
           scanf ("%d", &ghost[2]);
   }while(number_ghost > 4 || number_ghost < 1 || ghost[2] > 4 ||ghost[2] < 1);  
- /* //number_ghost = 2;
+  //number_ghost = 2;
   do
   {
-  	printf ( "Qual a posição do GHOST? (x,y)\n" );
+  	print_maze(maze);
+	printf ( "Qual a posição do GHOST? (x,y)\n" );
   	printf ( "x: " );
   	scanf ( "%d", &ghost[0] ); // referente a coluna - ghost
   	printf ( "y: " );
   	scanf ( "%d", &ghost[1] ); // referente a linha - ghost
+	clear_screen();
   }while (!validate_position(maze,ghost));                                           //mudar os parametros
 	position (maze,ghost,number_ghost);
   do
