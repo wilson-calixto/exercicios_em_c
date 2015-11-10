@@ -17,23 +17,23 @@
 #define LEFT 4
 /*Funcao que decide qual o fatasma sera chamado,
 conforme o numero da terceira posicao do vetor ghost*/
-void def_target(char maze[L][C],int ghost[3], int d)
+void def_target(char maze[L][C],int ghost[3], int ghost_number)
 {
         
- if (ghost[3] == BLINK)
+ if (ghost_number == BLINK)
   {
 
   }
-  else if (ghost[3] == PINK)
+  else if (ghost_number == PINK)
   {
   def_target_pink1(maze,ghost,d);
         printf("consegui \n\n");
   }
-  else if (ghost[3] == INKY)
+  else if (ghost_number == INKY)
   {
 
   }
-  else if (ghost[3] == CLYDE)
+  else if (ghost_number == CLYDE)
   {
 
   }
