@@ -20,7 +20,7 @@ void out(int id, int extra)
                         break;
                 case 3: printf("Qual a posição do GHOST? (x,y)\n");
                         break;
-                case 4: printf("x: ");
+                case 4: printf("  x: ");
                         break;
                 case 5: printf("y: ");
                         break;
