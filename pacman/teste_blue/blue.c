@@ -4,6 +4,8 @@
 
 #define L 23
 #define C 30
+#define LL 21
+#define LC 28
 
 // P = pacman, V = red ghost, B = blue ghost
 //EXECUTEM AÍ... MELHOREM SE PUDER...
@@ -11,7 +13,6 @@
 //verifica se a posicao é valida na matriz
 int validate_position(char maze[L][C], int x, int y)
 {
-
   	if (maze[x][y]==' ')
   	{
     		return 1;
@@ -20,7 +21,6 @@ int validate_position(char maze[L][C], int x, int y)
   	{
     		return 0;
   	}
-
 }
 
 //printa matriz... trivial...hehehe
@@ -29,9 +29,9 @@ void print_maze(char maze[L][C])
 	int i, j;
 	for (i=0; i<L; i++)
     {
-        for (j=0; j<C; j++)
+       	for (j=0; j<C; j++)
     	{
-		    printf("%c", maze[i][j]);	
+			printf("%c", maze[i][j]);	
 	    }
 	    printf("\n");
     }
@@ -47,30 +47,66 @@ void target_destiny_blue(char matriz[L][C], int lpack, int cpack,int lred, int c
 	d1 = lpack - lred; //linha pac - linha red
 	d2 = cpack - cred; //coluna pac - coluna red
 	// distancias maiores que zero
-	if(d1 >= 0 && d2 >= 0)
+	if(d1 >= 0 && d2 >= 0)//Direita e abaixo
 	{
 		lblue = lpack + d1; //calcula a linha que o blue vai
 		cblue = cpack + d2; //---------- coluna que o blue vai
-		if(lblue < L && cblue < C && validate_position(matriz, lblue, cblue)) //se for valida, marca com D
+		if(lblue <= LL && cblue <= LC && validate_position(matriz, lblue, cblue)) //se for valida, marca com D
 		{
 			matriz[lblue][cblue] = 'D';
 		}
-		// se a coluna for maior que o limite
-		if(cblue >= C)
+		//pos dentro do intervalo mas com posição invalida
+		else if(lblue <= LL && cblue <= LC && (!validate_position(matriz, lblue, cblue))) //se for valida, marca com D
 		{
-			aux1 = cblue - 28;
-			lblue = lblue - aux1;//decrementa as linhas(prioridadde p cima)
-			if(lblue > 0 && validate_position(matriz, lblue, 28)) //se for valida, marca com D e fixa a coluna 28
+			while(matriz[lblue][cblue] != ' ')//enquanto for diferente de espaco, decrementa a linha
+			{
+				lblue--;
+			}
+			matriz[lblue][cblue] = 'D';
+		}
+		// se a coluna for maior que o limite
+		if(lblue <= LL && cblue > LC)
+		{
+			aux1 = cblue - LC;
+			lblue = lblue + aux1;//decrementa as linhas(prioridadde p cima)
+			if(lblue <= LL && validate_position(matriz, lblue, 28)) //se for valida, marca com D e fixa a coluna 28
 			{
 				matriz[lblue][28] = 'D';
 			}
+			if(lblue <= LL && (!validate_position(matriz, lblue, 28))) //se for valida, marca com D e fixa a coluna 28
+			{
+				int n_cblue = 28;
+				while(matriz[lblue][n_cblue] != ' ')//enquanto for diferente de espaco, decrementa a linha
+				{
+					n_cblue--;
+				}
+				matriz[lblue][n_cblue] = 'D';
+			}
+			
 		}
-		//if a linha for maior que o limite
-		 
+		//if a linha for maior0 que o limite
+		if(lblue > LL && cblue <= LC)
+		{
+			aux1 = lblue - LL;
+			cblue = cblue + aux1;
+			if(cblue <= LC && validate_position(matriz, 21, cblue))
+			{
+				matriz[21][cblue] = 'D';
+			}
+			if(cblue <= LC && (!validate_position(matriz, 21, cblue)))
+			{
+				int n_lblue = 21;
+				while(matriz[n_lblue][cblue] != ' ')//enquanto for diferente de espaco, decrementa a linha
+				{
+					n_lblue--;
+				}
+				matriz[n_lblue][cblue] = 'D';
+			}
+		} 
 	}
 	//distancias menores que zero
 	// a msm coisa da primeira verificação segue para as demais
-	if(d1 <= 0 && d2 <= 0)
+	if(d1 < 0 && d2 < 0)//Direita e abaixo
 	{
 		lblue = lpack + d1;
 		cblue = cpack + d2;
@@ -78,27 +114,204 @@ void target_destiny_blue(char matriz[L][C], int lpack, int cpack,int lred, int c
 		{
 			matriz[lblue][cblue] = 'D';
 		}
+		if(lblue > 0 && cblue > 0 && (!validate_position(matriz, lblue, cblue)))
+		{
+			while(matriz[lblue][cblue] != ' ')
+			{
+				cblue++;
+			}
+			matriz[lblue][cblue] = 'D';
+		}
+		if(cblue <= 0)
+		{
+			lblue = lblue + cblue;
+			if(lblue > 0 && validate_position(matriz, lblue, 1))
+			{
+				matriz[lblue][1] = 'D';
+			}
+			else if(lblue > 0 && (!validate_position(matriz, lblue, 1)))
+			{
+				while(matriz[lblue][cblue] != ' ')
+				{
+					lblue++;
+				}
+				matriz[lblue][cblue] = 'D';
+				}
+				else
+				{
+					while(cblue < 1)
+					{
+						cblue++;
+					}
+					matriz[lblue][cblue] = 'D';
+				}
+			}
+		if(lblue <= 0)
+		{
+			cblue = cblue + lblue;
+			if(cblue > 0 && validate_position(matriz, 1, cblue))
+			{
+				matriz[1][cblue] = 'D';
+			}
+			if(cblue > 0 && (!validate_position(matriz, 1, cblue)))
+			{
+				while(matriz[lblue][cblue] != ' ')
+				{
+					cblue++;
+				}
+				matriz[1][cblue] = 'D';
+			}
+			else
+			{
+				while(lblue<1)
+				{
+					lblue--;
+				}
+				matriz[lblue][cblue] = 'D';
+			}
+		}
 	}
+
 	//linha maior, coluna menor que zero
-	if(d1 > 0 && d2 < 0 )
+	if(d1 > 0 && d2 < 0)
 	{
 		lblue = lpack + d1;
 		cblue = cpack + d2;
-		if(lblue < L && cblue > 0 && validate_position(matriz, lblue, cblue))
+		if(lblue < LL && cblue > 0 && validate_position(matriz, lblue, cblue))
 		{
 			matriz[lblue][cblue] = 'D';
 		}
+		if(lblue < LL && cblue > 0 && (!validate_position(matriz, lblue, cblue)))
+		{
+			while(matriz[lblue][cblue] != ' ')
+			{
+				cblue++;
+			}
+			matriz[lblue][cblue] = 'D';
+		}
+		if(cblue <= 0)
+		{
+			lblue = lblue + cblue;
+			if(lblue > 0 && validate_position(matriz, lblue, 1))
+			{
+				matriz[lblue][1] = 'D';
+			}
+			else 
+			{
+				if(lblue > 0 && (!validate_position(matriz, lblue, 1)))
+				{
+					while(matriz[lblue][cblue] != ' ')
+				{
+					lblue++;
+				}
+				matriz[lblue][cblue] = 'D';
+				}
+				else
+				{
+					while(cblue < 1)
+					{
+						cblue++;
+					}
+					matriz[lblue][cblue] = 'D';
+				}
+			}
+        	}
+		if(lblue <= 0)
+		{
+			cblue = cblue + lblue;
+			if(cblue > 0 && validate_position(matriz, 1, cblue))
+			{
+				matriz[1][cblue] = 'D';
+			}
+			if(cblue > 0 && (!validate_position(matriz, 1, cblue)))
+			{
+				while(matriz[lblue][cblue] != ' ')
+				{
+					cblue++;
+				}
+				matriz[1][cblue] = 'D';
+			}
+			else
+			{
+				while(lblue<1)
+				{
+					lblue--;
+				}
+				matriz[lblue][cblue] = 'D';
+			}
+		}
+		
 	}
 	//linha menor, coluna maior que zero
 	if(d1 < 0 && d2 > 0 )
 	{
 		lblue = lpack + d1;
 		cblue = cpack + d2;
-		if(lblue > 0 && cblue < C && validate_position(matriz, lblue, cblue))
+		if(lblue > 0 && cblue < LC && validate_position(matriz, lblue, cblue))
 		{
 			matriz[lblue][cblue] = 'D';
 		}
-    	}
+		
+		if(lblue > 0 && cblue <= LC && (!validate_position(matriz, lblue, cblue))) //se for valida, marca com D
+		{
+			while(matriz[lblue][cblue] != ' ')//enquanto for diferente de espaco, decrementa a linha
+			{
+				lblue--;
+			}
+			matriz[lblue][cblue] = 'D';
+		}
+		if(cblue <= 0)
+		{
+			lblue = lblue + cblue;
+			if(lblue > 0 && validate_position(matriz, lblue, 1))
+			{
+				matriz[lblue][1] = 'D';
+			}
+			else 
+			{
+				if(lblue > 0 && (!validate_position(matriz, lblue, 1)))
+				{
+					while(matriz[lblue][cblue] != ' ')
+					{
+						lblue++;
+					}
+					matriz[lblue][cblue] = 'D';
+				}
+				else
+				{
+					while(cblue < 1)
+					{
+						cblue++;
+					}
+						matriz[lblue][cblue] = 'D';
+				}
+			}
+		}
+		if(lblue <= 0)
+		{
+			cblue = cblue + lblue;
+			if(cblue > 0 && validate_position(matriz, 1, cblue))
+			{
+				matriz[1][cblue] = 'D';
+			}
+			if(cblue > 0 && (!validate_position(matriz, 1, cblue)))
+			{
+				while(matriz[lblue][cblue] != ' ')
+				{
+					cblue++;
+				}
+				matriz[1][cblue] = 'D';
+			}
+			else
+			{
+				while(lblue<1)
+				{
+					lblue--;
+				}
+				matriz[lblue][cblue] = 'D';
+			}
+		}
+    }
     	//linha == 0, coluna maior ou menor
     	/*if((d1 == 0 && (d2 > 0 || d2 < 0)))
 	{
@@ -133,20 +346,20 @@ int main(int argc, const char *argv[])
 	void target_destiny_blue(char matriz[L][C], int lpack, int cpack,int lred, int cred);
 
 	char maze[L][C]={{'0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0','0'},
-                    	   {'0',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ','0'},
+                    {'0',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ','0'},
                     {'0',' ','0','0','0','0',' ','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0',' ','0','0','0','0','0',' ','0'},
                     {'0',' ','0','0','0','0',' ','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0',' ','0','0','0','0','0',' ','0'},
                     {'0','7',' ',' ',' ',' ','7',' ',' ',' ',' ',' ',' ','7',' ','7',' ',' ',' ',' ',' ',' ','7',' ',' ',' ',' ',' ','7','0'},
                     {'0',' ','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0',' ','0'},
                     {'0',' ',' ',' ',' ',' ','7','0',' ',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',' ',' ','0','7',' ',' ',' ',' ',' ',' ','0'},
-                    {'0','0','0','0','0','0',' ','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0',' ','0','0','0','0','0','0','0'},
-                    {'0','0','0','0','0','0',' ','0',' ',' ',' ',' ',' ','6',' ','6',' ',' ',' ',' ',' ','0',' ','0','0','0','0','0','0','0'},
-                    {'0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0'},
-                    {'0','0','0','0','0','0',' ',' ','7','0','0','0','0','0','0','0','0','0','0','0','7',' ',' ','0','0','0','0','0','0','0'},
-                    {'0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0'},
-                    {'0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0'},
-                    {'0','0','0','0','0','0',' ','0','7',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','7','0',' ','0','0','0','0','0','0','0'},
-                    {'0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0'},
+                    {'0',' ','0','0','0','0',' ','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0',' ','0','0','0','0','0',' ','0'},
+                    {'0',' ','0','0','0','0',' ','0',' ',' ',' ',' ',' ','6',' ','6',' ',' ',' ',' ',' ','0',' ','0','0','0','0','0',' ','0'},
+                    {'0',' ','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0',' ','0'},
+                    {'0',' ','0','0','0','0',' ',' ','7','0','0','0','0','0','0','0','0','0','0','0','7',' ',' ','0','0','0','0','0',' ','0'},
+                    {'0',' ','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0',' ','0'},
+                    {'0',' ','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0',' ','0'},
+                    {'0',' ','0','0','0','0',' ','0','7',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','7','0',' ','0','0','0','0','0',' ','0'},
+                    {'0',' ','0','0','0','0',' ','0',' ','0','0','0','0','0','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0',' ','0'},
                     {'0',' ',' ',' ',' ',' ','7',' ','7',' ',' ',' ',' ',' ','0',' ',' ',' ',' ',' ','7',' ','7',' ',' ',' ',' ',' ',' ','0'},
                     {'0',' ','0','0','0','0',' ','0','0','0','0','0','0',' ','0',' ','0','0','0','0','0','0',' ','0','0','0','0','0',' ','0'},
                     {'0','7',' ',' ',' ',' ','7',' ','7',' ',' ',' ',' ','6',' ','6',' ',' ',' ',' ','7',' ','7','0',' ',' ',' ',' ','7','0'},
@@ -220,6 +433,7 @@ int main(int argc, const char *argv[])
     	//printf("qual a linha e coluna que vc deseja colocar o red ghost?\n");
     	//scanf("%d",&c);
     	//scanf("%d",&d);
+    	
     
 
     return 0;   
