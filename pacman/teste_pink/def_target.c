@@ -16,7 +16,7 @@
 #define DOWN 3
 #define LEFT 4
 /*Funcao que decide qual o fatasma sera chamado,
-conforme o numero da terceira posicao do vetor ghost*/
+conforme o numero do ghost*/
 void def_target(char maze[L][C],int ghost[3], int ghost_number)
 {
         
