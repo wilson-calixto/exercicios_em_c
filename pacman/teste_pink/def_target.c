@@ -15,24 +15,25 @@
 #define RIGHT 2
 #define DOWN 3
 #define LEFT 4
-
-void def_target_pink(char maze[L][C],int ghost[3], int d)
+/*Funcao que decide qual o fatasma sera chamado,
+conforme o numero do ghost*/
+void def_target(char maze[L][C],int ghost[3], int ghost_number,int pacman[3])
 {
         
- if (ghost[3] == BLINK)
+ if (ghost_number == BLINK)
   {
 
   }
-  else if (ghost[3] == PINK)
+  else if (ghost_number == PINK)
   {
-  def_target_pink1(maze,ghost,d);
+  def_target_pink(maze,ghost);
         printf("consegui \n\n");
   }
-  else if (ghost[3] == INKY)
+  else if (ghost_number == INKY)
   {
 
   }
-  else if (ghost[3] == CLYDE)
+  else if (ghost_number == CLYDE)
   {
 
   }
