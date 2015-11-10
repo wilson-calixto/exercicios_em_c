@@ -6,6 +6,10 @@
 #define C 30
 #define LL 21
 #define LC 28
+#define UP 1
+#define RIGHT 2
+#define DOWN 3
+#define LEFT 4
 
 // P = pacman, V = red ghost, B = blue ghost
 //EXECUTEM AÍ... MELHOREM SE PUDER...
@@ -38,6 +42,36 @@ void print_maze(char maze[L][C])
     printf("\n");
 }
 
+
+// 0 - coluna, 1 - linha, 2 - direção
+
+void operacao_dist(int pacman[3], int dir[2], int x, int y)
+{
+	int linha, coluna;
+
+	linha = pacman[0] + x;
+	coluna = pacman[1] + y;
+	dir[0] = linha;
+	dir[1] = coluna;
+}
+
+int* dist (int pacman[3])
+{
+	int linha, coluna, *dir, posicao_pacman;
+	posicao_pacman = pacman[3];
+	
+	dir = malloc(sizeof(int) * 2);
+	
+	if (posicao_pacman == UP) operacao_dist(pacman, dir,   0, 2);
+
+	if (posicao_pacman == RIGHT) operacao_dist(pacman, dir,  0, -2);
+		
+	if (posicao_pacman == DOWN) operacao_dist(pacman, dir, -2, 0);
+		
+	if (posicao_pacman == LEFT) operacao_dist(pacman, dir,   2, 0);
+			
+	return 	dir;
+}
 
 //verifica todas as possibilidades de combinações de posições
 void target_destiny_blue(char matriz[L][C], int lpack, int cpack,int lred, int cred) //l = linha, c = coluna
@@ -338,7 +372,17 @@ void target_destiny_blue(char matriz[L][C], int lpack, int cpack,int lred, int c
 
 int main(int argc, const char *argv[])
 {
-	int validate_position(char maze[L][C], int x, int y);
+	int validate_position(char maze[L][C], int x, int y), pacman[3], *teste;
+
+	pacman[0] = 1;
+	pacman[2] = 2;
+	pacman[3] = LEFT;
+
+	teste = malloc(sizeof(int) * 2);
+	
+	teste = dist(pacman);
+    	
+	printf("%d %d\n", teste[0], teste[1]);
 	void print_maze(char maze[L][C]);
 	//void target_pac(char matriz[L][C]);
 	//void target_red(char matriz[L][C]);
@@ -373,7 +417,10 @@ int main(int argc, const char *argv[])
     	print_maze(maze);
     	
 	int lpac, cpac, validade1=0;
-	
+	pacman[0]=3;
+	pacman[1]=3;
+	pacman[2]=UP;	
+
 	while(validade1 == 0) //insere  a pos do pacman
 	{
 		printf("Insira a posicao do pacman: \n");
@@ -434,7 +481,8 @@ int main(int argc, const char *argv[])
     	//scanf("%d",&c);
     	//scanf("%d",&d);
     	
-    
+
+	
 
     return 0;   
 }
