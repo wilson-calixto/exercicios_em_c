@@ -1,13 +1,13 @@
 #include <stdio.h>
-
+/*
 int in(int entrada)
 {
-
-        scanf("&d",entrada);
-
+	int a;
+        scanf("&d",&a);
+	entrada=a;
         return entrada;
 }
-
+*/
 
 void out(int id, int extra)
 {
@@ -29,6 +29,15 @@ void out(int id, int extra)
                 case 7: printf("%d ", extra);
                         break;
                 case 8: printf("%d  ", extra++);        
-                        break;         
+                        break;  
+		case 9:       
+                  printf ( "\t>>> GHOSTS <<<\n" );
+		  printf ( "\n" );
+		  printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
+		  printf ( "\n" );       
+			break;   
          }
 }
+/*
+printf ("aqui :%d\n\n\n",target[0]);
+printf ("aqui %d\n",target[1]);*/
