@@ -22,7 +22,7 @@ int main ( int argc, char *argv[] )
 {
 	char ***matriz_resultado;
 	char ***tabela;
-	int ntimes=0,njogos;
+	int ntimes=0,njogos, njogos;
 	scanf("%d", &ntimes);
 	njogos = (ntimes * (ntimes -1))/2;
 	printf("Qauntidade de jogos possiveis =  %d\n", njogos);

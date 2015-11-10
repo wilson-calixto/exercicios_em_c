@@ -1,4 +1,4 @@
-void verifica_direcao(int lab[23][30],int  cordenadas[2],int caminho[100][2],int tamanho,int x_pacman,int y_pacman)
+void verifica_direcao(char lab[23][30],int  cordenadas[2],int caminho[100][2],int tamanho,int x_pacman,int y_pacman)
 {
           int x,y,i=0,s, menor_score=999,menor_indice=5,compara_score_number ;
           int vetor_possibilidades[4][2];
@@ -7,7 +7,7 @@ void verifica_direcao(int lab[23][30],int  cordenadas[2],int caminho[100][2],int
  
           if (x+1 < 30)
           {
-                  if (lab[y][x+1] == '0'  )
+                  if (lab[y][x+1] !=  '0'  )
                   {
                           //cordenadas[1] = x+1;
                           vetor_possibilidades[i][0] = y;
@@ -17,7 +17,7 @@ void verifica_direcao(int lab[23][30],int  cordenadas[2],int caminho[100][2],int
           }
           if (y+1 < 23)
           {
-                  if (lab[y+1][x] == '0' )
+                  if (lab[y+1][x] != '0' )
                   {
                           vetor_possibilidades[i][0] = y+1;
                           vetor_possibilidades[i][1] = x;
@@ -28,7 +28,7 @@ void verifica_direcao(int lab[23][30],int  cordenadas[2],int caminho[100][2],int
           }
           if (x-1>=0)
           {
-                  if (lab[y][x-1] == '0' )
+                  if (lab[y][x-1] != '0' )
                   {
                           //cordenadas[1] = x-1;
                           vetor_possibilidades[i][0] = y;
@@ -38,7 +38,7 @@ void verifica_direcao(int lab[23][30],int  cordenadas[2],int caminho[100][2],int
           }
 	  if (y-1 >= 0)
           {
-                 if (lab[y-1][x] == '0' )
+                 if (lab[y-1][x] != '0' )
                  {
                          //cordenadas[0] = y-1;
                          vetor_possibilidades[i][0] = y-1;
@@ -61,6 +61,5 @@ void verifica_direcao(int lab[23][30],int  cordenadas[2],int caminho[100][2],int
          }
          cordenadas[0] = vetor_possibilidades[menor_indice][0];
          cordenadas[1] = vetor_possibilidades[menor_indice][1];
-
 }
 

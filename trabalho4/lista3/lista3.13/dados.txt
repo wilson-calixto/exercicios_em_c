@@ -4,3 +4,9 @@ santos vasco 1 1
 santos flamengo 1 0
 
 
+borges
+3 1 
+1 1 
+1 0
+
+

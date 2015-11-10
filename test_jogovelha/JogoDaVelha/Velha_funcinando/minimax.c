@@ -59,7 +59,7 @@ int joga_minimax(char **mat)
         }
         else
         {
-            if (mat[i][j] == 'O')]
+            if (mat[i][j] == 'O')
             {
              
                 b[i][j] = -1;
