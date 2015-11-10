@@ -1,7 +1,7 @@
-all: Polinomio
+all: lista4.10
 
-Polinomio: lista4.10.o derivada.o
-	gcc lista4.10.o derivada.o -o Polinomio
+lista4.10: lista4.10.o derivada.o
+	gcc lista4.10.o derivada.o -lm -o lista4.10
 
 lista4.10.o: lista4.10.c
 	gcc -c lista4.10.c
