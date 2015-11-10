@@ -10,7 +10,8 @@ int main( void ) {
 
 	//input( maze, R, C );
 	//print( maze, R, C );
+	fill( maze, 'P', 9, 9 );
+	printf( "(%d,%d)\n", search_x( maze, 'P' ), search_y( maze, 'P' ) );
 	
-	printf( "%d\n", distance( input_x(), input_y(), input_x(), input_y() ));
 	return 0;
 }
