@@ -9,7 +9,6 @@
 #define C 30
 #define L 23
 
-		/* ----------  end of function main  ---------- */
 
 int main (int argc, char *argv[])
 {
@@ -17,7 +16,7 @@ int main (int argc, char *argv[])
   int maze[L][C];
   int i,j;
   FILE *fp;
-  fp = fopen(argv[1],"r" );
+  fp = fopen("maze.txt","r" );
   for (i=0;i<L;i++)
   {
 	  for (j=0;j<C;j++)
@@ -33,9 +32,7 @@ int main (int argc, char *argv[])
   {  	  
   	  printf ( "Qual o numero do Ghost? = " );
           scanf ("%d", &number_ghost);
-	  printf ( "Direção do ghost = " );
-          scanf ("%d", &ghost[2]);
-  }while(number_ghost > 4 || number_ghost < 1 || ghost[2] > 4 ||ghost[2] < 1);  
+  }while(number_ghost > 4 || number_ghost < 1 );  
   //number_ghost = 2;
   do
   {
@@ -45,16 +42,12 @@ int main (int argc, char *argv[])
   	scanf ( "%d", &ghost[0] ); // referente a coluna - ghost
   	printf ( "y: " );
   	scanf ( "%d", &ghost[1] ); // referente a linha - ghost
+	printf ( "Direção do ghost = 1-Down , 2-Right, 3-Up, 4-Left" );
+        scanf ("%d", &ghost[2]);
 	clear_screen();
-  }while (!validate_position(maze,ghost));                                           //mudar os parametros
-	position (maze,ghost,number_ghost);
-  do
-  {  	
-        printf ( "Direção do Ghost: " );
-        scanf ("%d",&ghost[2]);
-  }while( pacman[2]>4 ||pacman[2]<1);
-
-  
+  }while (!validate_position(maze,ghost) || ghost[2] > 4 ||ghost[2] < 1);                                           //mudar os parametros
+	position (maze,ghost,3);
+    
   do 
   {
 	clear_screen();
@@ -64,19 +57,17 @@ int main (int argc, char *argv[])
   	scanf ( "%d", &pacman[0]); // referente a coluna - ghost
   	printf ( "y: " );
   	scanf ( "%d", &pacman[1]); // referente a linha - ghost
-  }while (!validate_position(maze,pacman));                          //mudar os parametros
+  }while (!validate_position(maze,5));                          //mudar os parametros
   
   do
   {  	
         printf ( "Direção do Pac-mam: " );
         scanf ("%d",&pacman[2]);
   }while( pacman[2]>4 ||pacman[2]<1);
-
-
   position (maze,pacman,5 );//mudar os parametros
   clear_screen();
   print_maze (maze);
   walking(maze,ghost,pacman);//mudar os parametros
-  */
+  
   return 0;
 }
