@@ -50,7 +50,7 @@ int caminho[30][2];
   position (maze,pacman,'P' );//mudar os parametros
   clear_screen();
   print_maze (maze);
-  //persegue_alvo(maze,ghost[3],pacman[3],caminho);//mudar os parametros
+  walking(maze,ghost[3],pacman[3],caminho);//mudar os parametros
   
   return 0;
 }
