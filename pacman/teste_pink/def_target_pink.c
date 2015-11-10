@@ -25,7 +25,7 @@ void def_target_pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
     {
       target[0]=i-TARGET;
       target[1]=j;
-      maze[i-TARGET][j] = 'T';
+     // maze[i-TARGET][j] = 'T';
     
     }
   }
@@ -37,7 +37,7 @@ void def_target_pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
     {
       target[0]=i;
       target[1]=j+TARGET;
-      maze[i][j+TARGET] = 'T';
+    //  maze[i][j+TARGET] = 'T';
       
     }
   }
@@ -49,7 +49,7 @@ void def_target_pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
     {
       target[0]= i+TARGET;
       target[1]= j;
-      maze[i+TARGET][j] = 'T';
+    //  maze[i+TARGET][j] = 'T';
      
     }
   }
@@ -61,7 +61,7 @@ void def_target_pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
     {
       target[0]=i;
       target[1]=j-TARGET;
-      maze[i][j-TARGET];
+     // maze[i][j-TARGET];
 	}
   }
 }
