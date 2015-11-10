@@ -27,6 +27,8 @@ void print_maze (int maze[L][C])
 	{
 	  printf("%d ", k++);
 	}
+
+
     for ( j = 0; j < C; j++ )
     {
       switch (maze[i][j])
@@ -40,7 +42,7 @@ void print_maze (int maze[L][C])
 	      case 6:
 		      printf("   ");
 		      break;
-	      case 1,2,3,4:
+	      case 3:
 		      printf(" G "); 
 		      break;
 	      case 5:
@@ -49,13 +51,15 @@ void print_maze (int maze[L][C])
 
 	      case 8:
 		      printf("   ");
-		      break;      
+		      break;
       }
 
     }
     printf ( "\n" );
   }
 
+    printf ( "\n" );
+    printf ( "\n" );
 //    printf ( "\n" );
 //    printf ( "\n" );
 //for ( i = 0; i < L; i++ )
@@ -66,6 +70,4 @@ void print_maze (int maze[L][C])
 //    }
 //    printf ( "\n" );
 //  }
-
-
 }

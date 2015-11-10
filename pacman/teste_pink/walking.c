@@ -1,13 +1,13 @@
 //Em construção!!!
 
-void walking(char maze[23][30], int ghost[3], int target[2])
+void walking(int maze[23][30], int ghost[3], int target[2])
 {
 	int x,y; 
 	y =  ghost[0];
 	x =  ghost[1]; 
 
 
-	while (maze[x][y] != '7')
+	while (maze[x][y] != 7)
 	{
 		switch (ghost[2])
 		{
@@ -24,11 +24,11 @@ void walking(char maze[23][30], int ghost[3], int target[2])
 				y = y-1;
 				break;	
 		}
-		if (validate_position(maze, int x , int y))
+		if (validate_position(maze, x, y))
 		{
 			ghost[0] = y;      
 			ghost[1] = x;
-			maze[x][y]  = 'G'; 
+			maze[x][y]  = 333; 
 		}else
 		{
 			x = ghost[1];
