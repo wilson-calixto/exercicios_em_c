@@ -17,7 +17,7 @@
 #define LEFT 4
 /*Funcao que decide qual o fatasma sera chamado,
 conforme o numero do ghost*/
-void def_target(char maze[L][C],int ghost[3], int ghost_number)
+void def_target(char maze[L][C],int ghost[3], int ghost_number,int pacman[3])
 {
         
  if (ghost_number == BLINK)
