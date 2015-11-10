@@ -10,7 +10,7 @@
 /* Defina o alvo para o fantasma pink
  * de acordo com a regra são 4 "casas"
  * a frente do pacman */
-void def_target_pink1(char maze[L][C],int vetor[3])
+void def_target_pink(char maze[L][C],int vetor[3])
 {                             //      i==i j==j
   int result,copia[3],i=vetor[0],j=vetor[1],d=vetor[2];
   copia[0]=vetor[0];
