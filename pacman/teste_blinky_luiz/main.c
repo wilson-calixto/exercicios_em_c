@@ -7,10 +7,8 @@
 int main( int argc, const char *argv[] ) {
 
 	int maze[R][C];
-	int x, y, p;
+	int x, y;
 
-	input( maze );
-	print( maze );
  	fill( maze, -10, input_y(), input_x() );
 	print( maze );
 
