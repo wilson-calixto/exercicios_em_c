@@ -17,8 +17,9 @@ int input_x( void ) {
 
 	int x;
 
-	printf( "Digite a coordenada x: " );
+	//printf( "Digite a coordenada x: " );
 	scanf( "%d", &x );
+	//puts( "\n" );
 
 	return x;
 }
@@ -27,8 +28,9 @@ int input_y( void ) {
 
 	int y;
 
-	printf( "Digite a coordenada y: " );
+	//printf( "Digite a coordenada y: " );
 	scanf( "%d", &y );
+	//puts( "\n" );
 
 	return y;
 }
@@ -55,6 +57,9 @@ void print( int maze[R][C] ) {
 					break;
 				case 7: 
 					putchar( ' ' );
+					break;
+				case -10: 
+					putchar( 'P' );
 					break;
 			}
 		}
