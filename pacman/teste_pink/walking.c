@@ -7,7 +7,7 @@ void walking(int maze[23][30], int ghost[3], int target[2])
 	x =  ghost[1]; 
 
 
-	while (maze[y][x] != 7)
+	while (target[0] != ghost[0] || target[1] != ghost[1] )
 	{
 		switch (ghost[2])
 		{
@@ -28,12 +28,16 @@ void walking(int maze[23][30], int ghost[3], int target[2])
 		{
 			ghost[0] = y;      
 			ghost[1] = x;
-			if (maze[y][x] != 7)
+			if (maze[y][x] != 7 &&  maze[y][x] != 5)
+
 			{
 				maze[y][x]  = 3; 
 			}else
 			{
-
+				if (maze[y][x] != 5)
+				{
+					change_path(maze,ghost,target); //neste momenro o ghost será atualizado com o melhor caminho da bifurcação
+				}
 			}
 		}else
 		{
@@ -45,6 +49,7 @@ void walking(int maze[23][30], int ghost[3], int target[2])
 				ghost[2] = 1;
 			}
 		}
+		print_maze(maze);
 	}
 
 }

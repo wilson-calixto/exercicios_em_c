@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "maze.h"
 #include "move.h"
+#include "math.h"
 
 #define BLINK 1
 #define PINK 2
@@ -69,6 +70,7 @@ int main (int argc, char *argv[])
   clear_screen();
   print_maze (maze);
   walking(maze,ghost,pacman);//mudar os parametros
+  print_maze (maze);
   
   return 0;
 }

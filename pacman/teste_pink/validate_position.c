@@ -3,7 +3,7 @@
 
 int validate_position(int maze[L][C], int linha, int coluna)
 {
-  if (maze[linha][coluna]== 8 || maze[linha][coluna] == 1 || maze[linha][coluna] == 7 )
+  if (maze[linha][coluna]== 8 || maze[linha][coluna] == 5 || maze[linha][coluna] == 7 || maze[linha][coluna]  == 6   )
   {
     return 1;
   }
