@@ -12,10 +12,21 @@
  *      Lucas Frota
  */
 
-	int distancia (ghost[3], pac[3])
-		{
-			int a;
-			a = sqrt ((g[0]-p[0])^2) + (g[1]-p[1])^2));
-		
-			return a;
-		}
+#include <stdio.h>
+#include <math.h>
+
+int main () 
+{
+
+}
+
+
+int distancia (int ghost[3], int pac[3])
+{
+    int a;
+    a = sqrt (((ghost[0]-pac[0])^2) + ((ghost[1]-pac[1])^2));
+
+    return a;
+}
+
+
