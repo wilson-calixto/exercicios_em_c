@@ -1,13 +1,10 @@
 #include <stdio.h>
-/*
+
 int in(int entrada)
 {
-	int a;
-        scanf("&d",&a);
-	entrada=a;
+        scanf("&d",&entrada);
         return entrada;
 }
-*/
 
 void out(int id, int extra)
 {
@@ -20,7 +17,7 @@ void out(int id, int extra)
                         break;
                 case 3: printf("Qual a posição do GHOST? (x,y)\n");
                         break;
-                case 4: printf("  x: ");
+                case 4: printf("x: ");
                         break;
                 case 5: printf("y: ");
                         break;
@@ -31,10 +28,10 @@ void out(int id, int extra)
                 case 8: printf("%d  ", extra++);        
                         break;  
 		case 9:       
-                  printf ( "\t>>> GHOSTS <<<\n" );
-		  printf ( "\n" );
-		  printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
-		  printf ( "\n" );       
+                	 printf ( "\t>>> GHOSTS <<<\n" );
+			 printf ( "\n" );
+			 printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
+		  	 printf ( "\n" );       
 			break;   
          }
 }
