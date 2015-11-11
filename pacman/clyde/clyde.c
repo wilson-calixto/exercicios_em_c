@@ -7,7 +7,7 @@
  *      Sergio Pinheiro
  *      Andressa Moreira
  *      Elisabeth castro
- *      Everton Petillo
+ *      Ewerton Petillo
  *      Richardson Souza
  *      Lucas Frota
  */
