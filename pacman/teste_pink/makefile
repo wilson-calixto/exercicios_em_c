@@ -1,10 +1,10 @@
-all: main
+all: rm  main
 
-main: main.o maze.o validate_position.o clear_screen.o move.o  walking.o 
-	gcc main.o maze.o validate_position.o clear_screen.o move.o walking.o  -o main
+main: main_teste.o maze.o validate_position.o clear_screen.o move.o  walking.o 
+	gcc main_teste.o maze.o validate_position.o clear_screen.o move.o walking.o  -o main
 
-main.o: main.c
-	gcc -c main.c -g
+main_teste.o: main_teste.c
+	gcc -c main_teste.c -g
 
 maze.o: maze.c
 	gcc -c maze.c -g
@@ -26,8 +26,8 @@ def_target.o: def_target.c
 def_target_pink.o: def_target_pink.c
 	gcc -c def_target_pink.c -g
 
-clea:
+clear:
 	rm -rf *.o
 
-mrproper:
+rm:	clear
 	rm -rf main

@@ -7,28 +7,34 @@ void walking(int maze[23][30], int ghost[3], int target[2])
 	x =  ghost[1]; 
 
 
-	while (maze[x][y] != 7)
+	while (maze[y][x] != 7)
 	{
 		switch (ghost[2])
 		{
 			case 1:
-				x = x+1;
-				break;
-			case 2:
 				y = y+1;
 				break;
+			case 2:
+				x = x+1;
+				break;
 			case 3:
-				x = x-1;
+				y = y-1;
 				break;
 			case 4:
-				y = y-1;
+				x = x-1;
 				break;	
 		}
-		if (validate_position(maze, x, y))
+		if (validate_position(maze, y, x))
 		{
 			ghost[0] = y;      
 			ghost[1] = x;
-			maze[x][y]  = 333; 
+			if (maze[y][x] != 7)
+			{
+				maze[y][x]  = 3; 
+			}else
+			{
+
+			}
 		}else
 		{
 			x = ghost[1];
