@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include "io_blinky.h"
 #include "target.h"
-#define R 19
-#define C 23
+#define R 23
+#define C 19
 
-int main( void ) {
+int main( int argc, const char *argv[] ) {
 
-	char maze[R][C];
+	int maze[R][C];
+	int x, y;
 
-	input( maze, 19, 23 );
-	print( maze, 19, 23 );
-	fill( maze, 'P', 9, 9 );
-	printf( "(%d,%d)\n", search_x( maze, 'P' ), search_y( maze, 'P' ) );
-	
+	input( maze );
+	print( maze );
+ 	fill( maze, -10, input_y(), input_x() );
+
 	return 0;
 }
