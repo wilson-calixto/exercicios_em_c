@@ -12,4 +12,10 @@
  *      Lucas Frota
  */
 
-
+	int distancia (ghost[3], pac[3])
+		{
+			int a;
+			a = sqrt ((g[0]-p[0])^2) + (g[1]-p[1])^2));
+		
+			return a;
+		}
