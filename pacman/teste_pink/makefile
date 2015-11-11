@@ -1,11 +1,15 @@
 all: rm  main
 
-main: main_teste.o maze.o validate_position.o clear_screen.o move.o  walking.o 
-	gcc main_teste.o maze.o validate_position.o clear_screen.o move.o walking.o  -o main
+main: main_teste.o maze.o validate_position.o clear_screen.o move.o  walking.o change_path.o score.o 
+	gcc main_teste.o maze.o validate_position.o clear_screen.o move.o walking.o change_path.o  score.o   -o main -lm
 
 main_teste.o: main_teste.c
 	gcc -c main_teste.c -g
 
+change_path.o: change_path.c
+	gcc -c change_path.c -g
+score.o: score.c
+	gcc -c score.c -g  
 maze.o: maze.c
 	gcc -c maze.c -g
 walking.o:walking.c
