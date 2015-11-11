@@ -1,5 +1,8 @@
-void input( char maze[19][23], int, int );
+#define R 23
+#define C 19
+
+void input( int maze[R][C] );
 int input_x( void );
 int input_y( void );
-void fill( char maze[19][23], char, int, int );
-void print( char maze[19][23], int, int );
+void fill( int maze[R][C], int, int, int );
+void print( int maze[R][C] );
