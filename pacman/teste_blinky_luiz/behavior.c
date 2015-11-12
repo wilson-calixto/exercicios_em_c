@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-#define R 19
-#define C 23
+#define R 23
+#define C 19
 
 int distance( int pac_x, int pac_y, int blinky_x, int blinky_y ) {
 
@@ -15,7 +15,7 @@ int distance( int pac_x, int pac_y, int blinky_x, int blinky_y ) {
 	return d;
 }
 
-int search_x( char maze[][23], char character ) {
+int search_x( char maze[][C], char character ) {
 
 	int i, j;
 
@@ -27,7 +27,7 @@ int search_x( char maze[][23], char character ) {
 	}
 }
 
-int search_y( char maze[][23], char character ) {
+int search_y( char maze[][C], char character ) {
 
 	int i, j;
 
@@ -39,6 +39,14 @@ int search_y( char maze[][23], char character ) {
 	}
 }
 
-/*void better_way_x( char maze[][23], int pac_x, int pac_y, int blink_x, int blink_y ) {
+void move_blinky( int maze[R][C], int x, int y ) {
 
-	distance( search_x( maze, 'o' ), search_y( maze, 'o' ), search_x( maze, 'B' ), search_y( maze, 'B' ) ); */
+	int i;
+	
+	for( i = y + 1; maze[x][i] != 7; i++ ) {
+		printf( "%d %d\n", i, x );
+	}
+	fill( maze, -7, x, i );
+
+	puts( "\n" );
+}
