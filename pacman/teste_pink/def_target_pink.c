@@ -5,7 +5,7 @@
 #define DOWN 3
 #define LEFT 4
 #define C 30
-#define L 23// wilson calixto: trocar os i j e k por referencias ao vetor ghost
+#define L 23
 #define TARGET 4
 #define LINHA 1
 #define COLUNA 0
