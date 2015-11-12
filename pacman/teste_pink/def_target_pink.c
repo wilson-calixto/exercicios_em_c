@@ -11,6 +11,7 @@
 #define COLUNA 0
 #define TRUE 1
 
+
 /* Defina o alvo para o fantasma pink
  * de acordo com a regra são 4 "casas"
  * a frente do pacman */
