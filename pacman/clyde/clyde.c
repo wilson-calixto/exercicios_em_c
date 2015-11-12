@@ -21,17 +21,18 @@ int main ()
 }
 
 
-int distancia (int ghost[3], int pac[3])
+float distancia (int ghost[3], int pac[3])
 {
-    int a;
-    a = sqrt (((ghost[0]-pac[0])^2) + ((ghost[1]-pac[1])^2));
+    float a;
+	a = sqrt((pow((ghost[0]-pac[0]),2)) + (pow((ghost[1]-pac[1]),2)));
 
     return a;
 }
 
 int clayde(int ghost[3],int pac[3])
 {
-	int t[2], d;
+	int t[2];
+	float d;
 	d= distancia(ghost,pca);
 	if (d > 8)
 	{
