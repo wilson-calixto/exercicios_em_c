@@ -17,9 +17,7 @@ int input_x( void ) {
 
 	int x;
 
-	//printf( "Digite a coordenada x: " );
 	scanf( "%d", &x );
-	//puts( "\n" );
 
 	return x;
 }
@@ -28,16 +26,16 @@ int input_y( void ) {
 
 	int y;
 
-	//printf( "Digite a coordenada y: " );
 	scanf( "%d", &y );
-	//puts( "\n" );
 
 	return y;
 }
 
 void fill( int maze[R][C], int character, int x, int y ) {
 	
-	maze[x][y] = character;
+	if( maze[x][y] != 0 )
+		maze[x][y] = character;
+	
 }
 			
 void print( int maze[R][C] ) {
