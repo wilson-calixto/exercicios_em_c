@@ -42,11 +42,12 @@ int search_y( char maze[][C], char character ) {
 void move_blinky( int maze[R][C], int x, int y ) {
 
 	int i;
-	
+	printf( "%d %d\n", x, y );	
 	for( i = y + 1; maze[x][i] != 7; i++ ) {
-		printf( "%d %d\n", i, x );
+
+		printf( "%d %d\n", x, i );
+		fill( maze, -7, x, i );
 	}
-	fill( maze, -7, x, i );
 
 	puts( "\n" );
 }
