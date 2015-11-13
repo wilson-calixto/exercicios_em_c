@@ -47,8 +47,8 @@ OBS: PREFERI FAZER O VETOR TARGET COMO GLOBAL PARA FACILITAR A FORMA DE DEBUGAR 
 int target[2];
 int main ( int argc, const char *argv[] )
 {
-
-input( maze[]C] );
+int maze[R][C];
+input( maze[][] );
 print(maze[][] );
   return 0;
 }
