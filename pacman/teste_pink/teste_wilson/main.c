@@ -48,6 +48,7 @@ int target[2];
 int main ( int argc, const char *argv[] )
 {
 
- 
+input( maze[]C] );
+print(maze[][] );
   return 0;
 }
