@@ -33,7 +33,7 @@ partpackman.o: pink/partpackman.c
 	gcc -c pink/partpackman.c
 
 
-maze.o: pink/i_o.c
+i_o.o: pink/i_o.c
 	gcc -c pink/i_o.c
 
 clear :
