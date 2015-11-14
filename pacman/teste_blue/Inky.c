@@ -51,6 +51,14 @@ void verifica_target(int target[2], char maze[23][30])
         {
                target[COLUNA]=29;
         }
+        if (target[LINHA]<1)
+        {
+        	target[LINHA]=1;
+        }
+        if (target[COLUNA]<1)
+        {
+        	target[COLUNA]=1;
+        }
         
 }        
 
