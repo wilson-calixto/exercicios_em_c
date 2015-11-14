@@ -81,7 +81,7 @@ void marca_target(char maze[23][30], int target[2])
         maze[target[LINHA]][target[COLUNA]]='T';
 }
 
-void marca_ghost(char maze[23][30], int *ghost)
+void marca_ghost(char maze[23][30], int ghost[3])
 {
         maze[ghost[LINHA]][ghost[COLUNA]]='B';
 }
