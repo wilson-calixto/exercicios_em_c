@@ -123,6 +123,7 @@ void zera_vetor(int vet[4])
         }
 }
 
+//nos if's de dentro da funcao acrescentei que a posicao deve ser != de 0 e != de B 
 void anda(int ghost[3], char maze[23][30], int target[2])
 {
         int dist[4], i=0, j=0, menor=0, vet[8];
