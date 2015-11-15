@@ -26,6 +26,10 @@
 //
 //
 
+#include"validate_position.h"
+#include"change_path.h"
+
+
 void walking(char maze[23][30], int ghost[3], int target[2])
 {
 	int x,y; 

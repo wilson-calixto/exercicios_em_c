@@ -2,6 +2,12 @@
 #include "maze.h"
 #include "move.h"
 #include "math.h"
+#include "validate_position.h"
+#include "walking.h"
+#include "clear_screen.h"
+#include "change_path.h"
+
+
 
 #define BLINK 1
 #define PINK 2
@@ -9,7 +15,6 @@
 #define CLYDE 4
 #define C 30
 #define L 23
-
 
 // Este MAIN foi criado para testar a função walking
 
