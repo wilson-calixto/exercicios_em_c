@@ -108,6 +108,7 @@ void marca_red(char maze[23][30], int red[3])
         maze[red[LINHA]][red[COLUNA]]='R';
 }
 
+//acrescentei o marca_pacman
 void marca_pacman(char maze[23][30], int pacman[3])
 {
 	maze[pacman[LINHA]][pacman[COLUNA]]='P';
