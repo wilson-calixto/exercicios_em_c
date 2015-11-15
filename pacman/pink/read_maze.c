@@ -4,9 +4,6 @@
 
 
 
-
-
-
 void read_maze (char maze[L][C])
 {
 	int aux,i,j;
