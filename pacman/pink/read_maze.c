@@ -12,7 +12,7 @@ void read_maze (char maze[L][C])
 		for( j = 0; j < C; j++ ) 
 		{
 			scanf("%d",&aux );
-			printf("aux: %d",aux);
+			
 			if(aux==1)
 			{
 				maze[i][j]=' ';
