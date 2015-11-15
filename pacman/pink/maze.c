@@ -2,6 +2,7 @@
 #define C 30
 #define L 23
 
+
 void print_maze (char maze[L][C])
 {
   int i, j,k;
