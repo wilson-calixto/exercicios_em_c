@@ -10,24 +10,39 @@
 #define C 30
 #define L 23
 
+
+// Este MAIN foi criado para testar a função walking
+
 		/* ----------  end of function main  ---------- */
 
 int main (int argc, char *argv[])
 {
   int ghost[3],pacman[3], number_ghost;
-  int maze[L][C];
-  int i,j;
+  char maze[L][C];
+  char ch;
+  int i=0,j=0;
   FILE *fp;
   fp = fopen("maze.txt","r" );
-  for (i=0;i<L;i++)
-  {
-	  for (j=0;j<C;j++)
-	  {
-		  fscanf(fp, "%d", &maze[i][j]);
-	  }
-  }
+  if(fp == NULL)
+	printf("Erro, nao foi possivel abrir o arquivo\n");
+  else
+	while( (ch=fgetc(fp))!= EOF )
+	{
+		if (ch != '\n')
+		{
+			maze[i][j] = ch;
+			j++;
+		}else
+		{
+			j = 0;
+			i++;
+		}
+	}		
   fclose(fp);
+	
   clear_screen();
+  print_maze(maze);
+ 
   printf ( "\t>>> GHOSTS <<<\n" );
   printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
   do
@@ -48,7 +63,7 @@ int main (int argc, char *argv[])
         scanf ("%d", &ghost[2]);
 	clear_screen();
   }while (!validate_position(maze,ghost[0],ghost[1]) || ghost[2] > 4 ||ghost[2] < 1);                                           //mudar os parametros
-	position (maze,ghost,3);
+	position (maze,ghost,'3');
     
   do 
   {
@@ -66,8 +81,7 @@ int main (int argc, char *argv[])
         printf ( "Direção do Pac-mam: 1-Down , 2-Right, 3-Up, 4-Left =  " );
         scanf ("%d",&pacman[2]);
   }while( pacman[2]>4 ||pacman[2]<1);
-  position (maze,pacman,5 );//mudar os parametros
-  clear_screen();
+  position (maze,pacman,'5' );//mudar os parametros
   print_maze (maze);
   walking(maze,ghost,pacman);//mudar os parametros
   print_maze (maze);

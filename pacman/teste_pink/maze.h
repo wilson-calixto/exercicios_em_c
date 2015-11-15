@@ -1,4 +1,4 @@
 #define L 23
 #define C 30
 
-void print_maze (int maze[L][C]);
+void print_maze (char maze[L][C]);
