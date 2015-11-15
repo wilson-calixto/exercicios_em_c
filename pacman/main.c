@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "pink/maze.h"
+#include "pink/read_maze.h"
 #include "pink/move.h"
 #include "pink/i_o.h"
 #include "pink/validate_position.h"
@@ -28,33 +29,8 @@ int main ( int argc, const char *argv[] )
   int caminho[30][2];
   char maze[L][C];     
 
-	
+	read_maze(maze);	
 
-	for( i = 0; i < L; i++ ) 
-	{
-		for( j = 0; j < C; j++ ) 
-		{
-			scanf("%d",&aux );
-			printf("aux: %d",aux);
-			if(aux==1)
-			{
-				maze[i][j]=' ';
-			}
-		    if(aux==0)
-			{
-				maze[i][j]='0';
-			}
-			if(aux==7)
-			{
-				maze[i][j]='7';
-			}
-			if(aux==6)
-			{
-				maze[i][j]='6';
-			}			
-						
-		}
-	}
   out(9,0);//funcao esta funcionando ps trocar as entradas e saidas para o_i menu
   
   print_maze (maze);   

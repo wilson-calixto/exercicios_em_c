@@ -1,13 +1,16 @@
 all: main
 /*wilson calisto: falta concertar o erro do maze.o que nao funciona e ler a matriz do txt */
-main: main.o maze.o validate_position.o clear_screen.o move.o def_target_pink.o i_o.o partvariavel.o partghost.o partpackman.o
-	gcc main.o maze.o validate_position.o clear_screen.o move.o def_target_pink.o i_o.o partvariavel.o partghost.o partpackman.o -o main
+main: main.o maze.o read_maze.o validate_position.o clear_screen.o move.o def_target_pink.o i_o.o partvariavel.o partghost.o partpackman.o
+	gcc main.o maze.o read_maze.o validate_position.o clear_screen.o move.o def_target_pink.o i_o.o partvariavel.o partghost.o partpackman.o -o main
 
 main.o: main.c
 	gcc -c main.c
 
 maze.o: pink/maze.c
 	gcc -c pink/maze.c
+
+read_maze.o: pink/read_maze.c
+	gcc -c pink/read_maze.c
 
 validate_position.o: pink/validate_position.c
 	gcc -c pink/validate_position.c
