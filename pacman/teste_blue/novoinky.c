@@ -14,6 +14,8 @@
 #define LINHA 0
 #define COLUNA 1
 
+//tirei essa função, usei o proprio vetor pacman[3] p variar linhas e coluna
+
 /*void *operacao_dist(int pacman[3] , int dir[2], int x, int y)
 {
 	int linha, coluna;
@@ -27,6 +29,7 @@
 }
 */
 
+//usei o vetor pacman[3] p variar aqui
 void dist (int pacman[3])
 {
 	int posicao_pacman;
@@ -54,7 +57,7 @@ void dist (int pacman[3])
 	//return dir;
 }
 
-
+//não usei essa tbm, acho que tem que colocar as excessoes de quando cai numa posicao invalida aqui, p depois usar ela em casos mais dificeis
 void verifica_target(int target[2], char maze[23][30])
 {
         if (target[LINHA]>22)
