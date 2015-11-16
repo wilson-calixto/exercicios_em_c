@@ -2,7 +2,6 @@
 #include "maze.h"
 #include "move.h"
 #include "math.h"
-
 #define BLINK 1
 #define PINK 2
 #define INKY 3
@@ -56,8 +55,8 @@ int main (int argc, char *argv[])
 				position(maze,target,'8');
 				break;
 			case 4:
-				target = clyde(ghost,pacman);
-				position(maze,target,'8');
+			//	target = clyde(ghost,pacman);
+			//	position(maze,target,'8');
 		        	break;
 
 		}	

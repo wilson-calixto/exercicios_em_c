@@ -44,25 +44,27 @@ int main (int argc, char *argv[])
 	        switch (number_ghost)
 		{
 			case 1:
-				void target_blinky(maze,ghost,pacman,target);
+				//void blink(maze,ghost,pacman,target);
 				position(maze,pacman,'8');
+				target[0] = pacman[0];
+				target[1] = pacman[1];
 				break;
-			case 2:i
-				void def_target_pink(maze,ghost,pacman,target);
-				position(maze,target,'T');
+			case 2:
+			//	void pink(maze,ghost,pacman,target);
+			//	position(maze,target,'T');
 				break;
 			case 3:
-
-				void inky(red,pacman,target);
+				ink(red,pacman,target);
 				position(maze,target,'8');
 				break;
 			case 4:
-				int clayde(maze,ghost,pacman,target)
+			//	void clyde(maze,ghost,pacman,target);
 			//	position(maze,target,'8');
 		        	break;
 
 		}	
- 	 	walking(maze,ghost,target);//mudar os parametros
+ 	 	
+		walking(maze,ghost,target);//mudar os parametros
   		print_maze (maze);
   	}
   }

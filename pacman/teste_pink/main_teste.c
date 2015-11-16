@@ -46,14 +46,16 @@ int main (int argc, char *argv[])
 			case 1:
 				//void blink(maze,ghost,pacman,target);
 				position(maze,pacman,'8');
+				target[0] = pacman[0];
+				target[1] = pacman[1];
 				break;
 			case 2:
 			//	void pink(maze,ghost,pacman,target);
 			//	position(maze,target,'T');
 				break;
 			case 3:
-			//	void ink(red,pacman,target);
-			//	position(maze,target,'8');
+				ink(red,pacman,target);
+				position(maze,target,'8');
 				break;
 			case 4:
 			//	void clyde(maze,ghost,pacman,target);
@@ -61,7 +63,8 @@ int main (int argc, char *argv[])
 		        	break;
 
 		}	
- 	 	walking(maze,ghost,target);//mudar os parametros
+ 	 	
+		walking(maze,ghost,target);//mudar os parametros
   		print_maze (maze);
   	}
   }

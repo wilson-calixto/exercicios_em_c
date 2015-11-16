@@ -1,46 +1,46 @@
-all: main
-/*wilson calisto: falta concertar o erro do maze.o que nao funciona e ler a matriz do txt */
-main: main.o maze.o read_maze.o validate_position.o clear_screen.o move.o def_target_pink.o i_o.o partvariavel.o partghost.o partpackman.o
-	gcc main.o maze.o read_maze.o validate_position.o clear_screen.o move.o def_target_pink.o i_o.o partvariavel.o partghost.o partpackman.o -o main
+all: rm  main
+
+main: main.o maze.o validate_position.o clear_screen.o move.o  walking.o change_path.o score.o read_player.o load_maze.o blinky.o clyde.o pink.o inky.o
+	gcc blinky.o clyde.o pink.o inky.o  main.o maze.o validate_position.o clear_screen.o move.o walking.o change_path.o  score.o read_player.o load_maze.o -o main -lm
 
 main.o: main.c
-	gcc -c main.c
+	gcc -c main.c -g
+load_maze.o: load_maze.c
+	gcc -c load_maze.c -g 
+read_player.o: read_player.c
+	gcc -c read_player.c -g
+change_path.o: change_path.c
+	gcc -c change_path.c -g
+score.o: score.c
+	gcc -c score.c -g  
+maze.o: maze.c
+	gcc -c maze.c -g
+walking.o:walking.c
+	gcc -c walking.c -g 
 
-maze.o: pink/maze.c
-	gcc -c pink/maze.c
+validate_position.o: validate_position.c
+	gcc -c validate_position.c -g
 
-read_maze.o: pink/read_maze.c
-	gcc -c pink/read_maze.c
+clear_screen.o: clear_screen.c
+	gcc -c clear_screen.c -g 
 
-validate_position.o: pink/validate_position.c
-	gcc -c pink/validate_position.c
+move.o: move.c
+	gcc -c move.c -g 
 
-clear_screen.o: pink/clear_screen.c
-	gcc -c pink/clear_screen.c
+def_target.o: def_target.c
+	gcc -c def_target.c -g 
 
-move.o: pink/move.c
-	gcc -c pink/move.c
+pink.o: pink.c
+	gcc -c pink.c -g
+inky.o: inky.c
+	gcc -c inky.c -g
+blinky.o: blinky.c
+	gcc -c blinky.c -g
+clyde.o: clyde.c
+	gcc -c clyde.c -g
 
-def_target_pink.o: pink/def_target_pink.c
-	gcc -c pink/def_target_pink.c
-	
-partvariavel.o: pink/partvariavel.c
-	gcc -c pink/partvariavel.c
-
-
-
-partghost.o: pink/partghost.c
-	gcc -c pink/partghost.c
-
-partpackman.o: pink/partpackman.c
-	gcc -c pink/partpackman.c
-
-
-i_o.o: pink/i_o.c
-	gcc -c pink/i_o.c
-
-clear :
+clear:
 	rm -rf *.o
 
-mrproper:
+rm:	clear
 	rm -rf main
