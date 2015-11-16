@@ -1,4 +1,5 @@
 #include "calcula_target.h"
+#include "dist2.h"
 #include <stdio.h>
 
 void inky(int pacman[3], int target[2])
@@ -11,7 +12,7 @@ void inky(int pacman[3], int target[2])
        printf("Insira a direção do Ghost Red: ");
        scanf("%d", &red[2]);
 
-       dist(pacman);
+       dist2(pacman);
        calcula_target(red, pacman, target);                         
 }
 
