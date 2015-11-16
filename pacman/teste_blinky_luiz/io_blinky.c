@@ -50,18 +50,31 @@ void print( int maze[R][C] ) {
 				case 0: 
 					putchar( '=' );
 					break;
+
 				case 1: 
 					putchar( ' ' );
 					break;
+
 				case 7: 
 					putchar( ' ' );
 					break;
+
+				case -7:
+					putchar( 'B' );
+					break;
+
 				case -10: 
 					putchar( 'P' );
 					break;
+				
+				case -5:
+					putchar( 'X' );
+					break;
+
 			}
 		}
 		printf( "\n" );
 	}
 	puts( "\n" );
 }
+

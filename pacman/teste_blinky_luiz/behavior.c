@@ -15,36 +15,14 @@ int distance( int pac_x, int pac_y, int blinky_x, int blinky_y ) {
 	return d;
 }
 
-int search_x( char maze[][C], char character ) {
-
-	int i, j;
-
-	for( i = 0; i < R; i++ ) {
-		for( j = 0; j < C; j++ ) {
-			if( maze[i][j] == character )
-				return i;
-		}
-	}
-}
-
-int search_y( char maze[][C], char character ) {
-
-	int i, j;
-
-	for( i = 0; i < R; i++ ) {
-		for( j = 0; j < C; j++ ) {
-			if( maze[i][j] == character )
-				return j;
-		}
-	}
-}
-
 void move_blinky( int maze[R][C], int pac_x, int pac_y, int blinky_x, int blinky_y ) {
 
 	float right, left, up, down;
 
 	fill( maze, -10, pac_x, pac_y );
 	fill( maze, -7, blinky_x, blinky_y );
+
+	print( maze );
 
 	printf( "%d %d\n", pac_x, pac_y );
 	printf( "%d %d\n", blinky_x, blinky_y );
@@ -60,19 +38,32 @@ void move_blinky( int maze[R][C], int pac_x, int pac_y, int blinky_x, int blinky
 		if( maze[ blinky_x ][ blinky_y + 1 ] != 0 && right < left && right < up && right < down )
 			blinky_y++; 
 		
-		if( maze[ blinky_x ][ blinky_y - 1 ] != 0 && left < right && left < up && left < down )
+		else if( maze[ blinky_x ][ blinky_y - 1 ] != 0 && left < right && left < up && left < down )
 			blinky_y--;
 
-		if( maze[ blinky_x - 1 ][ blinky_y ] != 0 && up < right && up < left && up < down )
+		else if( maze[ blinky_x - 1 ][ blinky_y ] != 0 && up < right && up < left && up < down )
 			blinky_x--;
 
-		if( maze[ blinky_x + 1 ][ blinky_y ] != 0 && down < right && down < left && down < up )
+		else if( maze[ blinky_x + 1 ][ blinky_y ] != 0 && down < right && down < left && down < up )
 			blinky_x++;
 		
+		else if( maze[ blinky_x - 1][ blinky_y ] != 0 && up == right && up == left && up == down )
+			blinky_x--;
+  		
+		else if( maze[ blinky_x ][ blinky_y - 1 ] != 0 && left == right && left == down )
+			blinky_y--;
+
+		else if( maze[ blinky_x + 1 ][ blinky_y ] != 0 && down == right )
+			blinky_x++;
+
+		else
+			blinky_y++; 
+
 		if( maze[ blinky_x ][ blinky_y ] != -10 )
 			fill( maze, -7, blinky_x, blinky_y );
 
 		}
 	
+	fill( maze, -5, pac_x, pac_y ); 
 	puts( "\n" );
 }
