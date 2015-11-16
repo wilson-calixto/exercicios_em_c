@@ -1,6 +1,6 @@
 #include "io.c"
 #include "clyde.c"
-#include "walk.c"
+//#include "walk.c"
 
 #define L 0
 #define C 1
@@ -19,13 +19,9 @@
 
 int main()
 {
-	char **maze = malloc(sizeof(char)*23);
+	char maze[23][30];
 	int i,j;
-	
-	for (i = 0; i < 23; i++)
-	{
-		maze[i] = (char *) malloc(sizeof(char)*30);
-	}
+
 	
 	import_maze(maze);
 	
@@ -81,7 +77,7 @@ int main()
 	
 	clear_screen();
 	
-	maze = walk(maze, ghost, target);
+	//maze = walk(maze, ghost, target);
 	
 	print_maze(maze);
 	
