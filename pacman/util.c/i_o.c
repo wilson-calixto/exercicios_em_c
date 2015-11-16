@@ -34,7 +34,7 @@ void out(int id, int extra)
 			break;
 		case 10: printf ( "Qual a posição do Pacman? (x,y)\n" );
 			break;
-		case 11:  ;
+		case 11: printf ( "Qual numero do Ghost");
 			break;
 		case 12:  ;
 			break
