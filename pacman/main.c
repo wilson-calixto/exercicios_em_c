@@ -49,8 +49,8 @@ int main ( int argc, const char *argv[] )
  printf("ghost[0]==%d\n", ghost[0]);
  printf("ghost[1]==%d\n", ghost[1]);
  printf("ghost[2]==%d\n", ghost[2]);  
-  position (maze,ghost,'G');
-  position (maze,pacman,'P' );//mudar os parametros
+ position (maze,ghost,'G');
+ position (maze,pacman,'P' );//mudar os parametros
  // clear_screen();
 
  if (ghost_number == BLINK)
@@ -77,10 +77,9 @@ int main ( int argc, const char *argv[] )
   printf ("target j: %d \n",target[1]);
   
   print_maze (maze);
-
+  walking(maze,ghost,pacman);
   
-                        
-  //walking(maze,ghost,pacman,caminho);
+
  
   return 0;
 }
