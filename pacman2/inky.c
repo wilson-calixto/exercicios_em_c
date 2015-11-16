@@ -1,4 +1,6 @@
 #include "calcula_target.h"
+#include <stdio.h>
+
 void inky(int pacman[3], int target[2])
 {
        int red[3];
