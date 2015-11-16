@@ -47,7 +47,7 @@ int main (int argc, char *argv[])
 	
   clear_screen();
   
-  printf ( "\t>>> BLINKY GHOST <<<\n" );
+  printf ( "\t>>> BLINKY GHOST <<<\n \n" );
 
   do
   {
