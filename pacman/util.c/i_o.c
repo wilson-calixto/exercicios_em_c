@@ -40,6 +40,8 @@ void out(int id, int extra)
 		  	 printf ( "\n" );
 			 printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
 			 printf ( "\n" );
-			break
+			break;
+		case 13: printf("Direção do Ghost: \n");
+			break;
          }
 }
