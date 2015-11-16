@@ -1,7 +1,7 @@
 #include "calcula_target.h"
 void inky(int pacman[3], int target[2])
 {
-       int red[3];
+       int red[2];
        printf("Insira a linha do Ghost Red: ");
        scanf("%d", &red[0]);
        printf("Insira a coluna do Ghost Red: ");
