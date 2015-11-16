@@ -33,7 +33,7 @@ int clayde(int ghost[3],int pac[3])
 {
 	int t[2];
 	float d;
-	d= distancia(ghost,pca);
+	d= distancia(ghost,pac);
 	if (d > 8)
 	{
 		t[0]= pac[0];
@@ -44,7 +44,7 @@ int clayde(int ghost[3],int pac[3])
 		t[0]= 22;
 		t[1]= 0;
 	}
-	return t;
+	//return t;
 }
 
 
