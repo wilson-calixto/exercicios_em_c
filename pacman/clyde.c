@@ -12,28 +12,23 @@
  *      Lucas Frota
  */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
-int main () 
+int dist (int ghost[3], int pac[3])
 {
-
-}
-
-
-float distancia (int ghost[3], int pac[3])
-{
-    float a;
+    int a;
 	a = sqrt((pow((ghost[0]-pac[0]),2)) + (pow((ghost[1]-pac[1]),2)));
 
     return a;
 }
 
-int clayde(int ghost[3],int pac[3])
+int * clyde(int ghost[3],int pac[3])
 {
-	int t[2];
-	float d;
-	d= distancia(ghost,pac);
+	int *t = (int *) malloc(sizeof(int)*2);
+	int d;
+	d = dist(ghost, pac);
 	if (d > 8)
 	{
 		t[0]= pac[0];
@@ -44,7 +39,10 @@ int clayde(int ghost[3],int pac[3])
 		t[0]= 22;
 		t[1]= 0;
 	}
-	//return t;
+	
+	//maze[t[0]][t[1]] = 'T';
+	
+	return t;
 }
 
 
