@@ -2,7 +2,7 @@
 #include "dist2.h"
 #include <stdio.h>
 
-void inky(int pacman[3], int target[2])
+void inky(int pacman[3], int target[2], char maze[23][30])
 {
        int red[3];
        printf("Insira a linha do Ghost Red: \n");
