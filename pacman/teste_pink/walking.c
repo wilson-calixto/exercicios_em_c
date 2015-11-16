@@ -54,12 +54,12 @@ void walking(char maze[23][30], int ghost[3], int target[2])
 		{
 			ghost[0] = y;      
 			ghost[1] = x;
-			if (maze[y][x] != '7' &&  maze[y][x] != '5')
+			if (maze[y][x] != '7' &&  maze[y][x] != '5' && maze[y][x] == '8')
 			{
 				maze[y][x]  = '3'; 
 			}else
 			{
-				if (maze[y][x] != '5')
+				if (maze[y][x] != '8')
 				{
 					change_path(maze,ghost,target); 
 	//neste momenro o ghost será atualizado com o melhor caminho da bifurcação

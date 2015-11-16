@@ -48,7 +48,12 @@ void print_maze (char maze[L][C])
 	      case '5':
 		      printf(" P "); 
 		      break;
-
+	      case '4':
+		      printf(" R ");
+		      break;
+	      case '8':
+		      printf(" T ");
+		      break;
 	      case ' ':
 		      printf("   ");
 		      break;

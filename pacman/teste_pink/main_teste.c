@@ -17,30 +17,10 @@
 
 int main (int argc, char *argv[])
 {
-  int ghost[3],pacman[3], number_ghost=0;
+  int ghost[3],pacman[3],target[2], number_ghost=0;
   char maze[L][C];
   char ch,path[20] = "maze.txt";
   int i=0,j=0;
- /* 
-  FILE *fp;
-  fp = fopen("maze.txt","r" );
-  if(fp == NULL)
-	printf("Erro, nao foi possivel abrir o arquivo\n");
-  else
-	while( (ch=fgetc(fp))!= EOF )
-	{
-		if (ch != '\n')
-		{
-			maze[i][j] = ch;
-			j++;
-		}else
-		{
-			j = 0;
-			i++;
-		}
-	}		
-  fclose(fp);
-*/	
   while (number_ghost != 9)
   {
   	//clear_screen();
@@ -60,10 +40,28 @@ int main (int argc, char *argv[])
 		
   		print_maze(maze);
   		read_player(maze,ghost,'3'); 
-  
-  		read_player(maze,pacman,'5'); 
- 		 
- 	 	walking(maze,ghost,pacman);//mudar os parametros
+  		read_player(maze,pacman,'5');
+	        switch (number_ghost)
+		{
+			case 1:
+				//void blink(maze,ghost,pacman,target);
+				position(maze,pacman,'8');
+				break;
+			case 2:
+			//	void pink(maze,ghost,pacman,target);
+			//	position(maze,target,'T');
+				break;
+			case 3:
+			//	void ink(red,pacman,target);
+			//	position(maze,target,'8');
+				break;
+			case 4:
+			//	void clyde(maze,ghost,pacman,target);
+			//	position(maze,target,'8');
+		        	break;
+
+		}	
+ 	 	walking(maze,ghost,target);//mudar os parametros
   		print_maze (maze);
   	}
   }
