@@ -2,7 +2,7 @@
 #include "pink/maze.h"
 #include "pink/read_maze.h"
 #include "pink/move.h"
-
+#include "calcula_target.h"
 #include "pink/validate_position.h"
 #include "pink/def_target_pink.h"
 
