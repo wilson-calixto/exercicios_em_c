@@ -36,7 +36,10 @@ void out(int id, int extra)
 			break;
 		case 11: printf ( "Qual numero do Ghost");
 			break;
-		case 12:  ;
+		case 12: printf ( "\t>>> GHOSTS <<<\n" );
+		  	 printf ( "\n" );
+			 printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
+			 printf ( "\n" );
 			break
          }
 }
