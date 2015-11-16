@@ -20,3 +20,5 @@ int compara_score(int vetor_possibilidades[2],int x_pacman,int y_pacman )
           return x+y;
   }
 
+
+

@@ -1,48 +1,67 @@
 #include <stdio.h>
-#define R 19
-#define C 23
+#define R 23
+#define C 19
 
-int i, j;
+void input( int maze[R][C] ) {
 
-void input( char maze[R][C], int rows, int cols ) {
+	int i, j;
 
-	for( i = 0; i < rows; i++ ) {
-		for( j = 0; j < cols; j++ ) {
-			scanf( "%c", &maze[i][j] );
+	for( i = 0; i < R; i++ ) {
+		for( j = 0; j < C; j++ ) {
+			scanf( "%d", &maze[i][j] );
 		}
 	}
 }
 
-int input_x() {
+int input_x( void ) {
 
 	int x;
 
-	printf( "Digite a coordenada x: " );
 	scanf( "%d", &x );
 
 	return x;
 }
 
-int input_y() {
+int input_y( void ) {
 
 	int y;
 
-	printf( "Digite a coordenada y: " );
 	scanf( "%d", &y );
 
 	return y;
 }
 
-void fill( char maze[R][C], char character, int x, int y ) {
+void fill( int maze[R][C], int character, int x, int y ) {
 	
-	maze[x][y] = character;
+	if( maze[x][y] != 0 )
+		maze[x][y] = character;
+	
 }
 			
-void print( char maze[19][23], int rows, int cols ) {
+void print( int maze[R][C] ) {
 
-	for( i = 0; i < rows; i++ ) {
-		for( j = 0; j < cols; j++ ) {
-			printf( "%c", maze[i][j] );
+	int i, j;
+
+	for( i = 0; i < R; i++ ) {
+		for( j = 0; j < C; j++ ) {
+
+			switch( maze[i][j] ) {
+
+				case 0: 
+					putchar( '=' );
+					break;
+				case 1: 
+					putchar( ' ' );
+					break;
+				case 7: 
+					putchar( ' ' );
+					break;
+				case -10: 
+					putchar( 'P' );
+					break;
+			}
 		}
+		printf( "\n" );
 	}
+	puts( "\n" );
 }
