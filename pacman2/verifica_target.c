@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "calcula_target.h"
-#include "dist.h"
+#include "dist2.h"
 #include "maze.h"
 #include "inky.h"
 

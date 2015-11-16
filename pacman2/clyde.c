@@ -24,25 +24,23 @@ int dist (int ghost[3], int pac[3])
     return a;
 }
 
-int * clyde(int ghost[3],int pac[3])
+void  clyde(int ghost[3],int pac[3], int target[2])
 {
-	int *t = (int *) malloc(sizeof(int)*2);
 	int d;
 	d = dist(ghost, pac);
 	if (d > 8)
 	{
-		t[0]= pac[0];
-		t[1]= pac[1];
+		target[0]= pac[0];
+		target[1]= pac[1];
 	}
 	else
 	{
-		t[0]= 22;
-		t[1]= 0;
+		target[0]= 21;
+		target[1]= 1;
 	}
 	
 	//maze[t[0]][t[1]] = 'T';
 	
-	return t;
 }
 
 

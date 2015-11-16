@@ -51,12 +51,12 @@ int main (int argc, char *argv[])
 				position(maze,target,'8');
 				break;
 			case 3:
-				inky(pacman,target);
+				inky(pacman,target,maze);
 				position(maze,target,'8');
 				break;
 			case 4:
-			//	target = clyde(ghost,pacman);
-			//	position(maze,target,'8');
+				clyde(ghost,pacman,target);
+				position(maze,target,'8');
 		        	break;
 
 		}	
