@@ -5,7 +5,7 @@
 #include "../util.c/i_o.h"
 #define C 30
 #define L 23
-#define POSIÇÃO_GHOST 3
+#define POSICAO_GHOST 3
 #define SEM_PARAMETRO 0
 #define X 4
 #define Y 5
