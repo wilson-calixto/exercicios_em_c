@@ -6,7 +6,7 @@
 #include "walking.h"
 #include "clear_screen.h"
 #include "change_path.h"
-
+#include "target_blinky.h"
 
 
 #define BLINK 1
@@ -15,13 +15,6 @@
 #define CLYDE 4
 #define C 30
 #define L 23
-
-
-void target_blinky(int pacman[3], int target[2])
-{
-    target[0] = pacman[0];
-    target[1] = pacman[1];
-}
 
 // Este MAIN foi criado para testar a função walking
 
