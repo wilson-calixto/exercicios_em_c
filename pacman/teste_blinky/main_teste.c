@@ -16,13 +16,20 @@
 #define C 30
 #define L 23
 
+
+void target_blinky(int pacman[3], int target[2])
+{
+    target[0] = pacman[0];
+    target[1] = pacman[1];
+}
+
 // Este MAIN foi criado para testar a função walking
 
 		/* ----------  end of function main  ---------- */
 
 int main (int argc, char *argv[])
 {
-  int ghost[3],pacman[3], number_ghost;
+  int ghost[3],pacman[3], target[2];
   char maze[L][C];
   char ch;
   int i=0,j=0;
@@ -46,16 +53,9 @@ int main (int argc, char *argv[])
   fclose(fp);
 	
   clear_screen();
-  print_maze(maze);
- 
-  printf ( "\t>>> GHOSTS <<<\n" );
-  printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
-  do
-  {  	  
-  	  printf ( "Qual o numero do Ghost? = " );
-          scanf ("%d", &number_ghost);
-  }while(number_ghost > 4 || number_ghost < 1 );  
-  //number_ghost = 2;
+  
+  printf ( "\t>>> BLINKY GHOST <<<\n" );
+
   do
   {
   	print_maze(maze);
@@ -69,7 +69,7 @@ int main (int argc, char *argv[])
 	clear_screen();
   }while (!validate_position(maze,ghost[0],ghost[1]) || ghost[2] > 4 ||ghost[2] < 1);                                           //mudar os parametros
 	position (maze,ghost,'3');
-    
+
   do 
   {
 	clear_screen();
@@ -86,9 +86,11 @@ int main (int argc, char *argv[])
         printf ( "Direção do Pac-mam: 1-Down , 2-Right, 3-Up, 4-Left =  " );
         scanf ("%d",&pacman[2]);
   }while( pacman[2]>4 ||pacman[2]<1);
+
+  target_blinky(pacman,target);
   position (maze,pacman,'5' );//mudar os parametros
   print_maze (maze);
-  walking(maze,ghost,pacman);//mudar os parametros
+  walking(maze,ghost,target);//mudar os parametros
   print_maze (maze);
   
   return 0;
