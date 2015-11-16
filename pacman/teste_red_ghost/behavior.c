@@ -34,26 +34,23 @@ void move_blinky( int maze[R][C], int pac_x, int pac_y, int blinky_x, int blinky
 		if( maze[ blinky_x ][ blinky_y + 1 ] != 0 && right < left && right < up && right < down )
 			blinky_y++; 
 		
-		else if( maze[ blinky_x ][ blinky_y - 1 ] != 0 && left < right && left < up && left < down )
+		if( maze[ blinky_x ][ blinky_y - 1 ] != 0 && left < right && left < up && left < down )
 			blinky_y--;
 
-		else if( maze[ blinky_x - 1 ][ blinky_y ] != 0 && up < right && up < left && up < down )
+		if( maze[ blinky_x - 1 ][ blinky_y ] != 0 && up < right && up < left && up < down )
 			blinky_x--;
 
-		else if( maze[ blinky_x + 1 ][ blinky_y ] != 0 && down < right && down < left && down < up )
+		if( maze[ blinky_x + 1 ][ blinky_y ] != 0 && down < right && down < left && down < up )
 			blinky_x++;
 		
-		else if( maze[ blinky_x - 1][ blinky_y ] != 0 && up == right && up == left && up == down )
+		if( maze[ blinky_x - 1][ blinky_y ] != 0 && up == right && up == left && up == down )
 			blinky_x--;
   		
-		else if( maze[ blinky_x ][ blinky_y - 1 ] != 0 && left == right && left == down )
+		if( maze[ blinky_x ][ blinky_y - 1 ] != 0 && left == right && left == down )
 			blinky_y--;
 
-		else if( maze[ blinky_x + 1 ][ blinky_y ] != 0 && down == right )
+		if( maze[ blinky_x + 1 ][ blinky_y ] != 0 && down == right )
 			blinky_x++;
-
-		else
-			blinky_y++; 
 
 		if( maze[ blinky_x ][ blinky_y ] != -10 )
 			fill( maze, -7, blinky_x, blinky_y );
