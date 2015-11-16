@@ -5,16 +5,17 @@
 #include "../util.c/i_o.h"
 #define C 30
 #define L 23
-#define POSIÇÃO_GHOST 3
+#define POSICAO_GHOST 3
 #define SEM_PARAMETRO 0
 #define X 4
 #define Y 5
+#define DIRECAO_GHOST 13
 
 void partghost (int *ghost,char maze[L][C])
 {
   	do
 	{  	  
-		out(POSIÇÃO_GHOST,SEM_PARAMETRO);
+		out(DIRECAO_GHOST,SEM_PARAMETRO);
 		in(ghost[2]);
   	}while(ghost[2]>4 ||ghost[2]<1);
   	//ghost_number = 2;

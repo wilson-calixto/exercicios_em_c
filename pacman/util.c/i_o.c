@@ -3,7 +3,7 @@
 int in(int entrada)
 {
 
-        scanf("&d",entrada);
+        scanf("&d",&entrada);
 
         return entrada;
 }
@@ -18,7 +18,7 @@ void out(int id, int extra)
                         break;
                 case 2: printf("\n");
                         break;
-                case 3: printf("Qual a posição do GHOST? (x,y)\n");
+                case 3: printf("Qual a posição do GHOST?\n");
                         break;
                 case 4: printf("x: ");
                         break;
@@ -30,5 +30,18 @@ void out(int id, int extra)
                         break;
                 case 8: printf("%d  ", extra++);        
                         break;         
+		case 9: printf ( "Direção do Pac-mam: " );
+			break;
+		case 10: printf ( "Qual a posição do Pacman? (x,y)\n" );
+			break;
+		case 11: printf ( "Qual numero do Ghost");
+			break;
+		case 12: printf ( "\t>>> GHOSTS <<<\n" );
+		  	 printf ( "\n" );
+			 printf ( "1.BLINK  2.PINK  3.INKY  4.CLYDE\n" );
+			 printf ( "\n" );
+			break;
+		case 13: printf("Direção do Ghost: \n");
+			break;
          }
 }

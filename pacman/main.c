@@ -2,14 +2,16 @@
 #include "pink/maze.h"
 #include "pink/read_maze.h"
 #include "pink/move.h"
-#include "pink/i_o.h"
+
 #include "pink/validate_position.h"
 #include "pink/def_target_pink.h"
 
 #include "pink/partvariavel.h"
 #include "pink/partghost.h"
 #include "pink/partpackman.h"
+#include "util.c/i_o.h"
 
+#define MENU 12
 #define BLINK 1
 #define PINK 2
 #define INKY 3
@@ -31,7 +33,7 @@ int main ( int argc, const char *argv[] )
 
 	read_maze(maze);	
 
-  out(9,0);//funcao esta funcionando ps trocar as entradas e saidas para o_i menu
+  out(MENU,0);//funcao esta funcionando ps trocar as entradas e saidas para o_i menu
   
   print_maze (maze);   
   
