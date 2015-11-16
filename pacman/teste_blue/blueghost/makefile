@@ -1,7 +1,7 @@
 all: rm  inky
 
-inky: inky.o maze.o validate_position.o clear_screen.o move.o  walking.o change_path.o score.o dist.o
-	gcc inky.o maze.o validate_position.o clear_screen.o move.o walking.o change_path.o  score.o dist.o  -o inky -lm
+inky: inky.o maze.o validate_position.o clear_screen.o move.o  walking.o change_path.o score.o dist.o calcula_target.o
+	gcc inky.o maze.o validate_position.o clear_screen.o move.o walking.o change_path.o  score.o dist.o calcula_target.o  -o inky -lm
 
 inky.o: inky.c
 	gcc -c inky.c -g
@@ -24,6 +24,10 @@ clear_screen.o: clear_screen.c
 move.o: move.c
 	gcc -c move.c -g
 	
+calcula_target.o: calcula_target.c
+	gcc -c calcula_target.c -g
+
+
 dist.o: dist.c
 	gcc -c dist.c -g 
 
