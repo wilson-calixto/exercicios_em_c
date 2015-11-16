@@ -14,6 +14,8 @@ void inky(int pacman[3], int target[2])
 
        dist2(pacman);
        calcula_target(red, pacman, target);                         
+       verifica_target(maze, target);
+       
 }
 
 
