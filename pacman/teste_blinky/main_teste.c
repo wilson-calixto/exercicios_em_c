@@ -16,10 +16,6 @@
 #define C 30
 #define L 23
 
-// Este MAIN foi criado para testar a função walking
-
-		/* ----------  end of function main  ---------- */
-
 int main (int argc, char *argv[])
 {
   int ghost[3],pacman[3], target[2];
@@ -60,7 +56,7 @@ int main (int argc, char *argv[])
 	printf ( "Direção do ghost = 1-Down , 2-Right, 3-Up, 4-Left = " );
         scanf ("%d", &ghost[2]);
 	clear_screen();
-  }while (!validate_position(maze,ghost[0],ghost[1]) || ghost[2] > 4 ||ghost[2] < 1);                                           //mudar os parametros
+  }while (!validate_position(maze,ghost[0],ghost[1]) || ghost[2] > 4 ||ghost[2] < 1);                                           
 	position (maze,ghost,'3');
 
   do 
@@ -72,8 +68,7 @@ int main (int argc, char *argv[])
   	scanf ( "%d", &pacman[0]); // referente a coluna - ghost
   	printf ( "y: " );
   	scanf ( "%d", &pacman[1]); // referente a linha - ghost
-  }while (!validate_position(maze,pacman[0],pacman[1]));                          //mudar os parametros
-  
+  }while (!validate_position(maze,pacman[0],pacman[1]));                         
   do
   {  	
         printf ( "Direção do Pac-mam: 1-Down , 2-Right, 3-Up, 4-Left =  " );

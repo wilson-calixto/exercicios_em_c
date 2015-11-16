@@ -35,6 +35,4 @@ void out(int id, int extra)
 			break;   
          }
 }
-/*
-printf ("aqui :%d\n\n\n",target[0]);
-printf ("aqui %d\n",target[1]);*/
+

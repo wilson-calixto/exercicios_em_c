@@ -70,4 +70,4 @@ void change_path( char maze[23][30],int ghost[3], int target[2] )
 	ghost[1] = changes[menor_indice][1];
 	ghost[2] = changes[menor_indice][2];
 
-}				/* ----------  end of function main  ---------- */
+}				
