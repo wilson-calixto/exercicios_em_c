@@ -20,8 +20,8 @@ void pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
   copia[2]=ghost[2];
   if (d == UP) // se a direção to pacman for para cima valida 4 "casas" para cima
   {
-    copia[0]-=TARGET;
-    result = validate_position (maze,copia);// falta terminar de adaptar de 2 variaveis para um vetor
+    copia[1]-=TARGET;
+    result = validate_position (maze,ghost[0],copia[1]);// falta terminar de adaptar de 2 variaveis para um vetor
     if (result == 1)
     {
       target[0]=i-TARGET;
@@ -32,8 +32,8 @@ void pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
   }
   else if (d == RIGHT)
   {
-    copia[1]+=TARGET;
-    result = validate_position (maze,copia);
+    copia[0]+=TARGET;
+    result = validate_position (maze,ghost[0],copia[1]);
     if (result == 1)
     {
       target[0]=i;
@@ -44,8 +44,8 @@ void pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
   }
   else if (d == DOWN)
   {
-    copia[0]+=TARGET;
-    result = validate_position (maze,copia);
+    copia[1]+=TARGET;
+    result = validate_position (maze,ghost[0],copia[1]);
     if (result == 1)
     {
       target[0]= i+TARGET;
@@ -56,8 +56,8 @@ void pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
   }
   else if (d == LEFT)
   {
-    copia[1]-=4;
-    result = validate_position (maze,copia);
+    copia[0]-=4;
+    result = validate_position (maze,ghost[0],copia[1]);
     if (result == 1)
     {
       target[0]=i;

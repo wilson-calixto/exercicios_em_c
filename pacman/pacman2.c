@@ -1,5 +1,6 @@
 #include "io.c"
-#include "clyde.c"
+#include "clyde2.c"
+#include "blinky2.c"
 //#include "walk.c"
 
 #define L 0
@@ -25,7 +26,7 @@ int main()
 	
 	import_maze(maze);
 	
-	print_maze(maze);
+	//print_maze(maze);
 	
 	// leitura pacman
 	int pacman[3];
@@ -52,7 +53,7 @@ int main()
 	switch (tghost)
 	{
 		case BLINKY:
-			// target = blinky();
+			target = blinky(pacman);
 			break;
 			
 		case PINKY:
@@ -73,7 +74,7 @@ int main()
 	
 	}
 	
-	maze[target[0]][target[1]] = 'T';
+	maze[target[L]][target[C]] = 'T';
 	
 	clear_screen();
 	

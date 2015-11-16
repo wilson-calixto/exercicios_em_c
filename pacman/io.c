@@ -56,7 +56,7 @@ void print_name(int g)
 }
 
 
-void import_maze(char **maze)
+void import_maze(char maze[23][30])
 {
 	int i,j;
 	
@@ -72,7 +72,7 @@ void import_maze(char **maze)
 	
 }
 
-void print_maze(char **maze)
+void print_maze(char maze[23][30])
 {
 	int i,j;
 	
