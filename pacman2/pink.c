@@ -1,8 +1,8 @@
 #include "validate_position.h"
 #include <stdio.h>
-#define UP 1
+#define UP 3
 #define RIGHT 2
-#define DOWN 3
+#define DOWN 1
 #define LEFT 4
 #define C 30
 #define L 23
@@ -11,58 +11,64 @@
  * de acordo com a regra são 4 "casas"
  * a frente do pacman */
  
-void pink(char maze[L][C],int ghost[3],int pacman[3],int target[2])
-{                          
-  int result,copia[3],i=ghost[0],j=ghost[1],d=ghost[2];
+void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
+{              
+	int result,i,j;
 
-  copia[0]=ghost[0];
-  copia[1]=ghost[1];
-  copia[2]=ghost[2];
-  if (d == UP) // se a direção to pacman for para cima valida 4 "casas" para cima
-  {
-    copia[1]-=TARGET;
-    result = validate_position (maze,ghost[0],copia[1]);// falta terminar de adaptar de 2 variaveis para um vetor
-    if (result == 1)
-    {
-      target[0]=i-TARGET;
-      target[1]=j;
-     // maze[i-TARGET][j] = 'T';
-    
-    }
-  }
-  else if (d == RIGHT)
-  {
-    copia[0]+=TARGET;
-    result = validate_position (maze,ghost[0],copia[1]);
-    if (result == 1)
-    {
-      target[0]=i;
-      target[1]=j+TARGET;
-    //  maze[i][j+TARGET] = 'T';
-      
-    }
-  }
-  else if (d == DOWN)
-  {
-    copia[1]+=TARGET;
-    result = validate_position (maze,ghost[0],copia[1]);
-    if (result == 1)
-    {
-      target[0]= i+TARGET;
-      target[1]= j;
-    //  maze[i+TARGET][j] = 'T';
-     
-    }
-  }
-  else if (d == LEFT)
-  {
-    copia[0]-=4;
-    result = validate_position (maze,ghost[0],copia[1]);
-    if (result == 1)
-    {
-      target[0]=i;
-      target[1]=j-TARGET;
-     // maze[i][j-TARGET];
-	}
-  }
-}
+	result = validate_position (maze,ghost[0],ghost[1]);
+	switch (pacman[2])
+		{
+			case 1:
+				target[0]= pacman[0] - TARGET;
+	      			target[1]= (pacman[1]);
+				if (result == 1)
+				{				
+				break;
+				}
+				else
+				{
+				target[0]= 1;
+				target[1]= 28;
+				break;
+				}
+			case 2:
+				target[0]= pacman[0];
+				target[1]= (pacman[1]) - TARGET;
+				if (result == 1)
+				{				
+				break;
+				}
+				else
+				{
+				target[0]= 1;
+				target[1]= 28;
+				break;
+				}
+			case 3:
+				target[0]= pacman[0] - TARGET;
+				target[1]= (pacman[1]);
+				if (result == 1)
+				{				
+				break;
+				}
+				else
+				{
+				target[0]= 1;
+				target[1]= 28;
+				break;
+				}
+			case 4:
+				target[0]= pacman[0];
+				target[1]= (pacman[1]) - TARGET;
+				if (result == 1)
+				{				
+				break;
+				}
+				else
+				{
+				target[0]= 1;
+				target[1]= 28;
+				break;
+				}
+		}
+}            
