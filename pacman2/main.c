@@ -48,6 +48,7 @@ int main (int argc, char *argv[])
 				break;
 			case 2:
 				pink(maze,ghost,pacman,target);
+				printf("i=%d j= %d\n",target[0],target[1]);
 				position(maze,target,'8');
 				break;
 			case 3:
