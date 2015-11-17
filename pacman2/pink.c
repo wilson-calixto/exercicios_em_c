@@ -16,14 +16,16 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 {              
 	int result,i,j;
 
-	result = validate_position (maze,ghost[0],ghost[1]);
 	switch (pacman[2])
 		{
 			case 1:
-				target[0]= pacman[0] - TARGET;
+				target[0]= pacman[0] + TARGET;
 	      			target[1]= (pacman[1]);
+				result = validate_position (maze,target[0],target[1]);
 				if (result == 1)
-				{				
+				{
+				target[0]= pacman[0] + TARGET;
+	      			target[1]= (pacman[1]);				
 				break;
 				}
 				else
@@ -34,9 +36,12 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 				}
 			case 2:
 				target[0]= pacman[0];
-				target[1]= (pacman[1]) - TARGET;
+				target[1]= (pacman[1]) + TARGET;
+				result = validate_position (maze,target[0],target[1]);
 				if (result == 1)
-				{				
+				{
+				target[0]= pacman[0];
+				target[1]= (pacman[1]) + TARGET;				
 				break;
 				}
 				else
@@ -48,8 +53,11 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 			case 3:
 				target[0]= pacman[0] - TARGET;
 				target[1]= (pacman[1]);
+				result = validate_position (maze,target[0],target[1]);
 				if (result == 1)
-				{				
+				{
+				target[0]= pacman[0] - TARGET;
+				target[1]= (pacman[1]);				
 				break;
 				}
 				else
@@ -61,8 +69,11 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 			case 4:
 				target[0]= pacman[0];
 				target[1]= (pacman[1]) - TARGET;
+				result = validate_position (maze,target[0],target[1]);
 				if (result == 1)
-				{				
+				{
+				target[0]= pacman[0];
+				target[1]= (pacman[1]) - TARGET;				
 				break;
 				}
 				else
