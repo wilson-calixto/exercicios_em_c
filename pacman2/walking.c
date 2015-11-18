@@ -28,12 +28,12 @@
 
 void walking(char maze[23][30], int ghost[3], int target[2])
 {
-	int x,y; 
+	int x,y,loop=0; 
 	y =  ghost[0];
 	x =  ghost[1]; 
 
 
-	while (target[0] != ghost[0] || target[1] != ghost[1] )
+	while ((target[0] != ghost[0] || target[1] != ghost[1]) && loop < 6  )
 	{
 		switch (ghost[2])
 		{
@@ -54,6 +54,7 @@ void walking(char maze[23][30], int ghost[3], int target[2])
 		{
 			ghost[0] = y;      
 			ghost[1] = x;
+			loop = 0;
 			if (maze[y][x] != '7' &&  maze[y][x] != '8' )
 			{
 				maze[y][x]  = '3'; 
@@ -69,6 +70,7 @@ void walking(char maze[23][30], int ghost[3], int target[2])
 		{
 			x = ghost[1];
 			y = ghost[0];
+			loop += 1;
 			ghost[2] += 1;
 			if (ghost[2] > 4)
 			{

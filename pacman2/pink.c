@@ -16,7 +16,7 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 				target[0]= pacman[0] + TARGET;
 	      			target[1]= (pacman[1]);
 				result = validate_position (maze,target[0],target[1]);
-				if (result == 1)
+				if (result == 1 &&  (target[0] < 22 && target[0] > 0)  )
 				{
 				target[0]= pacman[0] + TARGET;
 	      			target[1]= (pacman[1]);				
@@ -32,7 +32,7 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 				target[0]= pacman[0];
 				target[1]= (pacman[1]) + TARGET;
 				result = validate_position (maze,target[0],target[1]);
-				if (result == 1)
+				if (result == 1 &&   (target[1] < 30 && target[1] > 0)  )
 				{
 				target[0]= pacman[0];
 				target[1]= (pacman[1]) + TARGET;				
@@ -48,7 +48,7 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 				target[0]= pacman[0] - TARGET;
 				target[1]= (pacman[1]);
 				result = validate_position (maze,target[0],target[1]);
-				if (result == 1)
+				if (result == 1 || target[0] < 22 || target[0] > 0 )
 				{
 				target[0]= pacman[0] - TARGET;
 				target[1]= (pacman[1]);				
@@ -64,7 +64,7 @@ void pink(char maze[L][C], int ghost[3],int pacman[3],int target[2])
 				target[0]= pacman[0];
 				target[1]= (pacman[1]) - TARGET;
 				result = validate_position (maze,target[0],target[1]);
-				if (result == 1)
+				if (result == 1 &&  (target[1] < 30 && target[1] > 0)  )
 				{
 				target[0]= pacman[0];
 				target[1]= (pacman[1]) - TARGET;				
