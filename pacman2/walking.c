@@ -26,14 +26,14 @@
 //
 //
 
-void walking(char maze[23][30], int ghost[3], int target[2])
+void walking(char maze[23][30], int ghost[3], int target[2], int pacman[2])
 {
 	int x,y,loop=0; 
 	y =  ghost[0];
 	x =  ghost[1]; 
 
 
-	while ((target[0] != ghost[0] || target[1] != ghost[1]) && loop < 6  )
+	while (((target[0] != ghost[0] || target[1] != ghost[1]) && loop < 6) && ghost[0] != pacman[0] || ghost[1] != pacman[1] )
 	{
 		switch (ghost[2])
 		{

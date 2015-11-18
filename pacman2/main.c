@@ -62,7 +62,7 @@ int main (int argc, char *argv[])
 
 		}	
  	 	
-		walking(maze,ghost,target);//mudar os parametros
+		walking(maze,ghost,target, pacman);//mudar os parametros
   		print_maze (maze);
   	}
   }
