@@ -66,6 +66,10 @@ void walking(char maze[23][30], int ghost[3], int target[2])
 	//neste momenro o ghost será atualizado com o melhor caminho da bifurcação
 				}
 			}
+		sleep(1);
+		clear_screen();
+		print_maze(maze);
+
 		}else
 		{
 			x = ghost[1];
