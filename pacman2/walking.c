@@ -33,8 +33,9 @@ void walking(char maze[23][30], int ghost[3], int target[2], int pacman[2])
 	x =  ghost[1]; 
 
 
-	while (((target[0] != ghost[0] || target[1] != ghost[1]) && loop < 6) && ghost[0] != pacman[0] || ghost[1] != pacman[1] )
+	while ((target[0] != ghost[0] || target[1] != ghost[1]) && loop < 6) 
 	{
+		
 		switch (ghost[2])
 		{
 			case 1:
@@ -52,10 +53,16 @@ void walking(char maze[23][30], int ghost[3], int target[2], int pacman[2])
 		}
 		if (validate_position(maze, y, x))
 		{
+			
 			ghost[0] = y;      
 			ghost[1] = x;
 			loop = 0;
-			if (maze[y][x] != '7' &&  maze[y][x] != '8' )
+			if (maze[y][x] == '5')
+			{
+				break;
+			}
+			
+			if (maze[y][x] != '7' &&  maze[y][x] != '8' &&  maze[y][x] != '5' )
 			{
 				maze[y][x]  = '3'; 
 			}else
