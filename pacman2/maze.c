@@ -34,7 +34,7 @@ void print_maze (char maze[L][C])
       switch (maze[i][j])
       {
 	      case '0':
-		      printf("[.]");
+		      printf("ꗞꗞꗞ");
 		      break;
 	      case '7':
 		      printf("   ");
