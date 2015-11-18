@@ -36,7 +36,8 @@ void verifica_target(char maze[23][30], int target[2])
 		        		
 	                else
 	                {
-	                        maze[target[0]][target[1]]='T';
+	                        target[0] = target[0]+0;
+	                        target[1] = target[1]+0;
 	                }
 	        }
 	        if (target[1]>22)
@@ -66,7 +67,8 @@ void verifica_target(char maze[23][30], int target[2])
 		        		
 	                else
 	                {
-	                        maze[target[0]][target[1]]='T';
+	                        target[0] = target[0]+0;
+	                        target[1] = target[1]+0;
 	                } 
         	}
 		
@@ -98,7 +100,8 @@ void verifica_target(char maze[23][30], int target[2])
 		        		
 	                else
 	                {
-	                        maze[target[0]][target[1]]='T';
+	                        target[0] = target[0]+0;
+	                        target[1] = target[1]+0;
 	                }
 	        }
 	        if (target[1]<0)
@@ -128,7 +131,8 @@ void verifica_target(char maze[23][30], int target[2])
 		        		
 	                else
 	                {
-	                        maze[target[0]][target[1]]='T';
+	                        target[0] = target[0]+0;
+	                        target[1] = target[1]+0;
 	                } 
         	}
         }
