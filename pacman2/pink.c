@@ -1,12 +1,6 @@
 /*Codigo Finalizado por Evandro Fernandes*/
 #include "validate_position.h"
 #include <stdio.h>
-#define UP 3
-#define RIGHT 2
-#define DOWN 1
-#define LEFT 4
-#define C 30
-#define L 23
 #define TARGET 4
 /* Defina o alvo para o fantasma pink
  * de acordo com a regra são 4 "casas"
