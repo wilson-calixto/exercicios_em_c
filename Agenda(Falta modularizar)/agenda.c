@@ -21,6 +21,7 @@
 #define apaga_agenda 4
 #define pesquisa_agenda 5
 #define limpa_agenda 6
+#define finaliza 9
 #define TAM 1000
 
 typedef struct Contato
@@ -72,7 +73,7 @@ int main(int argc, const char *argv[])
             case limpa_agenda:
                 limpa_arquivo(arquivo);
                 break;
-            case 9:
+            case finaliza:
                 break;
             default:
                 printf("Operacao invalida.\n");
