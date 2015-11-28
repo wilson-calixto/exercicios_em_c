@@ -18,6 +18,7 @@
 #include "util.h"
 #define cria_agenda 1
 #define edita_arquivo 3
+#define apaga_agenda 4
 #define TAM 1000
 
 typedef struct Contato
@@ -59,7 +60,7 @@ int main(int argc, const char *argv[])
                 edita(arquivo);
                 copia(arquivo,origem);
                 break;
-            case 4:
+            case apaga_agenda:
                 apaga(arquivo);
                 copia(arquivo, origem);
                 break;
