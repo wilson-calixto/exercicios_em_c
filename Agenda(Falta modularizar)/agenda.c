@@ -17,6 +17,7 @@
 
 #include "util.h"
 #define cria_agenda 1
+#define lista_agenda 2
 #define edita_agenda 3
 #define apaga_agenda 4
 #define pesquisa_agenda 5
@@ -56,7 +57,7 @@ int main(int argc, const char *argv[])
                     cria_agenda_arquivo(file);
                }
                 break;
-           case 2:
+           case lista_agenda:
                 lista(arquivo);
                 break;
             case edita_agenda:
