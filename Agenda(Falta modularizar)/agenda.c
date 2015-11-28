@@ -17,6 +17,7 @@
 
 #include "util.h"
 #define criaAgenda 1
+#define editaArquivo 3
 #define TAM 1000
 
 typedef struct Contato
@@ -54,7 +55,7 @@ int main(int argc, const char *argv[])
            case 2:
                 lista(arquivo);
                 break;
-            case 3:
+            case editaArquivo:
                 edita(arquivo);
                 copia(arquivo,origem);
                 break;
