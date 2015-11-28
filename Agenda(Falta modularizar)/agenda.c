@@ -16,7 +16,7 @@
 #include <string.h>
 
 #include "util.h"
-
+#define criaAgenda 1
 #define TAM 1000
 
 typedef struct Contato
@@ -41,7 +41,7 @@ int main(int argc, const char *argv[])
 
         switch(op)
         {
-            case 1:
+            case criaAgenda:
                if (argc == 2)
                     cria_agenda_arquivo(argv[1]);
                else
