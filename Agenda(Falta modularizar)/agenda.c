@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "i_o.h"
+
 #include "util.h"
 #define cria_agenda 1
 #define lista_agenda 2
@@ -28,6 +28,7 @@
 #define erro 1
 #define operacao_invalida 9
 #define menu 10
+
 typedef struct Contato
 {
     char cod[TAM],nome[TAM], end[TAM];

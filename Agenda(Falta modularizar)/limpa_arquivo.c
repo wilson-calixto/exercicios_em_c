@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "util.h"
-#include "i_o.h"
+
 #define nulo 0
 #define erro 1
-
 #define TAM 1000
 #define TC 10
 /*fazer i_o com fprintf tambem*/

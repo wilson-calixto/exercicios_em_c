@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "i_o.h"
+#include "util.h"
 #define nulo 0
 #define erro 1
 #define codigo_a_ser_apagado 8

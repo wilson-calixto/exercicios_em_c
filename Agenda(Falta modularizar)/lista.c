@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "i_o.h"
+
+#include "util.h"
+
 #define nulo 0
 #define erro 1
 #define TAM 1000
-
 
 void lista(char arquivo[])
 {
