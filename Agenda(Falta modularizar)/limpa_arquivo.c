@@ -17,7 +17,7 @@ void limpa_arquivo(char arquivo[])
     fout = fopen(arquivo,"w+");
 
     if(fout == NULL)
-        saida(erro,nulo);
+        saida(erro);
     else
     {
  

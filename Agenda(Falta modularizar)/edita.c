@@ -30,17 +30,17 @@ void edita(char arquivo[])
     strcat(output, ".editado");
     
     if(((arqEntrada = fopen(arquivo, "r")) == NULL) || ((arqSaida = fopen(output, "w")) == NULL))
-           saida(erro,nulo);
+           saida(erro);
         
     else if((arqEntrada != NULL) && (arqSaida != NULL))
     {
-		saida(codigo_a_ser_modificado,nulo);
+		saida(codigo_a_ser_modificado);
         
         scanf("%d", &line); 
         getchar();
-		saida(nome_do_contato,nulo);
+		saida(nome_do_contato);
         fgets(contato.nome,MAX,stdin);
-		saida(endereco_do_contato,nulo);
+		saida(endereco_do_contato);
         fgets(contato.end,MAX, stdin);
 
         line = (line* 7) - 1;

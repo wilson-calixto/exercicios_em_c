@@ -28,6 +28,7 @@
 #define erro 1
 #define operacao_invalida 9
 #define menu 10
+#define Nome_arquivo 11
 
 typedef struct Contato
 {
@@ -46,7 +47,7 @@ int main(int argc, const char *argv[])
     while(op != 9)
     {
 
-        saida(menu,nulo);              
+        saida(menu);              
         scanf("%d", &op);
 
         switch(op)
@@ -56,7 +57,7 @@ int main(int argc, const char *argv[])
                     cria_agenda_arquivo(argv[1]);
                else
                {
-                    puts("Informe o nome do arquivo:");
+                    saida(Nome_arquivo);
                     scanf("%s", file);
                     cria_agenda_arquivo(file);
                }
@@ -81,7 +82,7 @@ int main(int argc, const char *argv[])
             case finaliza:
                 break;
             default:
-			        saida(operacao_invalida,nulo);               
+			    saida(operacao_invalida);               
                 break;
         }
 

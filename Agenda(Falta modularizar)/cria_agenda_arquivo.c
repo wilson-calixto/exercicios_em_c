@@ -29,7 +29,7 @@ void cria_agenda_arquivo(const char argv[])
     fin = fopen(argv,"r"); //abre arquivo a ser lido
 
     if(fin == NULL)
-          saida(erro,nulo);
+          saida(erro);
     else
     {
 
@@ -50,7 +50,7 @@ void cria_agenda_arquivo(const char argv[])
     fout = fopen(arquivo,"w+"); //cria arquivo a ser lido
 
     if(fout == NULL)
-	        saida(erro,nulo);
+	        saida(erro);
     else
     {
         fprintf(fout,"\tAgenda\n---------------------------------------------------------\n"); //cabeçalho da agenda

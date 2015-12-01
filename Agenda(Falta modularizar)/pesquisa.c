@@ -18,10 +18,10 @@ void pesquisa(char arquivo[])
 
     if((fp = fopen(arquivo,"r")) == NULL)
       
-        saida(erro,nulo);
+        saida(erro);
     else
     {
-        saida(codigo_do_contato,nulo);
+        saida(codigo_do_contato);
         scanf("%d", &pesq);
 
         pesq = (pesq * 7);

@@ -19,11 +19,11 @@ void apaga(char arquivo[])
     strcat(output, ".editado");
     
     if(((arqEntrada = fopen(arquivo, "r")) == 0) || ((arqSaida = fopen(output, "w")) == 0)) 
-         saida(erro,nulo);
+         saida(erro);
     else
     {
 
-        saida(codigo_a_ser_apagado,nulo);
+        saida(codigo_a_ser_apagado);
         scanf("%d", &line); 
     
         line = (line * 7);

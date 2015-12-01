@@ -9,7 +9,7 @@
 #endif
 
 // Programador: Wilson Oliveira Neto.
-void saida(int controle,int saida)
+void saida(int controle)
 {
     switch(controle)
     {
@@ -34,7 +34,8 @@ void saida(int controle,int saida)
                 break;
         case 10: printf("\nInforme a operação que deseja realizar:\n 1 - Criar agenda por arquivo\n 2 - Listar contatos\n 3 - Editar contatos\n 4 - Apagar contatos\n 5 - Pesquisar contato\n 6 - Limpa agenda\n 9 - Sair\n\nOperação: ");
                 break;
-        
-    }
+        case 11: printf("Informe o nome do arquivo: ");
+                 break;
 
+    }
 }

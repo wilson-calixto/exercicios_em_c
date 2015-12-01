@@ -15,7 +15,7 @@ void lista(char arquivo[])
     int i;
 
     if ((fp = fopen(arquivo,"r")) == 0)
-         saida(erro,nulo);
+         saida(erro);
     else
     {
         for(i = 0; !feof(fp); i++)

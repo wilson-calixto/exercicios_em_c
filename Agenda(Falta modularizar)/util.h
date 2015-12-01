@@ -5,5 +5,5 @@ void edita(char arquivo[]);
 void limpa_arquivo(char arquivo[]);
 void lista(char arquivo[]);
 void pesquisa(char arquivo[]);
-void saida(int controle,int saida);
+void saida(int controle);
 int entrada();
