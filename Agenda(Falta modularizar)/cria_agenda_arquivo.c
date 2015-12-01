@@ -16,7 +16,7 @@ typedef struct Contato
 
 typedef Contato* Agenda; //definindo ponteiro para Contato como Agenda (que nao foi usado)
 
-void cria_agenda_arquivo(char argv[])
+void cria_agenda_arquivo(const char argv[])
 {
     Contato agenda[NC], *p; //vetor e ponteiro do tipo Contato
     int i; // contador
