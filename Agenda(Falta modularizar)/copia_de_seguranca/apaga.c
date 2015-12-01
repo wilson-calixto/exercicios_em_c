@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "util.h"
+#define nulo 0
+#define erro 1
+#define codigo_a_ser_apagado 8
 #define TAM 1000
 
 void apaga(char arquivo[])
@@ -16,11 +19,11 @@ void apaga(char arquivo[])
     strcat(output, ".editado");
     
     if(((arqEntrada = fopen(arquivo, "r")) == 0) || ((arqSaida = fopen(output, "w")) == 0)) 
-        printf("\nImpossivel abrir arquivo...\n\n");
+         saida(erro,nulo);
     else
     {
 
-        printf("Digite o codigo do usuario a ser apagado no arquivo: "); 
+        saida(codigo_a_ser_apagado,nulo);
         scanf("%d", &line); 
     
         line = (line * 7);

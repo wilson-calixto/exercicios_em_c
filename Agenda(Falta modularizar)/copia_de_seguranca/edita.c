@@ -2,8 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "util.h"
+
+#define nulo 0
+#define erro 1
+#define codigo_a_ser_modificado 5
+#define nome_do_contato 6
+#define endereco_do_contato 7
 #define MAX 1000
 
+/*colocar no i_o o fprintf tembem*/
 typedef struct Contato
 {
     char cod[MAX], nome[MAX], end[MAX];
@@ -22,18 +30,17 @@ void edita(char arquivo[])
     strcat(output, ".editado");
     
     if(((arqEntrada = fopen(arquivo, "r")) == NULL) || ((arqSaida = fopen(output, "w")) == NULL))
-        printf("\nImpossivel abrir o arquivo...\n\n");
+           saida(erro,nulo);
+        
     else if((arqEntrada != NULL) && (arqSaida != NULL))
     {
-
-        puts("Digite o codigo do contato a ser modificado:"); 
+		saida(codigo_a_ser_modificado,nulo);
+        
         scanf("%d", &line); 
         getchar();
-
-        puts("Informe o nome do contato:");
+		saida(nome_do_contato,nulo);
         fgets(contato.nome,MAX,stdin);
-
-        puts("Informe o endereco do contato:");
+		saida(endereco_do_contato,nulo);
         fgets(contato.end,MAX, stdin);
 
         line = (line* 7) - 1;

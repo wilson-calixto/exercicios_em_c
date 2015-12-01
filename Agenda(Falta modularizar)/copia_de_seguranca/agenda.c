@@ -24,6 +24,10 @@
 #define limpa_agenda 6
 #define finaliza 9
 #define TAM 1000
+#define nulo 0
+#define erro 1
+#define operacao_invalida 9
+#define menu 10
 
 typedef struct Contato
 {
@@ -42,7 +46,7 @@ int main(int argc, const char *argv[])
     while(op != 9)
     {
 
-        printf("\nInforme a operação que deseja realizar:\n 1 - Criar agenda por arquivo\n 2 - Listar contatos\n 3 - Editar contatos\n 4 - Apagar contatos\n 5 - Pesquisar contato\n 6 - Limpa agenda\n 9 - Sair\n\nOperação: ");
+        saida(menu,nulo);              
         scanf("%d", &op);
 
         switch(op)
@@ -77,7 +81,7 @@ int main(int argc, const char *argv[])
             case finaliza:
                 break;
             default:
-                printf("Operacao invalida.\n");
+			        saida(operacao_invalida,nulo);               
                 break;
         }
 

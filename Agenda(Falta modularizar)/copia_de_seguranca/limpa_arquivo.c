@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "util.h"
 
+#define nulo 0
+#define erro 1
 #define TAM 1000
 #define TC 10
-
+/*fazer i_o com fprintf tambem*/
 void limpa_arquivo(char arquivo[])
 {
     FILE *fout;
@@ -14,7 +17,7 @@ void limpa_arquivo(char arquivo[])
     fout = fopen(arquivo,"w+");
 
     if(fout == NULL)
-        printf("Impossivel abrir o arquivo.");
+        saida(erro,nulo);
     else
     {
  

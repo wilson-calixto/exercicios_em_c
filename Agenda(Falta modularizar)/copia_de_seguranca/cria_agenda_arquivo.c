@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "util.h"
+
+#define nulo 0
+#define erro 1
 #define TAM 1000 //Tamanho maximo da string
 #define NC 10 //numero de contatos
 
@@ -12,7 +16,7 @@ typedef struct Contato
 
 typedef Contato* Agenda; //definindo ponteiro para Contato como Agenda (que nao foi usado)
 
-void cria_agenda_arquivo(char argv[])
+void cria_agenda_arquivo(const char argv[])
 {
     Contato agenda[NC], *p; //vetor e ponteiro do tipo Contato
     int i; // contador
@@ -25,7 +29,7 @@ void cria_agenda_arquivo(char argv[])
     fin = fopen(argv,"r"); //abre arquivo a ser lido
 
     if(fin == NULL)
-        printf("Impossivel abrir o arquivo."); //colocar isso em um arquivo i_o.c
+          saida(erro,nulo);
     else
     {
 
@@ -46,7 +50,7 @@ void cria_agenda_arquivo(char argv[])
     fout = fopen(arquivo,"w+"); //cria arquivo a ser lido
 
     if(fout == NULL)
-        printf("Erro, nao foi possivel abrir o arquivo.\n"); //mesmo da linha 28
+	        saida(erro,nulo);
     else
     {
         fprintf(fout,"\tAgenda\n---------------------------------------------------------\n"); //cabeçalho da agenda

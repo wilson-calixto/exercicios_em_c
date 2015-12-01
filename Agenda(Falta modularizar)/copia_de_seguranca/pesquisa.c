@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "util.h"
+
+#define nulo 0
+#define erro 1
 #define TAM 1000
+#define codigo_do_contato 2
+#define linhas 3
 
 void pesquisa(char arquivo[])
 {
@@ -11,10 +17,11 @@ void pesquisa(char arquivo[])
     char texto[TAM];
 
     if((fp = fopen(arquivo,"r")) == NULL)
-        printf("\nImpossivel abrir o arquivo.\n\n");
+      
+        saida(erro,nulo);
     else
     {
-        printf("Informe o codigo do contato: ");
+        saida(codigo_do_contato,nulo);
         scanf("%d", &pesq);
 
         pesq = (pesq * 7);

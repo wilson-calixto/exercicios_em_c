@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "util.h"
+
+#define nulo 0
+#define erro 1
 #define TAM 1000
 
 void lista(char arquivo[])
@@ -11,7 +15,7 @@ void lista(char arquivo[])
     int i;
 
     if ((fp = fopen(arquivo,"r")) == 0)
-        printf("\nImpossivel abrir o arquivo.\n\n");
+         saida(erro,nulo);
     else
     {
         for(i = 0; !feof(fp); i++)

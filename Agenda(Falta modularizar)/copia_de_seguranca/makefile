@@ -1,7 +1,7 @@
 all: agenda
 
-agenda: agenda.o pesquisa.o lista.o edita.o cria_agenda_arquivo.o apaga.o copia.o limpa_arquivo.o
-	gcc agenda.o lista.o pesquisa.o edita.o cria_agenda_arquivo.o apaga.o copia.o limpa_arquivo.o -o agenda
+agenda: agenda.o pesquisa.o lista.o edita.o cria_agenda_arquivo.o apaga.o copia.o limpa_arquivo.o i_o.o
+	gcc agenda.o lista.o pesquisa.o edita.o cria_agenda_arquivo.o apaga.o copia.o limpa_arquivo.o i_o.o -o agenda
 
 agenda.o: agenda.c
 	gcc -c agenda.c
@@ -26,6 +26,9 @@ copia.o: copia.c
 
 limpa_arquivo.o: limpa_arquivo.c
 	gcc -c  limpa_arquivo.c
+
+i_o.o: i_o.c
+	gcc -c i_o.c
 
 clear:
 	rm -rf *.o
