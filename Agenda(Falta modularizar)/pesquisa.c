@@ -26,7 +26,7 @@ void pesquisa(char arquivo[])
 
         pesq = (pesq * 7);
 
-        saida(linhas,nulo);
+        printf("---------------------------------------------------------\n");
 
         for(i = 1; !feof(fp); i++)
         {
@@ -35,6 +35,7 @@ void pesquisa(char arquivo[])
             if(i == pesq - 2 || i == pesq - 1 || i == pesq)
                 printf("%s\n",texto);
         }
-		     saida(linhas,nulo);
+
+        printf("---------------------------------------------------------\n");
     }
 }
