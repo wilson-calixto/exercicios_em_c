@@ -10,20 +10,17 @@
 
 void lista(char arquivo[])
 {
-    FILE *fp;
-    char texto[TAM];
+    Contato *p;
     int i;
 
-    if ((fp = fopen(arquivo,"r")) == 0)
-         saida(erro,nulo);
-    else
-    {
-        for(i = 0; !feof(fp); i++)
+        for(i = 1, p = agenda; i <= NC; i++,p++)
         {
-            fgets(texto,TAM,fp);
-            puts(texto);
+	    printf("---------------------------------------------------------\n"); //separador de contatos
+            printf("Contato %d\n\n",i); //numero do contato
+            printf("Codigo: %s",(*p).cod); //codigo do contato
+            printf("Nome: %s",(*p).nome); //nome do contato
+            printf("Endereco: %s\n",(*p).end); //endereço do contato
+            printf("---------------------------------------------------------\n"); //separador de contatos		
         }
 
-        fclose(fp);
-    }
 }

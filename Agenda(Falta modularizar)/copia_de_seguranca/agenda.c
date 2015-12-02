@@ -29,11 +29,6 @@
 #define operacao_invalida 9
 #define menu 10
 
-typedef struct Contato
-{
-    char cod[TAM],nome[TAM], end[TAM];
-}Contato;
-
 int main(int argc, const char *argv[])
 {
     int op = 0, op2 = 0;

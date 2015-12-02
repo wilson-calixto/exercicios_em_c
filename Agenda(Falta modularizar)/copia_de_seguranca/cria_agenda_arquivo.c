@@ -9,16 +9,9 @@
 #define TAM 1000 //Tamanho maximo da string
 #define NC 10 //numero de contatos
 
-typedef struct Contato
-{
-    char cod[TAM], nome[TAM], end[TAM];
-}Contato; //definindo estrutura Contato como um tipo
-
-typedef Contato* Agenda; //definindo ponteiro para Contato como Agenda (que nao foi usado)
-
 void cria_agenda_arquivo(const char argv[])
 {
-    Contato agenda[NC], *p; //vetor e ponteiro do tipo Contato
+    Contato *p; //vetor e ponteiro do tipo Contato
     int i; // contador
     char arquivo[TAM] = ""; //nome do arquivo a ser escrito
 

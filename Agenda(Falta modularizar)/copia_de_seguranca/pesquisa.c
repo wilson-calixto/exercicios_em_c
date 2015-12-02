@@ -9,32 +9,28 @@
 #define TAM 1000
 #define codigo_do_contato 2
 #define linhas 3
+#define NC 10
 
 void pesquisa(char arquivo[])
 {
-    FILE *fp;
+    
+    Contato *p;
     int pesq, i;
-    char texto[TAM];
-
-    if((fp = fopen(arquivo,"r")) == NULL)
-      
-        saida(erro,nulo);
-    else
     {
         saida(codigo_do_contato,nulo);
         scanf("%d", &pesq);
 
-        pesq = (pesq * 7);
-
         printf("---------------------------------------------------------\n");
 
-        for(i = 1; !feof(fp); i++)
+        for(i = 1, p = agenda; i < NC; i++,p++)
         {
-            fgets(texto,TAM,fp);
-
-            if(i == pesq - 2 || i == pesq - 1 || i == pesq)
-                printf("%s\n",texto);
-        }
+		if(pesq == i)
+		{	
+        		printf("Codigo: %s\n",(*p).cod);
+			printf("Nome: %s\n", (*p).nome);
+			printf("Endereco: %s\n", (*p).end);
+ 		}       
+	}
 
         printf("---------------------------------------------------------\n");
     }

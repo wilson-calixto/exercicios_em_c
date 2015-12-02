@@ -10,26 +10,29 @@
 void apaga(char arquivo[])
 {
     
-    FILE *arqEntrada, *arqSaida;
-    int line = 0 , linha = 1;
+    FILE *arqEntrada, *arqSaida, *fin;
+    int line = 0 , linha = 1, cod;
     int i;
     char textoArquivo[TAM], output[TAM] = "";
     
     strcat(output, arquivo);
     strcat(output, ".editado");
     
-    if(((arqEntrada = fopen(arquivo, "r")) == 0) || ((arqSaida = fopen(output, "w")) == 0)) 
+    if(((arqEntrada = fopen(arquivo, "r")) == NULL) || ((arqSaida = fopen(output, "w")) == NULL) || (fin = fopen("aux.txt","r")) == NULL)
          saida(erro,nulo);
     else
     {
 
         saida(codigo_a_ser_apagado,nulo);
         scanf("%d", &line); 
-    
+    	
+	cod = line - 1;
         line = (line * 7);
     
         rewind(arqEntrada); 
-    
+ 
+	fgets(agenda[0].cod, TAM, fin);
+   
         for(i = 0; !feof(arqEntrada);i++)
         { 
     	    memset(textoArquivo, '\0', 100); 
@@ -40,12 +43,14 @@ void apaga(char arquivo[])
                 if(linha == line - 1)
                 {
                     fprintf(arqSaida,"Nome:\n");
+		    fgets(agenda[cod].nome, TAM, fin);	
                     linha += 1;
                     continue;
                 }
                 else if(linha == line)
                 {
                     fprintf(arqSaida,"Endereco:\n");
+		    fgets(agenda[cod].end, TAM, fin);
                     linha += 1;
                     continue;
                 }
