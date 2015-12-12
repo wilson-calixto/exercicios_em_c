@@ -8,7 +8,7 @@
   #define limpa_tela system("/usr/bin/clear") //limpa tela
 #endif
 
-// Programador: Wilson Oliveira Neto.
+// Programador: Wilson calixto
 void saida(int controle,int saida)
 {
     switch(controle)
