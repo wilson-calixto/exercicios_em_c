@@ -103,11 +103,11 @@ void cria(const char argv[])
 		int i,j,indices[50],posicao,palavra_rand;
 		char **matriz;
 		/*inicia a matriz*/
-	    matriz=(char**)malloc(25*sizeof(char*));  
-	    for ( i=0;i<25;i++)
-	    {
-	        matriz[i]=(char*)malloc(50*sizeof(char));
-	    }
+     	        matriz=(char**)malloc(25*sizeof(char*));  
+	        for ( i=0;i<25;i++)
+	        {
+	            matriz[i]=(char*)malloc(50*sizeof(char));
+	        }
 		           
 		   //recebe os dados do arquivo 
 		for(i=0;i<25;i++)
@@ -127,25 +127,26 @@ void cria(const char argv[])
 		for(j=0;j<24;j++)
 	        {
 		
-				palavra_rand=1 + ( rand() % 23 );
-				//tirar palavras repetida com novo vetor
+			palavra_rand=1 + ( rand() % 23 );
+			//tirar palavras repetida com novo vetor
 			for(i=0;i<50;i++)
 		        {
-		        	posicao=1 + ( rand() % 48 );
+		        
 		            //mostra a string de forma embaralhada
 		            //guaradar o indice q ja saiou em um vetor e perguntar se esse indice ja saiu se nao print else gerre outro numeor
-					if(jogada_valida(indices,posicao) )
-					{
-						printf("%c",matriz[palavra_rand][posicao]);					
-						indices[i]=posicao;	
-					}
-					else
-					{
-						i--;
-					}
+				posicao=1 + ( rand() % 48 );
+				if(jogada_valida(indices,posicao) )
+				{
+					printf("%c",matriz[palavra_rand][posicao]);					
+					indices[i]=posicao;	
+				}
+				else
+				{
+					i--;
+				}
 							            
 		        }
-				printf("\n");
+			printf("\n");
 		}
 	}
 
