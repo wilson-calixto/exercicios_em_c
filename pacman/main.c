@@ -110,7 +110,7 @@ void cria(const char argv[])
 	    }
 		           
 		   //recebe os dados do arquivo 
-			 for(i=0;i<25;i++)
+		for(i=0;i<25;i++)
 	        {
 	            fgets(**matriz[i],50,fin);
 	            // fgets((*p).cod,TAM,fin);
@@ -118,18 +118,18 @@ void cria(const char argv[])
 		
 			
 		//mostra as strings 
-				for(i=0;i<25;i++)
+		for(i=0;i<25;i++)
 	        {
 	            printf("%s",matriz[i][50]);
 	        }
 		
 		//mostra 24 strings aleatorias
-			for(j=0;j<24;j++)
+		for(j=0;j<24;j++)
 	        {
 		
 				palavra_rand=1 + ( rand() % 23 );
 				//tirar palavras repetida com novo vetor
-				for(i=0;i<50;i++)
+			for(i=0;i<50;i++)
 		        {
 		        	posicao=1 + ( rand() % 48 );
 		            //mostra a string de forma embaralhada
@@ -141,12 +141,12 @@ void cria(const char argv[])
 					}
 					else
 					{
-							i--;
+						i--;
 					}
 							            
 		        }
 				printf("\n");
-			}
+		}
 	}
 
 
