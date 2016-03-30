@@ -7,7 +7,7 @@ int busca_binaria (int x, int n, int v[])
       m = (e + d)/2; // divide o vetor ao meio                        
       if (v[m] == x) // faz a busca de x no vetor
 	{
-		 return m; // se encontrar retorna a posição do que se estava procurando              
+		 return m; //               
 	}
       if (v[m] < x)
 	{
